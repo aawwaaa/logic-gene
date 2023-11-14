@@ -9,5 +9,6 @@ import { writeFileSync, readdirSync } from "fs"
     console.log("complete!")
 })()
 
+import "./cpu/processor"
 
 export default {}

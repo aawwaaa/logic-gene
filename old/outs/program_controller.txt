@@ -1,0 +1,983 @@
+set logic_generator_by "zzz"
+jump 18 always 0 0
+op add :num :num 0.95
+op log10 :num :num undefined
+op floor temp7 :num undefined
+op max temp7 temp7 0
+jump 16 always 0 0
+op sub temp8 :num temp7
+op pow temp9 10 temp8
+op floor temp9 temp9 undefined
+op mod temp9 temp9 10
+op add temp9 temp9 48
+op sub temp7 temp7 1
+op add temp10 temp0 2
+write temp9 bank1 temp10
+op add temp0 temp0 1
+jump 7 greaterThanEq temp7 0
+op add @counter ::ret 1
+jump 45 always 0 0
+op div :num :num :all
+op mul :num :num 16
+op floor :num :num undefined
+op add temp11 temp0 2
+set temp12 temp11
+write 10 bank1 temp12
+op add temp12 temp12 1
+op add temp0 temp0 1
+set temp13 0
+jump 43 always 0 0
+jump 31 lessThanEq :num temp13
+jump 37 always 0 0
+op add temp14 temp0 2
+set temp15 temp14
+write 79 bank1 temp15
+op add temp15 temp15 1
+op add temp0 temp0 1
+jump 42 always 0 0
+op add temp16 temp0 2
+set temp17 temp16
+write 42 bank1 temp17
+op add temp17 temp17 1
+op add temp0 temp0 1
+op add temp13 temp13 1
+jump 29 lessThan temp13 16
+op add @counter ::ret 1
+jump 177 always 0 0
+set temp0 0
+set temp1 -1
+set temp2 0
+set temp3 0
+op add temp18 temp0 2
+set temp19 0
+jump 58 always 0 0
+op add temp20 temp19 temp18
+op add temp21 temp19 0
+read temp22 bank3 temp21
+write temp22 bank1 temp20
+op add temp19 temp19 1
+jump 53 lessThan temp19 15
+op add temp0 temp0 15
+write temp0 bank1 1
+write 1 bank1 0
+read temp23 bank1 0
+jump 62 notEqual temp23 0
+set temp0 0
+op add temp24 temp0 2
+set temp25 0
+jump 73 always 0 0
+op add temp26 temp25 temp24
+op add temp27 temp25 15
+read temp28 bank3 temp27
+write temp28 bank1 temp26
+op add temp25 temp25 1
+jump 68 lessThan temp25 10
+op add temp0 temp0 10
+set :num 15,10
+op add :num :num 49
+op add temp29 temp0 2
+write :num bank1 temp29
+op add temp0 temp0 1
+op add temp30 temp0 2
+set temp31 temp30
+write 10 bank1 temp31
+op add temp31 temp31 1
+op add temp0 temp0 1
+op add temp32 temp0 2
+write 2 bank1 temp32
+op add temp33 temp0 3
+write 2 bank1 temp33
+op add temp34 temp0 4
+write 1 bank1 temp34
+op add temp0 temp0 3
+op add temp35 temp0 2
+set temp36 0
+jump 100 always 0 0
+op add temp37 temp36 temp35
+op add temp38 temp36 25
+read temp39 bank3 temp38
+write temp39 bank1 temp37
+op add temp36 temp36 1
+jump 95 lessThan temp36 5
+op add temp0 temp0 5
+set temp40 0
+set temp6 0
+set temp5 0
+write 7 bank2 0
+set temp41 false
+set temp42 0
+jump 150 always 0 0
+read :state bank2 9
+jump 109 equal :state 0
+read temp42 bank2 10
+read temp41 bank2 8
+op add temp40 temp40 1
+jump 116 greaterThan temp40 3
+jump 117 always 0 0
+op add temp6 temp6 1
+jump 119 notEqual temp6 temp2
+jump 120 always 0 0
+jump 146 always 0 0
+set temp43 0
+jump 145 always 0 0
+op add temp44 temp43 34
+read len bank2 temp44
+op add temp45 temp5 3
+op add temp46 temp0 2
+write 2 bank1 temp46
+op add temp47 temp0 3
+write temp45 bank1 temp47
+op add temp48 temp0 4
+write 1 bank1 temp48
+op add temp0 temp0 3
+op add temp49 temp43 36
+op add temp50 temp0 2
+set temp51 0
+jump 141 always 0 0
+op add temp52 temp51 temp50
+op add temp53 temp51 temp49
+read temp54 bank2 temp53
+write temp54 bank1 temp52
+op add temp51 temp51 1
+jump 136 lessThan temp51 len
+op add temp0 temp0 len
+op add temp5 temp5 1
+op add temp43 temp43 16
+jump 122 lessThan temp43 temp42
+write 0 bank2 9
+jump 149 notEqual temp41 0
+jump 150 always 0 0
+jump 151 always 0 0
+jump 109 equal temp41 0
+write 0 bank2 8
+op add temp55 temp1 3
+op add temp56 temp0 2
+write 2 bank1 temp56
+op add temp57 temp0 3
+write temp55 bank1 temp57
+op add temp58 temp0 4
+write 0 bank1 temp58
+op add temp0 temp0 3
+op add temp59 temp0 2
+set temp60 temp59
+write 62 bank1 temp60
+op add temp60 temp60 1
+op add temp0 temp0 1
+op add temp61 temp0 2
+write 2 bank1 temp61
+op add temp62 temp0 3
+write 15 bank1 temp62
+op add temp63 temp0 4
+write 0 bank1 temp63
+op add temp0 temp0 3
+write temp0 bank1 1
+write 1 bank1 0
+read temp64 bank1 0
+jump 174 notEqual temp64 0
+set temp0 0
+jump 179 equal temp3 -2
+jump 277 always 0 0
+sensor temp66 switch1 @enabled
+read !halt bank4 511
+jump 183 notEqual temp66 0
+jump 213 always 0 0
+jump 185 equal !halt 0
+jump 213 always 0 0
+op add temp67 temp0 2
+set temp68 0
+jump 193 always 0 0
+op add temp69 temp68 temp67
+op add temp70 temp68 303
+read temp71 bank3 temp70
+write temp71 bank1 temp69
+op add temp68 temp68 1
+jump 188 lessThan temp68 15
+op add temp0 temp0 15
+op add temp72 temp0 2
+set temp73 0
+jump 203 always 0 0
+op add temp74 temp73 temp72
+op add temp75 temp73 326
+read temp76 bank3 temp75
+write temp76 bank1 temp74
+op add temp73 temp73 1
+jump 198 lessThan temp73 25
+op add temp0 temp0 25
+write temp0 bank1 1
+write 1 bank1 0
+read temp77 bank1 0
+jump 207 notEqual temp77 0
+set temp0 0
+set temp3 5
+control enabled switch3 false
+end
+read temp65 bank1 256
+jump 179 notEqual temp65 true
+read temp78 bank1 257
+read temp79 bank1 258
+read temp80 bank1 259
+set temp81 259
+op sub temp82 temp78 1
+jump 222 equal temp79 5
+jump 225 always 0 0
+op add temp81 temp81 1
+op sub temp82 temp82 1
+jump 229 always 0 0
+jump 227 equal temp79 27
+jump 229 always 0 0
+op add temp81 temp81 1
+op sub temp82 temp82 1
+write false bank1 256
+jump 232 equal temp79 6
+jump 261 always 0 0
+op add temp83 temp0 2
+set temp84 0
+jump 240 always 0 0
+op add temp85 temp84 temp83
+op add temp86 temp84 318
+read temp87 bank3 temp86
+write temp87 bank1 temp85
+op add temp84 temp84 1
+jump 235 lessThan temp84 8
+op add temp0 temp0 8
+op add temp88 temp0 2
+set temp89 0
+jump 250 always 0 0
+op add temp90 temp89 temp88
+op add temp91 temp89 326
+read temp92 bank3 temp91
+write temp92 bank1 temp90
+op add temp89 temp89 1
+jump 245 lessThan temp89 25
+op add temp0 temp0 25
+write temp0 bank1 1
+write 1 bank1 0
+read temp93 bank1 0
+jump 254 notEqual temp93 0
+set temp0 0
+set temp3 5
+control enabled switch3 false
+control enabled switch1 true
+end
+read :state cell1 0
+jump 261 notEqual :state 0
+set temp94 0
+jump 270 always 0 0
+op add temp95 temp94 temp81
+read temp96 bank1 temp95
+op add temp97 temp94 244
+write temp96 bank4 temp97
+op add temp94 temp94 1
+jump 265 lessThan temp94 temp82
+write temp79 cell1 3
+write temp80 cell1 4
+write temp82 cell1 5
+write 3 cell1 2
+write 256 cell1 0
+end
+read temp98 bank1 256
+jump 277 notEqual temp98 true
+read temp99 bank1 257
+read temp100 bank1 258
+read temp101 bank1 259
+set temp102 259
+op sub temp103 temp99 1
+jump 286 equal temp100 5
+jump 289 always 0 0
+op add temp102 temp102 1
+op sub temp103 temp103 1
+jump 293 always 0 0
+jump 291 equal temp100 27
+jump 293 always 0 0
+op add temp102 temp102 1
+op sub temp103 temp103 1
+write false bank1 256
+jump 46 equal temp100 6
+jump 373 always 0 0
+write 1 cell2 0
+op add temp105 temp0 2
+set temp106 0
+jump 305 always 0 0
+op add temp107 temp106 temp105
+op add temp108 temp106 0
+read temp109 bank3 temp108
+write temp109 bank1 temp107
+op add temp106 temp106 1
+jump 300 lessThan temp106 15
+op add temp0 temp0 15
+write temp0 bank1 1
+write 1 bank1 0
+read temp110 bank1 0
+jump 309 notEqual temp110 0
+set temp0 0
+read :state cell2 0
+jump 312 notEqual :state 0
+read !result cell2 4
+jump 317 equal !result 0
+jump 327 always 0 0
+op add temp111 temp0 2
+set temp112 0
+jump 325 always 0 0
+op add temp113 temp112 temp111
+op add temp114 temp112 488
+read temp115 bank3 temp114
+write temp115 bank1 temp113
+op add temp112 temp112 1
+jump 320 lessThan temp112 8
+op add temp0 temp0 8
+jump 329 equal !result 2
+jump 339 always 0 0
+op add temp116 temp0 2
+set temp117 0
+jump 337 always 0 0
+op add temp118 temp117 temp116
+op add temp119 temp117 450
+read temp120 bank3 temp119
+write temp120 bank1 temp118
+op add temp117 temp117 1
+jump 332 lessThan temp117 19
+op add temp0 temp0 19
+jump 341 equal !result 3
+jump 356 always 0 0
+read !fid cell2 5
+write !fid bank2 1
+write 4 bank2 0
+read :state bank2 0
+jump 344 notEqual :state 0
+op add temp121 temp0 2
+set temp122 0
+jump 354 always 0 0
+op add temp123 temp122 temp121
+op add temp124 temp122 469
+read temp125 bank3 temp124
+write temp125 bank1 temp123
+op add temp122 temp122 1
+jump 349 lessThan temp122 19
+op add temp0 temp0 19
+op add temp126 temp0 2
+set temp127 0
+jump 364 always 0 0
+op add temp128 temp127 temp126
+op add temp129 temp127 326
+read temp130 bank3 temp129
+write temp130 bank1 temp128
+op add temp127 temp127 1
+jump 359 lessThan temp127 25
+op add temp0 temp0 25
+set temp3 9
+write temp0 bank1 1
+write 1 bank1 0
+read temp131 bank1 0
+jump 369 notEqual temp131 0
+set temp0 0
+op add @counter ::ret 1
+jump 375 equal temp100 10
+jump 887 always 0 0
+op add @counter @counter temp3
+jump 386 always 0 0
+jump 445 always 0 0
+jump 619 always 0 0
+jump 755 always 0 0
+jump 761 always 0 0
+jump 811 always 0 0
+jump 815 always 0 0
+jump 848 always 0 0
+jump 877 always 0 0
+jump 883 always 0 0
+jump 388 equal temp1 -1
+jump 402 always 0 0
+set temp1 -1
+set temp3 1
+set temp5 3
+op add temp132 temp0 2
+set temp133 0
+jump 399 always 0 0
+op add temp134 temp133 temp132
+op add temp135 temp133 30
+read temp136 bank3 temp135
+write temp136 bank1 temp134
+op add temp133 temp133 1
+jump 394 lessThan temp133 59
+op add temp0 temp0 59
+jump 426 always 0 0
+set temp4 temp1
+set temp1 -1
+set temp3 2
+set temp5 3
+op add temp137 temp0 2
+set temp138 0
+jump 414 always 0 0
+op add temp139 temp138 temp137
+op add temp140 temp138 130
+read temp141 bank3 temp140
+write temp141 bank1 temp139
+op add temp138 temp138 1
+jump 409 lessThan temp138 6
+op add temp0 temp0 6
+op add temp142 temp0 2
+set temp143 0
+jump 424 always 0 0
+op add temp144 temp143 temp142
+op add temp145 temp143 89
+read temp146 bank3 temp145
+write temp146 bank1 temp144
+op add temp143 temp143 1
+jump 419 lessThan temp143 41
+op add temp0 temp0 41
+op add temp147 temp1 3
+op add temp148 temp0 2
+write 2 bank1 temp148
+op add temp149 temp0 3
+write temp147 bank1 temp149
+op add temp150 temp0 4
+write 0 bank1 temp150
+op add temp0 temp0 3
+op add temp151 temp0 2
+set temp152 temp151
+write 62 bank1 temp152
+op add temp152 temp152 1
+op add temp0 temp0 1
+write temp0 bank1 1
+write 1 bank1 0
+read temp153 bank1 0
+jump 441 notEqual temp153 0
+set temp0 0
+jump 887 always 0 0
+jump 447 equal temp1 -1
+jump 449 always 0 0
+set temp3 0
+jump 50 always 0 0
+jump 451 equal temp1 0
+jump 531 always 0 0
+set temp3 7
+set temp1 -1
+op add temp154 temp0 2
+set temp155 0
+jump 461 always 0 0
+op add temp156 temp155 temp154
+op add temp157 temp155 351
+read temp158 bank3 temp157
+write temp158 bank1 temp156
+op add temp155 temp155 1
+jump 456 lessThan temp155 12
+op add temp0 temp0 12
+op add temp159 temp0 2
+set temp160 0
+jump 471 always 0 0
+op add temp161 temp160 temp159
+op add temp162 temp160 130
+read temp163 bank3 temp162
+write temp163 bank1 temp161
+op add temp160 temp160 1
+jump 466 lessThan temp160 6
+op add temp0 temp0 6
+read temp164 bank5 31
+op add temp164 temp164 1000
+jump 477 greaterThan @time temp164
+jump 489 always 0 0
+set temp5 0
+op add temp165 temp0 2
+set temp166 0
+jump 486 always 0 0
+op add temp167 temp166 temp165
+op add temp168 temp166 363
+read temp169 bank3 temp168
+write temp169 bank1 temp167
+op add temp166 temp166 1
+jump 481 lessThan temp166 27
+op add temp0 temp0 27
+jump 526 always 0 0
+set temp5 2
+op add temp170 temp0 2
+set temp171 0
+jump 498 always 0 0
+op add temp172 temp171 temp170
+op add temp173 temp171 390
+read temp174 bank3 temp173
+write temp174 bank1 temp172
+op add temp171 temp171 1
+jump 493 lessThan temp171 34
+op add temp0 temp0 34
+read temp175 bank5 0
+op add temp176 temp0 2
+set temp177 0
+jump 509 always 0 0
+op add temp178 temp177 temp176
+op add temp179 temp177 1
+read temp180 bank5 temp179
+write temp180 bank1 temp178
+op add temp177 temp177 1
+jump 504 lessThan temp177 temp175
+op add temp0 temp0 temp175
+op add temp181 temp0 2
+set temp182 0
+jump 519 always 0 0
+op add temp183 temp182 temp181
+op add temp184 temp182 424
+read temp185 bank3 temp184
+write temp185 bank1 temp183
+op add temp182 temp182 1
+jump 514 lessThan temp182 7
+op add temp0 temp0 7
+read :num bank5 16
+op div :num :num 64
+op ceil :num :num undefined
+set ::ret @counter
+set @counter 2
+write temp0 bank1 1
+write 1 bank1 0
+read temp186 bank1 0
+jump 528 notEqual temp186 0
+set temp0 0
+jump 533 equal temp1 1
+jump 596 always 0 0
+set temp1 -1
+set temp3 3
+set temp5 0
+op add temp187 temp0 2
+set temp188 0
+jump 544 always 0 0
+op add temp189 temp188 temp187
+op add temp190 temp188 136
+read temp191 bank3 temp190
+write temp191 bank1 temp189
+op add temp188 temp188 1
+jump 539 lessThan temp188 32
+op add temp0 temp0 32
+read !files bank2 4
+read !filesCap bank2 5
+read !free bank2 6
+read !total bank2 7
+set :num !files
+set ::ret @counter
+set @counter 2
+op add temp192 temp0 2
+set temp193 temp192
+write 47 bank1 temp193
+op add temp193 temp193 1
+op add temp0 temp0 1
+set :num !filesCap
+set ::ret @counter
+set @counter 2
+set :num !files
+set :all !filesCap
+set ::ret @counter
+set @counter 19
+op add temp194 temp0 2
+set temp195 temp194
+write 10 bank1 temp195
+op add temp195 temp195 1
+op add temp0 temp0 1
+op add temp196 temp0 2
+set temp197 0
+jump 578 always 0 0
+op add temp198 temp197 temp196
+op add temp199 temp197 168
+read temp200 bank3 temp199
+write temp200 bank1 temp198
+op add temp197 temp197 1
+jump 573 lessThan temp197 7
+op add temp0 temp0 7
+op sub temp201 !total !free
+set :num temp201
+set ::ret @counter
+set @counter 2
+op add temp202 temp0 2
+set temp203 temp202
+write 47 bank1 temp203
+op add temp203 temp203 1
+op add temp0 temp0 1
+set :num !total
+set ::ret @counter
+set @counter 2
+set :num temp201
+set :all !total
+set ::ret @counter
+set @counter 19
+jump 598 equal temp1 2
+jump 600 always 0 0
+set temp104 0
+jump 697 always 0 0
+op add temp204 temp1 3
+op add temp205 temp0 2
+write 2 bank1 temp205
+op add temp206 temp0 3
+write temp204 bank1 temp206
+op add temp207 temp0 4
+write 0 bank1 temp207
+op add temp0 temp0 3
+op add temp208 temp0 2
+set temp209 temp208
+write 62 bank1 temp209
+op add temp209 temp209 1
+op add temp0 temp0 1
+write temp0 bank1 1
+write 1 bank1 0
+read temp210 bank1 0
+jump 615 notEqual temp210 0
+set temp0 0
+jump 887 always 0 0
+jump 621 equal temp1 -1
+jump 624 always 0 0
+set temp3 0
+set temp1 temp4
+jump 50 always 0 0
+jump 626 equal temp1 0
+jump 676 always 0 0
+set temp3 -1
+op add temp211 temp0 2
+set temp212 0
+jump 635 always 0 0
+op add temp213 temp212 temp211
+op add temp214 temp212 0
+read temp215 bank3 temp214
+write temp215 bank1 temp213
+op add temp212 temp212 1
+jump 630 lessThan temp212 15
+op add temp0 temp0 15
+write temp0 bank1 1
+write 1 bank1 0
+read temp216 bank1 0
+jump 639 notEqual temp216 0
+set temp0 0
+control enabled switch3 false
+control enabled switch3 1
+op add temp217 @time 400
+control enabled switch1 true
+write 512 cell3 0
+write 64 cell3 1
+wait 0.02
+control enabled switch1 false
+jump 645 lessThan @time temp217
+control enabled switch3 0
+write 0 bank4 511
+write 512 bank4 504
+write temp4 bank4 501
+write 2 bank4 500
+read :state bank4 500
+jump 656 notEqual :state 0
+op add temp218 temp0 2
+write 1 bank1 temp218
+op add temp219 temp0 3
+write 32 bank1 temp219
+op add temp0 temp0 2
+write temp0 bank1 1
+write 1 bank1 0
+read temp220 bank1 0
+jump 665 notEqual temp220 0
+set temp0 0
+write 512 cell3 0
+write 64 cell3 1
+control enabled switch3 true
+op add temp221 @time 200
+control enabled switch1 false
+jump 672 lessThan @time temp221
+set temp3 -2
+end
+jump 678 equal temp1 1
+jump 694 always 0 0
+set temp3 6
+op add temp222 temp0 2
+set temp223 0
+jump 687 always 0 0
+op add temp224 temp223 temp222
+op add temp225 temp223 431
+read temp226 bank3 temp225
+write temp226 bank1 temp224
+op add temp223 temp223 1
+jump 682 lessThan temp223 19
+op add temp0 temp0 19
+write temp0 bank1 1
+write 1 bank1 0
+read temp227 bank1 0
+jump 691 notEqual temp227 0
+set temp0 0
+jump 696 equal temp1 2
+jump 734 always 0 0
+set temp104 1
+set temp1 -1
+set temp3 4
+set temp5 1
+op add temp228 temp0 2
+set temp229 0
+jump 708 always 0 0
+op add temp230 temp229 temp228
+op add temp231 temp229 175
+read temp232 bank3 temp231
+write temp232 bank1 temp230
+op add temp229 temp229 1
+jump 703 lessThan temp229 25
+op add temp0 temp0 25
+jump 712 equal temp104 0
+jump 722 always 0 0
+op add temp233 temp0 2
+set temp234 0
+jump 720 always 0 0
+op add temp235 temp234 temp233
+op add temp236 temp234 200
+read temp237 bank3 temp236
+write temp237 bank1 temp235
+op add temp234 temp234 1
+jump 715 lessThan temp234 64
+op add temp0 temp0 64
+jump 724 equal temp104 1
+jump 734 always 0 0
+op add temp238 temp0 2
+set temp239 0
+jump 732 always 0 0
+op add temp240 temp239 temp238
+op add temp241 temp239 264
+read temp242 bank3 temp241
+write temp242 bank1 temp240
+op add temp239 temp239 1
+jump 727 lessThan temp239 39
+op add temp0 temp0 39
+jump 736 notEqual temp1 1
+jump 754 always 0 0
+op add temp243 temp1 3
+op add temp244 temp0 2
+write 2 bank1 temp244
+op add temp245 temp0 3
+write temp243 bank1 temp245
+op add temp246 temp0 4
+write 0 bank1 temp246
+op add temp0 temp0 3
+op add temp247 temp0 2
+set temp248 temp247
+write 62 bank1 temp248
+op add temp248 temp248 1
+op add temp0 temp0 1
+write temp0 bank1 1
+write 1 bank1 0
+read temp249 bank1 0
+jump 751 notEqual temp249 0
+set temp0 0
+jump 887 always 0 0
+jump 757 equal temp1 -1
+jump 760 always 0 0
+set temp3 1
+set temp1 1
+jump 389 always 0 0
+jump 887 always 0 0
+jump 763 equal temp104 0
+jump 785 always 0 0
+jump 765 equal temp1 -1
+jump 768 always 0 0
+set temp3 1
+set temp1 2
+jump 389 always 0 0
+jump 770 equal temp1 0
+jump 785 always 0 0
+write 6 bank2 0
+op add temp250 temp0 2
+set temp251 0
+jump 779 always 0 0
+op add temp252 temp251 temp250
+op add temp253 temp251 0
+read temp254 bank3 temp253
+write temp254 bank1 temp252
+op add temp251 temp251 1
+jump 774 lessThan temp251 15
+op add temp0 temp0 15
+read :state bank2 0
+jump 781 notEqual :state 0
+set temp1 -1
+jump 50 always 0 0
+jump 787 equal temp104 1
+jump 810 always 0 0
+jump 789 equal temp1 -1
+jump 792 always 0 0
+set temp3 2
+set temp1 2
+jump 404 always 0 0
+jump 794 equal temp1 0
+jump 810 always 0 0
+write temp4 bank2 1
+write 4 bank2 0
+op add temp255 temp0 2
+set temp256 0
+jump 804 always 0 0
+op add temp257 temp256 temp255
+op add temp258 temp256 0
+read temp259 bank3 temp258
+write temp259 bank1 temp257
+op add temp256 temp256 1
+jump 799 lessThan temp256 15
+op add temp0 temp0 15
+read :state bank2 0
+jump 806 notEqual :state 0
+set temp1 -1
+jump 50 always 0 0
+jump 887 always 0 0
+set temp3 2
+set temp1 0
+jump 404 always 0 0
+jump 887 always 0 0
+op add temp260 temp0 2
+set temp261 0
+jump 823 always 0 0
+op add temp262 temp261 temp260
+op add temp263 temp261 0
+read temp264 bank3 temp263
+write temp264 bank1 temp262
+op add temp261 temp261 1
+jump 818 lessThan temp261 15
+op add temp0 temp0 15
+write temp0 bank1 1
+write 1 bank1 0
+read temp265 bank1 0
+jump 827 notEqual temp265 0
+set temp0 0
+write temp4 bank2 1
+write 8 bank2 0
+write temp103 bank2 10
+set temp266 0
+jump 840 always 0 0
+op add temp267 temp266 temp102
+read data bank1 temp267
+op add temp268 temp266 32
+write data bank2 temp268
+op add temp266 temp266 1
+jump 835 lessThan temp266 temp103
+write 1 bank2 9
+read :state bank2 9
+jump 842 notEqual :state 0
+set temp3 2
+set temp1 1
+jump 404 always 0 0
+jump 887 always 0 0
+jump 850 equal temp1 -1
+jump 853 always 0 0
+set temp3 1
+set temp1 0
+jump 389 always 0 0
+jump 855 equal temp1 0
+jump 858 always 0 0
+write 0 cell2 1
+set ::ret @counter
+set @counter 296
+jump 860 equal temp1 1
+jump 876 always 0 0
+set temp3 8
+op add temp269 temp0 2
+set temp270 0
+jump 869 always 0 0
+op add temp271 temp270 temp269
+op add temp272 temp270 431
+read temp273 bank3 temp272
+write temp273 bank1 temp271
+op add temp270 temp270 1
+jump 864 lessThan temp270 19
+op add temp0 temp0 19
+write temp0 bank1 1
+write 1 bank1 0
+read temp274 bank1 0
+jump 873 notEqual temp274 0
+set temp0 0
+jump 887 always 0 0
+write 1 cell2 1
+write temp102 cell2 2
+write temp103 cell2 3
+set ::ret @counter
+set @counter 296
+jump 887 always 0 0
+set temp3 0
+set temp1 -1
+jump 50 always 0 0
+jump 887 always 0 0
+jump 889 equal temp100 27
+jump 982 always 0 0
+jump 891 equal temp101 15
+jump 898 always 0 0
+jump 893 equal temp3 0
+jump 898 always 0 0
+op sub temp2 temp2 1
+jump 896 lessThan temp2 0
+jump 897 always 0 0
+set temp1 temp6
+jump 50 always 0 0
+jump 900 equal temp101 16
+jump 907 always 0 0
+jump 902 equal temp3 0
+jump 907 always 0 0
+op add temp2 temp2 1
+jump 905 greaterThan temp2 temp6
+jump 906 always 0 0
+set temp1 0
+jump 50 always 0 0
+jump 909 equal temp101 17
+jump 945 always 0 0
+op add temp275 temp1 3
+op add temp276 temp0 2
+write 2 bank1 temp276
+op add temp277 temp0 3
+write temp275 bank1 temp277
+op add temp278 temp0 4
+write 0 bank1 temp278
+op add temp0 temp0 3
+op add temp279 temp0 2
+set temp280 temp279
+write 32 bank1 temp280
+op add temp280 temp280 1
+op add temp0 temp0 1
+op sub temp1 temp1 1
+jump 925 lessThan temp1 -1
+jump 927 always 0 0
+set temp1 temp5
+op sub temp1 temp1 1
+op add temp281 temp1 3
+op add temp282 temp0 2
+write 2 bank1 temp282
+op add temp283 temp0 3
+write temp281 bank1 temp283
+op add temp284 temp0 4
+write 0 bank1 temp284
+op add temp0 temp0 3
+op add temp285 temp0 2
+set temp286 temp285
+write 62 bank1 temp286
+op add temp286 temp286 1
+op add temp0 temp0 1
+write temp0 bank1 1
+write 1 bank1 0
+read temp287 bank1 0
+jump 942 notEqual temp287 0
+set temp0 0
+jump 947 equal temp101 18
+jump 982 always 0 0
+op add temp288 temp1 3
+op add temp289 temp0 2
+write 2 bank1 temp289
+op add temp290 temp0 3
+write temp288 bank1 temp290
+op add temp291 temp0 4
+write 0 bank1 temp291
+op add temp0 temp0 3
+op add temp292 temp0 2
+set temp293 temp292
+write 32 bank1 temp293
+op add temp293 temp293 1
+op add temp0 temp0 1
+op add temp1 temp1 1
+jump 963 greaterThanEq temp1 temp5
+jump 964 always 0 0
+set temp1 -1
+op add temp294 temp1 3
+op add temp295 temp0 2
+write 2 bank1 temp295
+op add temp296 temp0 3
+write temp294 bank1 temp296
+op add temp297 temp0 4
+write 0 bank1 temp297
+op add temp0 temp0 3
+op add temp298 temp0 2
+set temp299 temp298
+write 62 bank1 temp299
+op add temp299 temp299 1
+op add temp0 temp0 1
+write temp0 bank1 1
+write 1 bank1 0
+read temp300 bank1 0
+jump 979 notEqual temp300 0
+set temp0 0
+end

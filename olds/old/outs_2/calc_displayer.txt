@@ -1,0 +1,105 @@
+set logic_generator_by "zzz"
+read temp0 cell1 58
+jump 4 equal temp0 true
+end
+read temp1 cell1 61
+read temp2 cell1 60
+jump 8 equal temp1 true
+jump 40 always 0 0
+write 69 cell1 40
+read temp3 cell1 40
+jump 12 always 0 0
+read temp3 cell1 40
+jump 11 notEqual temp3 0
+write 82 cell1 40
+read temp4 cell1 40
+jump 17 always 0 0
+read temp4 cell1 40
+jump 16 notEqual temp4 0
+write 82 cell1 40
+read temp5 cell1 40
+jump 22 always 0 0
+read temp5 cell1 40
+jump 21 notEqual temp5 0
+write 79 cell1 40
+read temp6 cell1 40
+jump 27 always 0 0
+read temp6 cell1 40
+jump 26 notEqual temp6 0
+write 82 cell1 40
+read temp7 cell1 40
+jump 32 always 0 0
+read temp7 cell1 40
+jump 31 notEqual temp7 0
+write 33 cell1 40
+read temp8 cell1 40
+jump 37 always 0 0
+read temp8 cell1 40
+jump 36 notEqual temp8 0
+write 0 cell1 61
+jump 103 always 0 0
+jump 42 lessThan temp2 0
+jump 47 always 0 0
+write 45 cell1 40
+read temp9 cell1 40
+jump 46 always 0 0
+read temp9 cell1 40
+jump 45 notEqual temp9 0
+op abs temp2 temp2 undefined
+op floor temp10 temp2 undefined
+set temp11 0
+op add temp12 temp10 0
+jump 55 always 0 0
+op add temp11 temp11 1
+op div temp12 temp12 10
+op floor temp12 temp12 undefined
+jump 52 notEqual temp12 0
+print temp11
+print " "
+op sub temp13 temp11 1
+op pow temp14 10 temp13
+op div temp15 temp10 temp14
+op floor temp15 temp15 undefined
+op mod temp15 temp15 10
+op add temp15 temp15 48
+write temp15 cell1 40
+read temp16 cell1 40
+jump 68 always 0 0
+read temp16 cell1 40
+jump 67 notEqual temp16 0
+op sub temp11 temp11 1
+jump 58 greaterThan temp11 0
+op mod temp17 temp2 1
+op mul temp17 temp17 10000000
+op mod temp18 temp17 1
+jump 76 greaterThan temp18 0.5
+jump 78 always 0 0
+op ceil temp17 temp17 undefined
+jump 79 always 0 0
+op floor temp17 temp17 undefined
+op div temp17 temp17 10000000
+jump 82 notEqual temp17 0
+jump 103 always 0 0
+write 44 cell1 40
+read temp19 cell1 40
+jump 86 always 0 0
+read temp19 cell1 40
+jump 85 notEqual temp19 0
+set temp20 0
+jump 102 always 0 0
+op mul temp17 temp17 10
+op floor temp21 temp17 undefined
+op add temp21 temp21 48
+write temp21 cell1 40
+read temp22 cell1 40
+jump 96 always 0 0
+read temp22 cell1 40
+jump 95 notEqual temp22 0
+op mod temp17 temp17 1
+jump 100 greaterThan temp20 6
+jump 101 always 0 0
+jump 103 always 0 0
+op add temp20 temp20 1
+jump 89 notEqual temp17 0
+write 0 cell1 58
+end

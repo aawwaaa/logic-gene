@@ -1,0 +1,88 @@
+set logic_generator_by "zzz"
+print "Idle."
+printflush message1
+set temp0 null
+sensor temp0 conveyor1 @firstItem
+jump 7 notEqual temp0 @tungsten
+end
+jump 4 notEqual temp0 @beryllium
+set temp1 0
+print "Read length."
+printflush message1
+set temp1 0
+set temp2 null
+set temp3 0
+set temp4 8
+op sub temp4 temp4 4
+set temp5 null
+sensor temp5 conveyor1 @firstItem
+jump 20 notEqual temp5 @tungsten
+end
+jump 17 equal temp5 null
+jump 17 equal temp5 @beryllium
+jump 17 equal temp5 @oxide
+set temp2 temp5
+set temp6 null
+sensor temp6 conveyor1 @firstItem
+jump 28 notEqual temp6 @tungsten
+end
+jump 25 notEqual temp6 @oxide
+control enabled conveyor1 false
+set temp3 -1
+set temp7 null
+jump 35 always 0 0
+op add temp3 temp3 1
+lookup item temp7 temp3
+jump 33 notEqual temp7 temp2
+control enabled conveyor1 true
+op shl temp3 temp3 temp4
+op or temp1 temp1 temp3
+jump 15 greaterThan temp4 0
+write temp1 bank1 257
+set temp8 -1
+set temp9 0
+jump 85 always 0 0
+print "Read data: "
+print temp9
+print "/"
+print temp1
+print "  Last: "
+print temp8
+print "."
+printflush message1
+set temp8 0
+set temp10 null
+set temp11 0
+set temp12 8
+op sub temp12 temp12 4
+set temp13 null
+sensor temp13 conveyor1 @firstItem
+jump 61 notEqual temp13 @tungsten
+end
+jump 58 equal temp13 null
+jump 58 equal temp13 @beryllium
+jump 58 equal temp13 @oxide
+set temp10 temp13
+set temp14 null
+sensor temp14 conveyor1 @firstItem
+jump 69 notEqual temp14 @tungsten
+end
+jump 66 notEqual temp14 @oxide
+control enabled conveyor1 false
+set temp11 -1
+set temp15 null
+jump 76 always 0 0
+op add temp11 temp11 1
+lookup item temp15 temp11
+jump 74 notEqual temp15 temp10
+control enabled conveyor1 true
+op shl temp11 temp11 temp12
+op or temp8 temp8 temp11
+jump 56 greaterThan temp12 0
+op add temp16 temp9 258
+write temp8 bank1 temp16
+write temp8 cell1 0
+op add temp9 temp9 1
+jump 44 lessThan temp9 temp1
+write true bank1 256
+end

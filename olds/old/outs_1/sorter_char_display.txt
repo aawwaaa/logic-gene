@@ -1,0 +1,191 @@
+set logic_generator_by "zzz"
+read temp0 cell1 0
+read temp1 bank1 temp0
+op and temp2 temp1 1
+jump 6 notEqual temp2 0
+jump 9 always 0 0
+control config sorter1 @metaglass
+control config sorter2 @metaglass
+jump 11 always 0 0
+control config sorter1 @coal
+control config sorter2 @coal
+op and temp3 temp1 2
+jump 14 notEqual temp3 0
+jump 17 always 0 0
+control config sorter3 @metaglass
+control config sorter4 @metaglass
+jump 19 always 0 0
+control config sorter3 @coal
+control config sorter4 @coal
+op and temp4 temp1 4
+jump 22 notEqual temp4 0
+jump 25 always 0 0
+control config sorter5 @metaglass
+control config sorter6 @metaglass
+jump 27 always 0 0
+control config sorter5 @coal
+control config sorter6 @coal
+op and temp5 temp1 8
+jump 30 notEqual temp5 0
+jump 33 always 0 0
+control config sorter7 @metaglass
+control config sorter8 @metaglass
+jump 35 always 0 0
+control config sorter7 @coal
+control config sorter8 @coal
+op and temp6 temp1 16
+jump 38 notEqual temp6 0
+jump 41 always 0 0
+control config sorter9 @metaglass
+control config sorter10 @metaglass
+jump 43 always 0 0
+control config sorter9 @coal
+control config sorter10 @coal
+op and temp7 temp1 32
+jump 46 notEqual temp7 0
+jump 49 always 0 0
+control config sorter11 @metaglass
+control config sorter12 @metaglass
+jump 51 always 0 0
+control config sorter11 @coal
+control config sorter12 @coal
+op and temp8 temp1 64
+jump 54 notEqual temp8 0
+jump 57 always 0 0
+control config sorter13 @metaglass
+control config sorter14 @metaglass
+jump 59 always 0 0
+control config sorter13 @coal
+control config sorter14 @coal
+op and temp9 temp1 128
+jump 62 notEqual temp9 0
+jump 65 always 0 0
+control config sorter15 @metaglass
+control config sorter16 @metaglass
+jump 67 always 0 0
+control config sorter15 @coal
+control config sorter16 @coal
+op and temp10 temp1 256
+jump 70 notEqual temp10 0
+jump 73 always 0 0
+control config sorter17 @metaglass
+control config sorter18 @metaglass
+jump 75 always 0 0
+control config sorter17 @coal
+control config sorter18 @coal
+op and temp11 temp1 512
+jump 78 notEqual temp11 0
+jump 81 always 0 0
+control config sorter19 @metaglass
+control config sorter20 @metaglass
+jump 83 always 0 0
+control config sorter19 @coal
+control config sorter20 @coal
+op and temp12 temp1 1024
+jump 86 notEqual temp12 0
+jump 89 always 0 0
+control config sorter21 @metaglass
+control config sorter22 @metaglass
+jump 91 always 0 0
+control config sorter21 @coal
+control config sorter22 @coal
+op and temp13 temp1 2048
+jump 94 notEqual temp13 0
+jump 97 always 0 0
+control config sorter23 @metaglass
+control config sorter24 @metaglass
+jump 99 always 0 0
+control config sorter23 @coal
+control config sorter24 @coal
+op and temp14 temp1 4096
+jump 102 notEqual temp14 0
+jump 105 always 0 0
+control config sorter25 @metaglass
+control config sorter26 @metaglass
+jump 107 always 0 0
+control config sorter25 @coal
+control config sorter26 @coal
+op and temp15 temp1 8192
+jump 110 notEqual temp15 0
+jump 113 always 0 0
+control config sorter27 @metaglass
+control config sorter28 @metaglass
+jump 115 always 0 0
+control config sorter27 @coal
+control config sorter28 @coal
+op and temp16 temp1 16384
+jump 118 notEqual temp16 0
+jump 121 always 0 0
+control config sorter29 @metaglass
+control config sorter30 @metaglass
+jump 123 always 0 0
+control config sorter29 @coal
+control config sorter30 @coal
+op and temp17 temp1 32768
+jump 126 notEqual temp17 0
+jump 129 always 0 0
+control config sorter31 @metaglass
+control config sorter32 @metaglass
+jump 131 always 0 0
+control config sorter31 @coal
+control config sorter32 @coal
+op and temp18 temp1 65536
+jump 134 notEqual temp18 0
+jump 137 always 0 0
+control config sorter33 @metaglass
+control config sorter34 @metaglass
+jump 139 always 0 0
+control config sorter33 @coal
+control config sorter34 @coal
+op and temp19 temp1 131072
+jump 142 notEqual temp19 0
+jump 145 always 0 0
+control config sorter35 @metaglass
+control config sorter36 @metaglass
+jump 147 always 0 0
+control config sorter35 @coal
+control config sorter36 @coal
+op and temp20 temp1 262144
+jump 150 notEqual temp20 0
+jump 153 always 0 0
+control config sorter37 @metaglass
+control config sorter38 @metaglass
+jump 155 always 0 0
+control config sorter37 @coal
+control config sorter38 @coal
+op and temp21 temp1 524288
+jump 158 notEqual temp21 0
+jump 161 always 0 0
+control config sorter39 @metaglass
+control config sorter40 @metaglass
+jump 163 always 0 0
+control config sorter39 @coal
+control config sorter40 @coal
+op and temp22 temp1 1048576
+jump 166 notEqual temp22 0
+jump 168 always 0 0
+control config sorter41 @metaglass
+jump 169 always 0 0
+control config sorter41 @coal
+op and temp23 temp1 2097152
+jump 172 notEqual temp23 0
+jump 174 always 0 0
+control config sorter42 @metaglass
+jump 175 always 0 0
+control config sorter42 @coal
+set temp24 0
+set temp25 temp0
+op equal temp25 temp25 0
+jump 189 always 0 0
+op add temp26 temp24 1
+read temp27 cell1 temp26
+jump 183 notEqual temp27 0
+set temp25 true
+jump 185 equal temp25 false
+set temp27 0
+write temp27 cell2 temp24
+jump 188 lessThan temp24 16
+jump 190 always 0 0
+op add temp24 temp24 1
+jump 179 always 0 0
+end

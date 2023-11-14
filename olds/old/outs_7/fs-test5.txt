@@ -1,0 +1,15 @@
+set logic_generator_by "zzz"
+set file 0
+set _ _
+sensor temp0 switch1 @enabled
+jump 2 equal temp0 0
+write file bank1 1
+write 4 bank1 0
+read :state bank1 0
+jump 7 notEqual :state 0
+read !ret bank1 2
+print "ret: "
+print !ret
+printflush message1
+control enabled switch1 0
+end

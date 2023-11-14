@@ -1,0 +1,42 @@
+set logic_generator_by "zzz"
+set file 0
+set _ _
+sensor temp0 switch1 @enabled
+jump 2 equal temp0 0
+write 0 bank1 9
+write 0 bank1 8
+write file bank1 1
+write 2 bank1 0
+print "---file["
+print file
+print "]---\n"
+set temp1 false
+set temp2 0
+jump 31 always 0 0
+read :state bank1 9
+jump 15 equal :state 0
+read temp2 bank1 10
+read temp1 bank1 8
+set temp3 0
+jump 26 always 0 0
+op add temp4 temp3 32
+read temp5 bank1 temp4
+print temp5
+print " "
+op add temp3 temp3 1
+jump 21 lessThan temp3 temp2
+write 0 bank1 9
+jump 30 notEqual temp1 0
+jump 31 always 0 0
+jump 32 always 0 0
+jump 15 equal temp1 0
+write 0 bank1 8
+read :state bank1 0
+jump 33 notEqual :state 0
+read !ret bank1 2
+print "\n---ret: "
+print !ret
+print "---"
+printflush message1
+control enabled switch1 0
+end

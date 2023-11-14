@@ -1,0 +1,95 @@
+set logic_generator_by "zzz"
+read temp0 cell1 7
+read temp1 cell1 0
+read temp2 cell1 1
+jump 73 lessThan temp0 3
+jump 45 lessThan temp0 4
+jump 16 lessThan temp0 5
+write 1 cell2 0
+wait 0.05
+write 0 cell2 0
+wait 0.05
+write 0 cell2 17
+write 1 bank2 1
+write 6 bank2 2
+write 1 bank2 0
+jump 93 always 0 0
+read temp3 cell2 17
+set temp4 3
+op add temp5 temp3 1
+write temp5 bank2 1
+write temp1 bank2 2
+jump 23 equal temp1 5
+jump 28 always 0 0
+op add temp6 temp3 2
+write temp6 bank2 1
+write temp2 bank2 3
+set temp4 4
+jump 34 always 0 0
+jump 30 equal temp1 27
+jump 34 always 0 0
+op add temp7 temp3 2
+write temp7 bank2 1
+write temp2 bank2 3
+set temp4 4
+set temp8 0
+jump 40 always 0 0
+read temp9 bank1 temp8
+op add temp10 temp8 temp4
+write temp9 bank2 temp10
+op add temp8 temp8 1
+jump 36 lessThan temp8 temp3
+write 1 bank2 0
+write 0 cell2 17
+write temp1 cell2 0
+jump 93 always 0 0
+read temp11 cell2 17
+set temp12 3
+op add temp13 temp11 1
+write temp13 bank2 1
+write temp1 bank2 2
+jump 52 equal temp1 5
+jump 57 always 0 0
+op add temp14 temp11 2
+write temp14 bank2 1
+write temp2 bank2 3
+set temp12 4
+jump 63 always 0 0
+jump 59 equal temp1 27
+jump 63 always 0 0
+op add temp15 temp11 2
+write temp15 bank2 1
+write temp2 bank2 3
+set temp12 4
+set temp16 0
+jump 69 always 0 0
+read temp17 bank1 temp16
+op add temp18 temp16 temp12
+write temp17 bank2 temp18
+op add temp16 temp16 1
+jump 65 lessThan temp16 temp11
+write 1 bank2 0
+write 0 cell2 17
+jump 93 always 0 0
+jump 91 lessThan temp0 1
+jump 88 lessThan temp0 2
+write 1 bank2 1
+write temp1 bank2 2
+jump 79 equal temp1 5
+jump 82 always 0 0
+write 2 bank2 1
+write temp2 bank2 3
+jump 86 always 0 0
+jump 84 equal temp1 27
+jump 86 always 0 0
+write 1 bank2 1
+write temp2 bank2 3
+write 1 bank2 0
+jump 93 always 0 0
+write temp1 cell2 0
+write temp1 cell2 16
+jump 93 always 0 0
+end
+jump 93 always 0 0
+write 0 cell1 7
+end

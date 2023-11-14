@@ -1,0 +1,601 @@
+set logic_generator_by "zzz"
+read temp0 cell1 8
+read temp1 cell1 9
+read temp2 cell1 10
+sensor temp3 switch1 @enabled
+jump 29 equal temp3 false
+control enabled switch1 false
+jump 9 equal temp0 true
+jump 14 always 0 0
+write 5 cell1 0
+write 27 cell1 1
+write 0 cell1 2
+write 2 cell1 7
+jump 29 always 0 0
+jump 16 equal temp1 true
+jump 20 always 0 0
+write 27 cell1 0
+write 0 cell1 1
+write 2 cell1 7
+jump 29 always 0 0
+jump 22 equal temp2 true
+jump 26 always 0 0
+write 27 cell1 0
+write 0 cell1 1
+write 2 cell1 7
+jump 29 always 0 0
+write 27 cell1 0
+write 0 cell1 1
+write 2 cell1 7
+sensor temp4 switch2 @enabled
+jump 54 equal temp4 false
+control enabled switch2 false
+jump 34 equal temp0 true
+jump 39 always 0 0
+write 5 cell1 0
+write 27 cell1 1
+write 1 cell1 2
+write 2 cell1 7
+jump 54 always 0 0
+jump 41 equal temp1 true
+jump 45 always 0 0
+write 27 cell1 0
+write 1 cell1 1
+write 2 cell1 7
+jump 54 always 0 0
+jump 47 equal temp2 true
+jump 51 always 0 0
+write 27 cell1 0
+write 1 cell1 1
+write 2 cell1 7
+jump 54 always 0 0
+write 27 cell1 0
+write 1 cell1 1
+write 2 cell1 7
+sensor temp5 switch3 @enabled
+jump 79 equal temp5 false
+control enabled switch3 false
+jump 59 equal temp0 true
+jump 64 always 0 0
+write 5 cell1 0
+write 27 cell1 1
+write 2 cell1 2
+write 2 cell1 7
+jump 79 always 0 0
+jump 66 equal temp1 true
+jump 70 always 0 0
+write 27 cell1 0
+write 2 cell1 1
+write 2 cell1 7
+jump 79 always 0 0
+jump 72 equal temp2 true
+jump 76 always 0 0
+write 27 cell1 0
+write 2 cell1 1
+write 2 cell1 7
+jump 79 always 0 0
+write 27 cell1 0
+write 2 cell1 1
+write 2 cell1 7
+sensor temp6 switch4 @enabled
+jump 104 equal temp6 false
+control enabled switch4 false
+jump 84 equal temp0 true
+jump 89 always 0 0
+write 5 cell1 0
+write 27 cell1 1
+write 3 cell1 2
+write 2 cell1 7
+jump 104 always 0 0
+jump 91 equal temp1 true
+jump 95 always 0 0
+write 27 cell1 0
+write 3 cell1 1
+write 2 cell1 7
+jump 104 always 0 0
+jump 97 equal temp2 true
+jump 101 always 0 0
+write 27 cell1 0
+write 3 cell1 1
+write 2 cell1 7
+jump 104 always 0 0
+write 27 cell1 0
+write 3 cell1 1
+write 2 cell1 7
+sensor temp7 switch5 @enabled
+jump 129 equal temp7 false
+control enabled switch5 false
+jump 109 equal temp0 true
+jump 114 always 0 0
+write 5 cell1 0
+write 27 cell1 1
+write 4 cell1 2
+write 2 cell1 7
+jump 129 always 0 0
+jump 116 equal temp1 true
+jump 120 always 0 0
+write 27 cell1 0
+write 4 cell1 1
+write 2 cell1 7
+jump 129 always 0 0
+jump 122 equal temp2 true
+jump 126 always 0 0
+write 27 cell1 0
+write 4 cell1 1
+write 2 cell1 7
+jump 129 always 0 0
+write 27 cell1 0
+write 4 cell1 1
+write 2 cell1 7
+sensor temp8 switch6 @enabled
+jump 154 equal temp8 false
+control enabled switch6 false
+jump 134 equal temp0 true
+jump 139 always 0 0
+write 5 cell1 0
+write 27 cell1 1
+write 5 cell1 2
+write 2 cell1 7
+jump 154 always 0 0
+jump 141 equal temp1 true
+jump 145 always 0 0
+write 27 cell1 0
+write 5 cell1 1
+write 2 cell1 7
+jump 154 always 0 0
+jump 147 equal temp2 true
+jump 151 always 0 0
+write 27 cell1 0
+write 5 cell1 1
+write 2 cell1 7
+jump 154 always 0 0
+write 27 cell1 0
+write 5 cell1 1
+write 2 cell1 7
+sensor temp9 switch7 @enabled
+jump 179 equal temp9 false
+control enabled switch7 false
+jump 159 equal temp0 true
+jump 164 always 0 0
+write 5 cell1 0
+write 27 cell1 1
+write 6 cell1 2
+write 2 cell1 7
+jump 179 always 0 0
+jump 166 equal temp1 true
+jump 170 always 0 0
+write 27 cell1 0
+write 6 cell1 1
+write 2 cell1 7
+jump 179 always 0 0
+jump 172 equal temp2 true
+jump 176 always 0 0
+write 27 cell1 0
+write 6 cell1 1
+write 2 cell1 7
+jump 179 always 0 0
+write 27 cell1 0
+write 6 cell1 1
+write 2 cell1 7
+sensor temp10 switch8 @enabled
+jump 204 equal temp10 false
+control enabled switch8 false
+jump 184 equal temp0 true
+jump 189 always 0 0
+write 5 cell1 0
+write 27 cell1 1
+write 7 cell1 2
+write 2 cell1 7
+jump 204 always 0 0
+jump 191 equal temp1 true
+jump 195 always 0 0
+write 27 cell1 0
+write 7 cell1 1
+write 2 cell1 7
+jump 204 always 0 0
+jump 197 equal temp2 true
+jump 201 always 0 0
+write 27 cell1 0
+write 7 cell1 1
+write 2 cell1 7
+jump 204 always 0 0
+write 27 cell1 0
+write 7 cell1 1
+write 2 cell1 7
+sensor temp11 switch9 @enabled
+jump 229 equal temp11 false
+control enabled switch9 false
+jump 209 equal temp0 true
+jump 214 always 0 0
+write 5 cell1 0
+write 27 cell1 1
+write 8 cell1 2
+write 2 cell1 7
+jump 229 always 0 0
+jump 216 equal temp1 true
+jump 220 always 0 0
+write 27 cell1 0
+write 8 cell1 1
+write 2 cell1 7
+jump 229 always 0 0
+jump 222 equal temp2 true
+jump 226 always 0 0
+write 27 cell1 0
+write 8 cell1 1
+write 2 cell1 7
+jump 229 always 0 0
+write 27 cell1 0
+write 8 cell1 1
+write 2 cell1 7
+sensor temp12 switch10 @enabled
+jump 254 equal temp12 false
+control enabled switch10 false
+jump 234 equal temp0 true
+jump 239 always 0 0
+write 5 cell1 0
+write 27 cell1 1
+write 9 cell1 2
+write 2 cell1 7
+jump 254 always 0 0
+jump 241 equal temp1 true
+jump 245 always 0 0
+write 27 cell1 0
+write 9 cell1 1
+write 2 cell1 7
+jump 254 always 0 0
+jump 247 equal temp2 true
+jump 251 always 0 0
+write 27 cell1 0
+write 9 cell1 1
+write 2 cell1 7
+jump 254 always 0 0
+write 27 cell1 0
+write 9 cell1 1
+write 2 cell1 7
+sensor temp13 switch11 @enabled
+jump 279 equal temp13 false
+control enabled switch11 false
+jump 259 equal temp0 true
+jump 264 always 0 0
+write 5 cell1 0
+write 27 cell1 1
+write 10 cell1 2
+write 2 cell1 7
+jump 279 always 0 0
+jump 266 equal temp1 true
+jump 270 always 0 0
+write 27 cell1 0
+write 10 cell1 1
+write 2 cell1 7
+jump 279 always 0 0
+jump 272 equal temp2 true
+jump 276 always 0 0
+write 27 cell1 0
+write 10 cell1 1
+write 2 cell1 7
+jump 279 always 0 0
+write 27 cell1 0
+write 10 cell1 1
+write 2 cell1 7
+sensor temp14 switch12 @enabled
+jump 304 equal temp14 false
+control enabled switch12 false
+jump 284 equal temp0 true
+jump 289 always 0 0
+write 5 cell1 0
+write 27 cell1 1
+write 11 cell1 2
+write 2 cell1 7
+jump 304 always 0 0
+jump 291 equal temp1 true
+jump 295 always 0 0
+write 27 cell1 0
+write 11 cell1 1
+write 2 cell1 7
+jump 304 always 0 0
+jump 297 equal temp2 true
+jump 301 always 0 0
+write 27 cell1 0
+write 11 cell1 1
+write 2 cell1 7
+jump 304 always 0 0
+write 27 cell1 0
+write 11 cell1 1
+write 2 cell1 7
+sensor temp15 switch13 @enabled
+jump 329 equal temp15 false
+control enabled switch13 false
+jump 309 equal temp0 true
+jump 314 always 0 0
+write 5 cell1 0
+write 27 cell1 1
+write 12 cell1 2
+write 2 cell1 7
+jump 329 always 0 0
+jump 316 equal temp1 true
+jump 320 always 0 0
+write 27 cell1 0
+write 12 cell1 1
+write 2 cell1 7
+jump 329 always 0 0
+jump 322 equal temp2 true
+jump 326 always 0 0
+write 27 cell1 0
+write 12 cell1 1
+write 2 cell1 7
+jump 329 always 0 0
+write 27 cell1 0
+write 12 cell1 1
+write 2 cell1 7
+sensor temp16 switch14 @enabled
+jump 354 equal temp16 false
+control enabled switch14 false
+jump 334 equal temp0 true
+jump 339 always 0 0
+write 5 cell1 0
+write 27 cell1 1
+write 13 cell1 2
+write 2 cell1 7
+jump 354 always 0 0
+jump 341 equal temp1 true
+jump 345 always 0 0
+write 27 cell1 0
+write 13 cell1 1
+write 2 cell1 7
+jump 354 always 0 0
+jump 347 equal temp2 true
+jump 351 always 0 0
+write 27 cell1 0
+write 13 cell1 1
+write 2 cell1 7
+jump 354 always 0 0
+write 27 cell1 0
+write 13 cell1 1
+write 2 cell1 7
+sensor temp17 switch15 @enabled
+jump 379 equal temp17 false
+control enabled switch15 false
+jump 359 equal temp0 true
+jump 364 always 0 0
+write 5 cell1 0
+write 27 cell1 1
+write 14 cell1 2
+write 2 cell1 7
+jump 379 always 0 0
+jump 366 equal temp1 true
+jump 370 always 0 0
+write 27 cell1 0
+write 14 cell1 1
+write 2 cell1 7
+jump 379 always 0 0
+jump 372 equal temp2 true
+jump 376 always 0 0
+write 27 cell1 0
+write 14 cell1 1
+write 2 cell1 7
+jump 379 always 0 0
+write 27 cell1 0
+write 14 cell1 1
+write 2 cell1 7
+sensor temp18 switch16 @enabled
+jump 404 equal temp18 false
+control enabled switch16 false
+jump 384 equal temp0 true
+jump 389 always 0 0
+write 5 cell1 0
+write 27 cell1 1
+write 15 cell1 2
+write 2 cell1 7
+jump 404 always 0 0
+jump 391 equal temp1 true
+jump 395 always 0 0
+write 27 cell1 0
+write 15 cell1 1
+write 2 cell1 7
+jump 404 always 0 0
+jump 397 equal temp2 true
+jump 401 always 0 0
+write 27 cell1 0
+write 15 cell1 1
+write 2 cell1 7
+jump 404 always 0 0
+write 27 cell1 0
+write 15 cell1 1
+write 2 cell1 7
+sensor temp19 switch17 @enabled
+jump 429 equal temp19 false
+control enabled switch17 false
+jump 409 equal temp0 true
+jump 414 always 0 0
+write 5 cell1 0
+write 27 cell1 1
+write 16 cell1 2
+write 2 cell1 7
+jump 429 always 0 0
+jump 416 equal temp1 true
+jump 420 always 0 0
+write 27 cell1 0
+write 16 cell1 1
+write 2 cell1 7
+jump 429 always 0 0
+jump 422 equal temp2 true
+jump 426 always 0 0
+write 27 cell1 0
+write 16 cell1 1
+write 2 cell1 7
+jump 429 always 0 0
+write 27 cell1 0
+write 16 cell1 1
+write 2 cell1 7
+sensor temp20 switch18 @enabled
+jump 454 equal temp20 false
+control enabled switch18 false
+jump 434 equal temp0 true
+jump 439 always 0 0
+write 5 cell1 0
+write 27 cell1 1
+write 17 cell1 2
+write 2 cell1 7
+jump 454 always 0 0
+jump 441 equal temp1 true
+jump 445 always 0 0
+write 27 cell1 0
+write 17 cell1 1
+write 2 cell1 7
+jump 454 always 0 0
+jump 447 equal temp2 true
+jump 451 always 0 0
+write 27 cell1 0
+write 17 cell1 1
+write 2 cell1 7
+jump 454 always 0 0
+write 27 cell1 0
+write 17 cell1 1
+write 2 cell1 7
+sensor temp21 switch19 @enabled
+jump 479 equal temp21 false
+control enabled switch19 false
+jump 459 equal temp0 true
+jump 464 always 0 0
+write 5 cell1 0
+write 27 cell1 1
+write 18 cell1 2
+write 2 cell1 7
+jump 479 always 0 0
+jump 466 equal temp1 true
+jump 470 always 0 0
+write 27 cell1 0
+write 18 cell1 1
+write 2 cell1 7
+jump 479 always 0 0
+jump 472 equal temp2 true
+jump 476 always 0 0
+write 27 cell1 0
+write 18 cell1 1
+write 2 cell1 7
+jump 479 always 0 0
+write 27 cell1 0
+write 18 cell1 1
+write 2 cell1 7
+sensor temp22 switch20 @enabled
+jump 504 equal temp22 false
+control enabled switch20 false
+jump 484 equal temp0 true
+jump 489 always 0 0
+write 5 cell1 0
+write 27 cell1 1
+write 19 cell1 2
+write 2 cell1 7
+jump 504 always 0 0
+jump 491 equal temp1 true
+jump 495 always 0 0
+write 27 cell1 0
+write 19 cell1 1
+write 2 cell1 7
+jump 504 always 0 0
+jump 497 equal temp2 true
+jump 501 always 0 0
+write 27 cell1 0
+write 19 cell1 1
+write 2 cell1 7
+jump 504 always 0 0
+write 27 cell1 0
+write 19 cell1 1
+write 2 cell1 7
+sensor temp23 switch21 @enabled
+jump 529 equal temp23 false
+control enabled switch21 false
+jump 509 equal temp0 true
+jump 514 always 0 0
+write 5 cell1 0
+write 27 cell1 1
+write 20 cell1 2
+write 2 cell1 7
+jump 529 always 0 0
+jump 516 equal temp1 true
+jump 520 always 0 0
+write 27 cell1 0
+write 20 cell1 1
+write 2 cell1 7
+jump 529 always 0 0
+jump 522 equal temp2 true
+jump 526 always 0 0
+write 27 cell1 0
+write 20 cell1 1
+write 2 cell1 7
+jump 529 always 0 0
+write 27 cell1 0
+write 20 cell1 1
+write 2 cell1 7
+sensor temp24 switch22 @enabled
+jump 554 equal temp24 false
+control enabled switch22 false
+jump 534 equal temp0 true
+jump 539 always 0 0
+write 5 cell1 0
+write 27 cell1 1
+write 21 cell1 2
+write 2 cell1 7
+jump 554 always 0 0
+jump 541 equal temp1 true
+jump 545 always 0 0
+write 27 cell1 0
+write 21 cell1 1
+write 3 cell1 7
+jump 554 always 0 0
+jump 547 equal temp2 true
+jump 551 always 0 0
+write 27 cell1 0
+write 21 cell1 1
+write 3 cell1 7
+jump 554 always 0 0
+write 27 cell1 0
+write 21 cell1 1
+write 3 cell1 7
+sensor temp25 switch23 @enabled
+jump 579 equal temp25 false
+control enabled switch23 false
+jump 559 equal temp0 true
+jump 564 always 0 0
+write 5 cell1 0
+write 10 cell1 1
+write 0 cell1 2
+write 2 cell1 7
+jump 579 always 0 0
+jump 566 equal temp1 true
+jump 570 always 0 0
+write 10 cell1 0
+write 0 cell1 1
+write 4 cell1 7
+jump 579 always 0 0
+jump 572 equal temp2 true
+jump 576 always 0 0
+write 10 cell1 0
+write 0 cell1 1
+write 4 cell1 7
+jump 579 always 0 0
+write 10 cell1 0
+write 0 cell1 1
+write 4 cell1 7
+sensor temp26 switch24 @enabled
+jump 600 equal temp26 false
+control enabled switch24 false
+jump 584 equal temp0 true
+jump 588 always 0 0
+write 5 cell1 0
+write 8 cell1 1
+write 2 cell1 7
+jump 600 always 0 0
+jump 590 equal temp1 true
+jump 593 always 0 0
+write 8 cell1 0
+write 1 cell1 7
+jump 600 always 0 0
+jump 595 equal temp2 true
+jump 598 always 0 0
+write 8 cell1 0
+write 1 cell1 7
+jump 600 always 0 0
+write 8 cell1 0
+write 1 cell1 7
+end

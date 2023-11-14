@@ -1,0 +1,423 @@
+set logic_generator_by "zzz"
+set temp0 0
+op add temp1 temp0 1
+getlink temp2 temp1
+jump 6 notEqual temp4 true
+jump 8 always 0 0
+write 0 temp2 0
+set temp4 true
+read temp5 bank1 256
+jump 50 equal temp5 true
+jump 12 equal temp3 true
+end
+set temp6 0
+jump 48 always 0 0
+op add temp7 temp6 32
+read temp8 temp2 temp7
+jump 18 equal temp8 true
+jump 47 always 0 0
+op add temp9 temp6 1
+getlink temp10 temp9
+write 1 bank1 1
+write 10 bank1 2
+write 1 bank1 0
+read temp11 bank1 0
+jump 23 notEqual temp11 0
+read temp12 temp10 64
+set temp13 2
+write temp12 bank1 1
+set temp14 0
+jump 35 always 0 0
+op add temp15 temp14 65
+read temp16 temp10 temp15
+write temp16 bank1 temp13
+op add temp13 temp13 1
+op add temp14 temp14 1
+jump 30 lessThan temp14 temp12
+write 1 bank1 0
+read temp17 bank1 0
+jump 37 notEqual temp17 0
+write 2 bank1 1
+write 10 bank1 2
+write 62 bank1 3
+write 1 bank1 0
+read temp18 bank1 0
+jump 43 notEqual temp18 0
+op add temp19 temp6 32
+write 0 temp2 temp19
+op add temp6 temp6 1
+jump 14 lessThan temp6 6
+end
+read temp20 bank1 257
+read temp21 bank1 258
+read temp22 bank1 259
+set temp23 259
+op sub temp24 temp20 1
+jump 57 equal temp21 5
+jump 60 always 0 0
+op add temp23 temp23 1
+op sub temp24 temp24 1
+jump 64 always 0 0
+jump 62 equal temp21 27
+jump 64 always 0 0
+op add temp23 temp23 1
+op sub temp24 temp24 1
+jump 66 equal temp21 6
+jump 185 always 0 0
+set temp25 0
+set temp26 1
+jump 74 always 0 0
+getlink temp27 temp26
+read temp28 temp27 0
+jump 73 equal temp28 0
+op add temp25 temp25 1
+op add temp26 temp26 1
+jump 69 lessThan temp26 @links
+write 28 bank1 1
+write 45 bank1 2
+write 45 bank1 3
+write 45 bank1 4
+write 67 bank1 5
+write 72 bank1 6
+write 65 bank1 7
+write 84 bank1 8
+write 32 bank1 9
+write 83 bank1 10
+write 69 bank1 11
+write 82 bank1 12
+write 86 bank1 13
+write 69 bank1 14
+write 82 bank1 15
+write 45 bank1 16
+write 45 bank1 17
+write 45 bank1 18
+write 10 bank1 19
+write 84 bank1 20
+write 72 bank1 21
+write 69 bank1 22
+write 82 bank1 23
+write 69 bank1 24
+write 32 bank1 25
+write 65 bank1 26
+write 82 bank1 27
+write 69 bank1 28
+write 32 bank1 29
+write 1 bank1 0
+read temp29 bank1 0
+jump 105 notEqual temp29 0
+write 1 bank1 1
+op add temp30 temp25 48
+write temp30 bank1 2
+write 1 bank1 0
+read temp31 bank1 0
+jump 111 notEqual temp31 0
+write 9 bank1 1
+write 32 bank1 2
+write 79 bank1 3
+write 78 bank1 4
+write 76 bank1 5
+write 73 bank1 6
+write 78 bank1 7
+write 69 bank1 8
+write 83 bank1 9
+write 46 bank1 10
+write 1 bank1 0
+read temp32 bank1 0
+jump 124 notEqual temp32 0
+write 23 bank1 1
+write 10 bank1 2
+write 80 bank1 3
+write 82 bank1 4
+write 69 bank1 5
+write 83 bank1 6
+write 83 bank1 7
+write 32 bank1 8
+write 67 bank1 9
+write 84 bank1 10
+write 82 bank1 11
+write 76 bank1 12
+write 43 bank1 13
+write 72 bank1 14
+write 32 bank1 15
+write 70 bank1 16
+write 79 bank1 17
+write 82 bank1 18
+write 32 bank1 19
+write 72 bank1 20
+write 69 bank1 21
+write 76 bank1 22
+write 80 bank1 23
+write 46 bank1 24
+write 1 bank1 0
+read temp33 bank1 0
+jump 151 notEqual temp33 0
+write 26 bank1 1
+write 10 bank1 2
+write 80 bank1 3
+write 76 bank1 4
+write 69 bank1 5
+write 65 bank1 6
+write 83 bank1 7
+write 69 bank1 8
+write 32 bank1 9
+write 69 bank1 10
+write 78 bank1 11
+write 84 bank1 12
+write 69 bank1 13
+write 82 bank1 14
+write 32 bank1 15
+write 89 bank1 16
+write 79 bank1 17
+write 85 bank1 18
+write 82 bank1 19
+write 32 bank1 20
+write 78 bank1 21
+write 65 bank1 22
+write 77 bank1 23
+write 69 bank1 24
+write 46 bank1 25
+write 10 bank1 26
+write 62 bank1 27
+write 1 bank1 0
+read temp34 bank1 0
+jump 181 notEqual temp34 0
+set temp3 false
+write 0 temp2 0
+jump 187 equal temp21 10
+jump 268 always 0 0
+jump 189 equal temp3 false
+jump 230 always 0 0
+set temp35 1
+write temp24 temp2 0
+set temp36 0
+jump 198 always 0 0
+op add temp37 temp36 temp23
+read temp38 bank1 temp37
+write temp38 temp2 temp35
+op add temp35 temp35 1
+op add temp36 temp36 1
+jump 193 lessThan temp36 temp24
+set temp3 true
+write 6 bank1 1
+write 78 bank1 2
+write 65 bank1 3
+write 77 bank1 4
+write 69 bank1 5
+write 58 bank1 6
+write 32 bank1 7
+write 1 bank1 0
+read temp39 bank1 0
+jump 208 notEqual temp39 0
+set temp40 2
+write temp24 bank1 1
+set temp41 0
+jump 219 always 0 0
+op add temp42 temp41 temp23
+read temp43 bank1 temp42
+write temp43 bank1 temp40
+op add temp40 temp40 1
+op add temp41 temp41 1
+jump 214 lessThan temp41 temp24
+write 1 bank1 0
+read temp44 bank1 0
+jump 221 notEqual temp44 0
+write 2 bank1 1
+write 10 bank1 2
+write 62 bank1 3
+write 1 bank1 0
+read temp45 bank1 0
+jump 227 notEqual temp45 0
+jump 268 always 0 0
+set temp46 65
+read temp47 temp2 0
+op add temp48 temp24 temp47
+op add temp48 temp48 1
+write temp48 temp2 64
+set temp49 0
+jump 242 always 0 0
+op add temp50 temp49 1
+read temp51 temp2 temp50
+write temp51 temp2 temp46
+op add temp46 temp46 1
+op add temp49 temp49 1
+jump 237 lessThan temp49 temp47
+write 58 temp2 temp46
+op add temp46 temp46 1
+set temp52 0
+jump 252 always 0 0
+op add temp53 temp52 temp23
+read temp54 bank1 temp53
+write temp54 temp2 temp46
+op add temp46 temp46 1
+op add temp52 temp52 1
+jump 247 lessThan temp52 temp24
+set temp55 1
+jump 261 always 0 0
+op add temp56 temp0 1
+jump 260 equal temp55 temp56
+getlink temp57 temp55
+op add temp58 temp0 32
+write 1 temp57 temp58
+op add temp55 temp55 1
+jump 255 lessThan temp55 @links
+write 2 bank1 1
+write 10 bank1 2
+write 62 bank1 3
+write 1 bank1 0
+read temp59 bank1 0
+jump 266 notEqual temp59 0
+jump 270 equal temp21 5
+jump 421 always 0 0
+jump 272 equal temp22 111
+jump 343 always 0 0
+set temp60 0
+set temp61 1
+jump 280 always 0 0
+getlink temp62 temp61
+read temp63 temp62 0
+jump 279 equal temp63 0
+op add temp60 temp60 1
+op add temp61 temp61 1
+jump 275 lessThan temp61 @links
+write 4 bank1 1
+write 10 bank1 2
+write 45 bank1 3
+write 45 bank1 4
+write 45 bank1 5
+write 1 bank1 0
+read temp64 bank1 0
+jump 287 notEqual temp64 0
+write 1 bank1 1
+op add temp65 temp60 48
+write temp65 bank1 2
+write 1 bank1 0
+read temp66 bank1 0
+jump 293 notEqual temp66 0
+write 11 bank1 1
+write 32 bank1 2
+write 79 bank1 3
+write 78 bank1 4
+write 76 bank1 5
+write 73 bank1 6
+write 78 bank1 7
+write 69 bank1 8
+write 83 bank1 9
+write 45 bank1 10
+write 45 bank1 11
+write 45 bank1 12
+write 1 bank1 0
+read temp67 bank1 0
+jump 308 notEqual temp67 0
+set temp68 1
+jump 336 always 0 0
+getlink temp69 temp68
+getlink temp70 temp68
+read temp71 temp70 0
+jump 317 notEqual temp71 0
+jump 335 always 0 0
+write 1 bank1 1
+write 10 bank1 2
+write 1 bank1 0
+read temp72 bank1 0
+jump 320 notEqual temp72 0
+set temp73 2
+write temp71 bank1 1
+set temp74 0
+jump 331 always 0 0
+op add temp75 temp74 1
+read temp76 temp69 temp75
+write temp76 bank1 temp73
+op add temp73 temp73 1
+op add temp74 temp74 1
+jump 326 lessThan temp74 temp71
+write 1 bank1 0
+read temp77 bank1 0
+jump 333 notEqual temp77 0
+op add temp68 temp68 1
+jump 312 lessThan temp68 @links
+write 2 bank1 1
+write 10 bank1 2
+write 62 bank1 3
+write 1 bank1 0
+read temp78 bank1 0
+jump 341 notEqual temp78 0
+jump 345 equal temp22 110
+jump 380 always 0 0
+write 29 bank1 1
+write 80 bank1 2
+write 76 bank1 3
+write 69 bank1 4
+write 65 bank1 5
+write 83 bank1 6
+write 69 bank1 7
+write 32 bank1 8
+write 69 bank1 9
+write 78 bank1 10
+write 84 bank1 11
+write 69 bank1 12
+write 82 bank1 13
+write 32 bank1 14
+write 89 bank1 15
+write 79 bank1 16
+write 85 bank1 17
+write 82 bank1 18
+write 32 bank1 19
+write 78 bank1 20
+write 69 bank1 21
+write 87 bank1 22
+write 32 bank1 23
+write 78 bank1 24
+write 65 bank1 25
+write 77 bank1 26
+write 69 bank1 27
+write 46 bank1 28
+write 10 bank1 29
+write 62 bank1 30
+write 1 bank1 0
+read temp79 bank1 0
+jump 376 notEqual temp79 0
+set temp3 false
+write 0 temp2 0
+jump 382 equal temp22 104
+jump 421 always 0 0
+write 35 bank1 1
+write 67 bank1 2
+write 84 bank1 3
+write 82 bank1 4
+write 76 bank1 5
+write 43 bank1 6
+write 79 bank1 7
+write 32 bank1 8
+write 79 bank1 9
+write 78 bank1 10
+write 76 bank1 11
+write 73 bank1 12
+write 78 bank1 13
+write 69 bank1 14
+write 83 bank1 15
+write 10 bank1 16
+write 67 bank1 17
+write 84 bank1 18
+write 82 bank1 19
+write 76 bank1 20
+write 43 bank1 21
+write 78 bank1 22
+write 32 bank1 23
+write 67 bank1 24
+write 72 bank1 25
+write 65 bank1 26
+write 78 bank1 27
+write 71 bank1 28
+write 69 bank1 29
+write 32 bank1 30
+write 78 bank1 31
+write 65 bank1 32
+write 77 bank1 33
+write 69 bank1 34
+write 10 bank1 35
+write 62 bank1 36
+write 1 bank1 0
+read temp80 bank1 0
+jump 419 notEqual temp80 0
+write 0 bank1 256
+end

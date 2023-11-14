@@ -1,0 +1,95 @@
+set logic_generator_by "zzz"
+set dataEveryPage 16
+set maxPage 0
+set dataBinAmount 8
+set dataBegin 8
+set sorterBegin 2
+write @time cell1 3
+write dataEveryPage cell1 4
+write maxPage cell1 5
+write dataBinAmount cell1 6
+write dataBegin cell1 7
+set opCode 0
+jump 16 always 0 0
+control config sorter1 @scrap
+read opCode cell1 0
+write @time cell1 3
+jump 13 equal opCode 0
+read page cell1 1
+op div dataBinAmount dataBinAmount 4
+op ceil dataBinAmount dataBinAmount undefined
+op mul temp0 dataBinAmount dataEveryPage
+op sub temp1 dataBinAmount 1
+op sub opCode opCode 1
+jump 56 lessThan opCode 1
+control config sorter1 @plastanium
+op mul temp2 dataEveryPage page
+op mul temp2 temp2 dataBinAmount
+op add temp2 temp2 sorterBegin
+set temp3 0
+set temp4 0
+jump 53 always 0 0
+write @time cell1 3
+op mod temp5 temp4 dataBinAmount
+jump 35 equal temp5 0
+jump 39 always 0 0
+op div temp6 temp4 dataBinAmount
+op floor temp6 temp6 undefined
+op add temp7 dataBegin temp6
+read temp3 cell1 temp7
+op div temp8 temp4 2
+op floor temp8 temp8 undefined
+op add temp8 temp8 1
+op mul temp8 temp8 dataBinAmount
+op mod temp9 temp4 dataBinAmount
+op sub temp8 temp8 temp9
+op add temp8 temp8 temp2
+op sub temp8 temp8 1
+getlink temp10 temp8
+op and temp11 temp3 15
+lookup item temp12 temp11
+control config temp10 temp12
+op shr temp3 temp3 4
+op add temp4 temp4 1
+jump 31 lessThan temp4 temp0
+write 0 cell1 0
+jump 94 always 0 0
+control config sorter1 @titanium
+op mul temp13 dataEveryPage page
+op mul temp13 temp13 dataBinAmount
+op add temp13 temp13 sorterBegin
+set temp14 0
+set temp15 0
+jump 91 always 0 0
+op shl temp14 temp14 4
+write @time cell1 3
+op add temp16 temp13 temp15
+getlink temp17 temp16
+sensor temp18 temp17 @config
+set temp19 0
+jump 71 always 0 0
+op add temp19 temp19 1
+lookup item temp20 temp19
+op notEqual temp21 temp20 temp18
+op notEqual temp22 temp20 null
+op land temp21 temp21 temp22
+jump 70 equal temp21 true
+print temp19
+print " "
+print temp18
+print " "
+op or temp14 temp14 temp19
+op mod temp23 temp15 dataBinAmount
+jump 84 equal temp23 temp1
+jump 90 always 0 0
+printflush message1
+op div temp24 temp15 dataBinAmount
+op floor temp24 temp24 undefined
+op add temp25 dataBegin temp24
+write temp14 cell1 temp25
+set temp14 0
+op add temp15 temp15 1
+jump 63 lessThan temp15 temp0
+write 0 cell1 0
+jump 94 always 0 0
+end

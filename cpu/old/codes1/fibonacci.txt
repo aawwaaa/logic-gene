@@ -1,0 +1,25 @@
+    const 1
+    sreg 16
+    const 1
+    sreg 17
+    const 0
+    sreg 18
+    const 0
+    sreg $address
+flag:
+    greg 17
+    write
+    ainc
+
+    greg 16
+    greg 17
+    add
+    sreg 18
+    greg 16
+    sreg 17
+    greg 18
+    sreg 16
+    
+    greg $address
+    sub 15
+    jnei :flag

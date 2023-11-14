@@ -1,0 +1,10 @@
+set logic_generator_by "zzz"
+set temp0 256
+jump 7 always 0 0
+read temp1 bank1 temp0
+print temp1
+print "\n"
+op add temp0 temp0 1
+jump 3 lessThan temp0 272
+printflush message1
+end

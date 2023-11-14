@@ -1,0 +1,12 @@
+set logic_generator_by "zzz"
+set ticks 50
+sensor temp1 switch1 @enabled
+jump 5 notEqual temp1 0
+end
+jump 7 greaterThan @time temp0
+end
+op add temp0 @time ticks
+sensor temp2 switch2 @enabled
+op notEqual temp2 temp2 true
+control enabled switch2 temp2
+end

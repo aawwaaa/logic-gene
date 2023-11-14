@@ -1,0 +1,310 @@
+set logic_generator_by "zzz"
+set _ _
+sensor temp0 switch1 @enabled
+jump 1 equal temp0 0
+write 0 bank1 9
+write 0 bank1 8
+write 7 bank1 0
+set temp1 false
+set temp2 0
+jump 300 always 0 0
+read :state bank1 9
+jump 10 equal :state 0
+read temp2 bank1 10
+read temp1 bank1 8
+set i 0
+jump 291 always 0 0
+op add temp3 i 32
+read id bank1 temp3
+print "["
+print id
+print "]: "
+op add temp4 i 34
+op add temp5 i 36
+read temp6 bank1 temp4
+set temp7 0
+jump 288 always 0 0
+op add temp8 temp7 temp5
+read temp9 bank1 temp8
+op mul temp10 temp9 2
+op add @counter @counter temp10
+set temp11 "[0]"
+jump 286 always 0 0
+set temp11 "[1]"
+jump 286 always 0 0
+set temp11 "[2]"
+jump 286 always 0 0
+set temp11 "[3]"
+jump 286 always 0 0
+set temp11 "[4]"
+jump 286 always 0 0
+set temp11 "[5]"
+jump 286 always 0 0
+set temp11 "[6]"
+jump 286 always 0 0
+set temp11 "[7]"
+jump 286 always 0 0
+set temp11 "[8]"
+jump 286 always 0 0
+set temp11 "[9]"
+jump 286 always 0 0
+set temp11 "\n"
+jump 286 always 0 0
+set temp11 "[11]"
+jump 286 always 0 0
+set temp11 "[12]"
+jump 286 always 0 0
+set temp11 "[13]"
+jump 286 always 0 0
+set temp11 "[14]"
+jump 286 always 0 0
+set temp11 "[15]"
+jump 286 always 0 0
+set temp11 "[16]"
+jump 286 always 0 0
+set temp11 "[17]"
+jump 286 always 0 0
+set temp11 "[18]"
+jump 286 always 0 0
+set temp11 "[19]"
+jump 286 always 0 0
+set temp11 "[20]"
+jump 286 always 0 0
+set temp11 "[21]"
+jump 286 always 0 0
+set temp11 "[22]"
+jump 286 always 0 0
+set temp11 "[23]"
+jump 286 always 0 0
+set temp11 "[24]"
+jump 286 always 0 0
+set temp11 "[25]"
+jump 286 always 0 0
+set temp11 "[26]"
+jump 286 always 0 0
+set temp11 "[27]"
+jump 286 always 0 0
+set temp11 "[28]"
+jump 286 always 0 0
+set temp11 "[29]"
+jump 286 always 0 0
+set temp11 "[30]"
+jump 286 always 0 0
+set temp11 "[31]"
+jump 286 always 0 0
+set temp11 " "
+jump 286 always 0 0
+set temp11 "!"
+jump 286 always 0 0
+set temp11 '"'
+jump 286 always 0 0
+set temp11 "#"
+jump 286 always 0 0
+set temp11 "$"
+jump 286 always 0 0
+set temp11 "%"
+jump 286 always 0 0
+set temp11 "&"
+jump 286 always 0 0
+set temp11 "'"
+jump 286 always 0 0
+set temp11 "("
+jump 286 always 0 0
+set temp11 ")"
+jump 286 always 0 0
+set temp11 "*"
+jump 286 always 0 0
+set temp11 "+"
+jump 286 always 0 0
+set temp11 ","
+jump 286 always 0 0
+set temp11 "-"
+jump 286 always 0 0
+set temp11 "."
+jump 286 always 0 0
+set temp11 "/"
+jump 286 always 0 0
+set temp11 "0"
+jump 286 always 0 0
+set temp11 "1"
+jump 286 always 0 0
+set temp11 "2"
+jump 286 always 0 0
+set temp11 "3"
+jump 286 always 0 0
+set temp11 "4"
+jump 286 always 0 0
+set temp11 "5"
+jump 286 always 0 0
+set temp11 "6"
+jump 286 always 0 0
+set temp11 "7"
+jump 286 always 0 0
+set temp11 "8"
+jump 286 always 0 0
+set temp11 "9"
+jump 286 always 0 0
+set temp11 ":"
+jump 286 always 0 0
+set temp11 ";"
+jump 286 always 0 0
+set temp11 "<"
+jump 286 always 0 0
+set temp11 "="
+jump 286 always 0 0
+set temp11 ">"
+jump 286 always 0 0
+set temp11 "?"
+jump 286 always 0 0
+set temp11 "@"
+jump 286 always 0 0
+set temp11 "A"
+jump 286 always 0 0
+set temp11 "B"
+jump 286 always 0 0
+set temp11 "C"
+jump 286 always 0 0
+set temp11 "D"
+jump 286 always 0 0
+set temp11 "E"
+jump 286 always 0 0
+set temp11 "F"
+jump 286 always 0 0
+set temp11 "G"
+jump 286 always 0 0
+set temp11 "H"
+jump 286 always 0 0
+set temp11 "I"
+jump 286 always 0 0
+set temp11 "J"
+jump 286 always 0 0
+set temp11 "K"
+jump 286 always 0 0
+set temp11 "L"
+jump 286 always 0 0
+set temp11 "M"
+jump 286 always 0 0
+set temp11 "N"
+jump 286 always 0 0
+set temp11 "O"
+jump 286 always 0 0
+set temp11 "P"
+jump 286 always 0 0
+set temp11 "Q"
+jump 286 always 0 0
+set temp11 "R"
+jump 286 always 0 0
+set temp11 "S"
+jump 286 always 0 0
+set temp11 "T"
+jump 286 always 0 0
+set temp11 "U"
+jump 286 always 0 0
+set temp11 "V"
+jump 286 always 0 0
+set temp11 "W"
+jump 286 always 0 0
+set temp11 "X"
+jump 286 always 0 0
+set temp11 "Y"
+jump 286 always 0 0
+set temp11 "Z"
+jump 286 always 0 0
+set temp11 "["
+jump 286 always 0 0
+set temp11 "\\"
+jump 286 always 0 0
+set temp11 "]"
+jump 286 always 0 0
+set temp11 "^"
+jump 286 always 0 0
+set temp11 "_"
+jump 286 always 0 0
+set temp11 "`"
+jump 286 always 0 0
+set temp11 "a"
+jump 286 always 0 0
+set temp11 "b"
+jump 286 always 0 0
+set temp11 "c"
+jump 286 always 0 0
+set temp11 "d"
+jump 286 always 0 0
+set temp11 "e"
+jump 286 always 0 0
+set temp11 "f"
+jump 286 always 0 0
+set temp11 "g"
+jump 286 always 0 0
+set temp11 "h"
+jump 286 always 0 0
+set temp11 "i"
+jump 286 always 0 0
+set temp11 "j"
+jump 286 always 0 0
+set temp11 "k"
+jump 286 always 0 0
+set temp11 "l"
+jump 286 always 0 0
+set temp11 "m"
+jump 286 always 0 0
+set temp11 "n"
+jump 286 always 0 0
+set temp11 "o"
+jump 286 always 0 0
+set temp11 "p"
+jump 286 always 0 0
+set temp11 "q"
+jump 286 always 0 0
+set temp11 "r"
+jump 286 always 0 0
+set temp11 "s"
+jump 286 always 0 0
+set temp11 "t"
+jump 286 always 0 0
+set temp11 "u"
+jump 286 always 0 0
+set temp11 "v"
+jump 286 always 0 0
+set temp11 "w"
+jump 286 always 0 0
+set temp11 "x"
+jump 286 always 0 0
+set temp11 "y"
+jump 286 always 0 0
+set temp11 "z"
+jump 286 always 0 0
+set temp11 "{"
+jump 286 always 0 0
+set temp11 "|"
+jump 286 always 0 0
+set temp11 "}"
+jump 286 always 0 0
+set temp11 "~"
+jump 286 always 0 0
+set temp11 "[127]"
+jump 286 always 0 0
+print temp11
+op add temp7 temp7 1
+jump 26 lessThan temp7 temp6
+print "\n"
+op add i i 16
+jump 16 lessThan i temp2
+jump 294 notEqual temp1 0
+jump 299 always 0 0
+write 1 bank1 8
+write 0 bank1 9
+read :state bank1 8
+jump 296 notEqual :state 0
+jump 300 always 0 0
+write 0 bank1 9
+jump 10 equal temp1 0
+write 0 bank1 8
+read :state bank1 0
+jump 302 notEqual :state 0
+read !ret bank1 2
+print "files: "
+print !ret
+printflush message1
+control enabled switch1 0
+end

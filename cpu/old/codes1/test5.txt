@@ -1,0 +1,6 @@
+flag:
+    const 1
+    outi 0
+    const 0
+    outi 0
+    jmpi :flag

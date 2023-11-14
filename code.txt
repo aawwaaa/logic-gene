@@ -1,0 +1,94 @@
+read data cell addr
+write data cell addr
+draw triangle x y x2 y2 x3 y3
+print "frog"
+drawflush display1
+printflush message1
+getlink result 0
+control enabled block1 0 0 0 0
+radar enemy any any distance turret1 1 result
+sensor result block1 @copper
+set result 0
+op add result a b
+lookup item result 0
+packcolor result 1 0 0 1
+wait 0.5
+stop
+end
+jump -1 notEqual x false
+ubind @poly
+ucontrol move 0 0 0 0 0
+uradar enemy any any distance 0 1 result
+ulocate building core true @copper outx outy found building
+
+jump -1 equal x false
+jump -1 notEqual x false
+jump -1 lessThan x false
+jump -1 lessThanEq x false
+jump -1 greaterThan x false
+jump -1 greaterThanEq x false
+jump -1 strictEqual x false
+
+draw clear r g b 0 0 0
+draw color r g b a 0 0
+draw col col 0 0 0 0 0
+draw stroke st 0 0 0 0 0
+draw line x y x2 y2 0 0
+draw lineRect x y w h 0 0
+draw rect x y w h 0 0
+draw poly x y s r ro 0
+draw linePoly x y s r ro 0
+draw triangle x y x2 y2 x3 y3
+draw image x y @copper 32 ro 0
+
+control enabled block1 1 0 0 0
+control shoot block1 1 2 3 0
+control shootp block1 1 2 0 0
+control config block1 1 0 0 0
+control color block1 1 0 0 0
+
+radar enemy ally player distance turret1 order result
+radar attacker flying boss health turret1 order result
+radar ground any any shield turret1 order result
+radar ground any any armor turret1 order result
+radar ground any any maxHealth turret1 order result
+
+lookup item result 0
+lookup liquid result 0
+lookup block result 0
+lookup unit result 0
+packcolor result 1 0 0 1
+
+ucontrol idle 0 0 0 0 0
+ucontrol stop 0 0 0 0 0
+ucontrol move x y 0 0 0
+ucontrol approach x y r 0 0
+ucontrol pathfind x y 0 0 0
+ucontrol boost e 0 0 0 0
+ucontrol target x y s 0 0
+ucontrol targetp t s 0 0 0
+ucontrol itemDrop t a 0 0 0
+ucontrol itemTake f i a 0 0
+ucontrol payDrop 0 0 0 0 0
+ucontrol payTake takeUnits 0 0 0 0
+ucontrol payEnter 0 0 0 0 0
+ucontrol mine x y 0 0 0
+ucontrol flag f 0 0 0 0
+ucontrol build x y b r c
+ucontrol unbind 0 0 0 0 0
+
+ucontrol getBlock x y type building floor
+ucontrol within x y r 0 0
+
+uradar enemy any any distance 0 1 result
+ulocate ore core true @copper outx outy found building
+ulocate building core true @copper outx outy found building
+ulocate building storage true @copper outx outy found building
+ulocate building generator true @copper outx outy found building
+ulocate building turret true @copper outx outy found building
+ulocate building factory true @copper outx outy found building
+ulocate building repair true @copper outx outy found building
+ulocate building battery true @copper outx outy found building
+ulocate building reactor true @copper outx outy found building
+ulocate spawn core true @copper outx outy found building
+ulocate damaged core true @copper outx outy found building

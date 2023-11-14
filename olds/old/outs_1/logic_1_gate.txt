@@ -1,0 +1,34 @@
+set logic_generator_by "zzz"
+sensor temp0 switch1 @enabled
+op notEqual temp0 temp0 1
+jump 5 notEqual switch2 null
+end
+control enabled switch2 temp0
+jump 8 notEqual switch3 null
+end
+control enabled switch3 temp0
+jump 11 notEqual switch4 null
+end
+control enabled switch4 temp0
+jump 14 notEqual switch5 null
+end
+control enabled switch5 temp0
+jump 17 notEqual switch6 null
+end
+control enabled switch6 temp0
+jump 20 notEqual switch7 null
+end
+control enabled switch7 temp0
+jump 23 notEqual switch8 null
+end
+control enabled switch8 temp0
+jump 26 notEqual switch9 null
+end
+control enabled switch9 temp0
+jump 29 notEqual switch10 null
+end
+control enabled switch10 temp0
+jump 32 notEqual switch11 null
+end
+control enabled switch11 temp0
+end

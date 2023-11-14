@@ -1,0 +1,7 @@
+set logic_generator_by "zzz"
+read temp0 bank1 128
+jump 4 equal temp0 true
+end
+write 0 bank1 128
+write 0 bank1 129
+end

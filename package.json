@@ -4,7 +4,7 @@
   "description": "",
   "main": "main.ts",
   "scripts": {
-    "start": "ts-node-dev --respawn --transpile-only main.ts"
+    "start": "ts-node-dev --respawn --transpile-only --watch \"*.ts,./cpu/codes/*.txt\" main.ts"
   },
   "author": "",
   "license": "ISC",

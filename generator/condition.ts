@@ -1,4 +1,4 @@
-import { Condition, jumpToAfter, always, Line, previusLine, Var, variable, operation, counter, SingleResult, getValue, SingleResultArr } from "./core"
+import { Condition, jumpToAfter, always, Line, previusLine, Var, variable, operation, counter, SingleResult, getValue, SingleResultArr, Value, Building, read } from "./core"
 
 export function ifThen(cond: Condition, then: ()=>void, elses?: ()=>void){
     const p1 = jumpToAfter(cond)
@@ -79,14 +79,19 @@ export function switchSplit(value: Var<number>, lines: (()=>void)[]){
     return line
 }
 
-export function switchCounter(value: Var<number>, length: number, lines: (()=>void)[]){
+export function switchCounter(value: Var<number>, length: number, lines: (()=>void)[], noJump = false){
     const jumps = []
-    const temp = variable()
-    const line = operation("mul", value, length + 1).to(temp)
-    counter.add(temp)
+    let line;
+    if(noJump){
+        line = operation("add", counter, value).to(counter)
+    }else{
+        const temp = variable()
+        line = operation("mul", value, length + 1).to(temp)
+        counter.add(temp)
+    }
     lines.forEach(a => {
         a()
-        jumps.push(jumpToAfter(always))
+        if(!noJump) jumps.push(jumpToAfter(always))
     })
     jumps.forEach(a => a.here())
     return line
@@ -100,10 +105,36 @@ export function switchValue<T>(value: Var<number>, values: T[]): SingleResult<T>
     return new SingleResultArr(results)
 }
 
+export function switchCounterJump(value: Var<number>, lines: (()=>void)[]){
+    const jumpsTo = []
+    const jumps = []
+    const line = switchCounter(value, 1, lines.map(a => () => {
+        const jump = jumpToAfter(always)
+        jumpsTo.push(jump)
+    }), true)
+    lines.map(a => {
+        jumpsTo.shift().here()
+        a()
+        jumps.push(jumpToAfter(always))
+    })
+    jumps.forEach(a => a.here())
+    return line
+}
+
 export function init(body: ()=>void){
     const inited = variable()
     return ifThen(inited.notEqual(true), () => {
         body()
         inited.set(true)
     }).next()
+}
+
+export function waitState(cell: Value<Building>, addr: Value<number>, targetValue: Value<number>){
+    const i = variable(":state")
+    doWhileLoop(()=>i.notEqual(targetValue), ()=>read(cell, addr).to(i))
+}
+
+export function waitStateNe(cell: Value<Building>, addr: Value<number>, defValue: Value<number>){
+    const i = variable(":state")
+    doWhileLoop(()=>i.equal(defValue), ()=>read(cell, addr).to(i))
 }

@@ -1,0 +1,17 @@
+set logic_generator_by "zzz"
+sensor :clock switch1 @enabled
+read temp0 cell1 0
+op div temp1 temp0 512
+op floor temp1 temp1 undefined
+op add temp1 temp1 2
+getlink temp1 temp1
+op mod temp0 temp0 512
+jump 1 notEqual :clock true
+read temp2 cell1 2
+jump 12 notEqual temp2 0
+end
+read temp3 cell1 3
+sensor :clock switch1 @enabled
+jump 13 notEqual :clock false
+write temp3 temp1 temp0
+end

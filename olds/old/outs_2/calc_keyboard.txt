@@ -1,0 +1,46 @@
+set logic_generator_by "zzz"
+sensor temp0 switch1 @enabled
+jump 5 equal temp0 false
+control enabled switch1 false
+write 44 cell1 0
+sensor temp1 switch2 @enabled
+jump 9 equal temp1 false
+control enabled switch2 false
+write 43 cell1 0
+sensor temp2 switch3 @enabled
+jump 13 equal temp2 false
+control enabled switch3 false
+write 45 cell1 0
+sensor temp3 switch4 @enabled
+jump 17 equal temp3 false
+control enabled switch4 false
+write 94 cell1 0
+sensor temp4 switch5 @enabled
+jump 21 equal temp4 false
+control enabled switch5 false
+write 88 cell1 0
+sensor temp5 switch6 @enabled
+jump 25 equal temp5 false
+control enabled switch6 false
+write 47 cell1 0
+sensor temp6 switch7 @enabled
+jump 29 equal temp6 false
+control enabled switch7 false
+write 37 cell1 0
+sensor temp7 switch8 @enabled
+jump 33 equal temp7 false
+control enabled switch8 false
+write 40 cell1 0
+sensor temp8 switch9 @enabled
+jump 37 equal temp8 false
+control enabled switch9 false
+write 41 cell1 0
+sensor temp9 switch10 @enabled
+jump 41 equal temp9 false
+control enabled switch10 false
+write 8 cell1 0
+sensor temp10 switch11 @enabled
+jump 45 equal temp10 false
+control enabled switch11 false
+write 1 cell1 0
+end

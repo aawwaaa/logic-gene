@@ -17,8 +17,8 @@ const dataBegin = variable("dataBegin").set(8)
 7: dataBegin
 */
 const cell = build("cell1")
-const status = build("sorter33")
-const sorterBegin = variable("sorterBegin").set(1)
+const status = control(build("sorter1"))
+const sorterBegin = variable("sorterBegin").set(2)
 
 write(cell, 3, time)
 write(cell, 4, dataEveryPage)
@@ -28,7 +28,7 @@ write(cell, 7, dataBegin)
 
 const opCode = variable("opCode").set(0)
 whileLoop(() => opCode.equal(0), () => {
-    control(status).config(item("scrap"))
+    status.config(item("scrap"))
     read(cell, 0).to(opCode)
     write(cell, 3, time)
 })
@@ -38,7 +38,7 @@ const sortersEveryPage = dataBinAmount.toMul(dataEveryPage)
 const a = sortersEveryData.toSub(1)
 
 switchSplit(opCode.sub(1), [() => {
-    control(status).config(item("titanium"))
+    status.config(item("titanium"))
     const sorterLinkBegin = dataEveryPage.toMul(page).mul(sortersEveryData).add(sorterBegin)
     const currentNumber = variable().set(0)
     forLoop(()=>variable().set(0), v=>v.lessThan(sortersEveryPage), v=>v.add(1), v => {
@@ -62,7 +62,7 @@ switchSplit(opCode.sub(1), [() => {
     })
     write(cell, 0, 0)
 }, () => {
-    control(status).config(item("plastanium"))
+    status.config(item("plastanium"))
     const sorterLinkBegin = dataEveryPage.toMul(page).mul(sortersEveryData).add(sorterBegin)
     const currentNumber = variable().set(0)
     forLoop(()=>variable().set(0), v=>v.lessThan(sortersEveryPage), v=>v.add(1), v => {

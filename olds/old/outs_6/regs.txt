@@ -1,0 +1,37 @@
+set logic_generator_by "zzz"
+print "---registers---"
+print "\n[0]pc="
+read temp0 cell1 0
+print temp0
+print "\n[1]sp="
+read temp1 cell1 1
+print temp1
+print "\n[2]args="
+read temp2 cell1 2
+print temp2
+print "\n[3]locals="
+read temp3 cell1 3
+print temp3
+print "\n[4]int="
+read temp4 cell1 4
+print temp4
+print "\n[8]address="
+read temp5 cell1 8
+print temp5
+print "\n[9]loop="
+read temp6 cell1 9
+print temp6
+print "\n[10]retval="
+read temp7 cell1 10
+print temp7
+print "\n[32]intproc="
+read temp8 cell1 32
+print temp8
+print "\n[62]command="
+read temp9 cell1 62
+print temp9
+print "\n[63]commandData="
+read temp10 cell1 63
+print temp10
+printflush message1
+end

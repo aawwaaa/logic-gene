@@ -1,5 +1,6 @@
 let i = 0
 let buffer: Line[] = []
+let _noprint = false
 
 export type Value<T> = T | Var<T>
 
@@ -11,8 +12,8 @@ type item = "copper"|"lead"|"metaglass"|"graphite"|"sand"|"coal"|"titanium"|"tho
 type liquid = "water"|"slag"|"oil"|"cryofluid"|"neoplasm"|"arkycite"|"gallium"|"ozone"|"hydrogen"|"nitrogen"|"cyanogen"
 type unitType = "dagger"|"mace"|"fortress"|"scepter"|"reign"|"nova"|"pulsar"|"quasar"|"vela"|"corvus"|"crawler"|"atrax"|"spiroct"|"arkyid"|"toxopid"|"flare"|"horizon"|"zenith"|"antumbra"|"eclipse"|"mono"|"poly"|"mega"|"quad"|"oct"|"risso"|"minke"|"bryde"|"sei"|"omura"|"retusa"|"oxynoe"|"cyerce"|"aegires"|"navanax"|"alpha"|"beta"|"gamma"|"stell"|"locus"|"precept"|"vanquish"|"conquer"|"merui"|"cleroi"|"anthicus"|"anthicus-missile"|"tecta"|"collaris"|"elude"|"avert"|"obviate"|"quell"|"quell-missile"|"disrupt"|"disrupt-missile"|"renale"|"latum"|"evoke"|"incite"|"emanate"|"block"|"manifold"|"assembly-drone"|"scathe-missile"|"turret-unit-build-tower"
 type statusEffect = "none"|"burning"|"freezing"|"unmoving"|"slow"|"wet"|"muddy"|"melting"|"sapped"|"electrified"|"spore-slowed"|"tarred"|"overdrive"|"overclock"|"shielded"|"boss"|"shocked"|"blasted"|"corroded"|"disarmed"|"invincible"
-type block = "air"|"spawn"|"cliff"|"build1"|"build2"|"build3"|"build4"|"build5"|"build6"|"build7"|"build8"|"build9"|"build10"|"build11"|"build12"|"build13"|"build14"|"build15"|"build16"|"deep-water"|"shallow-water"|"tainted-water"|"deep-tainted-water"|"darksand-tainted-water"|"sand-water"|"darksand-water"|"tar"|"pooled-cryofluid"|"molten-slag"|"space"|"empty"|"stone"|"crater-stone"|"char"|"basalt"|"hotrock"|"magmarock"|"sand-floor"|"darksand"|"dirt"|"mud"|"dacite"|"rhyolite"|"rhyolite-crater"|"rough-rhyolite"|"regolith"|"yellow-stone"|"carbon-stone"|"ferric-stone"|"ferric-craters"|"beryllic-stone"|"crystalline-stone"|"crystal-floor"|"yellow-stone-plates"|"red-stone"|"dense-red-stone"|"red-ice"|"arkycite-floor"|"arkyic-stone"|"rhyolite-vent"|"carbon-vent"|"arkyic-vent"|"yellow-stone-vent"|"red-stone-vent"|"crystalline-vent"|"redmat"|"bluemat"|"grass"|"salt"|"snow"|"ice"|"ice-snow"|"shale"|"moss"|"core-zone"|"spore-moss"|"stone-wall"|"spore-wall"|"dirt-wall"|"dacite-wall"|"ice-wall"|"snow-wall"|"dune-wall"|"regolith-wall"|"yellow-stone-wall"|"rhyolite-wall"|"carbon-wall"|"ferric-stone-wall"|"beryllic-stone-wall"|"arkyic-wall"|"crystalline-stone-wall"|"red-ice-wall"|"red-stone-wall"|"red-diamond-wall"|"sand-wall"|"salt-wall"|"shrubs"|"shale-wall"|"spore-pine"|"snow-pine"|"pine"|"white-tree-dead"|"white-tree"|"spore-cluster"|"redweed"|"pur-bush"|"yellowcoral"|"boulder"|"snow-boulder"|"shale-boulder"|"sand-boulder"|"dacite-boulder"|"basalt-boulder"|"carbon-boulder"|"ferric-boulder"|"beryllic-boulder"|"yellow-stone-boulder"|"arkyic-boulder"|"crystal-cluster"|"vibrant-crystal-cluster"|"crystal-blocks"|"crystal-orbs"|"crystalline-boulder"|"red-ice-boulder"|"rhyolite-boulder"|"red-stone-boulder"|"metal-floor"|"metal-floor-damaged"|"metal-floor-2"|"metal-floor-3"|"metal-floor-4"|"metal-floor-5"|"dark-panel-1"|"dark-panel-2"|"dark-panel-3"|"dark-panel-4"|"dark-panel-5"|"dark-panel-6"|"dark-metal"|"pebbles"|"tendrils"|"ore-copper"|"ore-lead"|"ore-scrap"|"ore-coal"|"ore-titanium"|"ore-thorium"|"ore-beryllium"|"ore-tungsten"|"ore-crystal-thorium"|"ore-wall-thorium"|"ore-wall-beryllium"|"graphitic-wall"|"ore-wall-tungsten"|"graphite-press"|"multi-press"|"silicon-smelter"|"silicon-crucible"|"kiln"|"plastanium-compressor"|"phase-weaver"|"surge-smelter"|"cryofluid-mixer"|"pyratite-mixer"|"blast-mixer"|"melter"|"separator"|"disassembler"|"spore-press"|"pulverizer"|"coal-centrifuge"|"incinerator"|"silicon-arc-furnace"|"electrolyzer"|"atmospheric-concentrator"|"oxidation-chamber"|"electric-heater"|"slag-heater"|"phase-heater"|"heat-redirector"|"heat-router"|"slag-incinerator"|"carbide-crucible"|"slag-centrifuge"|"surge-crucible"|"cyanogen-synthesizer"|"phase-synthesizer"|"heat-reactor"|"copper-wall"|"copper-wall-large"|"titanium-wall"|"titanium-wall-large"|"plastanium-wall"|"plastanium-wall-large"|"thorium-wall"|"thorium-wall-large"|"phase-wall"|"phase-wall-large"|"surge-wall"|"surge-wall-large"|"door"|"door-large"|"scrap-wall"|"scrap-wall-large"|"scrap-wall-huge"|"scrap-wall-gigantic"|"thruster"|"beryllium-wall"|"beryllium-wall-large"|"tungsten-wall"|"tungsten-wall-large"|"blast-door"|"reinforced-surge-wall"|"reinforced-surge-wall-large"|"carbide-wall"|"carbide-wall-large"|"shielded-wall"|"mender"|"mend-projector"|"overdrive-projector"|"overdrive-dome"|"force-projector"|"shock-mine"|"radar"|"build-tower"|"regen-projector"|"shockwave-tower"|"shield-projector"|"large-shield-projector"|"conveyor"|"titanium-conveyor"|"plastanium-conveyor"|"armored-conveyor"|"junction"|"bridge-conveyor"|"phase-conveyor"|"sorter"|"inverted-sorter"|"router"|"distributor"|"overflow-gate"|"underflow-gate"|"mass-driver"|"duct"|"armored-duct"|"duct-router"|"overflow-duct"|"underflow-duct"|"duct-bridge"|"duct-unloader"|"surge-conveyor"|"surge-router"|"unit-cargo-loader"|"unit-cargo-unload-point"|"mechanical-pump"|"rotary-pump"|"impulse-pump"|"conduit"|"pulse-conduit"|"plated-conduit"|"liquid-router"|"liquid-container"|"liquid-tank"|"liquid-junction"|"bridge-conduit"|"phase-conduit"|"reinforced-pump"|"reinforced-conduit"|"reinforced-liquid-junction"|"reinforced-bridge-conduit"|"reinforced-liquid-router"|"reinforced-liquid-container"|"reinforced-liquid-tank"|"power-node"|"power-node-large"|"surge-tower"|"diode"|"battery"|"battery-large"|"combustion-generator"|"thermal-generator"|"steam-generator"|"differential-generator"|"rtg-generator"|"solar-panel"|"solar-panel-large"|"thorium-reactor"|"impact-reactor"|"beam-node"|"beam-tower"|"beam-link"|"turbine-condenser"|"chemical-combustion-chamber"|"pyrolysis-generator"|"flux-reactor"|"neoplasia-reactor"|"mechanical-drill"|"pneumatic-drill"|"laser-drill"|"blast-drill"|"water-extractor"|"cultivator"|"oil-extractor"|"vent-condenser"|"cliff-crusher"|"plasma-bore"|"large-plasma-bore"|"impact-drill"|"eruption-drill"|"core-shard"|"core-foundation"|"core-nucleus"|"core-bastion"|"core-citadel"|"core-acropolis"|"container"|"vault"|"unloader"|"reinforced-container"|"reinforced-vault"|"duo"|"scatter"|"scorch"|"hail"|"wave"|"lancer"|"arc"|"parallax"|"swarmer"|"salvo"|"segment"|"tsunami"|"fuse"|"ripple"|"cyclone"|"foreshadow"|"spectre"|"meltdown"|"breach"|"diffuse"|"sublimate"|"titan"|"disperse"|"afflict"|"lustre"|"scathe"|"smite"|"malign"|"ground-factory"|"air-factory"|"naval-factory"|"additive-reconstructor"|"multiplicative-reconstructor"|"exponential-reconstructor"|"tetrative-reconstructor"|"repair-point"|"repair-turret"|"tank-fabricator"|"ship-fabricator"|"mech-fabricator"|"tank-refabricator"|"mech-refabricator"|"ship-refabricator"|"prime-refabricator"|"tank-assembler"|"ship-assembler"|"mech-assembler"|"basic-assembler-module"|"unit-repair-tower"|"payload-conveyor"|"payload-router"|"reinforced-payload-conveyor"|"reinforced-payload-router"|"payload-mass-driver"|"large-payload-mass-driver"|"small-deconstructor"|"deconstructor"|"constructor"|"large-constructor"|"payload-loader"|"payload-unloader"|"power-source"|"power-void"|"item-source"|"item-void"|"liquid-source"|"liquid-void"|"payload-source"|"payload-void"|"heat-source"|"illuminator"|"legacy-mech-pad"|"legacy-unit-factory"|"legacy-unit-factory-air"|"legacy-unit-factory-ground"|"command-center"|"launch-pad"|"interplanetary-accelerator"|"message"|"switch"|"micro-processor"|"logic-processor"|"hyper-processor"|"memory-cell"|"memory-bank"|"logic-display"|"large-logic-display"|"canvas"|"reinforced-message"|"world-processor"|"world-cell"|"world-message"
-type prop = "totalLiquids"|"itemCapacity"|"shooting"|"firstItem"|"powerNetStored"|"type"|"maxHealth"|"efficiency"|"powerNetOut"|"boosting"|"mining"|"shootY"|"shootX"|"powerCapacity"|"size"|"name"|"totalPower"|"heat"|"flag"|"color"|"range"|"dead"|"speed"|"enabled"|"powerNetIn"|"settable"|"mineX"|"payloadType"|"mineY"|"ammoCapacity"|"timescale"|"table"|"powerNetCapacity"|"totalItems"|"controller"|"ammo"|"rotation"|"health"|"team"|"controlled"|"senseable"|"x"|"progress"|"y"|"payloadCount"|"config"|"liquidCapacity"
+type block = "air"|"spawn"|"cliff"|"build1"|"build2"|"build3"|"build4"|"build5"|"build6"|"build7"|"build8"|"build9"|"build10"|"build11"|"build12"|"build13"|"build14"|"build15"|"build16"|"deep-water"|"shallow-water"|"tainted-water"|"deep-tainted-water"|"darksand-tainted-water"|"sand-water"|"darksand-water"|"tar"|"pooled-cryofluid"|"molten-slag"|"space"|"empty"|"stone"|"crater-stone"|"char"|"basalt"|"hotrock"|"magmarock"|"sand-floor"|"darksand"|"dirt"|"mud"|"dacite"|"rhyolite"|"rhyolite-crater"|"rough-rhyolite"|"regolith"|"yellow-stone"|"carbon-stone"|"ferric-stone"|"ferric-craters"|"beryllic-stone"|"crystalline-stone"|"crystal-floor"|"yellow-stone-plates"|"red-stone"|"dense-red-stone"|"red-ice"|"arkycite-floor"|"arkyic-stone"|"rhyolite-vent"|"carbon-vent"|"arkyic-vent"|"yellow-stone-vent"|"red-stone-vent"|"crystalline-vent"|"redmat"|"bluemat"|"grass"|"salt"|"snow"|"ice"|"ice-snow"|"shale"|"moss"|"core-zone"|"spore-moss"|"stone-wall"|"spore-wall"|"dirt-wall"|"dacite-wall"|"ice-wall"|"snow-wall"|"dune-wall"|"regolith-wall"|"yellow-stone-wall"|"rhyolite-wall"|"carbon-wall"|"ferric-stone-wall"|"beryllic-stone-wall"|"arkyic-wall"|"crystalline-stone-wall"|"red-ice-wall"|"red-stone-wall"|"red-diamond-wall"|"sand-wall"|"salt-wall"|"shrubs"|"shale-wall"|"spore-pine"|"snow-pine"|"pine"|"white-tree-dead"|"white-tree"|"spore-cluster"|"redweed"|"pur-bush"|"yellowcoral"|"boulder"|"snow-boulder"|"shale-boulder"|"sand-boulder"|"dacite-boulder"|"basalt-boulder"|"carbon-boulder"|"ferric-boulder"|"beryllic-boulder"|"yellow-stone-boulder"|"arkyic-boulder"|"crystal-cluster"|"vibrant-crystal-cluster"|"crystal-blocks"|"crystal-orbs"|"crystalline-boulder"|"red-ice-boulder"|"rhyolite-boulder"|"red-stone-boulder"|"metal-floor"|"metal-floor-damaged"|"metal-floor-2"|"metal-floor-3"|"metal-floor-4"|"metal-floor-5"|"dark-panel-1"|"dark-panel-2"|"dark-panel-3"|"dark-panel-4"|"dark-panel-5"|"dark-panel-6"|"dark-metal"|"pebbles"|"tendrils"|"ore-copper"|"ore-lead"|"ore-scrap"|"ore-coal"|"ore-titanium"|"ore-thorium"|"ore-beryllium"|"ore-tungsten"|"ore-crystal-thorium"|"ore-wall-thorium"|"ore-wall-beryllium"|"graphitic-wall"|"ore-wall-tungsten"|"graphite-press"|"multi-press"|"silicon-smelter"|"silicon-crucible"|"kiln"|"plastanium-compressor"|"phase-weaver"|"surge-smelter"|"cryofluid-mixer"|"pyratite-mixer"|"blast-mixer"|"melter"|"separator"|"disassembler"|"spore-press"|"pulverizer"|"coal-centrifuge"|"incinerator"|"silicon-arc-furnace"|"electrolyzer"|"atmospheric-concentrator"|"oxidation-chamber"|"electric-heater"|"slag-heater"|"phase-heater"|"heat-redirector"|"heat-router"|"slag-incinerator"|"carbide-crucible"|"slag-centrifuge"|"surge-crucible"|"cyanogen-synthesizer"|"phase-synthesizer"|"heat-reactor"|"copper-wall"|"copper-wall-large"|"titanium-wall"|"titanium-wall-large"|"plastanium-wall"|"plastanium-wall-large"|"thorium-wall"|"thorium-wall-large"|"phase-wall"|"phase-wall-large"|"surge-wall"|"surge-wall-large"|"door"|"door-large"|"scrap-wall"|"scrap-wall-large"|"scrap-wall-huge"|"scrap-wall-gigantic"|"thruster"|"beryllium-wall"|"beryllium-wall-large"|"tungsten-wall"|"tungsten-wall-large"|"blast-door"|"reinforced-surge-wall"|"reinforced-surge-wall-large"|"carbide-wall"|"carbide-wall-large"|"shielded-wall"|"mender"|"mend-projector"|"overdrive-projector"|"overdrive-dome"|"force-projector"|"shock-mine"|"radar"|"build-tower"|"regen-projector"|"shockwave-tower"|"shield-projector"|"large-shield-projector"|"conveyor"|"titanium-conveyor"|"plastanium-conveyor"|"armored-conveyor"|"junction"|"bridge-conveyor"|"phase-conveyor"|"sorter"|"inverted-sorter"|"router"|"distributor"|"overflow-gate"|"underflow-gate"|"mass-driver"|"duct"|"armored-duct"|"duct-router"|"overflow-duct"|"underflow-duct"|"duct-bridge"|"duct-unloader"|"surge-conveyor"|"surge-router"|"unit-cargo-loader"|"unit-cargo-unload-point"|"mechanical-pump"|"rotary-pump"|"impulse-pump"|"conduit"|"pulse-conduit"|"plated-conduit"|"liquid-router"|"liquid-container"|"liquid-tank"|"liquid-junction"|"bridge-conduit"|"phase-conduit"|"reinforced-pump"|"reinforced-conduit"|"reinforced-liquid-junction"|"reinforced-bridge-conduit"|"reinforced-liquid-router"|"reinforced-liquid-container"|"reinforced-liquid-tank"|"power-node"|"power-node-large"|"surge-tower"|"diode"|"battery"|"battery-large"|"combustion-generator"|"thermal-generator"|"steam-generator"|"differential-generator"|"rtg-generator"|"solar-panel"|"solar-panel-large"|"thorium-reactor"|"impact-reactor"|"beam-node"|"beam-tower"|"beam-link"|"turbine-condenser"|"chemical-combustion-chamber"|"pyrolysis-generator"|"flux-reactor"|"neoplasia-reactor"|"mechanical-drill"|"pneumatic-drill"|"laser-drill"|"blast-drill"|"water-extractor"|"cultivator"|"oil-extractor"|"vent-condenser"|"cliff-crusher"|"plasma-bore"|"large-plasma-bore"|"impact-drill"|"eruption-drill"|"core-shard"|"core-foundation"|"core-nucleus"|"core-bastion"|"core-citadel"|"core-acropolis"|"container"|"vault"|"unloader"|"reinforced-container"|"reinforced-vault"|"duo"|"scatter"|"scorch"|"hail"|"wave"|"lancer"|"arc"|"parallax"|"swarmer"|"salvo"|"segment"|"tsunami"|"fuse"|"ripple"|"cyclone"|"foreshadow"|"spectre"|"meltdown"|"breach"|"diffuse"|"sublimate"|"titan"|"disperse"|"afflict"|"lustre"|"scathe"|"smite"|"malign"|"ground-factory"|"air-factory"|"naval-factory"|"additive-reconstructor"|"multiplicative-reconstructor"|"exponential-reconstructor"|"tetrative-reconstructor"|"repair-point"|"repair-turret"|"tank-fabricator"|"ship-fabricator"|"mech-fabricator"|"tank-refabricator"|"mech-refabricator"|"ship-refabricator"|"prime-refabricator"|"tank-assembler"|"ship-assembler"|"mech-assembler"|"basic-assembler-module"|"unit-repair-tower"|"payload-conveyor"|"payload-router"|"reinforced-payload-conveyor"|"reinforced-payload-router"|"payload-mass-driver"|"large-payload-mass-driver"|"small-deconstructor"|"deconstructor"|"constructor"|"large-constructor"|"payload-loader"|"payload-unloader"|"power-source"|"power-void"|"item-source"|"item-void"|"liquid-source"|"liquid-void"|"payload-source"|"payload-void"|"heat-source"|"illuminator"|"legacy-mech-pad"|"legacy-unit-factory"|"legacy-unit-factory-air"|"legacy-unit-factory-ground"|"command-center"|"launch-pad"|"interplanetary-accelerator"|"message"|"switch"|"micro-processor"|"logic-processor"|"hyper-processor"|"memory-cell"|"memory-bank"|"logic-display"|"large-logic-display"|"canvas"|"reinforced-message"|"world-processor"|"world-cell"|"world-message"|"solid"
+type prop = "totalLiquids"|"itemCapacity"|"shooting"|"firstItem"|"powerNetStored"|"type"|"maxHealth"|"efficiency"|"powerNetOut"|"boosting"|"mining"|"shootY"|"shootX"|"powerCapacity"|"size"|"name"|"totalPower"|"heat"|"flag"|"color"|"range"|"dead"|"speed"|"enabled"|"powerNetIn"|"settable"|"mineX"|"payloadType"|"mineY"|"ammoCapacity"|"timescale"|"table"|"powerNetCapacity"|"totalItems"|"controller"|"ammo"|"rotation"|"health"|"team"|"controlled"|"senseable"|"x"|"progress"|"y"|"payloadCount"|"config"|"liquidCapacity"|"id"
 
 function tempVarName() {
     return "temp" + i++
@@ -84,8 +85,9 @@ export class Var<T>{
                 return this
             }
             const toType = "to"+type.substring(0, 1).toUpperCase()+type.substring(1)
-            this[toType] = function (value: Value<any>){
-                const v = variable()
+            this[toType] = function (value: Value<any>, name?: string){
+                const v = variable(typeof(value) == "string"? value: name)
+                if(typeof(value) == "string") value = void 0
                 new Line("op "+opType+" "+getValue(v)+" "+this.getN()+" "+getValue(value))
                 return v
             }
@@ -133,7 +135,7 @@ export class Var<T>{
     abs: () => Var<number>
     acos: () => Var<number>
     add: (value: Value<number>) => Var<number>
-    and: (value: Value<boolean>) => Var<boolean>
+    and: (value: Value<number>) => Var<number>
     angle: (value: Value<number>) => Var<number>
     angleDiff: (value: Value<number>) => Var<number>
     asin: () => Var<number>
@@ -146,7 +148,7 @@ export class Var<T>{
     opGreaterThan: (value: Value<number>) => Var<boolean>
     opGreaterThanEq: (value: Value<number>) => Var<boolean>
     idiv: (value: Value<number>) => Var<number>
-    land: (value: Value<number | boolean>) => Var<number>
+    land: (value: Value<number | boolean>) => Var<boolean>
     len:  (value: Value<string>) => Var<number>
     opLessThan: (value: Value<number>) => Var<boolean>
     opLessThanEq: (value: Value<number>) => Var<boolean>
@@ -171,46 +173,46 @@ export class Var<T>{
     tan: () => Var<number>
     xor: (value: Value<number | boolean>) => Var<number>
 
-    toAbs: () => Var<number>
-    toAcos: () => Var<number>
-    toAdd: (value: Value<number>) => Var<number>
-    toAnd: (value: Value<number>) => Var<number>
-    toAngle: (value: Value<number>) => Var<number>
-    toAngleDiff: (value: Value<number>) => Var<number>
-    toAsin: () => Var<number>
-    toAtan: () => Var<number>
-    toCeil: () => Var<number>
-    toCos: () => Var<number>
-    toDiv: (value: Value<number>) => Var<number>
-    toOpEqual: (value: Value<any>) => Var<boolean>
-    toFloor: () => Var<number>
-    toOpGreaterThan: (value: Value<number>) => Var<boolean>
-    toOpGreaterThanEq: (value: Value<number>) => Var<boolean>
-    toIdiv: (value: Value<number>) => Var<number>
-    toLand: (value: Value<boolean>) => Var<boolean>
-    toLen:  (value: Value<string>) => Var<number>
-    toOpLessThan: (value: Value<number>) => Var<boolean>
-    toOpLessThanEq: (value: Value<number>) => Var<boolean>
-    toLog: () => Var<number>
-    toLog10: () => Var<number>
-    toMax: (value: Value<number>) => Var<number>
-    toMin: (value: Value<number>) => Var<number>
-    toMod: (value: Value<number>) => Var<number>
-    toMul: (value: Value<number>) => Var<number>
-    toNoise: (value: Value<boolean>) => Var<number>
-    toNot: () => Var<number>
-    toOpNotEqual: (value: Value<any>) => Var<boolean>
-    toOr: (value: Value<number | boolean>) => Var<number>
-    toPow: (value: Value<number>) => Var<number>
-    toRand: () => Var<number>
-    toShl: (value: Value<number>) => Var<number>
-    toShr: (value: Value<number>) => Var<number>
-    toSin: () => Var<number>
-    toSqrt: () => Var<number>
-    toOpStrictEqual: (value: Value<any>) => Var<boolean>
-    toSub: (value: Value<number>) => Var<number>
-    toTan: () => Var<number>
-    toXor: (value: Value<number | boolean>) => Var<number>
+    toAbs: (name?: string) => Var<number>
+    toAcos: (name?: string) => Var<number>
+    toAdd: (value: Value<number>, name?: string) => Var<number>
+    toAnd: (value: Value<number>, name?: string) => Var<number>
+    toAngle: (value: Value<number>, name?: string) => Var<number>
+    toAngleDiff: (value: Value<number>, name?: string) => Var<number>
+    toAsin: (name?: string) => Var<number>
+    toAtan: (name?: string) => Var<number>
+    toCeil: (name?: string) => Var<number>
+    toCos: (name?: string) => Var<number>
+    toDiv: (value: Value<number>, name?: string) => Var<number>
+    toOpEqual: (value: Value<any>, name?: string) => Var<boolean>
+    toFloor: (name?: string) => Var<number>
+    toOpGreaterThan: (value: Value<number>, name?: string) => Var<boolean>
+    toOpGreaterThanEq: (value: Value<number>, name?: string) => Var<boolean>
+    toIdiv: (value: Value<number>, name?: string) => Var<number>
+    toLand: (value: Value<boolean>, name?: string) => Var<boolean>
+    toLen:  (value: Value<string>, name?: string) => Var<number>
+    toOpLessThan: (value: Value<number>, name?: string) => Var<boolean>
+    toOpLessThanEq: (value: Value<number>, name?: string) => Var<boolean>
+    toLog: (name?: string) => Var<number>
+    toLog10: (name?: string) => Var<number>
+    toMax: (value: Value<number>, name?: string) => Var<number>
+    toMin: (value: Value<number>, name?: string) => Var<number>
+    toMod: (value: Value<number>, name?: string) => Var<number>
+    toMul: (value: Value<number>, name?: string) => Var<number>
+    toNoise: (value: Value<boolean>, name?: string) => Var<number>
+    toNot: (name?: string) => Var<number>
+    toOpNotEqual: (value: Value<any>, name?: string) => Var<boolean>
+    toOr: (value: Value<number | boolean>, name?: string) => Var<number>
+    toPow: (value: Value<number>, name?: string) => Var<number>
+    toRand: (name?: string) => Var<number>
+    toShl: (value: Value<number>, name?: string) => Var<number>
+    toShr: (value: Value<number>, name?: string) => Var<number>
+    toSin: (name?: string) => Var<number>
+    toSqrt: (name?: string) => Var<number>
+    toOpStrictEqual: (value: Value<any>, name?: string) => Var<boolean>
+    toSub: (value: Value<number>, name?: string) => Var<number>
+    toTan: (name?: string) => Var<number>
+    toXor: (value: Value<number | boolean>, name?: string) => Var<number>
 }
 
 export class SingleResult<T> extends Line {
@@ -411,6 +413,41 @@ export function variable<T>(name?: string): Var<T> {
     return vars[name] ?? (vars[name] = new Var<T>(name))
 }
 
+let dvn = 0
+
+export function dynamicVariable<T>(): [Var<T>, SingleResult<T>]{
+    const name = "#"+(dvn ++)
+    const v = vars[name] ?? (vars[name] = new Var<T>(name))
+    return [v, {
+        lineNumber: 0,
+        get(name) {
+            const v = variable(name)
+            buffer.forEach(l => {
+                const {name: n, after} = v.setN()
+                l.str = l.str.replaceAll(name, n)
+            })
+            return v;
+        },
+        to(v) {
+            buffer.forEach(l => {
+                const {name: n, after} = v.setN()
+                l.str = l.str.replaceAll(name, n)
+            })
+            return this;
+        },
+        str: "",
+        jump(condition) {
+            return this;
+        },
+        next() {
+            return this;
+        },
+        prev() {
+            return this;
+        },
+    }]
+}
+
 export function build<T extends Building>(name: string): Var<T>{
     return variable(name)
 }
@@ -436,9 +473,12 @@ export function getResult() {
     let str = buffer.join("\n")
     str = str.replace(/\$[^ ]*/g, a => {
         const mark = marks[a.substring(1)]
-        if (mark == undefined) return "<unknown_mark:" + a.substring(1) + ">"
+        if (mark == undefined) return a
         return mark + ""
     })
+    buffer = []
+    _noprint = false
+    new Line("set logic_generator_by \"zzz\"")
     return str+"\nend"
 }
 
@@ -455,6 +495,7 @@ export function write(cell: Value<Building>, address: Value<number>, data: Value
 }
 
 export function print(str: Value<string> | Var<any>){
+    if(_noprint) return
     if(str instanceof Var) return [new Line("print "+getValue(str))]
     return str.split("|||")
         .filter(a => a)
@@ -481,11 +522,16 @@ export namespace draw{
     export const image: (x: Value<number>, y: Value<number>, image: Value<Image>, size: Value<number>, rotation: Value<number>) => Line = func("image")
 }
 
+export function noprint(noprint: boolean){
+    _noprint = noprint
+}
+
 /*
 printflush drawflush getlink control radar sensor
 */
 
 export function printflush(target: Var<Building>){
+    if(_noprint) return
     return new Line("printflush "+getValue(target))
 }
 
@@ -548,7 +594,7 @@ export function radar(source: Value<Building | Unit>, options: radarOptions = {}
     return new SingleResult<Unit>("radar "+options.type!.join(" ")+" "+options.sort+" "+getValue(source)+" "+getValue(options.order!)+" $")
 }
 
-export function sensor(source: Value<Building | Unit>, prop: Value<Prop>){
+export function sensor(source: Value<Building | Unit | Content>, prop: Value<Prop>){
     return new SingleResult("sensor $ "+getValue(source)+" "+getValue(prop))
 }
 
@@ -591,7 +637,7 @@ export function stop(){
 }
 
 export function end(){
-    return new Line("stop")
+    return new Line("end")
 }
 
 export function jumpTo(mark: string | number, condition: Condition) {
@@ -641,8 +687,8 @@ export class UnitVar extends Var<Unit>{
     controls: BindedUnitControls
     locates: BindedUnitLocates
 
-    rader(source: Value<Building | Unit>, options: radarOptions = {}){
-        return unitRadar(this, source, options)
+    rader(options: radarOptions = {}){
+        return unitRadar(this, options)
     }
 }
 
@@ -664,8 +710,8 @@ class BindedUnitControls{
     approach: (x: Value<number>, y: Value<number>, radius: Value<number>) => BindedUnitControls;
     pathfind: (x: Value<number>, y: Value<number>) => BindedUnitControls;
     boost: (enable: Value<number | boolean>) => BindedUnitControls;
-    target: (x: Value<number>, y: Value<number>, shoot: Value<number>) => BindedUnitControls;
-    targetp: (target: Value<Unit | Building>, shoot: Value<number>) => BindedUnitControls;
+    target: (x: Value<number>, y: Value<number>, shoot: Value<number | boolean>) => BindedUnitControls;
+    targetp: (target: Value<Unit | Building>, shoot: Value<number | boolean>) => BindedUnitControls;
     itemDrop: (target: Value<Building>, amount: Value<number>) => BindedUnitControls;
     itemTake: (from: Value<Building>, item: Value<Item>, amount: Value<number>) => BindedUnitControls;
     payDrop: () => BindedUnitControls;
@@ -687,23 +733,23 @@ export function unitBind(type: Value<UnitType>): UnitVar & Line{
     const unit = new UnitVar()
     const line = new Line("ubind "+getValue(type))
     currentUnitVar = unit
-    unit.set(currentUnit)
+    unit.set(unit)
     return Object.assign(unit, line)
 }
 
-export function unitBindTo(type: Value<UnitType>, unit: UnitVar): Line{
+export function unitBindTo(type: Value<UnitType>, u: UnitVar): Line{
     const line = new Line("ubind "+getValue(type))
-    currentUnitVar = unit
-    unit.set(currentUnit)
+    currentUnitVar = u
+    u.set(unit)
     return line
 }
 
 export namespace unitControls{
     function func(str: string){
-        return function(unit: UnitVar, ...args: any[]){
+        return function(u: UnitVar, ...args: any[]){
             let line;
-            if(unit != currentUnit &&  currentUnitVar != unit){
-                line = unit.bind()
+            if(u != unit &&  currentUnitVar != u){
+                line = u.bind()
             }
             const a = new Line("ucontrol "+str+" "+args.map(a => getValue(a)).join(" "))
             return line ?? a
@@ -716,8 +762,8 @@ export namespace unitControls{
     export const approach: (unit: UnitVar, x: Value<number>, y: Value<number>, radius: Value<number>) => Line = func("approach");
     export const pathfind: (unit: UnitVar, x: Value<number>, y: Value<number>) => Line = func("pathfind");
     export const boost: (unit: UnitVar, enable: Value<number | boolean>) => Line = func("boost");
-    export const target: (unit: UnitVar, x: Value<number>, y: Value<number>, shoot: Value<number>) => Line = func("target");
-    export const targetp: (unit: UnitVar, target: Value<Unit | Building>, shoot: Value<number>) => Line = func("targetp");
+    export const target: (unit: UnitVar, x: Value<number>, y: Value<number>, shoot: Value<number | boolean>) => Line = func("target");
+    export const targetp: (unit: UnitVar, target: Value<Unit | Building>, shoot: Value<number | boolean>) => Line = func("targetp");
     export const itemDrop: (unit: UnitVar, target: Value<Building>, amount: Value<number>) => Line = func("itemDrop");
     export const itemTake: (unit: UnitVar, from: Value<Building>, item: Value<Item>, amount: Value<number>) => Line = func("itemTake");
     export const payDrop: (unit: UnitVar) => Line = func("payDrop");
@@ -728,9 +774,9 @@ export namespace unitControls{
     export const build: (unit: UnitVar, x: Value<number>, y: Value<number>, block: Value<Block>, rotation: Value<number>, config: Value<any>) => Line = func("build");
     export const unbind: (unit: UnitVar) => Line = func("unbind");
 
-    export function getBlock(unit: UnitVar, x: Value<number>, y: Value<number>){
-        if(unit != currentUnit && currentUnitVar != unit){
-            unit.bind()
+    export function getBlock(u: UnitVar, x: Value<number>, y: Value<number>){
+        if(u != unit && currentUnitVar != u){
+            u.bind()
         }
         return new MultiResult<{
             type: Block,
@@ -739,27 +785,27 @@ export namespace unitControls{
         }>("ucontrol getBlock "+getValue(x)+" "+getValue(y)+" $type $building $floor", ["type", "building", "floor"])
     }
     export function within(unit: UnitVar, x: Value<number>, y: Value<number>, radius: Value<number>){
-        if(unit != currentUnit && currentUnitVar != unit){
+        if(unit != unit && currentUnitVar != unit){
             unit.bind()
         }
         return new SingleResult<boolean>("ucontrol within "+getValue(x)+" "+getValue(y)+" "+getValue(radius)+" $")
     }
 }
 
-export function unitRadar(unit: UnitVar, source: Value<Building | Unit>, options: radarOptions = {}){
+export function unitRadar(u: UnitVar, options: radarOptions = {}){
     let line;
-    if(unit != currentUnit &&  currentUnitVar != unit){
-        line = unit.bind()
+    if(u != unit &&  currentUnitVar != u){
+        line = u.bind()
     }
-    const a = radar(source, options)
+    const a = radar(0, options)
     a.str = "u"+a.str
-    return line ?? a
+    return a
 }
 
 export namespace unitLocates{
     export type buildingType = "core" | "storage" | "generator" | "turret" | "factory" | "repair" | "battery" | "reactor"
     export function ore(unit: UnitVar, type: Value<Item>){
-        if(unit != currentUnit && currentUnitVar != unit){
+        if(unit != unit && currentUnitVar != unit){
             unit.bind()
         }
         return new MultiResult<{
@@ -770,7 +816,7 @@ export namespace unitLocates{
     }
 
     export function building(unit: UnitVar, type: buildingType, enemy: Value<boolean> = false){
-        if(unit != currentUnit && currentUnitVar != unit){
+        if(unit != unit && currentUnitVar != unit){
             unit.bind()
         }
         return new MultiResult<{
@@ -781,9 +827,9 @@ export namespace unitLocates{
         }>("ulocate building "+type+" "+getValue(enemy)+" 0 $x $y $found $building", ["x", "y", "found", "building"])
     }
 
-    export function spawn(unit: UnitVar){
-        if(unit != currentUnit && currentUnitVar != unit){
-            unit.bind()
+    export function spawn(u: UnitVar){
+        if(u != unit && currentUnitVar != u){
+            u.bind()
         }
         return new MultiResult<{
             x: number,
@@ -792,9 +838,9 @@ export namespace unitLocates{
         }>("ulocate spawn 0 0 0 $x $y $found 0", ["x", "y", "found"])
     }
 
-    export function damaged(unit: UnitVar){
-        if(unit != currentUnit && currentUnitVar != unit){
-            unit.bind()
+    export function damaged(u: UnitVar){
+        if(u != unit && currentUnitVar != u){
+            u.bind()
         }
         return new MultiResult<{
             x: number,
@@ -840,5 +886,9 @@ class BindedUnitLocates{
 }
 
 
-export const currentUnit = new UnitVar("@unit")
+export const unit = new UnitVar("@unit")
 let currentUnitVar: UnitVar;
+
+export const links = new Var<number>("@links")
+export const mapw = new Var<number>("@mapw")
+export const maph = new Var<number>("@maph")

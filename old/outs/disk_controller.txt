@@ -1,0 +1,268 @@
+set logic_generator_by "zzz"
+read !op bank1 500
+op add @counter @counter !op
+jump 12 always 0 0
+jump 14 always 0 0
+jump 85 always 0 0
+jump 121 always 0 0
+jump 166 always 0 0
+jump 174 always 0 0
+jump 188 always 0 0
+jump 202 always 0 0
+jump 236 always 0 0
+end
+jump 263 always 0 0
+write 1 bank2 0
+read !nameLen bank1 505
+read !nameAddr bank1 506
+set temp0 0
+jump 29 always 0 0
+op add temp1 temp0 !nameAddr
+op div bank temp1 512
+op floor bank bank undefined
+op add bank bank 3
+getlink bank bank
+op mod bankAddr temp1 512
+read data bank bankAddr
+op add temp2 temp0 32
+write data bank1 temp2
+op add temp0 temp0 1
+jump 19 lessThan temp0 !nameLen
+write 1 bank2 9
+read :state bank2 9
+jump 31 notEqual :state 0
+read !op bank2 0
+jump 36 equal !op 0
+jump 43 always 0 0
+read !ret bank2 2
+write !ret bank1 502
+write 0 bank1 500
+read !halt bank1 511
+jump 42 equal !halt 0
+control enabled switch1 false
+end
+read !dataAddr bank1 504
+read !dataLen bank1 503
+set temp3 0
+set temp4 0
+set temp5 false
+set temp6 0
+write 0 bank2 9
+write 0 bank2 8
+jump 81 always 0 0
+jump 69 always 0 0
+jump 55 greaterThanEq temp4 !dataLen
+jump 58 always 0 0
+set temp6 temp3
+set temp5 true
+jump 71 always 0 0
+op add temp7 !dataAddr temp4
+op div bank temp7 512
+op floor bank bank undefined
+op add bank bank 3
+getlink bank bank
+op mod bankAddr temp7 512
+read data bank bankAddr
+op add temp8 temp3 32
+write data bank1 temp8
+op add temp3 temp3 1
+op add temp4 temp4 1
+jump 53 lessThan temp3 64
+set temp6 64
+write temp6 bank2 10
+write 1 bank2 9
+read :state bank2 9
+jump 73 notEqual :state 0
+jump 77 notEqual temp5 0
+jump 81 always 0 0
+write temp5 bank2 8
+write 0 bank2 10
+write 1 bank2 9
+jump 82 always 0 0
+jump 52 equal temp5 0
+read !ret bank2 2
+write !ret bank1 502
+jump 263 always 0 0
+read !fileId bank1 501
+write !fileId bank2 1
+write 2 bank2 0
+read !dataAddr bank1 504
+set temp9 0
+set temp10 false
+set temp11 0
+jump 115 always 0 0
+read :state bank2 9
+jump 93 equal :state 0
+read temp11 bank2 10
+read temp10 bank2 8
+set temp12 0
+jump 109 always 0 0
+op add temp13 temp12 32
+read data bank2 temp13
+op div bank !dataAddr 512
+op floor bank bank undefined
+op add bank bank 3
+getlink bank bank
+op mod bankAddr !dataAddr 512
+write data bank bankAddr
+op add !dataAddr !dataAddr 1
+op add temp12 temp12 1
+jump 99 lessThan temp12 temp11
+op add temp9 temp9 temp11
+write 0 bank2 9
+jump 114 notEqual temp10 0
+jump 115 always 0 0
+jump 116 always 0 0
+jump 93 equal temp10 0
+write 0 bank2 8
+write temp9 bank1 503
+read !ret bank2 2
+write !ret bank1 502
+jump 263 always 0 0
+read !fileId bank1 501
+write !fileId bank2 1
+write 3 bank2 0
+read !dataAddr bank1 504
+read !dataLen bank1 503
+set temp14 0
+set temp15 0
+set temp16 false
+set temp17 0
+write 0 bank2 9
+write 0 bank2 8
+jump 162 always 0 0
+jump 150 always 0 0
+jump 136 greaterThanEq temp15 !dataLen
+jump 139 always 0 0
+set temp17 temp14
+set temp16 true
+jump 152 always 0 0
+op add temp18 !dataAddr temp15
+op div bank temp18 512
+op floor bank bank undefined
+op add bank bank 3
+getlink bank bank
+op mod bankAddr temp18 512
+read data bank bankAddr
+op add temp19 temp14 32
+write data bank1 temp19
+op add temp14 temp14 1
+op add temp15 temp15 1
+jump 134 lessThan temp14 64
+set temp17 64
+write temp17 bank2 10
+write 1 bank2 9
+read :state bank2 9
+jump 154 notEqual :state 0
+jump 158 notEqual temp16 0
+jump 162 always 0 0
+write temp16 bank2 8
+write 0 bank2 10
+write 1 bank2 9
+jump 163 always 0 0
+jump 133 equal temp16 0
+read !ret bank2 2
+write !ret bank1 502
+jump 263 always 0 0
+read !fileId bank1 501
+write !fileId bank2 1
+write 4 bank2 0
+read :state bank2 0
+jump 169 notEqual :state 0
+read !ret bank2 2
+write !ret bank1 502
+jump 263 always 0 0
+write 5 bank2 0
+read :state bank2 0
+jump 175 notEqual :state 0
+read !files bank2 4
+write !files bank1 507
+read !filesCap bank2 5
+write !filesCap bank1 508
+read !free bank2 6
+write !free bank1 509
+read !total bank2 7
+write !total bank1 510
+read !ret bank2 2
+write !ret bank1 502
+jump 263 always 0 0
+write 6 bank2 0
+read :state bank2 0
+jump 189 notEqual :state 0
+read !files bank2 4
+write !files bank1 507
+read !filesCap bank2 5
+write !filesCap bank1 508
+read !free bank2 6
+write !free bank1 509
+read !total bank2 7
+write !total bank1 510
+read !ret bank2 2
+write !ret bank1 502
+jump 263 always 0 0
+write 7 bank2 0
+read !dataAddr bank1 504
+set temp20 0
+set temp21 false
+set temp22 0
+jump 230 always 0 0
+read :state bank2 9
+jump 208 equal :state 0
+read temp22 bank2 10
+read temp21 bank2 8
+set temp23 0
+jump 224 always 0 0
+op add temp24 temp23 32
+read data bank2 temp24
+op div bank !dataAddr 512
+op floor bank bank undefined
+op add bank bank 3
+getlink bank bank
+op mod bankAddr !dataAddr 512
+write data bank bankAddr
+op add !dataAddr !dataAddr 1
+op add temp23 temp23 1
+jump 214 lessThan temp23 temp22
+op add temp20 temp20 temp22
+write 0 bank2 9
+jump 229 notEqual temp21 0
+jump 230 always 0 0
+jump 231 always 0 0
+jump 208 equal temp21 0
+write 0 bank2 8
+write temp20 bank1 503
+read !ret bank2 2
+write !ret bank1 502
+jump 263 always 0 0
+read !fileId bank1 501
+write !fileId bank2 1
+read !nameLen bank1 505
+read !nameAddr bank1 506
+set temp25 0
+jump 252 always 0 0
+op add temp26 temp25 !nameAddr
+op div bank temp26 512
+op floor bank bank undefined
+op add bank bank 3
+getlink bank bank
+op mod bankAddr temp26 512
+read data bank bankAddr
+op add temp27 temp25 32
+write data bank1 temp27
+op add temp25 temp25 1
+jump 242 lessThan temp25 !nameLen
+write !nameLen bank2 10
+write 8 bank2 0
+write 1 bank2 9
+read :state bank2 9
+jump 256 notEqual :state 0
+read :state bank2 0
+jump 258 notEqual :state 0
+read !ret bank2 2
+write !ret bank1 502
+jump 263 always 0 0
+write 0 bank1 500
+read !halt bank1 511
+jump 267 equal !halt 0
+control enabled switch1 false
+end

@@ -1,0 +1,806 @@
+set logic_generator_by "zzz"
+jump 220 always 0 0
+set temp0 0
+set temp1 0
+op add temp2 temp0 2
+set temp3 temp2
+write 32 bank1 temp3
+op add temp3 temp3 1
+write 45 bank1 temp3
+op add temp3 temp3 1
+write 45 bank1 temp3
+op add temp3 temp3 1
+write 45 bank1 temp3
+op add temp3 temp3 1
+write 84 bank1 temp3
+op add temp3 temp3 1
+write 69 bank1 temp3
+op add temp3 temp3 1
+write 83 bank1 temp3
+op add temp3 temp3 1
+write 84 bank1 temp3
+op add temp3 temp3 1
+write 73 bank1 temp3
+op add temp3 temp3 1
+write 78 bank1 temp3
+op add temp3 temp3 1
+write 71 bank1 temp3
+op add temp3 temp3 1
+write 45 bank1 temp3
+op add temp3 temp3 1
+write 45 bank1 temp3
+op add temp3 temp3 1
+write 45 bank1 temp3
+op add temp3 temp3 1
+write 45 bank1 temp3
+op add temp3 temp3 1
+write 32 bank1 temp3
+op add temp3 temp3 1
+op add temp0 temp0 16
+op add temp4 temp0 2
+write 2 bank1 temp4
+op add temp5 temp0 3
+write 3 bank1 temp5
+op add temp6 temp0 4
+write 1 bank1 temp6
+op add temp0 temp0 3
+op add temp7 temp0 2
+set temp8 temp7
+write 80 bank1 temp8
+op add temp8 temp8 1
+write 82 bank1 temp8
+op add temp8 temp8 1
+write 79 bank1 temp8
+op add temp8 temp8 1
+write 67 bank1 temp8
+op add temp8 temp8 1
+write 69 bank1 temp8
+op add temp8 temp8 1
+write 83 bank1 temp8
+op add temp8 temp8 1
+write 83 bank1 temp8
+op add temp8 temp8 1
+write 79 bank1 temp8
+op add temp8 temp8 1
+write 82 bank1 temp8
+op add temp8 temp8 1
+op add temp0 temp0 9
+op add temp9 temp0 2
+write 2 bank1 temp9
+op add temp10 temp0 3
+write 3 bank1 temp10
+op add temp11 temp0 4
+write 0 bank1 temp11
+op add temp0 temp0 3
+op add temp12 temp0 2
+write 62 bank1 temp12
+op add temp0 temp0 1
+op add temp13 temp0 2
+write 2 bank1 temp13
+op add temp14 temp0 3
+write 4 bank1 temp14
+op add temp15 temp0 4
+write 1 bank1 temp15
+op add temp0 temp0 3
+op add temp16 temp0 2
+set temp17 temp16
+write 76 bank1 temp17
+op add temp17 temp17 1
+write 73 bank1 temp17
+op add temp17 temp17 1
+write 78 bank1 temp17
+op add temp17 temp17 1
+write 75 bank1 temp17
+op add temp17 temp17 1
+op add temp0 temp0 4
+op add temp18 temp0 2
+write 2 bank1 temp18
+op add temp19 temp0 3
+write 5 bank1 temp19
+op add temp20 temp0 4
+write 1 bank1 temp20
+op add temp0 temp0 3
+op add temp21 temp0 2
+set temp22 temp21
+write 73 bank1 temp22
+op add temp22 temp22 1
+write 83 bank1 temp22
+op add temp22 temp22 1
+op add temp0 temp0 2
+op add temp23 temp0 2
+write 2 bank1 temp23
+op add temp24 temp0 3
+write 6 bank1 temp24
+op add temp25 temp0 4
+write 1 bank1 temp25
+op add temp0 temp0 3
+op add temp26 temp0 2
+set temp27 temp26
+write 70 bank1 temp27
+op add temp27 temp27 1
+write 65 bank1 temp27
+op add temp27 temp27 1
+write 83 bank1 temp27
+op add temp27 temp27 1
+write 84 bank1 temp27
+op add temp27 temp27 1
+write 69 bank1 temp27
+op add temp27 temp27 1
+write 82 bank1 temp27
+op add temp27 temp27 1
+op add temp0 temp0 6
+op add temp28 temp0 2
+write 2 bank1 temp28
+op add temp29 temp0 3
+write 7 bank1 temp29
+op add temp30 temp0 4
+write 1 bank1 temp30
+op add temp0 temp0 3
+op add temp31 temp0 2
+set temp32 temp31
+write 84 bank1 temp32
+op add temp32 temp32 1
+write 72 bank1 temp32
+op add temp32 temp32 1
+write 65 bank1 temp32
+op add temp32 temp32 1
+write 78 bank1 temp32
+op add temp32 temp32 1
+op add temp0 temp0 4
+op add temp33 temp0 2
+write 2 bank1 temp33
+op add temp34 temp0 3
+write 8 bank1 temp34
+op add temp35 temp0 4
+write 1 bank1 temp35
+op add temp0 temp0 3
+op add temp36 temp0 2
+set temp37 temp36
+write 67 bank1 temp37
+op add temp37 temp37 1
+write 79 bank1 temp37
+op add temp37 temp37 1
+write 78 bank1 temp37
+op add temp37 temp37 1
+write 86 bank1 temp37
+op add temp37 temp37 1
+write 69 bank1 temp37
+op add temp37 temp37 1
+write 89 bank1 temp37
+op add temp37 temp37 1
+write 79 bank1 temp37
+op add temp37 temp37 1
+write 82 bank1 temp37
+op add temp37 temp37 1
+op add temp0 temp0 8
+op add temp38 temp0 2
+write 2 bank1 temp38
+op add temp39 temp0 3
+write 15 bank1 temp39
+op add temp40 temp0 4
+write 0 bank1 temp40
+op add temp0 temp0 3
+op add temp41 temp0 2
+set temp42 temp41
+write 91 bank1 temp42
+op add temp42 temp42 1
+write 94 bank1 temp42
+op add temp42 temp42 1
+write 86 bank1 temp42
+op add temp42 temp42 1
+write 93 bank1 temp42
+op add temp42 temp42 1
+write 77 bank1 temp42
+op add temp42 temp42 1
+write 79 bank1 temp42
+op add temp42 temp42 1
+write 86 bank1 temp42
+op add temp42 temp42 1
+write 69 bank1 temp42
+op add temp42 temp42 1
+write 32 bank1 temp42
+op add temp42 temp42 1
+write 91 bank1 temp42
+op add temp42 temp42 1
+write 69 bank1 temp42
+op add temp42 temp42 1
+write 78 bank1 temp42
+op add temp42 temp42 1
+write 93 bank1 temp42
+op add temp42 temp42 1
+write 79 bank1 temp42
+op add temp42 temp42 1
+write 75 bank1 temp42
+op add temp42 temp42 1
+op add temp0 temp0 15
+write temp0 bank1 1
+write 1 bank1 0
+read temp43 bank1 0
+jump 217 notEqual temp43 0
+set temp0 0
+read temp44 bank1 256
+jump 220 notEqual temp44 true
+read temp45 bank1 257
+read temp46 bank1 258
+read temp47 bank1 259
+set temp48 259
+op sub temp49 temp45 1
+jump 229 equal temp46 5
+jump 232 always 0 0
+op add temp48 temp48 1
+op sub temp49 temp49 1
+jump 236 always 0 0
+jump 234 equal temp46 27
+jump 236 always 0 0
+op add temp48 temp48 1
+op sub temp49 temp49 1
+write false bank1 256
+jump 2 equal temp46 6
+print temp46
+print " "
+print temp47
+printflush message1
+jump 244 equal temp46 10
+jump 741 always 0 0
+jump 496 lessThan temp1 3
+jump 413 lessThan temp1 4
+jump 334 lessThan temp1 5
+op add temp50 temp0 2
+write 2 bank1 temp50
+op add temp51 temp0 3
+write 13 bank1 temp51
+op add temp52 temp0 4
+write 0 bank1 temp52
+op add temp0 temp0 3
+op add temp53 temp0 2
+write 0 bank1 temp53
+op add temp0 temp0 1
+op add temp54 temp0 2
+write 0 bank1 temp54
+op add temp0 temp0 1
+op add temp55 temp0 2
+write 0 bank1 temp55
+op add temp0 temp0 1
+op add temp56 temp0 2
+write 0 bank1 temp56
+op add temp0 temp0 1
+op add temp57 temp0 2
+write 0 bank1 temp57
+op add temp0 temp0 1
+op add temp58 temp0 2
+write 0 bank1 temp58
+op add temp0 temp0 1
+op add temp59 temp0 2
+write 0 bank1 temp59
+op add temp0 temp0 1
+op add temp60 temp0 2
+write 0 bank1 temp60
+op add temp0 temp0 1
+op add temp61 temp0 2
+write 0 bank1 temp61
+op add temp0 temp0 1
+op add temp62 temp0 2
+write 0 bank1 temp62
+op add temp0 temp0 1
+op add temp63 temp0 2
+write 0 bank1 temp63
+op add temp0 temp0 1
+op add temp64 temp0 2
+write 0 bank1 temp64
+op add temp0 temp0 1
+op add temp65 temp0 2
+write 0 bank1 temp65
+op add temp0 temp0 1
+op add temp66 temp0 2
+write 0 bank1 temp66
+op add temp0 temp0 1
+op add temp67 temp0 2
+write 0 bank1 temp67
+op add temp0 temp0 1
+op add temp68 temp0 2
+write 0 bank1 temp68
+op add temp0 temp0 1
+op add temp69 temp0 2
+write 2 bank1 temp69
+op add temp70 temp0 3
+write 13 bank1 temp70
+op add temp71 temp0 4
+write 1 bank1 temp71
+op add temp0 temp0 3
+op add temp72 temp0 2
+set temp73 temp72
+write 67 bank1 temp73
+op add temp73 temp73 1
+write 79 bank1 temp73
+op add temp73 temp73 1
+write 78 bank1 temp73
+op add temp73 temp73 1
+write 86 bank1 temp73
+op add temp73 temp73 1
+write 69 bank1 temp73
+op add temp73 temp73 1
+write 89 bank1 temp73
+op add temp73 temp73 1
+write 79 bank1 temp73
+op add temp73 temp73 1
+write 82 bank1 temp73
+op add temp73 temp73 1
+op add temp0 temp0 8
+write temp0 bank1 1
+write 1 bank1 0
+read temp74 bank1 0
+jump 330 notEqual temp74 0
+set temp0 0
+jump 741 always 0 0
+op add temp75 temp0 2
+write 2 bank1 temp75
+op add temp76 temp0 3
+write 13 bank1 temp76
+op add temp77 temp0 4
+write 0 bank1 temp77
+op add temp0 temp0 3
+op add temp78 temp0 2
+write 0 bank1 temp78
+op add temp0 temp0 1
+op add temp79 temp0 2
+write 0 bank1 temp79
+op add temp0 temp0 1
+op add temp80 temp0 2
+write 0 bank1 temp80
+op add temp0 temp0 1
+op add temp81 temp0 2
+write 0 bank1 temp81
+op add temp0 temp0 1
+op add temp82 temp0 2
+write 0 bank1 temp82
+op add temp0 temp0 1
+op add temp83 temp0 2
+write 0 bank1 temp83
+op add temp0 temp0 1
+op add temp84 temp0 2
+write 0 bank1 temp84
+op add temp0 temp0 1
+op add temp85 temp0 2
+write 0 bank1 temp85
+op add temp0 temp0 1
+op add temp86 temp0 2
+write 0 bank1 temp86
+op add temp0 temp0 1
+op add temp87 temp0 2
+write 0 bank1 temp87
+op add temp0 temp0 1
+op add temp88 temp0 2
+write 0 bank1 temp88
+op add temp0 temp0 1
+op add temp89 temp0 2
+write 0 bank1 temp89
+op add temp0 temp0 1
+op add temp90 temp0 2
+write 0 bank1 temp90
+op add temp0 temp0 1
+op add temp91 temp0 2
+write 0 bank1 temp91
+op add temp0 temp0 1
+op add temp92 temp0 2
+write 0 bank1 temp92
+op add temp0 temp0 1
+op add temp93 temp0 2
+write 0 bank1 temp93
+op add temp0 temp0 1
+op add temp94 temp0 2
+write 2 bank1 temp94
+op add temp95 temp0 3
+write 13 bank1 temp95
+op add temp96 temp0 4
+write 1 bank1 temp96
+op add temp0 temp0 3
+op add temp97 temp0 2
+set temp98 temp97
+write 84 bank1 temp98
+op add temp98 temp98 1
+write 72 bank1 temp98
+op add temp98 temp98 1
+write 65 bank1 temp98
+op add temp98 temp98 1
+write 78 bank1 temp98
+op add temp98 temp98 1
+op add temp0 temp0 4
+write temp0 bank1 1
+write 1 bank1 0
+read temp99 bank1 0
+jump 409 notEqual temp99 0
+set temp0 0
+jump 741 always 0 0
+op add temp100 temp0 2
+write 2 bank1 temp100
+op add temp101 temp0 3
+write 13 bank1 temp101
+op add temp102 temp0 4
+write 0 bank1 temp102
+op add temp0 temp0 3
+op add temp103 temp0 2
+write 0 bank1 temp103
+op add temp0 temp0 1
+op add temp104 temp0 2
+write 0 bank1 temp104
+op add temp0 temp0 1
+op add temp105 temp0 2
+write 0 bank1 temp105
+op add temp0 temp0 1
+op add temp106 temp0 2
+write 0 bank1 temp106
+op add temp0 temp0 1
+op add temp107 temp0 2
+write 0 bank1 temp107
+op add temp0 temp0 1
+op add temp108 temp0 2
+write 0 bank1 temp108
+op add temp0 temp0 1
+op add temp109 temp0 2
+write 0 bank1 temp109
+op add temp0 temp0 1
+op add temp110 temp0 2
+write 0 bank1 temp110
+op add temp0 temp0 1
+op add temp111 temp0 2
+write 0 bank1 temp111
+op add temp0 temp0 1
+op add temp112 temp0 2
+write 0 bank1 temp112
+op add temp0 temp0 1
+op add temp113 temp0 2
+write 0 bank1 temp113
+op add temp0 temp0 1
+op add temp114 temp0 2
+write 0 bank1 temp114
+op add temp0 temp0 1
+op add temp115 temp0 2
+write 0 bank1 temp115
+op add temp0 temp0 1
+op add temp116 temp0 2
+write 0 bank1 temp116
+op add temp0 temp0 1
+op add temp117 temp0 2
+write 0 bank1 temp117
+op add temp0 temp0 1
+op add temp118 temp0 2
+write 0 bank1 temp118
+op add temp0 temp0 1
+op add temp119 temp0 2
+write 2 bank1 temp119
+op add temp120 temp0 3
+write 13 bank1 temp120
+op add temp121 temp0 4
+write 1 bank1 temp121
+op add temp0 temp0 3
+op add temp122 temp0 2
+set temp123 temp122
+write 70 bank1 temp123
+op add temp123 temp123 1
+write 65 bank1 temp123
+op add temp123 temp123 1
+write 83 bank1 temp123
+op add temp123 temp123 1
+write 84 bank1 temp123
+op add temp123 temp123 1
+write 69 bank1 temp123
+op add temp123 temp123 1
+write 82 bank1 temp123
+op add temp123 temp123 1
+op add temp0 temp0 6
+write temp0 bank1 1
+write 1 bank1 0
+read temp124 bank1 0
+jump 492 notEqual temp124 0
+set temp0 0
+jump 741 always 0 0
+jump 652 lessThan temp1 1
+jump 573 lessThan temp1 2
+op add temp125 temp0 2
+write 2 bank1 temp125
+op add temp126 temp0 3
+write 13 bank1 temp126
+op add temp127 temp0 4
+write 0 bank1 temp127
+op add temp0 temp0 3
+op add temp128 temp0 2
+write 0 bank1 temp128
+op add temp0 temp0 1
+op add temp129 temp0 2
+write 0 bank1 temp129
+op add temp0 temp0 1
+op add temp130 temp0 2
+write 0 bank1 temp130
+op add temp0 temp0 1
+op add temp131 temp0 2
+write 0 bank1 temp131
+op add temp0 temp0 1
+op add temp132 temp0 2
+write 0 bank1 temp132
+op add temp0 temp0 1
+op add temp133 temp0 2
+write 0 bank1 temp133
+op add temp0 temp0 1
+op add temp134 temp0 2
+write 0 bank1 temp134
+op add temp0 temp0 1
+op add temp135 temp0 2
+write 0 bank1 temp135
+op add temp0 temp0 1
+op add temp136 temp0 2
+write 0 bank1 temp136
+op add temp0 temp0 1
+op add temp137 temp0 2
+write 0 bank1 temp137
+op add temp0 temp0 1
+op add temp138 temp0 2
+write 0 bank1 temp138
+op add temp0 temp0 1
+op add temp139 temp0 2
+write 0 bank1 temp139
+op add temp0 temp0 1
+op add temp140 temp0 2
+write 0 bank1 temp140
+op add temp0 temp0 1
+op add temp141 temp0 2
+write 0 bank1 temp141
+op add temp0 temp0 1
+op add temp142 temp0 2
+write 0 bank1 temp142
+op add temp0 temp0 1
+op add temp143 temp0 2
+write 0 bank1 temp143
+op add temp0 temp0 1
+op add temp144 temp0 2
+write 2 bank1 temp144
+op add temp145 temp0 3
+write 13 bank1 temp145
+op add temp146 temp0 4
+write 1 bank1 temp146
+op add temp0 temp0 3
+op add temp147 temp0 2
+set temp148 temp147
+write 73 bank1 temp148
+op add temp148 temp148 1
+write 83 bank1 temp148
+op add temp148 temp148 1
+op add temp0 temp0 2
+write temp0 bank1 1
+write 1 bank1 0
+read temp149 bank1 0
+jump 569 notEqual temp149 0
+set temp0 0
+jump 741 always 0 0
+op add temp150 temp0 2
+write 2 bank1 temp150
+op add temp151 temp0 3
+write 13 bank1 temp151
+op add temp152 temp0 4
+write 0 bank1 temp152
+op add temp0 temp0 3
+op add temp153 temp0 2
+write 0 bank1 temp153
+op add temp0 temp0 1
+op add temp154 temp0 2
+write 0 bank1 temp154
+op add temp0 temp0 1
+op add temp155 temp0 2
+write 0 bank1 temp155
+op add temp0 temp0 1
+op add temp156 temp0 2
+write 0 bank1 temp156
+op add temp0 temp0 1
+op add temp157 temp0 2
+write 0 bank1 temp157
+op add temp0 temp0 1
+op add temp158 temp0 2
+write 0 bank1 temp158
+op add temp0 temp0 1
+op add temp159 temp0 2
+write 0 bank1 temp159
+op add temp0 temp0 1
+op add temp160 temp0 2
+write 0 bank1 temp160
+op add temp0 temp0 1
+op add temp161 temp0 2
+write 0 bank1 temp161
+op add temp0 temp0 1
+op add temp162 temp0 2
+write 0 bank1 temp162
+op add temp0 temp0 1
+op add temp163 temp0 2
+write 0 bank1 temp163
+op add temp0 temp0 1
+op add temp164 temp0 2
+write 0 bank1 temp164
+op add temp0 temp0 1
+op add temp165 temp0 2
+write 0 bank1 temp165
+op add temp0 temp0 1
+op add temp166 temp0 2
+write 0 bank1 temp166
+op add temp0 temp0 1
+op add temp167 temp0 2
+write 0 bank1 temp167
+op add temp0 temp0 1
+op add temp168 temp0 2
+write 0 bank1 temp168
+op add temp0 temp0 1
+op add temp169 temp0 2
+write 2 bank1 temp169
+op add temp170 temp0 3
+write 13 bank1 temp170
+op add temp171 temp0 4
+write 1 bank1 temp171
+op add temp0 temp0 3
+op add temp172 temp0 2
+set temp173 temp172
+write 76 bank1 temp173
+op add temp173 temp173 1
+write 73 bank1 temp173
+op add temp173 temp173 1
+write 78 bank1 temp173
+op add temp173 temp173 1
+write 75 bank1 temp173
+op add temp173 temp173 1
+op add temp0 temp0 4
+write temp0 bank1 1
+write 1 bank1 0
+read temp174 bank1 0
+jump 648 notEqual temp174 0
+set temp0 0
+jump 741 always 0 0
+op add temp175 temp0 2
+write 2 bank1 temp175
+op add temp176 temp0 3
+write 13 bank1 temp176
+op add temp177 temp0 4
+write 0 bank1 temp177
+op add temp0 temp0 3
+op add temp178 temp0 2
+write 0 bank1 temp178
+op add temp0 temp0 1
+op add temp179 temp0 2
+write 0 bank1 temp179
+op add temp0 temp0 1
+op add temp180 temp0 2
+write 0 bank1 temp180
+op add temp0 temp0 1
+op add temp181 temp0 2
+write 0 bank1 temp181
+op add temp0 temp0 1
+op add temp182 temp0 2
+write 0 bank1 temp182
+op add temp0 temp0 1
+op add temp183 temp0 2
+write 0 bank1 temp183
+op add temp0 temp0 1
+op add temp184 temp0 2
+write 0 bank1 temp184
+op add temp0 temp0 1
+op add temp185 temp0 2
+write 0 bank1 temp185
+op add temp0 temp0 1
+op add temp186 temp0 2
+write 0 bank1 temp186
+op add temp0 temp0 1
+op add temp187 temp0 2
+write 0 bank1 temp187
+op add temp0 temp0 1
+op add temp188 temp0 2
+write 0 bank1 temp188
+op add temp0 temp0 1
+op add temp189 temp0 2
+write 0 bank1 temp189
+op add temp0 temp0 1
+op add temp190 temp0 2
+write 0 bank1 temp190
+op add temp0 temp0 1
+op add temp191 temp0 2
+write 0 bank1 temp191
+op add temp0 temp0 1
+op add temp192 temp0 2
+write 0 bank1 temp192
+op add temp0 temp0 1
+op add temp193 temp0 2
+write 0 bank1 temp193
+op add temp0 temp0 1
+op add temp194 temp0 2
+write 2 bank1 temp194
+op add temp195 temp0 3
+write 13 bank1 temp195
+op add temp196 temp0 4
+write 1 bank1 temp196
+op add temp0 temp0 3
+op add temp197 temp0 2
+set temp198 temp197
+write 80 bank1 temp198
+op add temp198 temp198 1
+write 82 bank1 temp198
+op add temp198 temp198 1
+write 79 bank1 temp198
+op add temp198 temp198 1
+write 67 bank1 temp198
+op add temp198 temp198 1
+write 69 bank1 temp198
+op add temp198 temp198 1
+write 83 bank1 temp198
+op add temp198 temp198 1
+write 83 bank1 temp198
+op add temp198 temp198 1
+write 79 bank1 temp198
+op add temp198 temp198 1
+write 82 bank1 temp198
+op add temp198 temp198 1
+op add temp0 temp0 9
+write temp0 bank1 1
+write 1 bank1 0
+read temp199 bank1 0
+jump 737 notEqual temp199 0
+set temp0 0
+jump 741 always 0 0
+jump 743 equal temp46 27
+jump 805 always 0 0
+jump 745 equal temp47 17
+jump 774 always 0 0
+op add temp200 temp1 3
+op add temp201 temp0 2
+write 2 bank1 temp201
+op add temp202 temp0 3
+write temp200 bank1 temp202
+op add temp203 temp0 4
+write 0 bank1 temp203
+op add temp0 temp0 3
+op add temp204 temp0 2
+write 0 bank1 temp204
+op add temp0 temp0 1
+op add temp1 temp1 5
+op mod temp1 temp1 6
+op add temp205 temp1 3
+op add temp206 temp0 2
+write 2 bank1 temp206
+op add temp207 temp0 3
+write temp205 bank1 temp207
+op add temp208 temp0 4
+write 0 bank1 temp208
+op add temp0 temp0 3
+op add temp209 temp0 2
+write 62 bank1 temp209
+op add temp0 temp0 1
+write temp0 bank1 1
+write 1 bank1 0
+read temp210 bank1 0
+jump 771 notEqual temp210 0
+set temp0 0
+jump 776 equal temp47 18
+jump 805 always 0 0
+op add temp211 temp1 3
+op add temp212 temp0 2
+write 2 bank1 temp212
+op add temp213 temp0 3
+write temp211 bank1 temp213
+op add temp214 temp0 4
+write 0 bank1 temp214
+op add temp0 temp0 3
+op add temp215 temp0 2
+write 0 bank1 temp215
+op add temp0 temp0 1
+op add temp1 temp1 1
+op mod temp1 temp1 6
+op add temp216 temp1 3
+op add temp217 temp0 2
+write 2 bank1 temp217
+op add temp218 temp0 3
+write temp216 bank1 temp218
+op add temp219 temp0 4
+write 0 bank1 temp219
+op add temp0 temp0 3
+op add temp220 temp0 2
+write 62 bank1 temp220
+op add temp0 temp0 1
+write temp0 bank1 1
+write 1 bank1 0
+read temp221 bank1 0
+jump 802 notEqual temp221 0
+set temp0 0
+end
