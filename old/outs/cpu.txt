@@ -1,0 +1,867 @@
+set logic_generator_by "zzz"
+sensor reseting switch2 @enabled
+jump 18 equal reseting 0
+sensor reseting switch2 @enabled
+jump 3 notEqual reseting 0
+write 512 cell1 0
+write 64 cell1 1
+write 0 cell1 2
+write 0 cell1 3
+write 0 cell1 4
+write 0 cell1 8
+write 0 cell1 9
+write 0 cell1 10
+write 0 cell1 32
+write 0 cell1 62
+write 0 cell1 63
+write 0 cell2 0
+jump 851 always 0 0
+read int cell2 0
+jump 74 lessThanEq int 0
+read intLoaded cell2 1
+jump 66 notEqual intLoaded 0
+read intLen cell2 2
+read !sp cell1 1
+op div bank !sp 512
+op floor bank bank undefined
+op add bank bank 6
+getlink bank bank
+op mod bankAddr !sp 512
+write int bank bankAddr
+op add !sp !sp 1
+write !sp cell1 1
+sensor :clock2 switch1 @enabled
+sensor :clock switch1 @enabled
+jump 33 equal :clock :clock2
+set i 0
+jump 52 always 0 0
+op add temp0 i 3
+read value cell2 temp0
+read !sp cell1 1
+op div bank !sp 512
+op floor bank bank undefined
+op add bank bank 6
+getlink bank bank
+op mod bankAddr !sp 512
+write value bank bankAddr
+op add !sp !sp 1
+write !sp cell1 1
+sensor :clock2 switch1 @enabled
+sensor :clock switch1 @enabled
+jump 49 equal :clock :clock2
+op add i i 1
+jump 37 lessThan i intLen
+op add intLen intLen 1
+read !sp cell1 1
+op div bank !sp 512
+op floor bank bank undefined
+op add bank bank 6
+getlink bank bank
+op mod bankAddr !sp 512
+write intLen bank bankAddr
+op add !sp !sp 1
+write !sp cell1 1
+sensor :clock2 switch1 @enabled
+sensor :clock switch1 @enabled
+jump 64 equal :clock :clock2
+read !pc cell1 0
+op sub !pc !pc 1
+write !pc cell1 0
+set command 17
+read !intproc cell1 32
+op shl !intproc !intproc 8
+op or command command !intproc
+write -1 cell2 0
+op shr data command 8
+op shr symbol data 43
+op and data data 8796093022207
+jump 79 equal symbol 0
+op sub data 0 data
+op and command command 255
+write command cell1 62
+write data cell1 63
+op add @counter @counter command
+jump 111 always 0 0
+jump 113 always 0 0
+jump 124 always 0 0
+jump 138 always 0 0
+jump 151 always 0 0
+jump 224 always 0 0
+jump 259 always 0 0
+jump 285 always 0 0
+jump 322 always 0 0
+jump 366 always 0 0
+jump 368 always 0 0
+jump 383 always 0 0
+jump 398 always 0 0
+jump 421 always 0 0
+jump 444 always 0 0
+jump 466 always 0 0
+jump 488 always 0 0
+jump 494 always 0 0
+jump 569 always 0 0
+jump 676 always 0 0
+jump 700 always 0 0
+jump 724 always 0 0
+jump 748 always 0 0
+jump 782 always 0 0
+jump 793 always 0 0
+jump 808 always 0 0
+jump 823 always 0 0
+jump 837 always 0 0
+control enabled switch2 true
+jump 851 always 0 0
+read value cell1 data
+read !sp cell1 1
+op div bank !sp 512
+op floor bank bank undefined
+op add bank bank 6
+getlink bank bank
+op mod bankAddr !sp 512
+write value bank bankAddr
+op add !sp !sp 1
+write !sp cell1 1
+jump 851 always 0 0
+read !sp cell1 1
+op sub !sp !sp 1
+write !sp cell1 1
+op div bank !sp 512
+op floor bank bank undefined
+op add bank bank 6
+getlink bank bank
+op mod bankAddr !sp 512
+read value bank bankAddr
+sensor :clock2 switch1 @enabled
+sensor :clock switch1 @enabled
+jump 134 equal :clock :clock2
+write value cell1 data
+jump 851 always 0 0
+read !sp cell1 1
+op div bank !sp 512
+op floor bank bank undefined
+op add bank bank 6
+getlink bank bank
+op mod bankAddr !sp 512
+write data bank bankAddr
+op add !sp !sp 1
+write !sp cell1 1
+sensor :clock2 switch1 @enabled
+sensor :clock switch1 @enabled
+jump 148 equal :clock :clock2
+jump 851 always 0 0
+read !sp cell1 1
+op sub !sp !sp 1
+write !sp cell1 1
+op div bank !sp 512
+op floor bank bank undefined
+op add bank bank 6
+getlink bank bank
+op mod bankAddr !sp 512
+read value2 bank bankAddr
+sensor :clock2 switch1 @enabled
+sensor :clock switch1 @enabled
+jump 161 equal :clock :clock2
+read !sp cell1 1
+op sub !sp !sp 1
+write !sp cell1 1
+op div bank !sp 512
+op floor bank bank undefined
+op add bank bank 6
+getlink bank bank
+op mod bankAddr !sp 512
+read value bank bankAddr
+sensor :clock2 switch1 @enabled
+sensor :clock switch1 @enabled
+jump 173 equal :clock :clock2
+op mul temp1 data 2
+op add @counter @counter temp1
+op add value3 value value2
+jump 211 always 0 0
+op sub value3 value value2
+jump 211 always 0 0
+op mul value3 value value2
+jump 211 always 0 0
+op div value3 value value2
+jump 211 always 0 0
+op mod value3 value value2
+jump 211 always 0 0
+op pow value3 value value2
+jump 211 always 0 0
+op equal value3 value value2
+jump 211 always 0 0
+op notEqual value3 value value2
+jump 211 always 0 0
+op lessThan value3 value value2
+jump 211 always 0 0
+op lessThanEq value3 value value2
+jump 211 always 0 0
+op greaterThan value3 value value2
+jump 211 always 0 0
+op greaterThanEq value3 value value2
+jump 211 always 0 0
+op and value3 value value2
+jump 211 always 0 0
+op or value3 value value2
+jump 211 always 0 0
+op xor value3 value value2
+jump 211 always 0 0
+op max value3 value value2
+jump 211 always 0 0
+op min value3 value value2
+jump 211 always 0 0
+read !sp cell1 1
+op div bank !sp 512
+op floor bank bank undefined
+op add bank bank 6
+getlink bank bank
+op mod bankAddr !sp 512
+write value3 bank bankAddr
+op add !sp !sp 1
+write !sp cell1 1
+sensor :clock2 switch1 @enabled
+sensor :clock switch1 @enabled
+jump 221 equal :clock :clock2
+jump 851 always 0 0
+read !sp cell1 1
+op sub !sp !sp 1
+write !sp cell1 1
+op div bank !sp 512
+op floor bank bank undefined
+op add bank bank 6
+getlink bank bank
+op mod bankAddr !sp 512
+read value bank bankAddr
+sensor :clock2 switch1 @enabled
+sensor :clock switch1 @enabled
+jump 234 equal :clock :clock2
+op mul temp2 data 2
+op add @counter @counter temp2
+op abs value3 value 0
+jump 246 always 0 0
+op floor value3 value 0
+jump 246 always 0 0
+op ceil value3 value 0
+jump 246 always 0 0
+op rand value3 value 0
+jump 246 always 0 0
+read !sp cell1 1
+op div bank !sp 512
+op floor bank bank undefined
+op add bank bank 6
+getlink bank bank
+op mod bankAddr !sp 512
+write value3 bank bankAddr
+op add !sp !sp 1
+write !sp cell1 1
+sensor :clock2 switch1 @enabled
+sensor :clock switch1 @enabled
+jump 256 equal :clock :clock2
+jump 851 always 0 0
+read !sp cell1 1
+op sub !sp !sp 1
+write !sp cell1 1
+op div bank !sp 512
+op floor bank bank undefined
+op add bank bank 6
+getlink bank bank
+op mod bankAddr !sp 512
+read value bank bankAddr
+sensor :clock2 switch1 @enabled
+sensor :clock switch1 @enabled
+jump 269 equal :clock :clock2
+op add value3 value data
+read !sp cell1 1
+op div bank !sp 512
+op floor bank bank undefined
+op add bank bank 6
+getlink bank bank
+op mod bankAddr !sp 512
+write value3 bank bankAddr
+op add !sp !sp 1
+write !sp cell1 1
+sensor :clock2 switch1 @enabled
+sensor :clock switch1 @enabled
+jump 282 equal :clock :clock2
+jump 851 always 0 0
+read !sp cell1 1
+op sub !sp !sp 1
+write !sp cell1 1
+op div bank !sp 512
+op floor bank bank undefined
+op add bank bank 6
+getlink bank bank
+op mod bankAddr !sp 512
+read value bank bankAddr
+sensor :clock2 switch1 @enabled
+sensor :clock switch1 @enabled
+jump 295 equal :clock :clock2
+read !sp cell1 1
+op div bank !sp 512
+op floor bank bank undefined
+op add bank bank 6
+getlink bank bank
+op mod bankAddr !sp 512
+write value bank bankAddr
+op add !sp !sp 1
+write !sp cell1 1
+sensor :clock2 switch1 @enabled
+sensor :clock switch1 @enabled
+jump 307 equal :clock :clock2
+read !sp cell1 1
+op div bank !sp 512
+op floor bank bank undefined
+op add bank bank 6
+getlink bank bank
+op mod bankAddr !sp 512
+write value bank bankAddr
+op add !sp !sp 1
+write !sp cell1 1
+sensor :clock2 switch1 @enabled
+sensor :clock switch1 @enabled
+jump 319 equal :clock :clock2
+jump 851 always 0 0
+read !sp cell1 1
+op sub !sp !sp 1
+write !sp cell1 1
+op div bank !sp 512
+op floor bank bank undefined
+op add bank bank 6
+getlink bank bank
+op mod bankAddr !sp 512
+read value2 bank bankAddr
+sensor :clock2 switch1 @enabled
+sensor :clock switch1 @enabled
+jump 332 equal :clock :clock2
+read !sp cell1 1
+op sub !sp !sp 1
+write !sp cell1 1
+op div bank !sp 512
+op floor bank bank undefined
+op add bank bank 6
+getlink bank bank
+op mod bankAddr !sp 512
+read value bank bankAddr
+sensor :clock2 switch1 @enabled
+sensor :clock switch1 @enabled
+jump 344 equal :clock :clock2
+op mul temp3 data 2
+op add @counter @counter temp3
+jump 363 always value value2
+jump 362 always 0 0
+jump 363 equal value value2
+jump 362 always 0 0
+jump 363 notEqual value value2
+jump 362 always 0 0
+jump 363 lessThan value value2
+jump 362 always 0 0
+jump 363 lessThanEq value value2
+jump 362 always 0 0
+jump 363 greaterThan value value2
+jump 362 always 0 0
+jump 363 greaterThanEq value value2
+jump 362 always 0 0
+jump 365 always 0 0
+read !address cell1 8
+write !address cell1 0
+jump 851 always 0 0
+write data cell1 0
+jump 851 always 0 0
+read !sp cell1 1
+op sub !sp !sp 1
+write !sp cell1 1
+op div bank !sp 512
+op floor bank bank undefined
+op add bank bank 6
+getlink bank bank
+op mod bankAddr !sp 512
+read value bank bankAddr
+sensor :clock2 switch1 @enabled
+sensor :clock switch1 @enabled
+jump 378 equal :clock :clock2
+jump 382 notEqual value 0
+write data cell1 0
+jump 851 always 0 0
+read !sp cell1 1
+op sub !sp !sp 1
+write !sp cell1 1
+op div bank !sp 512
+op floor bank bank undefined
+op add bank bank 6
+getlink bank bank
+op mod bankAddr !sp 512
+read value bank bankAddr
+sensor :clock2 switch1 @enabled
+sensor :clock switch1 @enabled
+jump 393 equal :clock :clock2
+jump 397 equal value 0
+write data cell1 0
+jump 851 always 0 0
+read !address cell1 8
+op div bank !address 512
+op floor bank bank undefined
+op add bank bank 6
+getlink bank bank
+op mod bankAddr !address 512
+read value bank bankAddr
+sensor :clock2 switch1 @enabled
+sensor :clock switch1 @enabled
+jump 406 equal :clock :clock2
+read !sp cell1 1
+op div bank !sp 512
+op floor bank bank undefined
+op add bank bank 6
+getlink bank bank
+op mod bankAddr !sp 512
+write value bank bankAddr
+op add !sp !sp 1
+write !sp cell1 1
+sensor :clock2 switch1 @enabled
+sensor :clock switch1 @enabled
+jump 418 equal :clock :clock2
+jump 851 always 0 0
+read !address cell1 8
+read !sp cell1 1
+op sub !sp !sp 1
+write !sp cell1 1
+op div bank !sp 512
+op floor bank bank undefined
+op add bank bank 6
+getlink bank bank
+op mod bankAddr !sp 512
+read value bank bankAddr
+sensor :clock2 switch1 @enabled
+sensor :clock switch1 @enabled
+jump 432 equal :clock :clock2
+op div bank !address 512
+op floor bank bank undefined
+op add bank bank 6
+getlink bank bank
+op mod bankAddr !address 512
+write value bank bankAddr
+sensor :clock2 switch1 @enabled
+sensor :clock switch1 @enabled
+jump 441 equal :clock :clock2
+jump 851 always 0 0
+op div bank data 512
+op floor bank bank undefined
+op add bank bank 6
+getlink bank bank
+op mod bankAddr data 512
+read value bank bankAddr
+sensor :clock2 switch1 @enabled
+sensor :clock switch1 @enabled
+jump 451 equal :clock :clock2
+read !sp cell1 1
+op div bank !sp 512
+op floor bank bank undefined
+op add bank bank 6
+getlink bank bank
+op mod bankAddr !sp 512
+write value bank bankAddr
+op add !sp !sp 1
+write !sp cell1 1
+sensor :clock2 switch1 @enabled
+sensor :clock switch1 @enabled
+jump 463 equal :clock :clock2
+jump 851 always 0 0
+read !sp cell1 1
+op sub !sp !sp 1
+write !sp cell1 1
+op div bank !sp 512
+op floor bank bank undefined
+op add bank bank 6
+getlink bank bank
+op mod bankAddr !sp 512
+read value bank bankAddr
+sensor :clock2 switch1 @enabled
+sensor :clock switch1 @enabled
+jump 476 equal :clock :clock2
+op div bank data 512
+op floor bank bank undefined
+op add bank bank 6
+getlink bank bank
+op mod bankAddr data 512
+write value bank bankAddr
+sensor :clock2 switch1 @enabled
+sensor :clock switch1 @enabled
+jump 485 equal :clock :clock2
+jump 851 always 0 0
+read !loop cell1 9
+jump 493 lessThanEq !loop 0
+write data cell1 0
+op sub !loop !loop 1
+write !loop cell1 9
+jump 851 always 0 0
+read !sp cell1 1
+op sub !sp !sp 1
+write !sp cell1 1
+op div bank !sp 512
+op floor bank bank undefined
+op add bank bank 6
+getlink bank bank
+op mod bankAddr !sp 512
+read value bank bankAddr
+sensor :clock2 switch1 @enabled
+sensor :clock switch1 @enabled
+jump 504 equal :clock :clock2
+read value2 cell2 0
+read !sp cell1 1
+op div bank !sp 512
+op floor bank bank undefined
+op add bank bank 6
+getlink bank bank
+op mod bankAddr !sp 512
+write value2 bank bankAddr
+op add !sp !sp 1
+write !sp cell1 1
+sensor :clock2 switch1 @enabled
+sensor :clock switch1 @enabled
+jump 517 equal :clock :clock2
+jump 521 equal value2 -1
+jump 523 always 0 0
+write -2 cell2 0
+jump 524 always 0 0
+write 0 cell2 0
+read !locals cell1 3
+read !args cell1 2
+read !pc cell1 0
+read !sp cell1 1
+op div bank !sp 512
+op floor bank bank undefined
+op add bank bank 6
+getlink bank bank
+op mod bankAddr !sp 512
+write !locals bank bankAddr
+op add !sp !sp 1
+write !sp cell1 1
+sensor :clock2 switch1 @enabled
+sensor :clock switch1 @enabled
+jump 537 equal :clock :clock2
+read !sp cell1 1
+op div bank !sp 512
+op floor bank bank undefined
+op add bank bank 6
+getlink bank bank
+op mod bankAddr !sp 512
+write !args bank bankAddr
+op add !sp !sp 1
+write !sp cell1 1
+sensor :clock2 switch1 @enabled
+sensor :clock switch1 @enabled
+jump 549 equal :clock :clock2
+read !sp cell1 1
+op div bank !sp 512
+op floor bank bank undefined
+op add bank bank 6
+getlink bank bank
+op mod bankAddr !sp 512
+write !pc bank bankAddr
+op add !sp !sp 1
+write !sp cell1 1
+sensor :clock2 switch1 @enabled
+sensor :clock switch1 @enabled
+jump 561 equal :clock :clock2
+write data cell1 0
+read !sp cell1 1
+op sub !sp !sp 4
+op sub !sp !sp value
+write !sp cell1 2
+jump 851 always 0 0
+read !sp cell1 1
+op sub !sp !sp 1
+write !sp cell1 1
+op div bank !sp 512
+op floor bank bank undefined
+op add bank bank 6
+getlink bank bank
+op mod bankAddr !sp 512
+read value bank bankAddr
+sensor :clock2 switch1 @enabled
+sensor :clock switch1 @enabled
+jump 579 equal :clock :clock2
+write value cell1 10
+read !locals cell1 3
+write !locals cell1 1
+read !sp cell1 1
+op sub !sp !sp 1
+write !sp cell1 1
+op div bank !sp 512
+op floor bank bank undefined
+op add bank bank 6
+getlink bank bank
+op mod bankAddr !sp 512
+read temp4 bank bankAddr
+sensor :clock2 switch1 @enabled
+sensor :clock switch1 @enabled
+jump 594 equal :clock :clock2
+write temp4 cell1 0
+read !sp cell1 1
+op sub !sp !sp 1
+write !sp cell1 1
+op div bank !sp 512
+op floor bank bank undefined
+op add bank bank 6
+getlink bank bank
+op mod bankAddr !sp 512
+read value bank bankAddr
+sensor :clock2 switch1 @enabled
+sensor :clock switch1 @enabled
+jump 607 equal :clock :clock2
+read !sp cell1 1
+op sub !sp !sp 1
+write !sp cell1 1
+op div bank !sp 512
+op floor bank bank undefined
+op add bank bank 6
+getlink bank bank
+op mod bankAddr !sp 512
+read temp5 bank bankAddr
+sensor :clock2 switch1 @enabled
+sensor :clock switch1 @enabled
+jump 619 equal :clock :clock2
+write temp5 cell1 3
+read !sp cell1 1
+op sub !sp !sp 1
+write !sp cell1 1
+op div bank !sp 512
+op floor bank bank undefined
+op add bank bank 6
+getlink bank bank
+op mod bankAddr !sp 512
+read value2 bank bankAddr
+sensor :clock2 switch1 @enabled
+sensor :clock switch1 @enabled
+jump 632 equal :clock :clock2
+read !args cell1 2
+write !args cell1 1
+write value cell1 2
+read !retval cell1 10
+read int cell2 0
+jump 641 notEqual int 0
+jump 662 always 0 0
+read intLoaded cell2 1
+jump 644 equal intLoaded 0
+jump 647 always 0 0
+write -1 cell2 2
+write !retval cell2 3
+jump 660 always 0 0
+write 0 cell2 1
+read !sp cell1 1
+op div bank !sp 512
+op floor bank bank undefined
+op add bank bank 6
+getlink bank bank
+op mod bankAddr !sp 512
+write !retval bank bankAddr
+op add !sp !sp 1
+write !sp cell1 1
+sensor :clock2 switch1 @enabled
+sensor :clock switch1 @enabled
+jump 658 equal :clock :clock2
+write 0 cell2 0
+jump 675 always 0 0
+read !sp cell1 1
+op div bank !sp 512
+op floor bank bank undefined
+op add bank bank 6
+getlink bank bank
+op mod bankAddr !sp 512
+write !retval bank bankAddr
+op add !sp !sp 1
+write !sp cell1 1
+sensor :clock2 switch1 @enabled
+sensor :clock switch1 @enabled
+jump 672 equal :clock :clock2
+write value2 cell2 0
+jump 851 always 0 0
+read !locals cell1 3
+op add !locals !locals data
+op div bank !locals 512
+op floor bank bank undefined
+op add bank bank 6
+getlink bank bank
+op mod bankAddr !locals 512
+read value bank bankAddr
+sensor :clock2 switch1 @enabled
+sensor :clock switch1 @enabled
+jump 685 equal :clock :clock2
+read !sp cell1 1
+op div bank !sp 512
+op floor bank bank undefined
+op add bank bank 6
+getlink bank bank
+op mod bankAddr !sp 512
+write value bank bankAddr
+op add !sp !sp 1
+write !sp cell1 1
+sensor :clock2 switch1 @enabled
+sensor :clock switch1 @enabled
+jump 697 equal :clock :clock2
+jump 851 always 0 0
+read !sp cell1 1
+op sub !sp !sp 1
+write !sp cell1 1
+op div bank !sp 512
+op floor bank bank undefined
+op add bank bank 6
+getlink bank bank
+op mod bankAddr !sp 512
+read value bank bankAddr
+sensor :clock2 switch1 @enabled
+sensor :clock switch1 @enabled
+jump 710 equal :clock :clock2
+read !locals cell1 3
+op add !locals !locals data
+op div bank !locals 512
+op floor bank bank undefined
+op add bank bank 6
+getlink bank bank
+op mod bankAddr !locals 512
+write value bank bankAddr
+sensor :clock2 switch1 @enabled
+sensor :clock switch1 @enabled
+jump 721 equal :clock :clock2
+jump 851 always 0 0
+read !args cell1 2
+op add !args !args data
+op div bank !args 512
+op floor bank bank undefined
+op add bank bank 6
+getlink bank bank
+op mod bankAddr !args 512
+read value bank bankAddr
+sensor :clock2 switch1 @enabled
+sensor :clock switch1 @enabled
+jump 733 equal :clock :clock2
+read !sp cell1 1
+op div bank !sp 512
+op floor bank bank undefined
+op add bank bank 6
+getlink bank bank
+op mod bankAddr !sp 512
+write value bank bankAddr
+op add !sp !sp 1
+write !sp cell1 1
+sensor :clock2 switch1 @enabled
+sensor :clock switch1 @enabled
+jump 745 equal :clock :clock2
+jump 851 always 0 0
+write data cell2 0
+write 1 cell2 1
+read !sp cell1 1
+op sub !sp !sp 1
+write !sp cell1 1
+op div bank !sp 512
+op floor bank bank undefined
+op add bank bank 6
+getlink bank bank
+op mod bankAddr !sp 512
+read value bank bankAddr
+sensor :clock2 switch1 @enabled
+sensor :clock switch1 @enabled
+jump 760 equal :clock :clock2
+write value cell2 1
+set i 0
+jump 780 always 0 0
+read !sp cell1 1
+op sub !sp !sp 1
+write !sp cell1 1
+op div bank !sp 512
+op floor bank bank undefined
+op add bank bank 6
+getlink bank bank
+op mod bankAddr !sp 512
+read value2 bank bankAddr
+sensor :clock2 switch1 @enabled
+sensor :clock switch1 @enabled
+jump 775 equal :clock :clock2
+op add temp6 i 2
+write value2 cell2 temp6
+op add i i 1
+jump 765 lessThan i value
+jump 851 always 0 0
+control enabled switch2 true
+sensor reseting switch2 @enabled
+read int cell2 0
+jump 790 lessThanEq int 0
+read !sp cell1 1
+op add !sp !sp 1
+write !sp cell1 1
+jump 791 always 0 0
+jump 783 notEqual reseting 0
+control enabled switch2 false
+jump 851 always 0 0
+read !address cell1 8
+read value bank1 !address
+read !sp cell1 1
+op div bank !sp 512
+op floor bank bank undefined
+op add bank bank 6
+getlink bank bank
+op mod bankAddr !sp 512
+write value bank bankAddr
+op add !sp !sp 1
+write !sp cell1 1
+sensor :clock2 switch1 @enabled
+sensor :clock switch1 @enabled
+jump 805 equal :clock :clock2
+jump 851 always 0 0
+read !address cell1 8
+read !sp cell1 1
+op sub !sp !sp 1
+write !sp cell1 1
+op div bank !sp 512
+op floor bank bank undefined
+op add bank bank 6
+getlink bank bank
+op mod bankAddr !sp 512
+read value bank bankAddr
+sensor :clock2 switch1 @enabled
+sensor :clock switch1 @enabled
+jump 819 equal :clock :clock2
+write value bank1 !address
+jump 851 always 0 0
+read value bank1 data
+read !sp cell1 1
+op div bank !sp 512
+op floor bank bank undefined
+op add bank bank 6
+getlink bank bank
+op mod bankAddr !sp 512
+write value bank bankAddr
+op add !sp !sp 1
+write !sp cell1 1
+sensor :clock2 switch1 @enabled
+sensor :clock switch1 @enabled
+jump 834 equal :clock :clock2
+jump 851 always 0 0
+read !sp cell1 1
+op sub !sp !sp 1
+write !sp cell1 1
+op div bank !sp 512
+op floor bank bank undefined
+op add bank bank 6
+getlink bank bank
+op mod bankAddr !sp 512
+read value bank bankAddr
+sensor :clock2 switch1 @enabled
+sensor :clock switch1 @enabled
+jump 847 equal :clock :clock2
+write value bank1 data
+jump 851 always 0 0
+sensor :clock switch1 @enabled
+jump 851 notEqual :clock false
+read !pc cell1 0
+op div bank !pc 512
+op floor bank bank undefined
+op add bank bank 6
+getlink bank bank
+op mod bankAddr !pc 512
+read command bank bankAddr
+op add !pc !pc 1
+write !pc cell1 0
+sensor :clock2 switch1 @enabled
+sensor :clock switch1 @enabled
+jump 863 equal :clock :clock2
+end
+end

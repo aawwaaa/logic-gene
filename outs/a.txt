@@ -1,0 +1,102 @@
+set logic_generator_by "zzz"
+op mul temp1 temp0 2
+op add @counter @counter temp1
+set temp2 2
+jump 13 always 0 0
+set temp2 4
+jump 13 always 0 0
+set temp2 6
+jump 13 always 0 0
+set temp2 8
+jump 13 always 0 0
+set temp2 0
+jump 13 always 0 0
+op mul temp3 temp0 2
+op add @counter @counter temp3
+set temp4 3
+jump 25 always 0 0
+set temp4 5
+jump 25 always 0 0
+set temp4 7
+jump 25 always 0 0
+set temp4 9
+jump 25 always 0 0
+set temp4 1
+jump 25 always 0 0
+op mul temp5 temp0 2
+op add @counter @counter temp5
+set temp6 @slag
+jump 37 always 0 0
+set temp6 @arkycite
+jump 37 always 0 0
+set temp6 @water
+jump 37 always 0 0
+set temp6 @battery
+jump 37 always 0 0
+set temp6 @ozone
+jump 37 always 0 0
+op mul temp8 temp0 2
+op add @counter @counter temp8
+packcolor temp7 1 0.75 0.5 1
+jump 49 always 0 0
+packcolor temp7 0.5 0.75 0.5 1
+jump 49 always 0 0
+packcolor temp7 0.5 0.75 1 1
+jump 49 always 0 0
+packcolor temp7 1 1 0.5 1
+jump 49 always 0 0
+packcolor temp7 0.75 0.5 1 1
+jump 49 always 0 0
+op mul temp9 temp0 2
+op add @counter @counter temp9
+set temp10 "Slag"
+jump 61 always 0 0
+set temp10 "Arkycite"
+jump 61 always 0 0
+set temp10 "Water"
+jump 61 always 0 0
+set temp10 "Battery"
+jump 61 always 0 0
+set temp10 "Ozone"
+jump 61 always 0 0
+read temp11 cell1 temp2
+read temp12 cell1 temp4
+op div temp13 temp11 temp12
+op mul wid temp13 66
+op floor wid wid undefined
+op mul temp14 temp0 10
+op sub temp15 80 temp14
+op sub temp16 temp15 10
+op add temp17 temp16 5
+draw color 255 255 255 255
+draw image 5 temp17 temp6 8 0
+draw stroke 1
+op add temp18 temp16 1
+draw lineRect 11 temp18 68 8
+draw col temp7
+op add temp19 temp16 2
+draw rect 12 temp19 wid 6
+op mul temp11 temp11 100
+op floor temp11 temp11 undefined
+op div temp11 temp11 100
+op mul temp12 temp12 100
+op floor temp12 temp12 undefined
+op div temp12 temp12 100
+print temp10
+print ": ["
+print temp2
+print "/"
+print temp4
+print "] "
+print temp11
+print "/"
+print temp12
+print "\n"
+op add temp0 temp0 1
+op mod temp0 temp0 5
+jump 98 equal temp0 0
+jump 101 always 0 0
+drawflush display1
+printflush message1
+draw clear 0 0 0
+end

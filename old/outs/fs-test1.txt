@@ -1,0 +1,62 @@
+set logic_generator_by "zzz"
+set _ _
+sensor temp0 switch1 @enabled
+jump 1 equal temp0 0
+write 1 bank1 0
+write 84 bank1 32
+write 69 bank1 33
+write 83 bank1 34
+write 84 bank1 35
+write 4 bank1 10
+write 1 bank1 9
+read :state bank1 9
+jump 11 notEqual :state 0
+set temp1 6
+set temp2 false
+set temp3 0
+write 0 bank1 9
+write 0 bank1 8
+jump 51 always 0 0
+op mul temp4 temp1 16
+set temp5 0
+jump 35 always 0 0
+op mod temp6 temp5 2
+jump 25 equal temp6 1
+jump 31 always 0 0
+op add temp7 temp5 32
+op add temp8 temp5 temp4
+op mod temp8 temp8 96
+op add temp8 temp8 32
+write temp8 bank1 temp7
+jump 34 always 0 0
+op add temp9 temp5 32
+op add temp10 temp1 48
+write temp10 bank1 temp9
+op add temp5 temp5 1
+jump 22 lessThan temp5 32
+set temp3 32
+op sub temp1 temp1 1
+jump 40 equal temp1 0
+jump 41 always 0 0
+set temp2 true
+write temp3 bank1 10
+write 1 bank1 9
+read :state bank1 9
+jump 43 notEqual :state 0
+jump 47 notEqual temp2 0
+jump 51 always 0 0
+write temp2 bank1 8
+write 0 bank1 10
+write 1 bank1 9
+jump 52 always 0 0
+jump 19 equal temp2 0
+read :state bank1 0
+jump 52 notEqual :state 0
+read !ret bank1 2
+read !fileId bank1 1
+print !ret
+print "    file: "
+print !fileId
+printflush message1
+control enabled switch1 0
+end

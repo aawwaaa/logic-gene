@@ -1,0 +1,174 @@
+set logic_generator_by "zzz"
+set temp0 duct1
+jump 1 equal temp0 null
+set temp1 0
+print "Idle."
+printflush message1
+set temp2 null
+sensor temp2 temp0 @firstItem
+jump 10 notEqual temp2 @tungsten
+end
+jump 7 notEqual temp2 @beryllium
+print "Read length."
+printflush message1
+set temp1 0
+set temp3 null
+set temp4 0
+set temp5 8
+op sub temp5 temp5 4
+set temp6 null
+sensor temp6 temp0 @firstItem
+jump 22 notEqual temp6 @tungsten
+end
+jump 19 equal temp6 null
+jump 19 equal temp6 @beryllium
+jump 19 equal temp6 @oxide
+set temp3 temp6
+set temp7 null
+sensor temp7 temp0 @firstItem
+jump 30 notEqual temp7 @tungsten
+end
+jump 27 notEqual temp7 @oxide
+set temp4 -1
+jump 48 equal temp3 @copper
+jump 50 equal temp3 @lead
+jump 52 equal temp3 @metaglass
+jump 54 equal temp3 @graphite
+jump 56 equal temp3 @sand
+jump 58 equal temp3 @coal
+jump 60 equal temp3 @titanium
+jump 62 equal temp3 @thorium
+jump 64 equal temp3 @scrap
+jump 66 equal temp3 @silicon
+jump 68 equal temp3 @plastanium
+jump 70 equal temp3 @phase-fabric
+jump 72 equal temp3 @surge-alloy
+jump 74 equal temp3 @spore-pod
+jump 76 equal temp3 @blast-compound
+jump 78 equal temp3 @pyratite
+set temp4 0
+jump 80 always 0 0
+set temp4 1
+jump 80 always 0 0
+set temp4 2
+jump 80 always 0 0
+set temp4 3
+jump 80 always 0 0
+set temp4 4
+jump 80 always 0 0
+set temp4 5
+jump 80 always 0 0
+set temp4 6
+jump 80 always 0 0
+set temp4 7
+jump 80 always 0 0
+set temp4 8
+jump 80 always 0 0
+set temp4 9
+jump 80 always 0 0
+set temp4 10
+jump 80 always 0 0
+set temp4 11
+jump 80 always 0 0
+set temp4 12
+jump 80 always 0 0
+set temp4 13
+jump 80 always 0 0
+set temp4 14
+jump 80 always 0 0
+set temp4 15
+jump 80 always 0 0
+control enabled temp0 true
+op shl temp4 temp4 temp5
+op or temp1 temp1 temp4
+jump 17 greaterThan temp5 0
+write temp1 bank1 257
+set temp8 -1
+set temp9 0
+jump 171 always 0 0
+print "Read data: "
+print temp9
+print "/"
+print temp1
+print "  Last: "
+print temp8
+print "."
+printflush message1
+set temp8 0
+set temp10 null
+set temp11 0
+set temp12 8
+op sub temp12 temp12 4
+set temp13 null
+sensor temp13 temp0 @firstItem
+jump 105 notEqual temp13 @tungsten
+end
+jump 102 equal temp13 null
+jump 102 equal temp13 @beryllium
+jump 102 equal temp13 @oxide
+set temp10 temp13
+set temp14 null
+sensor temp14 temp0 @firstItem
+jump 113 notEqual temp14 @tungsten
+end
+jump 110 notEqual temp14 @oxide
+set temp11 -1
+jump 131 equal temp10 @copper
+jump 133 equal temp10 @lead
+jump 135 equal temp10 @metaglass
+jump 137 equal temp10 @graphite
+jump 139 equal temp10 @sand
+jump 141 equal temp10 @coal
+jump 143 equal temp10 @titanium
+jump 145 equal temp10 @thorium
+jump 147 equal temp10 @scrap
+jump 149 equal temp10 @silicon
+jump 151 equal temp10 @plastanium
+jump 153 equal temp10 @phase-fabric
+jump 155 equal temp10 @surge-alloy
+jump 157 equal temp10 @spore-pod
+jump 159 equal temp10 @blast-compound
+jump 161 equal temp10 @pyratite
+set temp11 0
+jump 163 always 0 0
+set temp11 1
+jump 163 always 0 0
+set temp11 2
+jump 163 always 0 0
+set temp11 3
+jump 163 always 0 0
+set temp11 4
+jump 163 always 0 0
+set temp11 5
+jump 163 always 0 0
+set temp11 6
+jump 163 always 0 0
+set temp11 7
+jump 163 always 0 0
+set temp11 8
+jump 163 always 0 0
+set temp11 9
+jump 163 always 0 0
+set temp11 10
+jump 163 always 0 0
+set temp11 11
+jump 163 always 0 0
+set temp11 12
+jump 163 always 0 0
+set temp11 13
+jump 163 always 0 0
+set temp11 14
+jump 163 always 0 0
+set temp11 15
+jump 163 always 0 0
+control enabled temp0 true
+op shl temp11 temp11 temp12
+op or temp8 temp8 temp11
+jump 100 greaterThan temp12 0
+op add temp15 temp9 258
+write temp8 bank1 temp15
+write temp8 cell1 0
+op add temp9 temp9 1
+jump 88 lessThan temp9 temp1
+write true bank1 256
+end

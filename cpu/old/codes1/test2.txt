@@ -1,0 +1,5 @@
+const 1
+writes 0x1
+saddr 0x1
+read
+sreg 3

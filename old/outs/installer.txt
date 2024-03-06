@@ -1,0 +1,90 @@
+set logic_generator_by "zzz"
+read !enable cell1 0
+jump 4 equal !enable 0
+jump 5 always 0 0
+end
+write 1 bank2 0
+read !name cell1 1
+jump 9 equal !name 0
+jump 20 always 0 0
+read temp0 bank3 0
+set temp1 0
+jump 17 always 0 0
+op add temp2 temp1 32
+op add temp3 temp1 1
+read temp4 bank3 temp3
+write temp4 bank2 temp2
+op add temp1 temp1 1
+jump 12 lessThan temp1 temp0
+write temp0 bank2 10
+jump 31 always 0 0
+read !clen cell1 3
+read !cbegin cell1 2
+set temp5 0
+jump 29 always 0 0
+op add temp6 temp5 32
+op add temp7 temp5 !cbegin
+read temp8 bank1 temp7
+write temp8 bank2 temp6
+op add temp5 temp5 1
+jump 24 lessThan temp5 !clen
+write !clen bank2 10
+write 1 bank2 9
+read :state bank2 9
+jump 32 notEqual :state 0
+read !op bank2 0
+jump 37 equal !op 0
+jump 43 always 0 0
+read !ret bank2 2
+write !ret cell1 4
+read !fileId bank2 1
+write !fileId cell1 5
+write 0 cell1 0
+end
+set temp9 0
+read temp10 bank3 16
+set temp11 false
+set temp12 0
+write 0 bank2 9
+write 0 bank2 8
+jump 80 always 0 0
+set temp13 0
+jump 67 always 0 0
+jump 54 greaterThanEq temp13 64
+jump 56 always 0 0
+set temp12 temp13
+jump 70 always 0 0
+op add temp14 temp9 32
+op div bank temp14 512
+op floor bank bank undefined
+op add bank bank 3
+getlink bank bank
+op mod bankAddr temp14 512
+read temp15 bank bankAddr
+op add temp16 temp13 32
+write temp15 bank2 temp16
+op add temp9 temp9 1
+op add temp13 temp13 1
+jump 52 lessThan temp9 temp10
+set temp12 temp13
+set temp11 true
+write temp12 bank2 10
+write 1 bank2 9
+read :state bank2 9
+jump 72 notEqual :state 0
+jump 76 notEqual temp11 0
+jump 80 always 0 0
+write temp11 bank2 8
+write 0 bank2 10
+write 1 bank2 9
+jump 81 always 0 0
+jump 50 equal temp11 0
+read :state bank2 0
+jump 81 notEqual :state 0
+read !ret bank2 2
+write !ret cell1 4
+read !fileId bank2 1
+write !fileId cell1 5
+write 0 cell1 0
+end
+end

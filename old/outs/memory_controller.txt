@@ -1,0 +1,88 @@
+set logic_generator_by "zzz"
+read !enable bank2 238
+jump 4 equal !enable 0
+jump 5 always 0 0
+end
+read !len bank2 242
+read !src bank2 239
+read !dst bank2 241
+read !fromComponent bank2 240
+op add @counter @counter !fromComponent
+jump 12 always 0 0
+jump 52 always 0 0
+read !toInput bank2 243
+op add @counter @counter !toInput
+jump 16 always 0 0
+jump 35 always 0 0
+set temp0 0
+jump 33 always 0 0
+op add temp1 temp0 !src
+op div bank temp1 512
+op floor bank bank undefined
+op add bank bank 3
+getlink bank bank
+op mod bankAddr temp1 512
+read data bank bankAddr
+op add temp2 temp0 !dst
+op div bank temp2 512
+op floor bank bank undefined
+op add bank bank 3
+getlink bank bank
+op mod bankAddr temp2 512
+write data bank bankAddr
+op add temp0 temp0 1
+jump 18 lessThan temp0 !len
+jump 51 always 0 0
+set temp3 0
+jump 47 always 0 0
+op add temp4 temp3 !src
+op div bank temp4 512
+op floor bank bank undefined
+op add bank bank 3
+getlink bank bank
+op mod bankAddr temp4 512
+read data bank bankAddr
+op add temp5 temp3 !dst
+write data bank1 temp5
+op add temp3 temp3 1
+jump 37 lessThan temp3 !len
+write !len bank1 1
+write 1 bank1 0
+jump 51 always 0 0
+jump 82 always 0 0
+read !toInput bank2 243
+op add @counter @counter !toInput
+jump 56 always 0 0
+jump 70 always 0 0
+set temp6 0
+jump 68 always 0 0
+op add temp7 temp6 !src
+read data bank2 temp7
+op add temp8 temp6 !dst
+op div bank temp8 512
+op floor bank bank undefined
+op add bank bank 3
+getlink bank bank
+op mod bankAddr temp8 512
+write data bank bankAddr
+op add temp6 temp6 1
+jump 58 lessThan temp6 !len
+jump 81 always 0 0
+set temp9 0
+jump 77 always 0 0
+op add temp10 temp9 !src
+read data bank2 temp10
+op add temp11 temp9 !dst
+write data bank1 temp11
+op add temp9 temp9 1
+jump 72 lessThan temp9 !len
+write !len bank1 1
+write 1 bank1 0
+jump 81 always 0 0
+jump 82 always 0 0
+read !halt bank2 511
+jump 85 notEqual !halt 0
+jump 86 always 0 0
+control enabled switch1 false
+write 0 bank2 238
+end

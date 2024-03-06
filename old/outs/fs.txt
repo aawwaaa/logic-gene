@@ -1,0 +1,778 @@
+set logic_generator_by "zzz"
+read !op bank1 0
+op add @counter @counter !op
+jump 12 always 0 0
+jump 15 always 0 0
+jump 197 always 0 0
+jump 278 always 0 0
+jump 500 always 0 0
+jump 583 always 0 0
+jump 602 always 0 0
+jump 667 always 0 0
+jump 730 always 0 0
+control config sorter1 @silicon
+end
+jump 776 always 0 0
+set ptr 0
+control config sorter1 @surge-alloy
+jump 24 lessThan ptr 31
+read :state bank1 9
+jump 18 equal :state 0
+write 2 bank1 2
+write 0 bank1 0
+write 0 bank1 9
+end
+op mul temp0 ptr 16
+op add temp1 temp0 16
+op div bank temp1 512
+op floor bank bank undefined
+op add bank bank 3
+getlink bank bank
+op mod bankAddr temp1 512
+read temp2 bank bankAddr
+jump 34 equal temp2 0
+jump 35 always 0 0
+jump 37 always 0 0
+op add ptr ptr 1
+jump 17 always 0 0
+write ptr bank1 1
+read :state bank1 9
+jump 38 equal :state 0
+op mul fstab ptr 16
+op add temp3 fstab 16
+op div bank temp3 512
+op floor bank bank undefined
+op add bank bank 3
+getlink bank bank
+op mod bankAddr temp3 512
+write 1 bank bankAddr
+op add fstab fstab 1
+read !freeBegin bank2 4
+set ptr !freeBegin
+op add temp4 fstab 16
+op div bank temp4 512
+op floor bank bank undefined
+op add bank bank 3
+getlink bank bank
+op mod bankAddr temp4 512
+write ptr bank bankAddr
+op add fstab fstab 1
+read !len bank1 10
+op add temp5 fstab 16
+op div bank temp5 512
+op floor bank bank undefined
+op add bank bank 3
+getlink bank bank
+op mod bankAddr temp5 512
+write !len bank bankAddr
+op add fstab fstab 2
+set i 0
+jump 81 always 0 0
+op add temp6 i 32
+read data bank1 temp6
+op add temp7 fstab 16
+op div bank temp7 512
+op floor bank bank undefined
+op add bank bank 3
+getlink bank bank
+op mod bankAddr temp7 512
+write data bank bankAddr
+op add fstab fstab 1
+op add i i 1
+jump 70 lessThan i !len
+write 0 bank1 9
+op add dataPtr ptr 4
+set i 0
+set count 1
+set ret 0
+set temp8 false
+set temp9 0
+jump 146 always 0 0
+read :state bank1 9
+jump 90 equal :state 0
+read temp9 bank1 10
+read temp8 bank1 8
+jump 96 equal ptr -1
+jump 99 always 0 0
+set temp8 true
+set ret 3
+jump 142 always 0 0
+control config sorter1 @spore-pod
+set j 0
+jump 140 always 0 0
+op add temp10 j 32
+read data bank1 temp10
+op add temp11 dataPtr i
+op add temp12 temp11 512
+op div bank temp12 512
+op floor bank bank undefined
+op add bank bank 3
+getlink bank bank
+op mod bankAddr temp12 512
+write data bank bankAddr
+op add i i 1
+jump 115 greaterThanEq i 60
+jump 139 always 0 0
+op add temp13 ptr 1
+op add temp14 temp13 512
+op div bank temp14 512
+op floor bank bank undefined
+op add bank bank 3
+getlink bank bank
+op mod bankAddr temp14 512
+write 60 bank bankAddr
+set i 0
+op add temp15 ptr 512
+op div bank temp15 512
+op floor bank bank undefined
+op add bank bank 3
+getlink bank bank
+op mod bankAddr temp15 512
+read next bank bankAddr
+jump 133 equal next -1
+jump 136 always 0 0
+set temp8 true
+set ret 3
+jump 141 always 0 0
+set ptr next
+op add dataPtr ptr 4
+op add count count 1
+op add j j 1
+jump 102 lessThan j temp9
+control config sorter1 @scrap
+write 0 bank1 9
+jump 145 notEqual temp8 0
+jump 146 always 0 0
+jump 147 always 0 0
+jump 90 equal temp8 0
+write 0 bank1 8
+set temp16 "next"
+op add temp17 ptr 512
+op div bank temp17 512
+op floor bank bank undefined
+op add bank bank 3
+getlink bank bank
+op mod bankAddr temp17 512
+read temp16 bank bankAddr
+op add temp18 ptr 512
+op div bank temp18 512
+op floor bank bank undefined
+op add bank bank 3
+getlink bank bank
+op mod bankAddr temp18 512
+write -1 bank bankAddr
+op add temp19 ptr 1
+op add temp20 temp19 512
+op div bank temp20 512
+op floor bank bank undefined
+op add bank bank 3
+getlink bank bank
+op mod bankAddr temp20 512
+write i bank bankAddr
+write temp16 bank2 4
+read !files bank2 0
+op add !files !files 1
+write !files bank2 0
+read !free bank2 3
+op sub !free !free count
+write !free bank2 3
+read !files bank2 0
+read !filesCap bank2 1
+read !free bank2 3
+read !total bank2 2
+write !files bank1 4
+write !filesCap bank1 5
+write !free bank1 6
+write !total bank1 7
+print "files: "
+print !files
+print " / "
+print !filesCap
+print "\nfreeChunks: "
+print !free
+print " / "
+print !total
+printflush message1
+write ret bank1 2
+jump 776 always 0 0
+read !fileId bank1 1
+op mul fstab !fileId 16
+op add temp21 fstab 16
+op div bank temp21 512
+op floor bank bank undefined
+op add bank bank 3
+getlink bank bank
+op mod bankAddr temp21 512
+read temp22 bank bankAddr
+jump 208 notEqual temp22 0
+jump 270 always 0 0
+op add fstab fstab 1
+op add temp23 fstab 16
+op div bank temp23 512
+op floor bank bank undefined
+op add bank bank 3
+getlink bank bank
+op mod bankAddr temp23 512
+read ptr bank bankAddr
+op add begin ptr 4
+set temp24 false
+set temp25 0
+write 0 bank1 9
+write 0 bank1 8
+jump 267 always 0 0
+control config sorter1 @plastanium
+op add temp26 ptr 1
+op add temp27 temp26 512
+op div bank temp27 512
+op floor bank bank undefined
+op add bank bank 3
+getlink bank bank
+op mod bankAddr temp27 512
+read temp25 bank bankAddr
+set i 0
+jump 244 always 0 0
+op add temp28 i begin
+op add temp29 temp28 512
+op div bank temp29 512
+op floor bank bank undefined
+op add bank bank 3
+getlink bank bank
+op mod bankAddr temp29 512
+read data bank bankAddr
+op add temp30 i 32
+write data bank1 temp30
+op add i i 1
+jump 233 lessThan i temp25
+op add temp31 ptr 512
+op div bank temp31 512
+op floor bank bank undefined
+op add bank bank 3
+getlink bank bank
+op mod bankAddr temp31 512
+read ptr bank bankAddr
+op add begin ptr 4
+jump 255 equal ptr -1
+jump 256 always 0 0
+set temp24 true
+control config sorter1 @scrap
+write temp25 bank1 10
+write 1 bank1 9
+read :state bank1 9
+jump 259 notEqual :state 0
+jump 263 notEqual temp24 0
+jump 267 always 0 0
+write temp24 bank1 8
+write 0 bank1 10
+write 1 bank1 9
+jump 268 always 0 0
+jump 222 equal temp24 0
+write 0 bank1 2
+jump 277 always 0 0
+write 0 bank1 10
+write 1 bank1 8
+write 1 bank1 9
+read :state bank1 9
+jump 273 notEqual :state 0
+write 0 bank1 8
+write 1 bank1 2
+jump 776 always 0 0
+read !fileId bank1 1
+op mul fstab !fileId 16
+op add temp32 fstab 16
+op div bank temp32 512
+op floor bank bank undefined
+op add bank bank 3
+getlink bank bank
+op mod bankAddr temp32 512
+read temp33 bank bankAddr
+jump 289 notEqual temp33 0
+jump 334 always 0 0
+control config sorter1 @beryllium
+op add temp34 fstab 1
+op add temp35 temp34 16
+op div bank temp35 512
+op floor bank bank undefined
+op add bank bank 3
+getlink bank bank
+op mod bankAddr temp35 512
+read ptr bank bankAddr
+set begin ptr
+op add temp36 ptr 512
+op div bank temp36 512
+op floor bank bank undefined
+op add bank bank 3
+getlink bank bank
+op mod bankAddr temp36 512
+read next bank bankAddr
+set count 1
+jump 317 always 0 0
+set ptr next
+op add count count 1
+op add temp37 ptr 512
+op div bank temp37 512
+op floor bank bank undefined
+op add bank bank 3
+getlink bank bank
+op mod bankAddr temp37 512
+read next bank bankAddr
+jump 308 notEqual next -1
+read !freeBegin bank2 4
+op add temp38 ptr 512
+op div bank temp38 512
+op floor bank bank undefined
+op add bank bank 3
+getlink bank bank
+op mod bankAddr temp38 512
+write !freeBegin bank bankAddr
+read !files bank2 0
+op sub !files !files 1
+write !files bank2 0
+read !free bank2 3
+op add !free !free count
+write !free bank2 3
+write begin bank2 4
+jump 377 always 0 0
+set ptr 0
+control config sorter1 @surge-alloy
+jump 344 lessThan ptr 31
+read :state bank1 9
+jump 337 equal :state 0
+write 1 bank1 8
+write 0 bank1 9
+write 2 bank1 2
+write 0 bank1 0
+end
+op mul temp39 ptr 16
+op add temp40 temp39 16
+op div bank temp40 512
+op floor bank bank undefined
+op add bank bank 3
+getlink bank bank
+op mod bankAddr temp40 512
+read temp41 bank bankAddr
+jump 354 equal temp41 0
+jump 355 always 0 0
+jump 357 always 0 0
+op add ptr ptr 1
+jump 336 always 0 0
+write ptr bank1 1
+read :state bank1 9
+jump 358 equal :state 0
+op mul fstab ptr 16
+op add temp42 fstab 16
+op div bank temp42 512
+op floor bank bank undefined
+op add bank bank 3
+getlink bank bank
+op mod bankAddr temp42 512
+write 1 bank bankAddr
+op add fstab fstab 1
+op add temp43 fstab 2
+op add temp44 temp43 16
+op div bank temp44 512
+op floor bank bank undefined
+op add bank bank 3
+getlink bank bank
+op mod bankAddr temp44 512
+write 0 bank bankAddr
+read !freeBegin bank2 4
+op add temp45 fstab 1
+op add temp46 temp45 16
+op div bank temp46 512
+op floor bank bank undefined
+op add bank bank 3
+getlink bank bank
+op mod bankAddr temp46 512
+write !freeBegin bank bankAddr
+op add dataPtr !freeBegin 4
+set i 0
+set count 1
+set ret 0
+set temp47 false
+set temp48 0
+jump 449 always 0 0
+read :state bank1 9
+jump 393 equal :state 0
+read temp48 bank1 10
+read temp47 bank1 8
+jump 399 equal !freeBegin -1
+jump 402 always 0 0
+set temp47 true
+set ret 3
+jump 445 always 0 0
+control config sorter1 @spore-pod
+set j 0
+jump 443 always 0 0
+op add temp49 j 32
+read data bank1 temp49
+op add temp50 dataPtr i
+op add temp51 temp50 512
+op div bank temp51 512
+op floor bank bank undefined
+op add bank bank 3
+getlink bank bank
+op mod bankAddr temp51 512
+write data bank bankAddr
+op add i i 1
+jump 418 greaterThanEq i 60
+jump 442 always 0 0
+op add temp52 !freeBegin 1
+op add temp53 temp52 512
+op div bank temp53 512
+op floor bank bank undefined
+op add bank bank 3
+getlink bank bank
+op mod bankAddr temp53 512
+write 60 bank bankAddr
+set i 0
+op add temp54 !freeBegin 512
+op div bank temp54 512
+op floor bank bank undefined
+op add bank bank 3
+getlink bank bank
+op mod bankAddr temp54 512
+read next bank bankAddr
+jump 436 equal next -1
+jump 439 always 0 0
+set temp47 true
+set ret 3
+jump 444 always 0 0
+set !freeBegin next
+op add dataPtr !freeBegin 4
+op add count count 1
+op add j j 1
+jump 405 lessThan j temp48
+control config sorter1 @scrap
+write 0 bank1 9
+jump 448 notEqual temp47 0
+jump 449 always 0 0
+jump 450 always 0 0
+jump 393 equal temp47 0
+write 0 bank1 8
+set temp55 "next"
+op add temp56 !freeBegin 512
+op div bank temp56 512
+op floor bank bank undefined
+op add bank bank 3
+getlink bank bank
+op mod bankAddr temp56 512
+read temp55 bank bankAddr
+op add temp57 !freeBegin 512
+op div bank temp57 512
+op floor bank bank undefined
+op add bank bank 3
+getlink bank bank
+op mod bankAddr temp57 512
+write -1 bank bankAddr
+op add temp58 !freeBegin 1
+op add temp59 temp58 512
+op div bank temp59 512
+op floor bank bank undefined
+op add bank bank 3
+getlink bank bank
+op mod bankAddr temp59 512
+write i bank bankAddr
+write temp55 bank2 4
+read !files bank2 0
+op add !files !files 1
+write !files bank2 0
+read !free bank2 3
+op sub !free !free count
+write !free bank2 3
+read !files bank2 0
+read !filesCap bank2 1
+read !free bank2 3
+read !total bank2 2
+write !files bank1 4
+write !filesCap bank1 5
+write !free bank1 6
+write !total bank1 7
+print "files: "
+print !files
+print " / "
+print !filesCap
+print "\nfreeChunks: "
+print !free
+print " / "
+print !total
+printflush message1
+write ret bank1 2
+jump 776 always 0 0
+read !fileId bank1 1
+op mul fstab !fileId 16
+op add temp60 fstab 16
+op div bank temp60 512
+op floor bank bank undefined
+op add bank bank 3
+getlink bank bank
+op mod bankAddr temp60 512
+read temp61 bank bankAddr
+jump 511 notEqual temp61 0
+jump 581 always 0 0
+control config sorter1 @pyratite
+op add temp62 fstab 16
+op div bank temp62 512
+op floor bank bank undefined
+op add bank bank 3
+getlink bank bank
+op mod bankAddr temp62 512
+write 0 bank bankAddr
+op add fstab fstab 1
+op add temp63 fstab 16
+op div bank temp63 512
+op floor bank bank undefined
+op add bank bank 3
+getlink bank bank
+op mod bankAddr temp63 512
+read ptr bank bankAddr
+set begin ptr
+op add temp64 ptr 512
+op div bank temp64 512
+op floor bank bank undefined
+op add bank bank 3
+getlink bank bank
+op mod bankAddr temp64 512
+read next bank bankAddr
+set count 1
+jump 546 always 0 0
+set ptr next
+op add count count 1
+op add temp65 ptr 512
+op div bank temp65 512
+op floor bank bank undefined
+op add bank bank 3
+getlink bank bank
+op mod bankAddr temp65 512
+read next bank bankAddr
+jump 537 notEqual next -1
+read !freeBegin bank2 4
+op add temp66 ptr 512
+op div bank temp66 512
+op floor bank bank undefined
+op add bank bank 3
+getlink bank bank
+op mod bankAddr temp66 512
+write !freeBegin bank bankAddr
+write begin bank2 4
+read !free bank2 3
+op add !free !free count
+write !free bank2 3
+read !files bank2 0
+op sub !files !files 1
+write !files bank2 0
+read !files bank2 0
+read !filesCap bank2 1
+read !free bank2 3
+read !total bank2 2
+write !files bank1 4
+write !filesCap bank1 5
+write !free bank1 6
+write !total bank1 7
+print "files: "
+print !files
+print " / "
+print !filesCap
+print "\nfreeChunks: "
+print !free
+print " / "
+print !total
+printflush message1
+write 0 bank1 2
+jump 582 always 0 0
+write 1 bank1 2
+jump 776 always 0 0
+read !files bank2 0
+read !filesCap bank2 1
+read !free bank2 3
+read !total bank2 2
+write !files bank1 4
+write !filesCap bank1 5
+write !free bank1 6
+write !total bank1 7
+print "files: "
+print !files
+print " / "
+print !filesCap
+print "\nfreeChunks: "
+print !free
+print " / "
+print !total
+printflush message1
+write 0 bank1 2
+jump 776 always 0 0
+control config sorter1 @blast-compound
+write 0 bank2 0
+write 0 bank2 1
+write 0 bank2 3
+write 0 bank2 2
+write 0 bank2 4
+set count 0
+set ptr 0
+jump 621 always 0 0
+op add temp67 ptr 64
+op add temp68 ptr 512
+op div bank temp68 512
+op floor bank bank undefined
+op add bank bank 3
+getlink bank bank
+op mod bankAddr temp68 512
+write temp67 bank bankAddr
+op add ptr ptr 64
+op add count count 1
+op add temp69 ptr 512
+op div bank temp69 512
+op floor bank bank undefined
+op add bank bank 3
+getlink bank bank
+jump 611 notEqual bank 0
+op add temp70 ptr 512
+op div bank temp70 512
+op floor bank bank undefined
+op add bank bank 3
+getlink bank bank
+op mod bankAddr temp70 512
+write -1 bank bankAddr
+set i 0
+jump 644 always 0 0
+op add temp71 i 16
+op div bank temp71 512
+op floor bank bank undefined
+op add bank bank 3
+getlink bank bank
+op mod bankAddr temp71 512
+write 0 bank bankAddr
+op add i i 16
+jump 636 lessThan i 496
+write 31 bank2 1
+write count bank2 3
+write count bank2 2
+read !files bank2 0
+read !filesCap bank2 1
+read !free bank2 3
+read !total bank2 2
+write !files bank1 4
+write !filesCap bank1 5
+write !free bank1 6
+write !total bank1 7
+print "files: "
+print !files
+print " / "
+print !filesCap
+print "\nfreeChunks: "
+print !free
+print " / "
+print !total
+printflush message1
+write count bank1 2
+jump 776 always 0 0
+set ptr 0
+set temp72 false
+set temp73 0
+write 0 bank1 9
+write 0 bank1 8
+jump 726 always 0 0
+control config sorter1 @titanium
+set count 0
+jump 713 always 0 0
+jump 680 lessThan ptr 31
+set temp72 true
+set temp73 count
+jump 716 always 0 0
+op mul temp74 ptr 16
+op add temp75 temp74 16
+op div bank temp75 512
+op floor bank bank undefined
+op add bank bank 3
+getlink bank bank
+op mod bankAddr temp75 512
+read temp76 bank bankAddr
+jump 690 notEqual temp76 0
+jump 691 always 0 0
+jump 693 always 0 0
+op add ptr ptr 1
+jump 676 always 0 0
+op mul begin ptr 16
+op add temp77 count 32
+write ptr bank1 temp77
+op add count count 1
+set i 1
+jump 711 always 0 0
+op add temp78 i begin
+op add temp79 temp78 16
+op div bank temp79 512
+op floor bank bank undefined
+op add bank bank 3
+getlink bank bank
+op mod bankAddr temp79 512
+read data bank bankAddr
+op add temp80 count 32
+write data bank1 temp80
+op add count count 1
+op add i i 1
+jump 699 lessThan i 16
+op add ptr ptr 1
+jump 676 lessThan count 63
+set temp73 count
+control config sorter1 @scrap
+write temp73 bank1 10
+write 1 bank1 9
+read :state bank1 9
+jump 718 notEqual :state 0
+jump 722 notEqual temp72 0
+jump 726 always 0 0
+write temp72 bank1 8
+write 0 bank1 10
+write 1 bank1 9
+jump 727 always 0 0
+jump 673 equal temp72 0
+read !files bank2 0
+write !files bank1 2
+jump 776 always 0 0
+read !fileId bank1 1
+op mul fstab !fileId 16
+op add temp81 fstab 16
+op div bank temp81 512
+op floor bank bank undefined
+op add bank bank 3
+getlink bank bank
+op mod bankAddr temp81 512
+read temp82 bank bankAddr
+jump 741 notEqual temp82 0
+jump 771 always 0 0
+control config sorter1 @lead
+op add fstab fstab 2
+read :state bank1 9
+jump 743 equal :state 0
+read !len bank1 10
+op add temp83 fstab 16
+op div bank temp83 512
+op floor bank bank undefined
+op add bank bank 3
+getlink bank bank
+op mod bankAddr temp83 512
+write !len bank bankAddr
+op add fstab fstab 2
+set i 0
+jump 767 always 0 0
+op add temp84 i 32
+read data bank1 temp84
+op add temp85 fstab 16
+op div bank temp85 512
+op floor bank bank undefined
+op add bank bank 3
+getlink bank bank
+op mod bankAddr temp85 512
+write data bank bankAddr
+op add fstab fstab 1
+op add i i 1
+jump 756 lessThan i !len
+write 0 bank1 9
+write 0 bank1 2
+jump 775 always 0 0
+read :state bank1 9
+jump 771 equal :state 0
+write 0 bank1 9
+write 1 bank1 2
+jump 776 always 0 0
+write 0 bank1 0
+end

@@ -1,0 +1,55 @@
+program
+labelbase 480
+name "REPEATER-F"
+version 1
+    const :intproc
+    sreg $intproc
+    printStrl :hello
+flag:
+    phalt
+    jmpi :flag
+    reset
+def intproc 0
+    set .d.halt 0
+    loadArg .int.type
+    equal .int.input.type
+    jeqi +6
+    loadArg .int.input.c1
+    loadArg .int.input.c2
+    loadArg .int.input.len
+    call :inputproc 3
+    ret
+    const 0
+    ret
+def inputproc 0
+    loadArg 0
+    equal 0x0a
+    jeqi :flag2
+    loadArg 2
+    equal 1
+    jeqi :flag3
+    ini .i
+    equal '/'
+    jeqi :flag3
+    reset
+flag3:
+    printStrl :data
+    set .m.src .i
+    set .m.fromComponent 1
+    set .m.dst 2
+    set .m.target .m.t.input
+    loadArg 2
+    outi .m.len
+    set .m.enable 1
+    waitState .m.enable 0
+    set .m.fromComponent 0
+    set .m.target 0
+    printStrl :endl
+flag2:
+    const 0
+    ret
+pad 192
+    strl data "REPEAT: \n"
+    strl endl "\n>"
+    strl hello "\x10\x00IT WILL REPEAT YOUR INPUT, TYPE \"/\" TO EXIT\n>"
+endProgram

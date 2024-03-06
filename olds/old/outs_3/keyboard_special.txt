@@ -1,0 +1,8 @@
+set logic_generator_by "zzz"
+sensor temp0 switch1 @enabled
+write temp0 cell1 8
+sensor temp1 switch2 @enabled
+write temp1 cell1 9
+sensor temp2 switch3 @enabled
+write temp2 cell1 10
+end

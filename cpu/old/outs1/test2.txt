@@ -1,0 +1,7 @@
+write 259 bank2 0
+write 271 bank2 1
+write 259 bank2 2
+write 2050 bank2 3
+write 12 bank2 4
+write 770 bank2 5
+write 0 bank2 6

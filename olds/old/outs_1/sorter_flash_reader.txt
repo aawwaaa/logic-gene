@@ -1,0 +1,165 @@
+set logic_generator_by "zzz"
+read temp0 cell1 3
+op add temp0 temp0 1000
+jump 6 greaterThan temp0 @time
+control config sorter1 @blast-compound
+end
+control config sorter1 @scrap
+read temp1 cell1 4
+read temp2 cell1 5
+read temp3 cell1 7
+set currentPage 0
+set currentData 0
+sensor temp4 switch1 @enabled
+jump 15 equal temp4 true
+jump 74 always 0 0
+jump 17 greaterThan currentPage temp2
+jump 20 always 0 0
+control enabled switch2 false
+control enabled switch1 false
+end
+write currentPage cell1 1
+write 1 cell1 0
+jump 24 always 0 0
+control config sorter1 @beryllium
+read temp5 cell1 0
+jump 23 notEqual temp5 0
+control config sorter1 @titanium
+op add currentPage currentPage 1
+set currentData 0
+set temp6 0
+op add temp7 temp3 currentData
+read temp6 cell1 temp7
+op add currentData currentData 1
+jump 35 greaterThanEq currentData temp1
+jump 49 always 0 0
+jump 37 greaterThan currentPage temp2
+jump 40 always 0 0
+control enabled switch2 false
+control enabled switch1 false
+end
+write currentPage cell1 1
+write 1 cell1 0
+jump 44 always 0 0
+control config sorter1 @beryllium
+read temp8 cell1 0
+jump 43 notEqual temp8 0
+control config sorter1 @titanium
+op add currentPage currentPage 1
+set currentData 0
+write temp6 cell2 63
+set temp9 0
+op add temp10 temp3 currentData
+read temp6 cell1 temp10
+op add currentData currentData 1
+jump 56 greaterThanEq currentData temp1
+jump 70 always 0 0
+jump 58 greaterThan currentPage temp2
+jump 61 always 0 0
+control enabled switch2 false
+control enabled switch1 false
+end
+write currentPage cell1 1
+write 1 cell1 0
+jump 65 always 0 0
+control config sorter1 @beryllium
+read temp11 cell1 0
+jump 64 notEqual temp11 0
+control config sorter1 @titanium
+op add currentPage currentPage 1
+set currentData 0
+write temp6 bank1 temp9
+op add temp9 temp9 1
+jump 51 notEqual temp6 0
+control enabled switch1 false
+sensor temp12 switch2 @enabled
+jump 77 equal temp12 true
+jump 164 always 0 0
+control config sorter1 @spore-pod
+set temp13 0
+jump 83 always 0 0
+op add temp14 temp3 temp13
+write 0 cell1 temp14
+op add temp13 temp13 1
+jump 80 lessThan temp13 temp1
+set temp15 0
+read temp15 cell2 63
+op add temp16 temp3 currentData
+write temp15 cell1 temp16
+op add currentData currentData 1
+jump 91 greaterThanEq currentData temp1
+jump 112 always 0 0
+write currentPage cell1 1
+write 2 cell1 0
+jump 95 always 0 0
+control config sorter1 @carbide
+read temp17 cell1 0
+jump 94 notEqual temp17 0
+op add currentPage currentPage 1
+jump 100 greaterThan currentPage temp2
+jump 103 always 0 0
+control enabled switch2 false
+control enabled switch1 false
+end
+set currentData 0
+control config sorter1 @spore-pod
+set temp18 0
+jump 110 always 0 0
+op add temp19 temp3 temp18
+write 0 cell1 temp19
+op add temp18 temp18 1
+jump 107 lessThan temp18 temp1
+control config sorter1 @plastanium
+set temp20 0
+read temp15 bank1 temp20
+op add temp21 temp3 currentData
+write temp15 cell1 temp21
+op add currentData currentData 1
+jump 119 greaterThanEq currentData temp1
+jump 140 always 0 0
+write currentPage cell1 1
+write 2 cell1 0
+jump 123 always 0 0
+control config sorter1 @carbide
+read temp22 cell1 0
+jump 122 notEqual temp22 0
+op add currentPage currentPage 1
+jump 128 greaterThan currentPage temp2
+jump 131 always 0 0
+control enabled switch2 false
+control enabled switch1 false
+end
+set currentData 0
+control config sorter1 @spore-pod
+set temp23 0
+jump 138 always 0 0
+op add temp24 temp3 temp23
+write 0 cell1 temp24
+op add temp23 temp23 1
+jump 135 lessThan temp23 temp1
+control config sorter1 @plastanium
+op add temp20 temp20 1
+jump 113 notEqual temp15 0
+write currentPage cell1 1
+write 2 cell1 0
+jump 146 always 0 0
+control config sorter1 @carbide
+read temp25 cell1 0
+jump 145 notEqual temp25 0
+op add currentPage currentPage 1
+jump 151 greaterThan currentPage temp2
+jump 154 always 0 0
+control enabled switch2 false
+control enabled switch1 false
+end
+set currentData 0
+control config sorter1 @spore-pod
+set temp26 0
+jump 161 always 0 0
+op add temp27 temp3 temp26
+write 0 cell1 temp27
+op add temp26 temp26 1
+jump 158 lessThan temp26 temp1
+control config sorter1 @plastanium
+control enabled switch2 false
+end

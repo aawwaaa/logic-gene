@@ -1,0 +1,21 @@
+set logic_generator_by "zzz"
+jump 3 notEqual temp1 true
+jump 5 always 0 0
+set temp0 0
+set temp1 true
+control enabled router1 0
+control enabled conveyor1 1
+sensor temp2 router1 @totalItems
+jump 10 greaterThan temp2 0
+jump 17 always 0 0
+control enabled conveyor1 0
+control enabled router1 1
+sensor temp3 router1 @totalItems
+jump 10 greaterThan temp3 0
+control enabled conveyor1 0
+control enabled router1 0
+op add temp0 temp0 1
+print "Count: "
+print temp0
+printflush message1
+end

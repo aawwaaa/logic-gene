@@ -1,0 +1,28 @@
+set logic_generator_by "zzz"
+getlink temp0 1
+set temp1 72
+draw clear 0 0 0
+sensor temp2 temp0 @itemCapacity
+set temp3 0
+jump 25 always 0 0
+lookup item temp4 temp3
+sensor temp5 temp0 temp4
+jump 11 notEqual temp5 0
+jump 24 always 0 0
+op add temp6 temp1 4
+draw color 255 255 255 255
+draw image 4 temp6 temp4 6 0
+op div temp7 temp5 temp2
+op mul wid temp7 68
+op floor wid wid undefined
+draw stroke 1
+op add temp8 temp1 1
+draw lineRect 9 temp8 70 6
+draw color 128 128 128 255
+op add temp9 temp1 2
+draw rect 10 temp9 wid 4
+op sub temp1 temp1 8
+op add temp3 temp3 1
+jump 7 lessThan temp3 @itemCount
+drawflush display1
+end

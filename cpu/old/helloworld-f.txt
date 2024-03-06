@@ -1,0 +1,18 @@
+program
+labelbase 480
+name "HELLOWORLD-F"
+version 1
+    const :intproc
+    sreg $intproc
+    call :foo 0
+    reset
+def intproc 0
+    const 0
+    ret
+def foo 0
+    printStrl :data
+    const 0
+    ret
+pad 64
+    strl data "HELLO WORLD!\n"
+endProgram

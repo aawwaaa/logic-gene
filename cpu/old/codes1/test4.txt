@@ -1,0 +1,18 @@
+    const :intproc
+    sreg $intproc
+flag:
+    halt
+    jmpi :flag
+
+def intproc 1
+    loadArg -1
+    print
+    loadArg 0
+    print
+    loadArg 1
+    print
+    loadArg 2
+    print
+    printflush
+    const 1
+    ret

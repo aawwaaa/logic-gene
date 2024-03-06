@@ -1,0 +1,91 @@
+program
+labelbase 480
+name "INTRO.TXT"
+    const :intproc
+    sreg $intproc
+    call :display 0
+    sreg $address
+flag:
+    phalt
+    jmpi :flag
+    reset
+def intproc 0
+    set .d.halt 0
+    loadArg 0
+    equal 0x100
+    jeqi +6
+    loadArg 1
+    loadArg 2
+    loadArg 3
+    call :inputproc 3
+    ret
+    const 0
+    ret
+def inputproc 0
+    loadArg 0
+    equal 0x1b
+    jeqi :iproc_flag
+    loadArg 1
+    equal 0
+    jeqi :iproc_flag2
+# esc
+    reset
+iproc_flag2:
+    loadArg 1
+    equal 15
+    jeqi :iproc_flag3
+# page up
+    reads :currentPage
+    addi -1
+    max 0
+    writes :currentPage
+    jmpi :iproc_flag
+iproc_flag3:
+    loadArg 1
+    equal 16
+    jeqi :iproc_flag
+# page down
+    reads :currentPage
+    addi 1
+    cpy
+    addi :pages
+    sreg $address
+    read
+    jeqi :iproc_flag4
+    writes :currentPage
+    jmpi :iproc_flag
+iproc_flag4:
+# page out of range
+    sreg $address
+    jmpi :iproc_flag
+iproc_flag:
+    call :display 0
+    sreg $address
+    const 0
+    ret
+def display 1
+    printStrl :clear
+    reads :currentPage
+    addi :pages
+    sreg $address
+    read
+    cpy
+    sreg $address
+    addi 1
+    outi .m.src
+    set .m.dst 2
+    set .m.toInput 1
+    read
+    outi .m.len
+    set .m.enable 1
+    waitState .m.enable 0
+    set .m.toInput 0
+    const 0
+    ret
+pad 160
+    data currentPage 0
+    data pages :page1
+    data 0
+    strl clear "\x01\x00\x02\x00\x00"
+    strl page1 "TEXT~\x02\x0f\x09PAGE 1"
+endProgram

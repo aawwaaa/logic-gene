@@ -1,0 +1,87 @@
+set logic_generator_by "zzz"
+read temp0 cell1 32
+jump 4 equal temp0 false
+jump 5 always 0 0
+end
+write 67 cell1 40
+read temp1 cell1 40
+jump 9 always 0 0
+read temp1 cell1 40
+jump 8 notEqual temp1 0
+write 65 cell1 40
+read temp2 cell1 40
+jump 14 always 0 0
+read temp2 cell1 40
+jump 13 notEqual temp2 0
+write 76 cell1 40
+read temp3 cell1 40
+jump 19 always 0 0
+read temp3 cell1 40
+jump 18 notEqual temp3 0
+write 67 cell1 40
+read temp4 cell1 40
+jump 24 always 0 0
+read temp4 cell1 40
+jump 23 notEqual temp4 0
+write 32 cell1 40
+read temp5 cell1 40
+jump 29 always 0 0
+read temp5 cell1 40
+jump 28 notEqual temp5 0
+write 49 cell1 40
+read temp6 cell1 40
+jump 34 always 0 0
+read temp6 cell1 40
+jump 33 notEqual temp6 0
+write 46 cell1 40
+read temp7 cell1 40
+jump 39 always 0 0
+read temp7 cell1 40
+jump 38 notEqual temp7 0
+write 50 cell1 40
+read temp8 cell1 40
+jump 44 always 0 0
+read temp8 cell1 40
+jump 43 notEqual temp8 0
+write 66 cell1 40
+read temp9 cell1 40
+jump 49 always 0 0
+read temp9 cell1 40
+jump 48 notEqual temp9 0
+write 89 cell1 40
+read temp10 cell1 40
+jump 54 always 0 0
+read temp10 cell1 40
+jump 53 notEqual temp10 0
+write 32 cell1 40
+read temp11 cell1 40
+jump 59 always 0 0
+read temp11 cell1 40
+jump 58 notEqual temp11 0
+write 90 cell1 40
+read temp12 cell1 40
+jump 64 always 0 0
+read temp12 cell1 40
+jump 63 notEqual temp12 0
+write 90 cell1 40
+read temp13 cell1 40
+jump 69 always 0 0
+read temp13 cell1 40
+jump 68 notEqual temp13 0
+write 90 cell1 40
+read temp14 cell1 40
+jump 74 always 0 0
+read temp14 cell1 40
+jump 73 notEqual temp14 0
+write 10 cell1 40
+read temp15 cell1 40
+jump 79 always 0 0
+read temp15 cell1 40
+jump 78 notEqual temp15 0
+write 68 cell1 40
+read temp16 cell1 40
+jump 84 always 0 0
+read temp16 cell1 40
+jump 83 notEqual temp16 0
+write 0 cell1 32
+end

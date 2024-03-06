@@ -1,0 +1,44 @@
+set logic_generator_by "zzz"
+ubind @flare
+set temp0 @unit
+sensor temp1 temp0 @pyratite
+jump 6 lessThan temp1 8
+jump 11 always 0 0
+sensor temp2 vault1 @x
+sensor temp3 vault1 @y
+ucontrol move temp2 temp3
+ucontrol itemTake vault1 @pyratite 10
+end
+sensor temp4 switch1 @enabled
+jump 14 equal temp4 false
+jump 16 always 0 0
+ucontrol move 965 899
+end
+uradar enemy attacker any distance 0 1 temp5
+jump 19 notEqual temp5 null
+jump 24 always 0 0
+sensor temp6 temp5 @x
+sensor temp7 temp5 @y
+ucontrol approach temp6 temp7 4
+ucontrol targetp temp5 true
+jump 43 always 0 0
+sensor temp8 temp0 @x
+sensor temp9 temp0 @y
+ulocate building core true 0 temp10 temp11 temp12 temp13
+jump 29 equal temp12 true
+jump 41 always 0 0
+ucontrol move temp10 temp11
+op sub temp14 temp10 temp8
+op sub temp15 temp11 temp9
+op len temp16 temp14 temp15
+op div temp17 temp14 temp16
+op mul temp17 temp17 10
+op add temp17 temp17 temp8
+op div temp18 temp15 temp16
+op mul temp18 temp18 10
+op add temp18 temp18 temp9
+ucontrol target temp17 temp18 true
+end
+ucontrol unbind 
+end
+end

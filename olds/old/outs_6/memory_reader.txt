@@ -1,0 +1,22 @@
+set logic_generator_by "zzz"
+printflush message1
+sensor :clock switch1 @enabled
+jump 2 notEqual :clock false
+sensor :clock switch1 @enabled
+read temp0 cell1 0
+op div temp1 temp0 512
+op floor temp1 temp1 undefined
+op mod temp0 temp0 512
+op add temp1 temp1 2
+getlink temp1 temp1
+read temp2 temp1 temp0
+read temp0 cell1 0
+op mod temp0 temp0 512
+jump 4 notEqual :clock true
+read temp2 temp1 temp0
+write temp2 cell1 1
+print temp0
+print " "
+print temp2
+printflush message1
+end

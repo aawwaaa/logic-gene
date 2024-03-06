@@ -1,0 +1,102 @@
+program
+labelbase 480
+name "INTRO.TXT"
+version 1
+    const :intproc
+    sreg $intproc
+    call :display 0
+    sreg $address
+flag:
+    phalt
+    jmpi :flag
+    reset
+def intproc 0
+    set .d.halt 0
+    loadArg 0
+    equal 0x100
+    jeqi +6
+    loadArg 1
+    loadArg 2
+    loadArg 3
+    call :inputproc 3
+    ret
+    const 0
+    ret
+def inputproc 0
+    loadArg 0
+    equal 0x1b
+    jeqi :iproc_flag
+    loadArg 1
+    equal 0
+    jeqi :iproc_flag2
+# esc
+    reset
+iproc_flag2:
+    loadArg 1
+    equal 15
+    jeqi :iproc_flag3
+# page up
+    reads :currentPage
+    addi -1
+    max 0
+    writes :currentPage
+    jmpi :iproc_flag
+iproc_flag3:
+    loadArg 1
+    equal 16
+    jeqi :iproc_flag
+# page down
+    reads :currentPage
+    addi 1
+    cpy
+    addi :pages
+    sreg $address
+    read
+    jeqi :iproc_flag4
+    writes :currentPage
+    jmpi :iproc_flag
+iproc_flag4:
+# page out of range
+    sreg $address
+    jmpi :iproc_flag
+iproc_flag:
+    call :display 0
+    sreg $address
+    const 0
+    ret
+def display 1
+    printStrl :clear
+    reads :currentPage
+    addi :pages
+    sreg $address
+    read
+    cpy
+    sreg $address
+    addi 1
+    outi .m.src
+    set .m.dst 2
+    set .m.target .m.t.input
+    read
+    outi .m.len
+    set .m.enable 1
+    waitState .m.enable 0
+    set .m.target .m.t.memory
+    const 0
+    ret
+pad 160
+    data currentPage 0
+    data pages :page1
+    data :page2
+    data :page3
+    data :page4
+    data :page5
+    data :page6
+    data 0
+    strl clear "\x10\x00\x11\x00\x00"
+    strl page1 "[ESC] EXIT\n[PAGEUP] PREV\n[PAGEDOWN] NEXT\x11\x03\x01PROGRAMMABLE\x11\x04\x04COMPUTER\x11\x05\x05BY ZZZ\x11\x06\x00THIS INTRO WILL\nTEACH YOU HOW TOUSE THIS\nCOMPUTER AND\nAND PARTS OF\nPROGRAM ROM\nAND INSTRUCTION\x11\x0f\x09PAGE 1"
+    strl page2 "MODES\n\nTHIS COMPUTER\nHAS 2 MODES: \nMANAGE MODE AND\nPROGRAM MODE\n\nMANAGE MODE CAN\nMANAGE FILES ANDLAUNCH TO\nPROGRAM MODE\x11\x0f\x09PAGE 2"
+    strl page3 "MANAGE MODE\n\nMANAGE MODE USEDPROCESSOR TO \nPROCESS INPUT\nIT IS FASTER BUTIT IS NOT\nPROGRAMMABLE\nUSE [UP][DOWN]\n TO MOVE CURSOR\nUSE [ENTER]\nTO CONFIRM\nUSE [INIT] TO\nBACK TO MAINPAGE\x11\x0f\x09PAGE 3"
+    strl page4 "PROGRAM MODE\n\nPROGRAM MODE USECPU TO PROCESS INPUT\nIT IS SLOWER BUTIS PROGRAMMABLE\nOPERATIONS\nIS DEPENDED BY\nRUNNING PROGRAM\nUSE [INIT] TO\nKILL PROCESS\x11\x0f\x09PAGE 4"
+    strl page5 "INSTRUCTION\n\nCPUS INSTRUCTIONIS A KIND OF\nBYTECODE BASED\nSTACK WITH SOME\nREGISTERS\nIT HAS 3 PARTS:\nBIN 52: SYMBOL\nBIN 8-51: DATA\nBIN 0-7: COMMAND\x11\x0f\x09PAGE 5"
+    strl page6 "PROGRAM ROM\n\nPROGRAM ROM IS\nINSERTED IN LEFTTOP AND IT HAS 4PARTS:\nADDR 0: NAMELEN\nADDR 1-15: NAME\nADDR 16: CODELENADDR 31: @TIME\nADDR 32+:\nBYTECODES\x11\x0f\x09PAGE 6"
+endProgram

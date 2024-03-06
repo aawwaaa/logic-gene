@@ -1,0 +1,201 @@
+set logic_generator_by "zzz"
+jump 182 always 0 0
+set temp0 0
+set temp1 -1
+write 85 bank1 2
+write 83 bank1 3
+write 69 bank1 4
+write 82 bank1 5
+write 78 bank1 6
+write 65 bank1 7
+write 77 bank1 8
+write 69 bank1 9
+write 58 bank1 10
+write 32 bank1 11
+op add temp0 temp0 10
+write temp0 bank1 1
+write 1 bank1 0
+read temp2 bank1 0
+jump 17 notEqual temp2 0
+set temp0 0
+read temp3 bank1 256
+jump 20 notEqual temp3 true
+read temp4 bank1 257
+read temp5 bank1 258
+read temp6 bank1 259
+set temp7 259
+op sub temp8 temp4 1
+jump 29 equal temp5 5
+jump 32 always 0 0
+op add temp7 temp7 1
+op sub temp8 temp8 1
+jump 36 always 0 0
+jump 34 equal temp5 27
+jump 36 always 0 0
+op add temp7 temp7 1
+op sub temp8 temp8 1
+write false bank1 256
+jump 2 equal temp5 6
+write temp8 bank2 0
+set temp9 0
+jump 46 always 0 0
+op add temp10 temp9 1
+op add temp11 temp9 temp7
+read temp12 bank1 temp11
+write temp12 bank2 temp10
+op add temp9 temp9 1
+jump 41 lessThan temp9 temp8
+write 80 bank1 2
+write 65 bank1 3
+write 83 bank1 4
+write 83 bank1 5
+write 87 bank1 6
+write 79 bank1 7
+write 82 bank1 8
+write 68 bank1 9
+write 58 bank1 10
+write 32 bank1 11
+op add temp0 temp0 10
+write temp0 bank1 1
+write 1 bank1 0
+read temp13 bank1 0
+jump 60 notEqual temp13 0
+set temp0 0
+read temp14 bank1 256
+jump 63 notEqual temp14 true
+read temp15 bank1 257
+read temp16 bank1 258
+read temp17 bank1 259
+set temp18 259
+op sub temp19 temp15 1
+jump 72 equal temp16 5
+jump 75 always 0 0
+op add temp18 temp18 1
+op sub temp19 temp19 1
+jump 79 always 0 0
+jump 77 equal temp16 27
+jump 79 always 0 0
+op add temp18 temp18 1
+op sub temp19 temp19 1
+write false bank1 256
+jump 2 equal temp16 6
+write 80 bank1 2
+write 76 bank1 3
+write 69 bank1 4
+write 65 bank1 5
+write 83 bank1 6
+write 69 bank1 7
+write 32 bank1 8
+write 87 bank1 9
+write 65 bank1 10
+write 73 bank1 11
+write 84 bank1 12
+write 10 bank1 13
+op add temp0 temp0 12
+write temp0 bank1 1
+write 1 bank1 0
+read temp20 bank1 0
+jump 96 notEqual temp20 0
+set temp0 0
+read temp21 bank2 0
+write temp21 bank3 0
+set temp22 0
+jump 108 always 0 0
+op add temp23 temp22 1
+op add temp24 temp22 1
+read temp25 bank2 temp24
+write temp25 bank3 temp23
+op add temp22 temp22 1
+jump 103 lessThan temp22 temp21
+write temp19 bank3 64
+set temp26 0
+jump 117 always 0 0
+op add temp27 temp26 65
+op add temp28 temp26 temp18
+read temp29 bank1 temp28
+write temp29 bank3 temp27
+op add temp26 temp26 1
+jump 112 lessThan temp26 temp19
+write 1 bank3 128
+read temp30 bank3 128
+jump 119 notEqual temp30 0
+read temp31 bank3 129
+read temp1 bank3 130
+jump 138 notEqual temp31 0
+write 83 bank1 2
+write 85 bank1 3
+write 67 bank1 4
+write 67 bank1 5
+write 69 bank1 6
+write 83 bank1 7
+write 83 bank1 8
+write 46 bank1 9
+op add temp0 temp0 8
+write temp0 bank1 1
+write 1 bank1 0
+read temp32 bank1 0
+jump 135 notEqual temp32 0
+set temp0 0
+jump 159 notEqual temp31 1
+write 65 bank1 2
+write 67 bank1 3
+write 67 bank1 4
+write 69 bank1 5
+write 83 bank1 6
+write 83 bank1 7
+write 32 bank1 8
+write 68 bank1 9
+write 69 bank1 10
+write 78 bank1 11
+write 73 bank1 12
+write 69 bank1 13
+write 68 bank1 14
+write 46 bank1 15
+op add temp0 temp0 14
+write temp0 bank1 1
+write 1 bank1 0
+read temp33 bank1 0
+jump 156 notEqual temp33 0
+set temp0 0
+jump 182 notEqual temp31 2
+write 85 bank1 2
+write 83 bank1 3
+write 69 bank1 4
+write 82 bank1 5
+write 32 bank1 6
+write 78 bank1 7
+write 79 bank1 8
+write 84 bank1 9
+write 32 bank1 10
+write 69 bank1 11
+write 88 bank1 12
+write 73 bank1 13
+write 83 bank1 14
+write 84 bank1 15
+write 83 bank1 16
+write 46 bank1 17
+op add temp0 temp0 16
+write temp0 bank1 1
+write 1 bank1 0
+read temp34 bank1 0
+jump 179 notEqual temp34 0
+set temp0 0
+read temp35 bank1 256
+jump 182 notEqual temp35 true
+read temp36 bank1 257
+read temp37 bank1 258
+read temp38 bank1 259
+set temp39 259
+op sub temp40 temp36 1
+jump 191 equal temp37 5
+jump 194 always 0 0
+op add temp39 temp39 1
+op sub temp40 temp40 1
+jump 198 always 0 0
+jump 196 equal temp37 27
+jump 198 always 0 0
+op add temp39 temp39 1
+op sub temp40 temp40 1
+write false bank1 256
+jump 2 equal temp37 6
+end

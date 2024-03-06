@@ -1,0 +1,30 @@
+set logic_generator_by "zzz"
+set temp0 0
+set temp1 0
+set temp2 0.001
+set temp3 16
+set temp4 0
+op div temp5 176 temp3
+op mul temp6 temp3 temp3
+jump 28 always 0 0
+op mod temp7 temp4 temp3
+op div temp8 temp4 temp3
+op floor temp8 temp8 undefined
+op add temp9 temp7 temp0
+op div temp9 temp9 temp2
+op add temp10 temp8 temp1
+op div temp10 temp10 temp2
+op mul temp7 temp7 temp5
+op mul temp8 temp8 temp5
+op noise temp11 temp9 temp10
+op mul temp11 temp11 255
+jump 22 greaterThan temp11 0
+jump 24 always 0 0
+draw color temp11 0 0 255
+jump 25 always 0 0
+draw color 0 0 temp11 255
+draw rect temp7 temp8 temp5 temp5
+op add temp4 temp4 1
+drawflush display1
+jump 9 lessThan temp4 temp6
+end

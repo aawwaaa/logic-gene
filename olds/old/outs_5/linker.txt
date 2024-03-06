@@ -1,0 +1,46 @@
+set logic_generator_by "zzz"
+read temp0 bank1 0
+jump 4 equal temp0 true
+jump 16 always 0 0
+read temp1 bank1 1
+set temp2 0
+jump 12 always 0 0
+op add temp3 temp2 258
+op add temp4 temp2 2
+read temp5 bank1 temp4
+write temp5 bank2 temp3
+op add temp2 temp2 1
+jump 7 lessThan temp2 temp1
+write temp1 bank2 257
+write 1 bank2 256
+write 0 bank1 0
+read temp6 bank2 0
+jump 19 equal temp6 true
+jump 31 always 0 0
+read temp7 bank2 1
+set temp8 0
+jump 27 always 0 0
+op add temp9 temp8 258
+op add temp10 temp8 2
+read temp11 bank2 temp10
+write temp11 bank1 temp9
+op add temp8 temp8 1
+jump 22 lessThan temp8 temp7
+write temp7 bank1 257
+write 1 bank1 256
+write 0 bank2 0
+read temp12 bank1 256
+jump 34 equal temp12 true
+jump 45 always 0 0
+read temp13 bank1 257
+set temp14 0
+jump 43 always 0 0
+op add temp15 temp14 258
+read temp16 bank1 temp15
+write temp16 cell1 0
+read temp17 cell1 0
+jump 40 notEqual temp17 -1
+op add temp14 temp14 1
+jump 37 lessThan temp14 temp13
+write 0 bank1 256
+end

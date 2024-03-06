@@ -1,0 +1,8 @@
+    const 20
+    sreg $loop
+    const 1
+flag:
+    addi 1
+    cpy
+    sreg $int
+    loop :flag

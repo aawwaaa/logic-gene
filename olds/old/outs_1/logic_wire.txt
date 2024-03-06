@@ -1,0 +1,132 @@
+set logic_generator_by "zzz"
+sensor temp1 switch1 @enabled
+jump 14 equal switch1 null
+jump 14 equal temp1 temp0
+set temp0 temp1
+control enabled switch2 temp1
+control enabled switch3 temp1
+control enabled switch4 temp1
+control enabled switch5 temp1
+control enabled switch6 temp1
+control enabled switch7 temp1
+control enabled switch8 temp1
+control enabled switch9 temp1
+control enabled switch10 temp1
+sensor temp2 switch2 @enabled
+jump 27 equal switch2 null
+jump 27 equal temp2 temp0
+set temp0 temp2
+control enabled switch1 temp2
+control enabled switch3 temp2
+control enabled switch4 temp2
+control enabled switch5 temp2
+control enabled switch6 temp2
+control enabled switch7 temp2
+control enabled switch8 temp2
+control enabled switch9 temp2
+control enabled switch10 temp2
+sensor temp3 switch3 @enabled
+jump 40 equal switch3 null
+jump 40 equal temp3 temp0
+set temp0 temp3
+control enabled switch1 temp3
+control enabled switch2 temp3
+control enabled switch4 temp3
+control enabled switch5 temp3
+control enabled switch6 temp3
+control enabled switch7 temp3
+control enabled switch8 temp3
+control enabled switch9 temp3
+control enabled switch10 temp3
+sensor temp4 switch4 @enabled
+jump 53 equal switch4 null
+jump 53 equal temp4 temp0
+set temp0 temp4
+control enabled switch1 temp4
+control enabled switch2 temp4
+control enabled switch3 temp4
+control enabled switch5 temp4
+control enabled switch6 temp4
+control enabled switch7 temp4
+control enabled switch8 temp4
+control enabled switch9 temp4
+control enabled switch10 temp4
+sensor temp5 switch5 @enabled
+jump 66 equal switch5 null
+jump 66 equal temp5 temp0
+set temp0 temp5
+control enabled switch1 temp5
+control enabled switch2 temp5
+control enabled switch3 temp5
+control enabled switch4 temp5
+control enabled switch6 temp5
+control enabled switch7 temp5
+control enabled switch8 temp5
+control enabled switch9 temp5
+control enabled switch10 temp5
+sensor temp6 switch6 @enabled
+jump 79 equal switch6 null
+jump 79 equal temp6 temp0
+set temp0 temp6
+control enabled switch1 temp6
+control enabled switch2 temp6
+control enabled switch3 temp6
+control enabled switch4 temp6
+control enabled switch5 temp6
+control enabled switch7 temp6
+control enabled switch8 temp6
+control enabled switch9 temp6
+control enabled switch10 temp6
+sensor temp7 switch7 @enabled
+jump 92 equal switch7 null
+jump 92 equal temp7 temp0
+set temp0 temp7
+control enabled switch1 temp7
+control enabled switch2 temp7
+control enabled switch3 temp7
+control enabled switch4 temp7
+control enabled switch5 temp7
+control enabled switch6 temp7
+control enabled switch8 temp7
+control enabled switch9 temp7
+control enabled switch10 temp7
+sensor temp8 switch8 @enabled
+jump 105 equal switch8 null
+jump 105 equal temp8 temp0
+set temp0 temp8
+control enabled switch1 temp8
+control enabled switch2 temp8
+control enabled switch3 temp8
+control enabled switch4 temp8
+control enabled switch5 temp8
+control enabled switch6 temp8
+control enabled switch7 temp8
+control enabled switch9 temp8
+control enabled switch10 temp8
+sensor temp9 switch9 @enabled
+jump 118 equal switch9 null
+jump 118 equal temp9 temp0
+set temp0 temp9
+control enabled switch1 temp9
+control enabled switch2 temp9
+control enabled switch3 temp9
+control enabled switch4 temp9
+control enabled switch5 temp9
+control enabled switch6 temp9
+control enabled switch7 temp9
+control enabled switch8 temp9
+control enabled switch10 temp9
+sensor temp10 switch10 @enabled
+jump 131 equal switch10 null
+jump 131 equal temp10 temp0
+set temp0 temp10
+control enabled switch1 temp10
+control enabled switch2 temp10
+control enabled switch3 temp10
+control enabled switch4 temp10
+control enabled switch5 temp10
+control enabled switch6 temp10
+control enabled switch7 temp10
+control enabled switch8 temp10
+control enabled switch9 temp10
+end

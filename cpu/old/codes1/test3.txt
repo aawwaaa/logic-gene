@@ -1,0 +1,13 @@
+    jmpi :main
+
+def foo 0
+    loadArg 0
+    loadArg 1
+    add
+    ret
+
+main:
+    const 1
+    const 2
+    call foo 2
+    sreg 8

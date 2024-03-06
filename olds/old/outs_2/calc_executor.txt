@@ -1,0 +1,66 @@
+set logic_generator_by "zzz"
+set temp0 0
+read temp1 cell1 57
+jump 5 equal temp1 true
+end
+set temp2 0
+read temp3 bank1 temp2
+op add temp2 temp2 1
+read temp4 bank1 temp2
+op add temp2 temp2 1
+jump 55 always 0 0
+jump 13 equal temp3 1
+jump 15 always 0 0
+write temp4 cell2 temp0
+op add temp0 temp0 1
+jump 17 equal temp3 0
+jump 51 always 0 0
+set temp5 0
+set temp6 0
+jump 21 lessThanEq temp0 0
+jump 24 always 0 0
+write 1 cell1 61
+write 0 cell1 57
+end
+op sub temp0 temp0 1
+read temp5 cell2 temp0
+jump 28 lessThanEq temp0 0
+jump 31 always 0 0
+write 1 cell1 61
+write 0 cell1 57
+end
+op sub temp0 temp0 1
+read temp6 cell2 temp0
+op mul temp7 temp4 2
+op add @counter @counter temp7
+set temp6 temp6
+jump 49 always 0 0
+op add temp6 temp6 temp5
+jump 49 always 0 0
+op sub temp6 temp6 temp5
+jump 49 always 0 0
+op mul temp6 temp6 temp5
+jump 49 always 0 0
+op div temp6 temp6 temp5
+jump 49 always 0 0
+op mod temp6 temp6 temp5
+jump 49 always 0 0
+op pow temp6 temp6 temp5
+jump 49 always 0 0
+write temp6 cell2 temp0
+op add temp0 temp0 1
+read temp3 bank1 temp2
+op add temp2 temp2 1
+read temp4 bank1 temp2
+op add temp2 temp2 1
+jump 11 notEqual temp3 2
+jump 58 lessThanEq temp0 0
+jump 61 always 0 0
+write 1 cell1 61
+write 0 cell1 57
+end
+op sub temp0 temp0 1
+read temp4 cell2 temp0
+write temp4 cell1 60
+write 0 cell1 57
+end

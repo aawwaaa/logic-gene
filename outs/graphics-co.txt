@@ -1,0 +1,620 @@
+set logic_generator_by "zzz"
+sensor running switch1 @enabled
+jump 4 notEqual running 0
+end
+sensor reseting switch2 @enabled
+jump 21 equal reseting 0
+sensor reseting switch2 @enabled
+jump 6 notEqual reseting 0
+write 512 cell1 0
+write 64 cell1 1
+write 0 cell1 2
+write 0 cell1 3
+write 0 cell1 4
+write 0 cell1 8
+write 0 cell1 9
+write 0 cell1 10
+write 0 cell1 32
+write 0 cell1 62
+write 0 cell1 63
+write 0 cell2 0
+jump 609 always 0 0
+read int cell2 0
+jump 53 lessThanEq int 0
+read intLoaded cell2 1
+jump 45 notEqual intLoaded 0
+read intLen cell2 2
+read !sp cell1 1
+write int bank2 !sp
+op add !sp !sp 1
+write !sp cell1 1
+set i 0
+jump 39 always 0 0
+op add temp0 i 3
+read value cell2 temp0
+read !sp cell1 1
+write value bank2 !sp
+op add !sp !sp 1
+write !sp cell1 1
+op add i i 1
+jump 32 lessThan i intLen
+op add intLen intLen 1
+read !sp cell1 1
+write intLen bank2 !sp
+op add !sp !sp 1
+write !sp cell1 1
+read !pc cell1 0
+op sub !pc !pc 1
+write !pc cell1 0
+set command 17
+read !intproc cell1 32
+op shl !intproc !intproc 8
+op or command command !intproc
+write -1 cell2 0
+op shr data command 8
+op shr symbol data 43
+op and data data 8796093022207
+jump 58 equal symbol 0
+op sub data 0 data
+op and command command 255
+write command cell1 62
+write data cell1 63
+op add @counter @counter command
+jump 96 always 0 0
+jump 98 always 0 0
+jump 104 always 0 0
+jump 115 always 0 0
+jump 120 always 0 0
+jump 177 always 0 0
+jump 214 always 0 0
+jump 229 always 0 0
+jump 242 always 0 0
+jump 270 always 0 0
+jump 272 always 0 0
+jump 279 always 0 0
+jump 286 always 0 0
+jump 298 always 0 0
+jump 310 always 0 0
+jump 321 always 0 0
+jump 332 always 0 0
+jump 338 always 0 0
+jump 373 always 0 0
+jump 439 always 0 0
+jump 452 always 0 0
+jump 465 always 0 0
+jump 478 always 0 0
+jump 496 always 0 0
+jump 507 always 0 0
+jump 514 always 0 0
+jump 521 always 0 0
+jump 527 always 0 0
+jump 533 always 0 0
+jump 534 always 0 0
+jump 535 always 0 0
+jump 536 always 0 0
+jump 537 always 0 0
+jump 608 always 0 0
+control enabled switch2 true
+jump 609 always 0 0
+read value cell1 data
+read !sp cell1 1
+write value bank2 !sp
+op add !sp !sp 1
+write !sp cell1 1
+jump 609 always 0 0
+read !sp cell1 1
+op sub !sp !sp 1
+write !sp cell1 1
+op div bank !sp 512
+op floor bank bank undefined
+op add bank bank 7
+getlink bank bank
+op mod bankAddr !sp 512
+read value bank bankAddr
+write value cell1 data
+jump 609 always 0 0
+read !sp cell1 1
+write data bank2 !sp
+op add !sp !sp 1
+write !sp cell1 1
+jump 609 always 0 0
+read !sp cell1 1
+op sub !sp !sp 1
+write !sp cell1 1
+read value2 bank2 !sp
+read !sp cell1 1
+op sub !sp !sp 1
+write !sp cell1 1
+read value bank2 !sp
+op mul temp1 data 2
+op add @counter @counter temp1
+op add value3 value value2
+jump 172 always 0 0
+op sub value3 value value2
+jump 172 always 0 0
+op mul value3 value value2
+jump 172 always 0 0
+op div value3 value value2
+jump 172 always 0 0
+op mod value3 value value2
+jump 172 always 0 0
+op pow value3 value value2
+jump 172 always 0 0
+op equal value3 value value2
+jump 172 always 0 0
+op notEqual value3 value value2
+jump 172 always 0 0
+op lessThan value3 value value2
+jump 172 always 0 0
+op lessThanEq value3 value value2
+jump 172 always 0 0
+op greaterThan value3 value value2
+jump 172 always 0 0
+op greaterThanEq value3 value value2
+jump 172 always 0 0
+op and value3 value value2
+jump 172 always 0 0
+op or value3 value value2
+jump 172 always 0 0
+op xor value3 value value2
+jump 172 always 0 0
+op max value3 value value2
+jump 172 always 0 0
+op min value3 value value2
+jump 172 always 0 0
+op angle value3 value value2
+jump 172 always 0 0
+op angleDiff value3 value value2
+jump 172 always 0 0
+op len value3 value value2
+jump 172 always 0 0
+op noise value3 value value2
+jump 172 always 0 0
+read !sp cell1 1
+write value3 bank2 !sp
+op add !sp !sp 1
+write !sp cell1 1
+jump 609 always 0 0
+read !sp cell1 1
+op sub !sp !sp 1
+write !sp cell1 1
+read value bank2 !sp
+op mul temp2 data 2
+op add @counter @counter temp2
+op abs value3 value 0
+jump 209 always 0 0
+op floor value3 value 0
+jump 209 always 0 0
+op ceil value3 value 0
+jump 209 always 0 0
+op rand value3 value 0
+jump 209 always 0 0
+op sin value3 value 0
+jump 209 always 0 0
+op cos value3 value 0
+jump 209 always 0 0
+op tan value3 value 0
+jump 209 always 0 0
+op asin value3 value 0
+jump 209 always 0 0
+op acos value3 value 0
+jump 209 always 0 0
+op atan value3 value 0
+jump 209 always 0 0
+op sqrt value3 value 0
+jump 209 always 0 0
+op log value3 value 0
+jump 209 always 0 0
+op log10 value3 value 0
+jump 209 always 0 0
+read !sp cell1 1
+write value3 bank2 !sp
+op add !sp !sp 1
+write !sp cell1 1
+jump 609 always 0 0
+read !sp cell1 1
+op sub !sp !sp 1
+write !sp cell1 1
+op div bank !sp 512
+op floor bank bank undefined
+op add bank bank 7
+getlink bank bank
+op mod bankAddr !sp 512
+read value bank bankAddr
+op add value3 value data
+read !sp cell1 1
+write value3 bank2 !sp
+op add !sp !sp 1
+write !sp cell1 1
+jump 609 always 0 0
+read !sp cell1 1
+op sub !sp !sp 1
+write !sp cell1 1
+read value bank2 !sp
+read !sp cell1 1
+write value bank2 !sp
+op add !sp !sp 1
+write !sp cell1 1
+read !sp cell1 1
+write value bank2 !sp
+op add !sp !sp 1
+write !sp cell1 1
+jump 609 always 0 0
+read !sp cell1 1
+op sub !sp !sp 1
+write !sp cell1 1
+read value2 bank2 !sp
+read !sp cell1 1
+op sub !sp !sp 1
+write !sp cell1 1
+read value bank2 !sp
+op mul temp3 data 2
+op add @counter @counter temp3
+jump 267 always value value2
+jump 266 always 0 0
+jump 267 equal value value2
+jump 266 always 0 0
+jump 267 notEqual value value2
+jump 266 always 0 0
+jump 267 lessThan value value2
+jump 266 always 0 0
+jump 267 lessThanEq value value2
+jump 266 always 0 0
+jump 267 greaterThan value value2
+jump 266 always 0 0
+jump 267 greaterThanEq value value2
+jump 266 always 0 0
+jump 269 always 0 0
+read !address cell1 8
+write !address cell1 0
+jump 609 always 0 0
+write data cell1 0
+jump 609 always 0 0
+read !sp cell1 1
+op sub !sp !sp 1
+write !sp cell1 1
+read value bank2 !sp
+jump 278 notEqual value 0
+write data cell1 0
+jump 609 always 0 0
+read !sp cell1 1
+op sub !sp !sp 1
+write !sp cell1 1
+read value bank2 !sp
+jump 285 equal value 0
+write data cell1 0
+jump 609 always 0 0
+read !address cell1 8
+op div bank !address 512
+op floor bank bank undefined
+op add bank bank 7
+getlink bank bank
+op mod bankAddr !address 512
+read value bank bankAddr
+read !sp cell1 1
+write value bank2 !sp
+op add !sp !sp 1
+write !sp cell1 1
+jump 609 always 0 0
+read !address cell1 8
+read !sp cell1 1
+op sub !sp !sp 1
+write !sp cell1 1
+read value bank2 !sp
+op div bank !address 512
+op floor bank bank undefined
+op add bank bank 7
+getlink bank bank
+op mod bankAddr !address 512
+write value bank bankAddr
+jump 609 always 0 0
+op div bank data 512
+op floor bank bank undefined
+op add bank bank 7
+getlink bank bank
+op mod bankAddr data 512
+read value bank bankAddr
+read !sp cell1 1
+write value bank2 !sp
+op add !sp !sp 1
+write !sp cell1 1
+jump 609 always 0 0
+read !sp cell1 1
+op sub !sp !sp 1
+write !sp cell1 1
+read value bank2 !sp
+op div bank data 512
+op floor bank bank undefined
+op add bank bank 7
+getlink bank bank
+op mod bankAddr data 512
+write value bank bankAddr
+jump 609 always 0 0
+read !loop cell1 9
+jump 337 lessThanEq !loop 0
+write data cell1 0
+op sub !loop !loop 1
+write !loop cell1 9
+jump 609 always 0 0
+read !sp cell1 1
+op sub !sp !sp 1
+write !sp cell1 1
+read value bank2 !sp
+read value2 cell2 0
+read !sp cell1 1
+write value2 bank2 !sp
+op add !sp !sp 1
+write !sp cell1 1
+jump 349 equal value2 -1
+jump 351 always 0 0
+write -2 cell2 0
+jump 352 always 0 0
+write 0 cell2 0
+read !locals cell1 3
+read !args cell1 2
+read !pc cell1 0
+read !sp cell1 1
+write !locals bank2 !sp
+op add !sp !sp 1
+write !sp cell1 1
+read !sp cell1 1
+write !args bank2 !sp
+op add !sp !sp 1
+write !sp cell1 1
+read !sp cell1 1
+write !pc bank2 !sp
+op add !sp !sp 1
+write !sp cell1 1
+write data cell1 0
+read !sp cell1 1
+op sub !sp !sp 4
+op sub !sp !sp value
+write !sp cell1 2
+jump 609 always 0 0
+read !sp cell1 1
+op sub !sp !sp 1
+write !sp cell1 1
+read value bank2 !sp
+write value cell1 10
+read !locals cell1 3
+write !locals cell1 1
+read !sp cell1 1
+op sub !sp !sp 1
+write !sp cell1 1
+op div bank !sp 512
+op floor bank bank undefined
+op add bank bank 7
+getlink bank bank
+op mod bankAddr !sp 512
+read temp4 bank bankAddr
+write temp4 cell1 0
+read !sp cell1 1
+op sub !sp !sp 1
+write !sp cell1 1
+read value bank2 !sp
+read !sp cell1 1
+op sub !sp !sp 1
+write !sp cell1 1
+op div bank !sp 512
+op floor bank bank undefined
+op add bank bank 7
+getlink bank bank
+op mod bankAddr !sp 512
+read temp5 bank bankAddr
+write temp5 cell1 3
+read !sp cell1 1
+op sub !sp !sp 1
+write !sp cell1 1
+op div bank !sp 512
+op floor bank bank undefined
+op add bank bank 7
+getlink bank bank
+op mod bankAddr !sp 512
+read value2 bank bankAddr
+read !args cell1 2
+write !args cell1 1
+write value cell1 2
+read !retval cell1 10
+read int cell2 0
+jump 420 notEqual int 0
+jump 433 always 0 0
+read intLoaded cell2 1
+jump 423 equal intLoaded 0
+jump 426 always 0 0
+write -1 cell2 2
+write !retval cell2 3
+jump 431 always 0 0
+write 0 cell2 1
+read !sp cell1 1
+write !retval bank2 !sp
+op add !sp !sp 1
+write !sp cell1 1
+write 0 cell2 0
+jump 438 always 0 0
+read !sp cell1 1
+write !retval bank2 !sp
+op add !sp !sp 1
+write !sp cell1 1
+write value2 cell2 0
+jump 609 always 0 0
+read !locals cell1 3
+op add !locals !locals data
+op div bank !locals 512
+op floor bank bank undefined
+op add bank bank 7
+getlink bank bank
+op mod bankAddr !locals 512
+read value bank bankAddr
+read !sp cell1 1
+write value bank2 !sp
+op add !sp !sp 1
+write !sp cell1 1
+jump 609 always 0 0
+read !sp cell1 1
+op sub !sp !sp 1
+write !sp cell1 1
+read value bank2 !sp
+read !locals cell1 3
+op add !locals !locals data
+op div bank !locals 512
+op floor bank bank undefined
+op add bank bank 7
+getlink bank bank
+op mod bankAddr !locals 512
+write value bank bankAddr
+jump 609 always 0 0
+read !args cell1 2
+op add !args !args data
+op div bank !args 512
+op floor bank bank undefined
+op add bank bank 7
+getlink bank bank
+op mod bankAddr !args 512
+read value bank bankAddr
+read !sp cell1 1
+write value bank2 !sp
+op add !sp !sp 1
+write !sp cell1 1
+jump 609 always 0 0
+write data cell2 0
+write 1 cell2 1
+read !sp cell1 1
+op sub !sp !sp 1
+write !sp cell1 1
+read value bank2 !sp
+write value cell2 1
+set i 0
+jump 494 always 0 0
+read !sp cell1 1
+op sub !sp !sp 1
+write !sp cell1 1
+read value2 bank2 !sp
+op add temp6 i 2
+write value2 cell2 temp6
+op add i i 1
+jump 487 lessThan i value
+jump 609 always 0 0
+control enabled switch2 true
+sensor reseting switch2 @enabled
+read int cell2 0
+jump 504 lessThanEq int 0
+read !sp cell1 1
+op add !sp !sp 1
+write !sp cell1 1
+jump 505 always 0 0
+jump 497 notEqual reseting 0
+control enabled switch2 false
+jump 609 always 0 0
+read !address cell1 8
+read value bank1 !address
+read !sp cell1 1
+write value bank2 !sp
+op add !sp !sp 1
+write !sp cell1 1
+jump 609 always 0 0
+read !address cell1 8
+read !sp cell1 1
+op sub !sp !sp 1
+write !sp cell1 1
+read value bank2 !sp
+write value bank1 !address
+jump 609 always 0 0
+read value bank1 data
+read !sp cell1 1
+write value bank2 !sp
+op add !sp !sp 1
+write !sp cell1 1
+jump 609 always 0 0
+read !sp cell1 1
+op sub !sp !sp 1
+write !sp cell1 1
+read value bank2 !sp
+write value bank1 data
+jump 609 always 0 0
+jump 609 always 0 0
+jump 609 always 0 0
+jump 609 always 0 0
+jump 609 always 0 0
+jump 556 equal data 2
+jump 556 equal data 9
+read !sp cell1 1
+op sub !sp !sp 1
+write !sp cell1 1
+read value bank2 !sp
+read !sp cell1 1
+op sub !sp !sp 1
+write !sp cell1 1
+read value2 bank2 !sp
+read !sp cell1 1
+op sub !sp !sp 1
+write !sp cell1 1
+read value3 bank2 !sp
+jump 556 equal data 0
+read !sp cell1 1
+op sub !sp !sp 1
+write !sp cell1 1
+read temp7 bank2 !sp
+op add @counter @counter data
+jump 567 always 0 0
+jump 569 always 0 0
+jump 571 always 0 0
+jump 577 always 0 0
+jump 579 always 0 0
+jump 581 always 0 0
+jump 587 always 0 0
+jump 589 always 0 0
+jump 595 always 0 0
+jump 605 always 0 0
+draw clear value3 value2 value
+jump 607 always 0 0
+draw color temp7 value3 value2 value
+jump 607 always 0 0
+read !sp cell1 1
+op sub !sp !sp 1
+write !sp cell1 1
+read value bank2 !sp
+draw stroke value
+jump 607 always 0 0
+draw line temp7 value3 value2 value
+jump 607 always 0 0
+draw rect temp7 value3 value2 value
+jump 607 always 0 0
+read !sp cell1 1
+op sub !sp !sp 1
+write !sp cell1 1
+read temp8 bank2 !sp
+draw poly temp8 temp7 value3 value2 value
+jump 607 always 0 0
+draw lineRect temp7 value3 value2 value
+jump 607 always 0 0
+read !sp cell1 1
+op sub !sp !sp 1
+write !sp cell1 1
+read temp9 bank2 !sp
+draw linePoly temp9 temp9 value3 value2 value
+jump 607 always 0 0
+read !sp cell1 1
+op sub !sp !sp 1
+write !sp cell1 1
+read temp10 bank2 !sp
+read !sp cell1 1
+op sub !sp !sp 1
+write !sp cell1 1
+read temp11 bank2 !sp
+draw triangle temp11 temp10 temp7 value3 value2 value
+jump 607 always 0 0
+drawflush display1
+jump 607 always 0 0
+jump 609 always 0 0
+jump 609 always 0 0
+read !pc cell1 0
+op div bank !pc 512
+op floor bank bank undefined
+op add bank bank 7
+getlink bank bank
+op mod bankAddr !pc 512
+read command bank bankAddr
+op add !pc !pc 1
+write !pc cell1 0
+end
+end

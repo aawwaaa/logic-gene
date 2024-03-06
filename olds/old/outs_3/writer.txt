@@ -1,0 +1,66 @@
+set logic_generator_by "zzz"
+print "Idle."
+printflush message1
+control config source1 null
+read temp0 bank1 0
+jump 7 equal temp0 true
+end
+set temp1 null
+control config source1 @beryllium
+sensor temp1 conveyor1 @firstItem
+jump 8 notEqual temp1 @beryllium
+read temp2 bank1 1
+print "Write length: "
+print temp2
+print "."
+printflush message1
+set temp3 8
+op sub temp3 temp3 4
+op shl temp4 15 temp3
+op and temp5 temp2 temp4
+op shr temp5 temp5 temp3
+lookup item temp6 temp5
+set temp7 null
+control config source1 temp6
+sensor temp7 conveyor1 @firstItem
+jump 23 notEqual temp7 temp6
+set temp8 null
+control config source1 @oxide
+sensor temp8 conveyor1 @firstItem
+jump 27 notEqual temp8 @oxide
+jump 17 greaterThan temp3 0
+set temp9 0
+jump 59 always 0 0
+op add temp10 temp9 2
+read temp11 bank1 temp10
+print "Write data: "
+print temp9
+print "/"
+print temp2
+print "  "
+print temp11
+print "."
+printflush message1
+set temp12 8
+op sub temp12 temp12 4
+op shl temp13 15 temp12
+op and temp14 temp11 temp13
+op shr temp14 temp14 temp12
+lookup item temp15 temp14
+set temp16 null
+control config source1 temp15
+sensor temp16 conveyor1 @firstItem
+jump 50 notEqual temp16 temp15
+set temp17 null
+control config source1 @oxide
+sensor temp17 conveyor1 @firstItem
+jump 54 notEqual temp17 @oxide
+jump 44 greaterThan temp12 0
+op add temp9 temp9 1
+jump 33 lessThan temp9 temp2
+set temp18 null
+control config source1 @tungsten
+sensor temp18 conveyor1 @firstItem
+jump 61 notEqual temp18 @tungsten
+write 0 bank1 0
+end

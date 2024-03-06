@@ -1,0 +1,765 @@
+set logic_generator_by "zzz"
+set temp0 0
+read temp1 cell1 56
+jump 5 equal temp1 true
+end
+set temp2 0
+set temp3 0
+set temp4 0
+set temp5 false
+set temp6 false
+set temp7 0
+set temp8 false
+read temp9 cell2 temp2
+op add temp2 temp2 1
+jump 693 always 0 0
+jump 17 equal temp9 44
+jump 19 always 0 0
+set temp5 true
+jump 67 always 0 0
+jump 21 lessThanEq temp9 57
+jump 51 always 0 0
+jump 23 greaterThanEq temp9 48
+jump 34 always 0 0
+set temp6 true
+jump 26 equal temp5 true
+jump 30 always 0 0
+op mul temp7 temp7 10
+op sub temp10 temp9 48
+op add temp7 temp7 temp10
+jump 33 always 0 0
+op mul temp4 temp4 10
+op sub temp11 temp9 48
+op add temp4 temp4 temp11
+jump 50 always 0 0
+jump 36 equal temp6 true
+jump 50 always 0 0
+set temp8 true
+jump 39 always 0 0
+op div temp7 temp7 10
+jump 38 greaterThanEq temp7 1
+op add temp12 temp4 temp7
+set temp4 0
+set temp7 0
+set temp5 false
+set temp6 false
+write 1 bank1 temp3
+op add temp3 temp3 1
+write temp12 bank1 temp3
+op add temp3 temp3 1
+write 2 bank1 temp3
+jump 67 always 0 0
+jump 53 equal temp6 true
+jump 67 always 0 0
+set temp8 true
+jump 56 always 0 0
+op div temp7 temp7 10
+jump 55 greaterThanEq temp7 1
+op add temp13 temp4 temp7
+set temp4 0
+set temp7 0
+set temp5 false
+set temp6 false
+write 1 bank1 temp3
+op add temp3 temp3 1
+write temp13 bank1 temp3
+op add temp3 temp3 1
+write 2 bank1 temp3
+jump 69 equal temp9 40
+jump 71 always 0 0
+write 0 cell3 temp0
+op add temp0 temp0 1
+jump 73 equal temp9 41
+jump 127 always 0 0
+set temp14 -1
+jump 76 lessThanEq temp0 0
+jump 101 always 0 0
+write 0 cell1 56
+set temp15 1
+op mul temp16 temp15 2
+op add @counter @counter temp16
+set temp17 "("
+jump 94 always 0 0
+set temp17 "+"
+jump 94 always 0 0
+set temp17 "-"
+jump 94 always 0 0
+set temp17 "*"
+jump 94 always 0 0
+set temp17 "/"
+jump 94 always 0 0
+set temp17 "%"
+jump 94 always 0 0
+set temp17 "^"
+jump 94 always 0 0
+write 0 bank1 temp3
+op add temp3 temp3 1
+write temp15 bank1 temp3
+op add temp3 temp3 1
+write 2 bank1 temp3
+write 1 cell1 57
+end
+op sub temp0 temp0 1
+read temp14 cell3 temp0
+jump 125 equal temp14 0
+op mul temp18 temp14 2
+op add @counter @counter temp18
+set temp19 "("
+jump 120 always 0 0
+set temp19 "+"
+jump 120 always 0 0
+set temp19 "-"
+jump 120 always 0 0
+set temp19 "*"
+jump 120 always 0 0
+set temp19 "/"
+jump 120 always 0 0
+set temp19 "%"
+jump 120 always 0 0
+set temp19 "^"
+jump 120 always 0 0
+write 0 bank1 temp3
+op add temp3 temp3 1
+write temp14 bank1 temp3
+op add temp3 temp3 1
+write 2 bank1 temp3
+jump 74 notEqual temp14 0
+set temp8 true
+jump 129 equal temp9 43
+jump 221 always 0 0
+jump 131 equal temp8 false
+jump 137 always 0 0
+write 1 bank1 temp3
+op add temp3 temp3 1
+write 0 bank1 temp3
+op add temp3 temp3 1
+write 2 bank1 temp3
+jump 138 always 0 0
+set temp8 false
+jump 220 always 0 0
+jump 141 equal temp0 0
+jump 143 always 0 0
+set temp20 0
+jump 145 always 0 0
+op sub temp21 temp0 1
+read temp20 cell3 temp21
+op mul temp22 temp20 2
+op add @counter @counter temp22
+set temp23 -1
+jump 161 always 0 0
+set temp23 0
+jump 161 always 0 0
+set temp23 0
+jump 161 always 0 0
+set temp23 1
+jump 161 always 0 0
+set temp23 1
+jump 161 always 0 0
+set temp23 1
+jump 161 always 0 0
+set temp23 2
+jump 161 always 0 0
+op lessThan temp24 temp23 0
+op equal temp25 temp23 0
+op land temp25 temp25 false
+op or temp24 temp24 temp25
+jump 167 equal temp24 true
+jump 170 always 0 0
+write 1 cell3 temp0
+op add temp0 temp0 1
+jump 221 always 0 0
+jump 172 lessThanEq temp0 0
+jump 197 always 0 0
+write 0 cell1 56
+set temp26 1
+op mul temp27 temp26 2
+op add @counter @counter temp27
+set temp28 "("
+jump 190 always 0 0
+set temp28 "+"
+jump 190 always 0 0
+set temp28 "-"
+jump 190 always 0 0
+set temp28 "*"
+jump 190 always 0 0
+set temp28 "/"
+jump 190 always 0 0
+set temp28 "%"
+jump 190 always 0 0
+set temp28 "^"
+jump 190 always 0 0
+write 0 bank1 temp3
+op add temp3 temp3 1
+write temp26 bank1 temp3
+op add temp3 temp3 1
+write 2 bank1 temp3
+write 1 cell1 57
+end
+op sub temp0 temp0 1
+read temp20 cell3 temp0
+op mul temp29 temp20 2
+op add @counter @counter temp29
+set temp30 "("
+jump 215 always 0 0
+set temp30 "+"
+jump 215 always 0 0
+set temp30 "-"
+jump 215 always 0 0
+set temp30 "*"
+jump 215 always 0 0
+set temp30 "/"
+jump 215 always 0 0
+set temp30 "%"
+jump 215 always 0 0
+set temp30 "^"
+jump 215 always 0 0
+write 0 bank1 temp3
+op add temp3 temp3 1
+write temp20 bank1 temp3
+op add temp3 temp3 1
+write 2 bank1 temp3
+jump 139 always 0 0
+jump 223 equal temp9 45
+jump 315 always 0 0
+jump 225 equal temp8 false
+jump 231 always 0 0
+write 1 bank1 temp3
+op add temp3 temp3 1
+write 0 bank1 temp3
+op add temp3 temp3 1
+write 2 bank1 temp3
+jump 232 always 0 0
+set temp8 false
+jump 314 always 0 0
+jump 235 equal temp0 0
+jump 237 always 0 0
+set temp31 0
+jump 239 always 0 0
+op sub temp32 temp0 1
+read temp31 cell3 temp32
+op mul temp33 temp31 2
+op add @counter @counter temp33
+set temp34 -1
+jump 255 always 0 0
+set temp34 0
+jump 255 always 0 0
+set temp34 0
+jump 255 always 0 0
+set temp34 1
+jump 255 always 0 0
+set temp34 1
+jump 255 always 0 0
+set temp34 1
+jump 255 always 0 0
+set temp34 2
+jump 255 always 0 0
+op lessThan temp35 temp34 0
+op equal temp36 temp34 0
+op land temp36 temp36 false
+op or temp35 temp35 temp36
+jump 261 equal temp35 true
+jump 264 always 0 0
+write 2 cell3 temp0
+op add temp0 temp0 1
+jump 315 always 0 0
+jump 266 lessThanEq temp0 0
+jump 291 always 0 0
+write 0 cell1 56
+set temp37 1
+op mul temp38 temp37 2
+op add @counter @counter temp38
+set temp39 "("
+jump 284 always 0 0
+set temp39 "+"
+jump 284 always 0 0
+set temp39 "-"
+jump 284 always 0 0
+set temp39 "*"
+jump 284 always 0 0
+set temp39 "/"
+jump 284 always 0 0
+set temp39 "%"
+jump 284 always 0 0
+set temp39 "^"
+jump 284 always 0 0
+write 0 bank1 temp3
+op add temp3 temp3 1
+write temp37 bank1 temp3
+op add temp3 temp3 1
+write 2 bank1 temp3
+write 1 cell1 57
+end
+op sub temp0 temp0 1
+read temp31 cell3 temp0
+op mul temp40 temp31 2
+op add @counter @counter temp40
+set temp41 "("
+jump 309 always 0 0
+set temp41 "+"
+jump 309 always 0 0
+set temp41 "-"
+jump 309 always 0 0
+set temp41 "*"
+jump 309 always 0 0
+set temp41 "/"
+jump 309 always 0 0
+set temp41 "%"
+jump 309 always 0 0
+set temp41 "^"
+jump 309 always 0 0
+write 0 bank1 temp3
+op add temp3 temp3 1
+write temp31 bank1 temp3
+op add temp3 temp3 1
+write 2 bank1 temp3
+jump 233 always 0 0
+jump 317 equal temp9 88
+jump 409 always 0 0
+jump 319 equal temp8 false
+jump 325 always 0 0
+write 1 bank1 temp3
+op add temp3 temp3 1
+write 0 bank1 temp3
+op add temp3 temp3 1
+write 2 bank1 temp3
+jump 326 always 0 0
+set temp8 false
+jump 408 always 0 0
+jump 329 equal temp0 0
+jump 331 always 0 0
+set temp42 0
+jump 333 always 0 0
+op sub temp43 temp0 1
+read temp42 cell3 temp43
+op mul temp44 temp42 2
+op add @counter @counter temp44
+set temp45 -1
+jump 349 always 0 0
+set temp45 0
+jump 349 always 0 0
+set temp45 0
+jump 349 always 0 0
+set temp45 1
+jump 349 always 0 0
+set temp45 1
+jump 349 always 0 0
+set temp45 1
+jump 349 always 0 0
+set temp45 2
+jump 349 always 0 0
+op lessThan temp46 temp45 1
+op equal temp47 temp45 1
+op land temp47 temp47 false
+op or temp46 temp46 temp47
+jump 355 equal temp46 true
+jump 358 always 0 0
+write 3 cell3 temp0
+op add temp0 temp0 1
+jump 409 always 0 0
+jump 360 lessThanEq temp0 0
+jump 385 always 0 0
+write 0 cell1 56
+set temp48 1
+op mul temp49 temp48 2
+op add @counter @counter temp49
+set temp50 "("
+jump 378 always 0 0
+set temp50 "+"
+jump 378 always 0 0
+set temp50 "-"
+jump 378 always 0 0
+set temp50 "*"
+jump 378 always 0 0
+set temp50 "/"
+jump 378 always 0 0
+set temp50 "%"
+jump 378 always 0 0
+set temp50 "^"
+jump 378 always 0 0
+write 0 bank1 temp3
+op add temp3 temp3 1
+write temp48 bank1 temp3
+op add temp3 temp3 1
+write 2 bank1 temp3
+write 1 cell1 57
+end
+op sub temp0 temp0 1
+read temp42 cell3 temp0
+op mul temp51 temp42 2
+op add @counter @counter temp51
+set temp52 "("
+jump 403 always 0 0
+set temp52 "+"
+jump 403 always 0 0
+set temp52 "-"
+jump 403 always 0 0
+set temp52 "*"
+jump 403 always 0 0
+set temp52 "/"
+jump 403 always 0 0
+set temp52 "%"
+jump 403 always 0 0
+set temp52 "^"
+jump 403 always 0 0
+write 0 bank1 temp3
+op add temp3 temp3 1
+write temp42 bank1 temp3
+op add temp3 temp3 1
+write 2 bank1 temp3
+jump 327 always 0 0
+jump 411 equal temp9 47
+jump 503 always 0 0
+jump 413 equal temp8 false
+jump 419 always 0 0
+write 1 bank1 temp3
+op add temp3 temp3 1
+write 0 bank1 temp3
+op add temp3 temp3 1
+write 2 bank1 temp3
+jump 420 always 0 0
+set temp8 false
+jump 502 always 0 0
+jump 423 equal temp0 0
+jump 425 always 0 0
+set temp53 0
+jump 427 always 0 0
+op sub temp54 temp0 1
+read temp53 cell3 temp54
+op mul temp55 temp53 2
+op add @counter @counter temp55
+set temp56 -1
+jump 443 always 0 0
+set temp56 0
+jump 443 always 0 0
+set temp56 0
+jump 443 always 0 0
+set temp56 1
+jump 443 always 0 0
+set temp56 1
+jump 443 always 0 0
+set temp56 1
+jump 443 always 0 0
+set temp56 2
+jump 443 always 0 0
+op lessThan temp57 temp56 1
+op equal temp58 temp56 1
+op land temp58 temp58 false
+op or temp57 temp57 temp58
+jump 449 equal temp57 true
+jump 452 always 0 0
+write 4 cell3 temp0
+op add temp0 temp0 1
+jump 503 always 0 0
+jump 454 lessThanEq temp0 0
+jump 479 always 0 0
+write 0 cell1 56
+set temp59 1
+op mul temp60 temp59 2
+op add @counter @counter temp60
+set temp61 "("
+jump 472 always 0 0
+set temp61 "+"
+jump 472 always 0 0
+set temp61 "-"
+jump 472 always 0 0
+set temp61 "*"
+jump 472 always 0 0
+set temp61 "/"
+jump 472 always 0 0
+set temp61 "%"
+jump 472 always 0 0
+set temp61 "^"
+jump 472 always 0 0
+write 0 bank1 temp3
+op add temp3 temp3 1
+write temp59 bank1 temp3
+op add temp3 temp3 1
+write 2 bank1 temp3
+write 1 cell1 57
+end
+op sub temp0 temp0 1
+read temp53 cell3 temp0
+op mul temp62 temp53 2
+op add @counter @counter temp62
+set temp63 "("
+jump 497 always 0 0
+set temp63 "+"
+jump 497 always 0 0
+set temp63 "-"
+jump 497 always 0 0
+set temp63 "*"
+jump 497 always 0 0
+set temp63 "/"
+jump 497 always 0 0
+set temp63 "%"
+jump 497 always 0 0
+set temp63 "^"
+jump 497 always 0 0
+write 0 bank1 temp3
+op add temp3 temp3 1
+write temp53 bank1 temp3
+op add temp3 temp3 1
+write 2 bank1 temp3
+jump 421 always 0 0
+jump 505 equal temp9 37
+jump 597 always 0 0
+jump 507 equal temp8 false
+jump 513 always 0 0
+write 1 bank1 temp3
+op add temp3 temp3 1
+write 0 bank1 temp3
+op add temp3 temp3 1
+write 2 bank1 temp3
+jump 514 always 0 0
+set temp8 false
+jump 596 always 0 0
+jump 517 equal temp0 0
+jump 519 always 0 0
+set temp64 0
+jump 521 always 0 0
+op sub temp65 temp0 1
+read temp64 cell3 temp65
+op mul temp66 temp64 2
+op add @counter @counter temp66
+set temp67 -1
+jump 537 always 0 0
+set temp67 0
+jump 537 always 0 0
+set temp67 0
+jump 537 always 0 0
+set temp67 1
+jump 537 always 0 0
+set temp67 1
+jump 537 always 0 0
+set temp67 1
+jump 537 always 0 0
+set temp67 2
+jump 537 always 0 0
+op lessThan temp68 temp67 1
+op equal temp69 temp67 1
+op land temp69 temp69 false
+op or temp68 temp68 temp69
+jump 543 equal temp68 true
+jump 546 always 0 0
+write 5 cell3 temp0
+op add temp0 temp0 1
+jump 597 always 0 0
+jump 548 lessThanEq temp0 0
+jump 573 always 0 0
+write 0 cell1 56
+set temp70 1
+op mul temp71 temp70 2
+op add @counter @counter temp71
+set temp72 "("
+jump 566 always 0 0
+set temp72 "+"
+jump 566 always 0 0
+set temp72 "-"
+jump 566 always 0 0
+set temp72 "*"
+jump 566 always 0 0
+set temp72 "/"
+jump 566 always 0 0
+set temp72 "%"
+jump 566 always 0 0
+set temp72 "^"
+jump 566 always 0 0
+write 0 bank1 temp3
+op add temp3 temp3 1
+write temp70 bank1 temp3
+op add temp3 temp3 1
+write 2 bank1 temp3
+write 1 cell1 57
+end
+op sub temp0 temp0 1
+read temp64 cell3 temp0
+op mul temp73 temp64 2
+op add @counter @counter temp73
+set temp74 "("
+jump 591 always 0 0
+set temp74 "+"
+jump 591 always 0 0
+set temp74 "-"
+jump 591 always 0 0
+set temp74 "*"
+jump 591 always 0 0
+set temp74 "/"
+jump 591 always 0 0
+set temp74 "%"
+jump 591 always 0 0
+set temp74 "^"
+jump 591 always 0 0
+write 0 bank1 temp3
+op add temp3 temp3 1
+write temp64 bank1 temp3
+op add temp3 temp3 1
+write 2 bank1 temp3
+jump 515 always 0 0
+jump 599 equal temp9 94
+jump 691 always 0 0
+jump 601 equal temp8 false
+jump 607 always 0 0
+write 1 bank1 temp3
+op add temp3 temp3 1
+write 0 bank1 temp3
+op add temp3 temp3 1
+write 2 bank1 temp3
+jump 608 always 0 0
+set temp8 false
+jump 690 always 0 0
+jump 611 equal temp0 0
+jump 613 always 0 0
+set temp75 0
+jump 615 always 0 0
+op sub temp76 temp0 1
+read temp75 cell3 temp76
+op mul temp77 temp75 2
+op add @counter @counter temp77
+set temp78 -1
+jump 631 always 0 0
+set temp78 0
+jump 631 always 0 0
+set temp78 0
+jump 631 always 0 0
+set temp78 1
+jump 631 always 0 0
+set temp78 1
+jump 631 always 0 0
+set temp78 1
+jump 631 always 0 0
+set temp78 2
+jump 631 always 0 0
+op lessThan temp79 temp78 2
+op equal temp80 temp78 2
+op land temp80 temp80 true
+op or temp79 temp79 temp80
+jump 637 equal temp79 true
+jump 640 always 0 0
+write 6 cell3 temp0
+op add temp0 temp0 1
+jump 691 always 0 0
+jump 642 lessThanEq temp0 0
+jump 667 always 0 0
+write 0 cell1 56
+set temp81 1
+op mul temp82 temp81 2
+op add @counter @counter temp82
+set temp83 "("
+jump 660 always 0 0
+set temp83 "+"
+jump 660 always 0 0
+set temp83 "-"
+jump 660 always 0 0
+set temp83 "*"
+jump 660 always 0 0
+set temp83 "/"
+jump 660 always 0 0
+set temp83 "%"
+jump 660 always 0 0
+set temp83 "^"
+jump 660 always 0 0
+write 0 bank1 temp3
+op add temp3 temp3 1
+write temp81 bank1 temp3
+op add temp3 temp3 1
+write 2 bank1 temp3
+write 1 cell1 57
+end
+op sub temp0 temp0 1
+read temp75 cell3 temp0
+op mul temp84 temp75 2
+op add @counter @counter temp84
+set temp85 "("
+jump 685 always 0 0
+set temp85 "+"
+jump 685 always 0 0
+set temp85 "-"
+jump 685 always 0 0
+set temp85 "*"
+jump 685 always 0 0
+set temp85 "/"
+jump 685 always 0 0
+set temp85 "%"
+jump 685 always 0 0
+set temp85 "^"
+jump 685 always 0 0
+write 0 bank1 temp3
+op add temp3 temp3 1
+write temp75 bank1 temp3
+op add temp3 temp3 1
+write 2 bank1 temp3
+jump 609 always 0 0
+read temp9 cell2 temp2
+op add temp2 temp2 1
+jump 15 notEqual temp9 0
+jump 696 equal temp6 true
+jump 710 always 0 0
+set temp8 true
+jump 699 always 0 0
+op div temp7 temp7 10
+jump 698 greaterThanEq temp7 1
+op add temp86 temp4 temp7
+set temp4 0
+set temp7 0
+set temp5 false
+set temp6 false
+write 1 bank1 temp3
+op add temp3 temp3 1
+write temp86 bank1 temp3
+op add temp3 temp3 1
+write 2 bank1 temp3
+jump 761 always 0 0
+jump 713 lessThanEq temp0 0
+jump 738 always 0 0
+write 0 cell1 56
+set temp88 1
+op mul temp89 temp88 2
+op add @counter @counter temp89
+set temp90 "("
+jump 731 always 0 0
+set temp90 "+"
+jump 731 always 0 0
+set temp90 "-"
+jump 731 always 0 0
+set temp90 "*"
+jump 731 always 0 0
+set temp90 "/"
+jump 731 always 0 0
+set temp90 "%"
+jump 731 always 0 0
+set temp90 "^"
+jump 731 always 0 0
+write 0 bank1 temp3
+op add temp3 temp3 1
+write temp88 bank1 temp3
+op add temp3 temp3 1
+write 2 bank1 temp3
+write 1 cell1 57
+end
+op sub temp0 temp0 1
+read temp87 cell3 temp0
+op mul temp91 temp87 2
+op add @counter @counter temp91
+set temp92 "("
+jump 756 always 0 0
+set temp92 "+"
+jump 756 always 0 0
+set temp92 "-"
+jump 756 always 0 0
+set temp92 "*"
+jump 756 always 0 0
+set temp92 "/"
+jump 756 always 0 0
+set temp92 "%"
+jump 756 always 0 0
+set temp92 "^"
+jump 756 always 0 0
+write 0 bank1 temp3
+op add temp3 temp3 1
+write temp87 bank1 temp3
+op add temp3 temp3 1
+write 2 bank1 temp3
+jump 711 greaterThan temp0 0
+write 0 cell1 56
+write 1 cell1 57
+end
