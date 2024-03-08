@@ -1,0 +1,39 @@
+addr 128 inttable:
+    data 0
+    data &intproc
+addr 511 entrypoint:
+    data &main
+
+addr 1024 main:
+    mov &inttable -> inttable
+    push 123
+    push 456
+    call 2 -> &test
+    print temp2
+    int 1
+    raise 0
+
+func test arg0, arg1 -> local0
+    push a
+    push b
+    getarg arg0 -> a
+    getarg arg1 -> b
+    add a, b -> a
+    setlocal a -> local0
+    pop -> b
+    pop -> a
+    getlocal local0 -> temp2
+    ret temp2
+endfunc
+
+func intproc
+    pushregs
+    mov &data -> a
+    mov 512 -> b
+    memcopy a, 12 -> b
+    popregs
+    ret 0
+endfunc
+
+data:
+    str "HELLO WORLD!"

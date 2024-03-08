@@ -1,0 +1,129 @@
+write 1048 bank1 128
+# region itable
+# 
+# node __data [] -> []
+# 0	0	0		0
+write 1024 bank1 511
+# region entrypoint
+# 
+# node __data [] -> []
+# 0	0	0		0
+write 164368 bank3 0
+# region main
+# loop
+# node mov-15 [0] -> [temp]
+# 10	0	8	0	0
+write 278266510 bank3 1
+# node mov-13 [temp] -> [&var_index]
+# 8	0	10	1061	1061
+write 33718288 bank3 2
+# node mov-15 [&itable] -> [inttable]
+# 10	0	0	128	128
+write 272106162 bank3 3
+# node call [] -> [&clear]
+# 0	0	10	1038	1038
+write 270533298 bank3 4
+# node call [] -> [&test]
+# 0	0	10	1032	1032
+write 12741201 bank3 5
+# node add [temp2,0x30] -> [temp2]
+# 9	10	9	0x30	48
+write 138822286 bank3 6
+# node mov-13 [temp2] -> [529]
+# 9	0	10	529	529
+write 269484714 bank3 7
+# node jmp [] -> [&loop]
+# 0	0	10	1028	1028
+write 163891 bank3 8
+# region test
+# 
+# node funcinit [0] -> []
+# 10	0	0	0	0
+write 40 bank3 9
+# node push [a] -> []
+# 0	0	0		0
+write 16941072 bank3 10
+# node mov-15 [0x40] -> [a]
+# 10	0	0	0x40	64
+write 138412686 bank3 11
+# node mov-13 [a] -> [528]
+# 0	0	10	528	528
+write 41 bank3 12
+# node pop [] -> [a]
+# 0	0	0		0
+write 426036 bank3 13
+# node ret [1] -> []
+# 10	0	0	1	1
+write 163891 bank3 14
+# region clear
+# mark
+# node funcinit [0] -> []
+# 10	0	0	0	0
+write 40 bank3 15
+# node push [a] -> []
+# 0	0	0		0
+write 131112 bank3 16
+# node push [temp] -> []
+# 8	0	0		0
+write 164368 bank3 17
+# node mov-15 [0] -> [temp]
+# 10	0	8	0	0
+write 67272720 bank3 18
+# node mov-15 [256] -> [a]
+# 10	0	0	256	256
+write 134086669 bank3 19
+# node mov-12 [temp] -> [a]
+# 8	0	0	511	511
+write 273416881 bank3 20
+# node loop [a] -> [&mark]
+# 0	0	10	1043	1043
+write 553 bank3 21
+# node pop [] -> [temp]
+# 0	0	8		0
+write 41 bank3 22
+# node pop [] -> [a]
+# 0	0	0		0
+write 163892 bank3 23
+# node ret [0] -> []
+# 10	0	0	0	0
+write 163891 bank3 24
+# region input_handler
+# 
+# node funcinit [0] -> []
+# 10	0	0	0	0
+write 40 bank3 25
+# node push [a] -> []
+# 0	0	0		0
+write 16424 bank3 26
+# node push [b] -> []
+# 1	0	0		0
+write 131112 bank3 27
+# node push [temp] -> []
+# 8	0	0		0
+write 278298696 bank3 28
+# node mov-7 [&var_index] -> [b]
+# 10	0	1	1061	1061
+write 268075528 bank3 29
+# node mov-7 [1022] -> [temp]
+# 10	0	8	1022	1022
+write 134348877 bank3 30
+# node mov-12 [temp] -> [b]
+# 8	0	1	512	512
+write 288849 bank3 31
+# node add [b,1] -> [b]
+# 1	10	1	1	1
+write 278151822 bank3 32
+# node mov-13 [b] -> [&var_index]
+# 1	0	10	1061	1061
+write 553 bank3 33
+# node pop [] -> [temp]
+# 0	0	8		0
+write 105 bank3 34
+# node pop [] -> [b]
+# 0	0	1		0
+write 41 bank3 35
+# node pop [] -> [a]
+# 0	0	0		0
+write 163892 bank3 36
+# node ret [0] -> []
+# 10	0	0	0	0

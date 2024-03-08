@@ -1,0 +1,33 @@
+write 1024 bank1 511
+# region entrypoint
+# 
+# node __data [] -> []
+# 0	0	0		0
+write 134381584 bank3 0
+# region main
+# data
+# node mov-15 [vramBegin] -> [a]
+# 10	0	0	512	512
+write 3309648 bank3 1
+# node mov-15 [12] -> [b]
+# 10	0	1	12	12
+write 269648955 bank3 2
+# node memcopy [&data,b] -> [a]
+# 10	1	0	1028	1028
+write 0 bank3 3
+# node reset [] -> []
+# 0	0	0		0
+write 72 bank3 4
+# node __data [] -> []
+# 0	0	0		0
+write 69 bank3 5
+write 76 bank3 6
+write 76 bank3 7
+write 79 bank3 8
+write 32 bank3 9
+write 87 bank3 10
+write 79 bank3 11
+write 82 bank3 12
+write 76 bank3 13
+write 68 bank3 14
+write 33 bank3 15

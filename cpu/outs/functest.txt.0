@@ -1,0 +1,110 @@
+write 0 bank1 128
+# region inttable
+# 
+# node __data [] -> []
+# 0	0	0		0
+write 1042 bank1 129
+# node __data [] -> []
+# 0	0	0		0
+write 1024 bank1 511
+# region entrypoint
+# 
+# node __data [] -> []
+# 0	0	0		0
+write 33718288 bank3 0
+# region main
+# 
+# node mov-15 [&inttable] -> [inttable]
+# 10	0	0	128	128
+write 32407592 bank3 1
+# node push [123] -> []
+# 10	0	0	123	123
+write 119701544 bank3 2
+# node push [456] -> []
+# 10	0	0	456	456
+write 270303922 bank3 3
+# node call [] -> [&test]
+# 2	0	10	1031	1031
+write 147516 bank3 4
+# node print [temp2] -> []
+# 9	0	0		0
+write 426039 bank3 5
+# node int [1] -> []
+# 10	0	0	1	1
+write 163897 bank3 6
+# node raise [0] -> []
+# 10	0	0	0	0
+write 426035 bank3 7
+# region test
+# 
+# node funcinit [1] -> []
+# 10	0	0	1	1
+write 40 bank3 8
+# node push [a] -> []
+# 0	0	0		0
+write 16424 bank3 9
+# node push [b] -> []
+# 1	0	0		0
+write 196612 bank3 10
+# node mov-3 [args] -> [a]
+# 12	0	0	0	0
+write 458820 bank3 11
+# node mov-3 [args] -> [b]
+# 12	0	1	1	1
+write 1041 bank3 12
+# node add [a,b] -> [a]
+# 0	1	0		0
+write 845 bank3 13
+# node mov-12 [a] -> [locals]
+# 0	0	13	0	0
+write 105 bank3 14
+# node pop [] -> [b]
+# 0	0	1		0
+write 41 bank3 15
+# node pop [] -> [a]
+# 0	0	0		0
+write 213572 bank3 16
+# node mov-3 [locals] -> [temp2]
+# 13	0	9	0	0
+write 147508 bank3 17
+# node ret [temp2] -> []
+# 9	0	0		0
+write 163891 bank3 18
+# region intproc
+# 
+# node funcinit [0] -> []
+# 10	0	0	0	0
+write 53 bank3 19
+# node pushregs [] -> []
+# 0	0	0		0
+write 275152912 bank3 20
+# node mov-15 [&data] -> [a]
+# 10	0	0	1049	1049
+write 134381648 bank3 21
+# node mov-15 [512] -> [b]
+# 10	0	1	512	512
+write 3156091 bank3 22
+# node memcopy [a,12] -> [b]
+# 0	10	1	12	12
+write 54 bank3 23
+# node popregs [] -> []
+# 0	0	0		0
+write 163892 bank3 24
+# node ret [0] -> []
+# 10	0	0	0	0
+write 72 bank3 25
+# region data
+# 
+# node __data [] -> []
+# 0	0	0		0
+write 69 bank3 26
+write 76 bank3 27
+write 76 bank3 28
+write 79 bank3 29
+write 32 bank3 30
+write 87 bank3 31
+write 79 bank3 32
+write 82 bank3 33
+write 76 bank3 34
+write 68 bank3 35
+write 33 bank3 36

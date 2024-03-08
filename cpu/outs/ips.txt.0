@@ -1,0 +1,30 @@
+write 0 bank1 128
+# region inttable
+# 
+# node __data [] -> []
+# 0	0	0		0
+write 33718288 bank1 256
+# region main
+# loop
+# node mov-15 [&inttable] -> [inttable]
+# 10	0	0	128	128
+write 50496208 bank1 257
+# node mov-15 [192] -> [sp]
+# 10	0	11	192	192
+write 163856 bank1 258
+# node mov-15 [0] -> [a]
+# 10	0	0	0	0
+write 272401 bank1 259
+# node add [a,1] -> [a]
+# 0	10	0	1	1
+write 134218382 bank1 260
+# node mov-13 [a] -> [512]
+# 0	0	10	512	512
+write 67895978 bank1 261
+# node jmp [] -> [&loop]
+# 0	0	10	259	259
+write 256 bank1 511
+# region entrypoint
+# 
+# node __data [] -> []
+# 0	0	0		0

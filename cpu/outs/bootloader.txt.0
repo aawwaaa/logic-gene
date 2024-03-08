@@ -1,0 +1,526 @@
+write 100827856 bank1 192
+# region main
+# run
+# node mov-15 [384] -> [sp]
+# 10	0	11	384	384
+write 53215922 bank1 193
+# node call [] -> [&checkOperate]
+# 0	0	10	203	203
+write 134119432 bank1 194
+# node mov-7 [entrypoint] -> [a]
+# 10	0	0	511	511
+write 51643052 bank1 195
+# node jne [a] -> [&run]
+# 0	0	10	197	197
+write 81789618 bank1 196
+# node call [] -> [&waitData]
+# 0	0	10	312	312
+write 426064 bank1 197
+# node mov-15 [1] -> [b]
+# 10	0	1	1	1
+write 128729742 bank1 198
+# node mov-13 [b] -> [statOutput]
+# 1	0	10	491	491
+write 100827856 bank1 199
+# node mov-15 [384] -> [sp]
+# 10	0	11	384	384
+write 134119432 bank1 200
+# node mov-7 [entrypoint] -> [a]
+# 10	0	0	511	511
+write 42 bank1 201
+# node jmp [] -> [a]
+# 0	0	0		0
+write -426041 bank1 202
+# node raise [-1] -> []
+# 10	0	0	-1	-1
+write 163891 bank1 203
+# region checkOperate
+# mark1 end
+# node funcinit [0] -> []
+# 10	0	0	0	0
+write 40 bank1 204
+# node push [a] -> []
+# 0	0	0		0
+write 129138696 bank1 205
+# node mov-7 [opInput] -> [a]
+# 10	0	0	492	492
+write 272930 bank1 206
+# node notEqual [a,1] -> [temp]
+# 0	10	8	1	1
+write 55706284 bank1 207
+# node jne [temp] -> [&mark1]
+# 8	0	10	212	212
+write 163856 bank1 208
+# node mov-15 [0] -> [a]
+# 10	0	0	0	0
+write 128975502 bank1 209
+# node mov-13 [a] -> [opInput]
+# 0	0	10	492	492
+write 81789618 bank1 210
+# node call [] -> [&waitData]
+# 0	0	10	312	312
+write 163892 bank1 211
+# node ret [0] -> []
+# 10	0	0	0	0
+write 535074 bank1 212
+# node notEqual [a,2] -> [temp]
+# 0	10	8	2	2
+write 57279148 bank1 213
+# node jne [temp] -> [&end]
+# 8	0	10	218	218
+write 163856 bank1 214
+# node mov-15 [0] -> [a]
+# 10	0	0	0	0
+write 128975502 bank1 215
+# node mov-13 [a] -> [opInput]
+# 0	0	10	492	492
+write 89916082 bank1 216
+# node call [] -> [&saveData]
+# 0	0	10	343	343
+write 163892 bank1 217
+# node ret [0] -> []
+# 10	0	0	0	0
+write 41 bank1 218
+# node pop [] -> [a]
+# 0	0	0		0
+write 163892 bank1 219
+# node ret [0] -> []
+# 10	0	0	0	0
+write 163891 bank1 220
+# region loadPart
+# wait
+# node funcinit [0] -> []
+# 10	0	0	0	0
+write 65576 bank1 221
+# node push [e] -> []
+# 4	0	0		0
+write 196868 bank1 222
+# node mov-3 [args] -> [e]
+# 12	0	4	0	0
+write 133759630 bank1 223
+# node mov-13 [e] -> [dataOpTarget]
+# 4	0	10	510	510
+write 426256 bank1 224
+# node mov-15 [1] -> [e]
+# 10	0	4	1	1
+write 133497486 bank1 225
+# node mov-13 [e] -> [dataOp]
+# 4	0	10	509	509
+write 133595400 bank1 226
+# node mov-7 [dataOp] -> [e]
+# 10	0	4	509	509
+write 59310764 bank1 227
+# node jne [e] -> [&wait]
+# 4	0	10	226	226
+write 297 bank1 228
+# node pop [] -> [e]
+# 0	0	4		0
+write 163892 bank1 229
+# node ret [0] -> []
+# 10	0	0	0	0
+write 163891 bank1 230
+# region savePart
+# wait
+# node funcinit [0] -> []
+# 10	0	0	0	0
+write 65576 bank1 231
+# node push [e] -> []
+# 4	0	0		0
+write 196868 bank1 232
+# node mov-3 [args] -> [e]
+# 12	0	4	0	0
+write 133759630 bank1 233
+# node mov-13 [e] -> [dataOpTarget]
+# 4	0	10	510	510
+write 688400 bank1 234
+# node mov-15 [2] -> [e]
+# 10	0	4	2	2
+write 133497486 bank1 235
+# node mov-13 [e] -> [dataOp]
+# 4	0	10	509	509
+write 133595400 bank1 236
+# node mov-7 [dataOp] -> [e]
+# 10	0	4	509	509
+write 61932204 bank1 237
+# node jne [e] -> [&wait]
+# 4	0	10	236	236
+write 297 bank1 238
+# node pop [] -> [e]
+# 0	0	4		0
+write 163892 bank1 239
+# node ret [0] -> []
+# 10	0	0	0	0
+write 163891 bank1 240
+# region loadByte
+# load
+# node funcinit [0] -> []
+# 10	0	0	0	0
+write 4319781 bank1 241
+# node lessThan [indexRegister,16] -> [temp]
+# 7	10	8	16	16
+write 64881324 bank1 242
+# node jne [temp] -> [&load]
+# 8	0	10	247	247
+write 371089 bank1 243
+# node add [partRegister,1] -> [partRegister]
+# 6	10	6	1	1
+write 98344 bank1 244
+# node push [partRegister] -> []
+# 6	0	0		0
+write 57688754 bank1 245
+# node call [] -> [&loadPart]
+# 1	0	10	220	220
+write 164304 bank1 246
+# node mov-15 [0] -> [indexRegister]
+# 10	0	7	0	0
+write 129352260 bank1 247
+# node mov-3 [indexRegister] -> [temp2]
+# 7	0	9	dataBegin	493
+write 387537 bank1 248
+# node add [indexRegister,1] -> [indexRegister]
+# 7	10	7	1	1
+write 147508 bank1 249
+# node ret [temp2] -> []
+# 9	0	0		0
+write 163891 bank1 250
+# region saveByte
+# save
+# node funcinit [0] -> []
+# 10	0	0	0	0
+write 4319781 bank1 251
+# node lessThan [indexRegister,16] -> [temp]
+# 7	10	8	16	16
+write 67502764 bank1 252
+# node jne [temp] -> [&save]
+# 8	0	10	257	257
+write 98344 bank1 253
+# node push [partRegister] -> []
+# 6	0	0		0
+write 371089 bank1 254
+# node add [partRegister,1] -> [partRegister]
+# 6	10	6	1	1
+write 60310194 bank1 255
+# node call [] -> [&savePart]
+# 1	0	10	230	230
+write 164304 bank1 256
+# node mov-15 [0] -> [indexRegister]
+# 10	0	7	0	0
+write 197124 bank1 257
+# node mov-3 [args] -> [temp]
+# 12	0	8	0	0
+write 129368525 bank1 258
+# node mov-12 [temp] -> [indexRegister]
+# 8	0	7	dataBegin	493
+write 387537 bank1 259
+# node add [indexRegister,1] -> [indexRegister]
+# 7	10	7	1	1
+write 163892 bank1 260
+# node ret [0] -> []
+# 10	0	0	0	0
+write 163891 bank1 261
+# region loadInt
+# loop mark
+# node funcinit [0] -> []
+# 10	0	0	0	0
+write 40 bank1 262
+# node push [a] -> []
+# 0	0	0		0
+write 16424 bank1 263
+# node push [b] -> []
+# 1	0	0		0
+write 32808 bank1 264
+# node push [c] -> []
+# 2	0	0		0
+write 163920 bank1 265
+# node mov-15 [0] -> [b]
+# 10	0	1	0	0
+write 62915250 bank1 266
+# node call [] -> [&loadByte]
+# 0	0	10	240	240
+write 2255004 bank1 267
+# node and [temp2,0x8] -> [c]
+# 9	10	2	0x8	8
+write 1992732 bank1 268
+# node and [temp2,0x7] -> [a]
+# 9	10	0	0x7	7
+write 534547 bank1 269
+# node mul [a,2] -> [a]
+# 0	10	0	2	2
+write 1075295 bank1 270
+# node shl [b,4] -> [b]
+# 1	10	1	4	4
+write 62915250 bank1 271
+# node call [] -> [&loadByte]
+# 0	0	10	240	240
+write 25693 bank1 272
+# node or [b,temp2] -> [b]
+# 1	9	1		0
+write 70779569 bank1 273
+# node loop [a] -> [&loop]
+# 0	0	10	270	270
+write 72385195 bank1 274
+# node jeq [c] -> [&mark]
+# 2	0	10	276	276
+write -288851 bank1 275
+# node mul [b,-1] -> [b]
+# 1	10	1	-1	-1
+write 16976 bank1 276
+# node mov-15 [b] -> [temp2]
+# 1	0	9		0
+write 169 bank1 277
+# node pop [] -> [c]
+# 0	0	2		0
+write 105 bank1 278
+# node pop [] -> [b]
+# 0	0	1		0
+write 41 bank1 279
+# node pop [] -> [a]
+# 0	0	0		0
+write 147508 bank1 280
+# node ret [temp2] -> []
+# 9	0	0		0
+write 163891 bank1 281
+# region saveInt
+# loop loop2
+# node funcinit [0] -> []
+# 10	0	0	0	0
+write 40 bank1 282
+# node push [a] -> []
+# 0	0	0		0
+write 16424 bank1 283
+# node push [b] -> []
+# 1	0	0		0
+write 32808 bank1 284
+# node push [c] -> []
+# 2	0	0		0
+write 196612 bank1 285
+# node mov-3 [args] -> [a]
+# 12	0	0	0	0
+write 163920 bank1 286
+# node mov-15 [0] -> [b]
+# 10	0	1	0	0
+write 2631719 bank1 287
+# node ops1 [a,10] -> [a]
+# 0	10	0	10	10
+write 1058848 bank1 288
+# node shr [a,4] -> [a]
+# 0	10	0	4	4
+write 288849 bank1 289
+# node add [b,1] -> [b]
+# 1	10	1	1	1
+write 75498156 bank1 290
+# node jne [a] -> [&loop]
+# 0	0	10	288	288
+write 196612 bank1 291
+# node mov-3 [args] -> [a]
+# 12	0	0	0	0
+write 550996 bank1 292
+# node div [b,2] -> [b]
+# 1	10	1	2	2
+write 551015 bank1 293
+# node ops1 [b,2] -> [b]
+# 1	10	1	2	2
+write 197124 bank1 294
+# node mov-3 [args] -> [temp]
+# 12	0	8	0	0
+write 141861 bank1 295
+# node lessThan [temp,0] -> [temp]
+# 8	10	8	0	0
+write 2238995 bank1 296
+# node mul [temp,8] -> [temp]
+# 8	10	8	8	8
+write 132637 bank1 297
+# node or [temp,b] -> [temp]
+# 8	1	8		0
+write 131112 bank1 298
+# node push [temp] -> []
+# 8	0	0		0
+write 65553074 bank1 299
+# node call [] -> [&saveByte]
+# 1	0	10	250	250
+write 550995 bank1 300
+# node mul [b,2] -> [b]
+# 1	10	1	2	2
+write 1075347 bank1 301
+# node mul [b,4] -> [c]
+# 1	10	2	4	4
+write 1091730 bank1 302
+# node sub [c,4] -> [c]
+# 2	10	2	4	4
+write 2592 bank1 303
+# node shr [a,c] -> [temp]
+# 0	2	8		0
+write 4074012 bank1 304
+# node and [temp,0xf] -> [temp]
+# 8	10	8	0xf	15
+write 131112 bank1 305
+# node push [temp] -> []
+# 8	0	0		0
+write 65553074 bank1 306
+# node call [] -> [&saveByte]
+# 1	0	10	250	250
+write 78922417 bank1 307
+# node loop [b] -> [&loop2]
+# 1	0	10	301	301
+write 169 bank1 308
+# node pop [] -> [c]
+# 0	0	2		0
+write 105 bank1 309
+# node pop [] -> [b]
+# 0	0	1		0
+write 41 bank1 310
+# node pop [] -> [a]
+# 0	0	0		0
+write 163892 bank1 311
+# node ret [0] -> []
+# 10	0	0	0	0
+write 163891 bank1 312
+# region waitData
+# loop
+# node funcinit [0] -> []
+# 10	0	0	0	0
+write 40 bank1 313
+# node push [a] -> []
+# 0	0	0		0
+write 163856 bank1 314
+# node mov-15 [0] -> [a]
+# 10	0	0	0	0
+write 128713358 bank1 315
+# node mov-13 [a] -> [statOutput]
+# 0	0	10	491	491
+write 164304 bank1 316
+# node mov-15 [0] -> [indexRegister]
+# 10	0	7	0	0
+write 164240 bank1 317
+# node mov-15 [0] -> [partRegister]
+# 10	0	6	0	0
+write 163880 bank1 318
+# node push [0] -> []
+# 10	0	0	0	0
+write 57688754 bank1 319
+# node call [] -> [&loadPart]
+# 1	0	10	220	220
+write 68420274 bank1 320
+# node call [] -> [&loadInt]
+# 0	0	10	261	261
+write 82985643 bank1 321
+# node jeq [temp2] -> [&loop]
+# 9	0	10	316	316
+write 85197490 bank1 322
+# node call [] -> [&loadData]
+# 0	0	10	325	325
+write 41 bank1 323
+# node pop [] -> [a]
+# 0	0	0		0
+write 163892 bank1 324
+# node ret [0] -> []
+# 10	0	0	0	0
+write 163891 bank1 325
+# region loadData
+# loop
+# node funcinit [0] -> []
+# 10	0	0	0	0
+write 81960 bank1 326
+# node push [f] -> []
+# 5	0	0		0
+write 688464 bank1 327
+# node mov-15 [2] -> [f]
+# 10	0	5	2	2
+write 128795278 bank1 328
+# node mov-13 [f] -> [statOutput]
+# 5	0	10	491	491
+write 164304 bank1 329
+# node mov-15 [0] -> [indexRegister]
+# 10	0	7	0	0
+write 164240 bank1 330
+# node mov-15 [0] -> [partRegister]
+# 10	0	6	0	0
+write 163880 bank1 331
+# node push [0] -> []
+# 10	0	0	0	0
+write 57688754 bank1 332
+# node call [] -> [&loadPart]
+# 1	0	10	220	220
+write 68420274 bank1 333
+# node call [] -> [&loadInt]
+# 0	0	10	261	261
+write 134103694 bank1 334
+# node mov-13 [temp2] -> [511]
+# 9	0	10	511	511
+write 268599632 bank1 335
+# node mov-15 [1024] -> [f]
+# 10	0	5	1024	1024
+write 68420274 bank1 336
+# node call [] -> [&loadInt]
+# 0	0	10	261	261
+write 147791 bank1 337
+# node mov-14 [temp2] -> [f]
+# 9	0	5		0
+write 354641 bank1 338
+# node add [f,1] -> [f]
+# 5	10	5	1	1
+write 4303397 bank1 339
+# node lessThan [partRegister,16] -> [temp]
+# 6	10	8	16	16
+write 88212140 bank1 340
+# node jne [temp] -> [&loop]
+# 8	0	10	336	336
+write 361 bank1 341
+# node pop [] -> [f]
+# 0	0	5		0
+write 52 bank1 342
+# node ret [] -> []
+# 0	0	0		0
+write 163891 bank1 343
+# region saveData
+# loop
+# node funcinit [0] -> []
+# 10	0	0	0	0
+write 81960 bank1 344
+# node push [f] -> []
+# 5	0	0		0
+write 950608 bank1 345
+# node mov-15 [3] -> [f]
+# 10	0	5	3	3
+write 128795278 bank1 346
+# node mov-13 [f] -> [statOutput]
+# 5	0	10	491	491
+write 164304 bank1 347
+# node mov-15 [0] -> [indexRegister]
+# 10	0	7	0	0
+write 164240 bank1 348
+# node mov-15 [0] -> [partRegister]
+# 10	0	6	0	0
+write 134120008 bank1 349
+# node mov-7 [511] -> [temp2]
+# 10	0	9	511	511
+write 147496 bank1 350
+# node push [temp2] -> []
+# 9	0	0		0
+write 73679538 bank1 351
+# node call [] -> [&saveInt]
+# 1	0	10	281	281
+write 268599632 bank1 352
+# node mov-15 [1024] -> [f]
+# 10	0	5	1024	1024
+write 82508 bank1 353
+# node mov-11 [f] -> [temp2]
+# 5	0	9		0
+write 147496 bank1 354
+# node push [temp2] -> []
+# 9	0	0		0
+write 73679538 bank1 355
+# node call [] -> [&saveInt]
+# 1	0	10	281	281
+write 354641 bank1 356
+# node add [f,1] -> [f]
+# 5	10	5	1	1
+write 4303397 bank1 357
+# node lessThan [partRegister,16] -> [temp]
+# 6	10	8	16	16
+write 92668588 bank1 358
+# node jne [temp] -> [&loop]
+# 8	0	10	353	353
+write 163892 bank1 359
+# node ret [0] -> []
+# 10	0	0	0	0

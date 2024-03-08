@@ -1,0 +1,216 @@
+define statOutput 491
+define opInput 492
+define dataBegin 493
+define dataOp 509
+define dataOpTarget 510
+define entrypoint 511
+define partRegister g
+define indexRegister h
+
+addr 192 main:
+    mov 384 -> sp
+    call 0 -> &checkOperate
+    mov [entrypoint] -> a
+    jne a -> &run
+    call 0 -> &waitData
+run::
+    mov 1 -> b
+    mov b -> [statOutput]
+    mov 384 -> sp
+    mov [entrypoint] -> a
+    jmp -> a
+    raise -1
+
+func checkOperate
+    push a
+    mov [opInput] -> a
+    notEqual a, 1 -> temp
+    jne temp -> &mark1
+    mov 0 -> a
+    mov a -> [opInput]
+    call 0 -> &waitData
+    ret 0
+mark1::
+    notEqual a, 2 -> temp
+    jne temp -> &end
+    mov 0 -> a
+    mov a -> [opInput]
+    call 0 -> &saveData
+    ret 0
+end::
+    pop -> a
+    ret 0
+endfunc
+
+func loadPart part
+    push e
+    getarg part -> e
+    mov e -> [dataOpTarget]
+    mov 1 -> e
+    mov e -> [dataOp]
+wait::
+    mov [dataOp] -> e
+    jne e -> &wait
+    pop -> e
+    ret 0
+endfunc
+
+func savePart part
+    push e
+    getarg part -> e
+    mov e -> [dataOpTarget]
+    mov 2 -> e
+    mov e -> [dataOp]
+wait::
+    mov [dataOp] -> e
+    jne e -> &wait
+    pop -> e
+    ret 0
+endfunc
+
+func loadByte
+    lessThan indexRegister, 16 -> temp
+    jne temp -> &load
+    add partRegister, 1 -> partRegister
+    push partRegister
+    call 1 -> &loadPart
+    mov 0 -> indexRegister
+load::
+    mov [indexRegister + dataBegin] -> temp2
+    add indexRegister, 1 -> indexRegister
+    ret temp2
+endfunc
+
+func saveByte data
+    lessThan indexRegister, 16 -> temp
+    jne temp -> &save
+    push partRegister
+    add partRegister, 1 -> partRegister
+    call 1 -> &savePart
+    mov 0 -> indexRegister
+save::
+    getarg data -> temp
+    mov temp -> [indexRegister + dataBegin]
+    add indexRegister, 1 -> indexRegister
+    ret 0
+endfunc
+
+func loadInt
+    push a
+    push b
+    push c
+    mov 0 -> b
+    call 0 -> &loadByte
+    and temp2, 0x8 -> c
+    and temp2, 0x7 -> a
+    mul a, 2 -> a
+loop::
+    shl b, 4 -> b
+    call 0 -> &loadByte
+    or b, temp2 -> b
+    loop a -> &loop
+    jeq c -> &mark
+    neg b
+mark::
+    mov b -> temp2
+
+    pop -> c
+    pop -> b
+    pop -> a
+    ret temp2
+endfunc
+
+func saveInt data
+    push a
+    push b
+    push c
+    getarg data -> a
+    mov 0 -> b
+    abs a -> a
+loop::
+    shr a, 4 -> a
+    inc b
+    jne a -> &loop
+    getarg data -> a
+    div b, 2 -> b
+    ceil b -> b
+    getarg data -> temp
+    lessThan temp, 0 -> temp
+    mul temp, 8 -> temp
+    or temp, b -> temp
+    push temp
+    call 1 -> &saveByte
+    mul b, 2 -> b
+loop2::
+    mul b, 4 -> c
+    sub c, 4 -> c
+    shr a, c -> temp
+    and temp, 0xf -> temp
+    push temp
+    call 1 -> &saveByte
+    loop b -> &loop2
+
+    pop -> c
+    pop -> b
+    pop -> a
+    ret 0
+endfunc
+
+func waitData
+    push a
+    mov 0 -> a
+    mov a -> [statOutput]
+loop::
+    mov 0 -> indexRegister
+    mov 0 -> partRegister
+    push 0
+    call 1 -> &loadPart
+    call 0 -> &loadInt
+    jeq temp2 -> &loop
+
+    call 0 -> &loadData
+    pop -> a
+    ret 0
+endfunc
+
+func loadData
+    push f
+    mov 2 -> f
+    mov f -> [statOutput]
+    mov 0 -> indexRegister
+    mov 0 -> partRegister
+    push 0
+    call 1 -> &loadPart
+    call 0 -> &loadInt
+    mov temp2 -> [511]
+    mov 1024 -> f
+loop::
+    call 0 -> &loadInt
+    mov temp2 -> [f]
+    inc f
+    lessThan partRegister, 16 -> temp
+    jne temp -> &loop
+    pop -> f
+    ret
+endfunc
+
+func saveData
+    push f
+    mov 3 -> f
+    mov f -> [statOutput]
+    mov 0 -> indexRegister
+    mov 0 -> partRegister
+    mov [511] -> temp2
+    push temp2
+    call 1 -> &saveInt
+    mov 1024 -> f
+loop::
+    mov [f] -> temp2
+    push temp2
+    call 1 -> &saveInt
+    inc f
+    lessThan partRegister, 16 -> temp
+    jne temp -> &loop
+
+    ret 0
+endfunc

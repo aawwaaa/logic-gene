@@ -1,0 +1,34 @@
+define vramBegin 512
+define vramLen 256
+
+macro print index, strBegin, strLen
+    push a
+    push b
+    push c
+
+    mov index -> a
+    mov 0 -> b
+    mov strLen -> c
+print_printChar::
+    mov [b+ strBegin ] -> temp
+    mov temp -> [b+ vramBegin ]
+    inc b
+    greaterThanEq b, strLen -> temp
+    jeq temp -> &print_printChar
+
+    pop -> c
+    pop -> b
+    pop -> a
+endmacro
+
+addr 511 entrypoint:
+    data &main
+
+addr 1024 main:
+;   print 0, &data, 12
+    mov vramBegin -> a
+    mov 12 -> b
+    memcopy &data, b -> a
+    reset
+data::
+    str "HELLO WORLD!"

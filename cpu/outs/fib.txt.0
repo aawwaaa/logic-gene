@@ -1,0 +1,70 @@
+write 1024 bank1 511
+# region entrypoint
+# 
+# node __data [] -> []
+# 0	0	0		0
+write 426000 bank3 0
+# region main
+# loop print
+# node mov-15 [1] -> [a]
+# 10	0	0	1	1
+write 426064 bank3 1
+# node mov-15 [1] -> [b]
+# 10	0	1	1	1
+write 164048 bank3 2
+# node mov-15 [0] -> [d]
+# 10	0	3	0	0
+write 1169 bank3 3
+# node add [a,b] -> [c]
+# 0	1	2		0
+write 16400 bank3 4
+# node mov-15 [b] -> [a]
+# 1	0	0		0
+write 32848 bank3 5
+# node mov-15 [c] -> [b]
+# 2	0	1		0
+write 32828 bank3 6
+# node print [c] -> []
+# 2	0	0		0
+write 2402471 bank3 7
+# node ops1 [c,9] -> [c]
+# 2	10	2	9	9
+write 305319 bank3 8
+# node ops1 [c,1] -> [c]
+# 2	10	2	1	1
+write 2787606 bank3 9
+# node pow [10,c] -> [e]
+# 10	2	4	10	10
+write 20820 bank3 10
+# node div [b,e] -> [f]
+# 1	4	5		0
+write 354663 bank3 11
+# node ops1 [f,1] -> [f]
+# 5	10	5	1	1
+write 2714005 bank3 12
+# node mod [f,10] -> [g]
+# 5	10	6	10	10
+write 12691857 bank3 13
+# node add [g,0x30] -> [g]
+# 6	10	6	0x30	48
+write 4098514 bank3 14
+# node sub [15,c] -> [h]
+# 10	2	7	15	15
+write 56785 bank3 15
+# node add [d,h] -> [h]
+# 3	7	7		0
+write 134316493 bank3 16
+# node mov-12 [g] -> [h]
+# 6	0	7	vramBegin	512
+write 270828209 bank3 17
+# node loop [c] -> [&print]
+# 2	0	10	1033	1033
+write 4253905 bank3 18
+# node add [d,0x10] -> [d]
+# 3	10	3	0x10	16
+write 67168469 bank3 19
+# node mod [d,0x100] -> [d]
+# 3	10	3	0x100	256
+write 269222570 bank3 20
+# node jmp [] -> [&loop]
+# 0	0	10	1027	1027

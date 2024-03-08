@@ -1,0 +1,30 @@
+define vramBegin 512
+define vramLen 256
+
+addr 511 entrypoint:
+    data &main
+
+addr 1024 main:
+    mov 1 -> a
+    mov 1 -> b
+    mov 0 -> d
+loop::
+    add a, b -> c
+    mov b -> a
+    mov c -> b
+    print c
+    log10 c -> c
+    floor c -> c
+print::
+    pow 10, c -> e
+    div b, e -> f
+    floor f -> f
+    mod f, 10 -> g
+    add g, 0x30 -> g
+    sub 15, c -> h
+    add d, h -> h
+    mov g -> [h+ vramBegin ]
+    loop c -> &print
+    add d, 0x10 -> d
+    mod d, 0x100 -> d
+    jmp -> &loop

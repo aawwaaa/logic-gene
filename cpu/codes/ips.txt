@@ -1,0 +1,13 @@
+addr 128 inttable:
+    data 0
+addr 511 entrypoint:
+    data &main
+
+addr 256 main:
+    mov &inttable -> inttable
+    mov 192 -> sp
+    mov 0 -> a
+loop::
+    add a, 1 -> a
+    mov a -> [512]
+    jmp -> &loop

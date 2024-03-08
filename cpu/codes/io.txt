@@ -1,0 +1,53 @@
+addr 511 entrypoint:
+    data &main
+addr 128 itable:
+    data &input_handler
+
+addr 1024 main:
+    mov 0 -> temp
+    mov temp -> [&var_index]
+    mov &itable -> inttable
+    call 0 -> &clear
+loop::
+    call 0 -> &test
+    add temp2, 0x30 -> temp2
+    mov temp2 -> [529]
+    jmp -> &loop
+
+func test
+    push a
+    mov 0x40 -> a
+    mov a -> [528]
+    pop -> a
+    ret 1
+endfunc
+
+func clear
+    push a
+    push temp
+    mov 0 -> temp
+    mov 256 -> a
+mark::
+    mov temp -> [a + 511]
+    loop a -> &mark
+    pop -> temp
+    pop -> a
+    ret 0
+endfunc
+
+func input_handler
+    push a
+    push b
+    push temp
+    mov [&var_index] -> b
+    mov [1022] -> temp
+    mov temp -> [b + 512]
+    add b, 1 -> b
+    mov b -> [&var_index]
+    pop -> temp
+    pop -> b
+    pop -> a
+    ret 0
+endfunc
+
+var_index: pad 1
