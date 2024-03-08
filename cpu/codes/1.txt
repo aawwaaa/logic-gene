@@ -1,8 +1,0 @@
-    const 0
-f:
-    reads :a
-    add
-    cpy
-    outi 10
-    jmpi :f
-data a 1

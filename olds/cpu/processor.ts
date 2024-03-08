@@ -47,7 +47,7 @@ export function decodeData(data, file, index, labels, ptr, labelbase){
 function compile(data, file){
     const neg = Math.pow(2, 51)
 
-    let ptr = 0, bank = 2, out = "", labels = {}, defines = {}, labelbase = 0
+    let ptr = 0, bank = 2, out = "", labels = {}, labelbase = 0
     function writeLine(command, data){
         // if(bank == 1)console.log(ptr, Object.keys(commands)[command], data, decodeData(data, file, 0, labels, (bank - 1) * 512 + ptr, labelbase))
         if(typeof(data) == "string" && data.startsWith(":"))
@@ -83,13 +83,9 @@ function compile(data, file){
             labels[line.substring(0, line.length - 1)] = (bank - 1) * 512 + ptr
             return
         }
-        const [command, data, ...oth] = line.split(" ").map(a => defines[a] ?? a)
+        const [command, data, ...oth] = line.split(" ")
         if(command == "labelbase"){
             labelbase = +data
-            return
-        }
-        if(command == "define"){
-            defines[data] = oth.join(" ")
             return
         }
         if(macros[command]){

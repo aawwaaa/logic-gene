@@ -1,7 +1,6 @@
 program
 labelbase 480
 name "REPEATER-F"
-version 1
     const :intproc
     sreg $intproc
     printStrl :hello
@@ -11,12 +10,12 @@ flag:
     reset
 def intproc 0
     set .d.halt 0
-    loadArg .int.type
-    equal .int.input.type
+    loadArg 0
+    equal 0x100
     jeqi +6
-    loadArg .int.input.c1
-    loadArg .int.input.c2
-    loadArg .int.input.len
+    loadArg 1
+    loadArg 2
+    loadArg 3
     call :inputproc 3
     ret
     const 0
@@ -37,13 +36,13 @@ flag3:
     set .m.src .i
     set .m.fromComponent 1
     set .m.dst 2
-    set .m.target .m.t.input
+    set .m.toInput 1
     loadArg 2
     outi .m.len
     set .m.enable 1
     waitState .m.enable 0
     set .m.fromComponent 0
-    set .m.target 0
+    set .m.toInput 0
     printStrl :endl
 flag2:
     const 0
@@ -51,5 +50,5 @@ flag2:
 pad 192
     strl data "REPEAT: \n"
     strl endl "\n>"
-    strl hello "\x10\x00IT WILL REPEAT YOUR INPUT, TYPE \"/\" TO EXIT\n>"
+    strl hello "\x01\x00\x02\x00\x00IT WILL REPEAT YOUR INPUT, TYPE \"/\" TO EXIT\n>"
 endProgram

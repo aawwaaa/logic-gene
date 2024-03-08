@@ -35,22 +35,7 @@ export const operations = {
     abs: 1,
     floor: 1,
     ceil: 1,
-    rand: 1,
-
-    // graphics-co
-    sin: 1,
-    cos: 1,
-    tan: 1,
-    asin: 1,
-    acos: 1,
-    atan: 1,
-    sqrt: 1,
-    log: 1,
-    log10: 1,
-    angle: 2,
-    angleDiff: 2,
-    len: 2,
-    noise: 2
+    rand: 1
 }
 
 export const commands = {
@@ -61,20 +46,8 @@ export const commands = {
     loop: 16, call: 17, ret: 18,
     loadLocal: 19, saveLocal: 20, loadArg: 21,
     int: 22, halt: 23,
-    in: 24, out: 25, ini: 26, outi: 27,
-    draw: 32/*, vector: 33*/
+    in: 24, out: 25, ini: 26, outi: 27
 }
-
-export const draws = {
-    clear: 0, color: 1, stroke: 2,
-    line: 3, rect: 4, poly: 5,
-    lineRect: 6, linePoly: 7,
-    triangle: 8, flush: 9
-}
-
-// export const vectors = {
-//     add: 0, sub: 1, rotate: 2, scale: 3, copy: 4
-// }
 
 const diskOffset = 256 - 12
 const memoryOffset = diskOffset - 6
@@ -106,15 +79,6 @@ export const components = {
             memory: 0,
             input: 1,
             component: 2
-        }
-    },
-    int: {
-        type: 0,
-        input: {
-            type: 0x100,
-            c1: 1,
-            c2: 2,
-            len: 3
         }
     }
 }
@@ -165,14 +129,7 @@ export const macros = {
             labels[num] = ptr
             num = d
         }
-        writeLine(gd(num), 0)
-    },
-    fill(line, [_, label, len, data], writeLine, ptr, labels, g, s, gd){
-        labels[label] = ptr
-        data = gd(data)
-        for (let index = 0; index < len; index++) {
-            writeLine(data, 0)
-        }
+        writeLine(gd(num) , 0)
     },
     str(line, [_, label, ...str], writeLine, ptr, labels){
         if(!label.startsWith("\"")) labels[label] = ptr
@@ -280,23 +237,16 @@ export const macros = {
         writeLine(commands.const, 0)
         writeLine(commands.outi, ".m.target")
     },
-    consts(line, [_, ...data], writeLine, p, l, g, s, gd){
-        data.forEach(d => writeLine(commands.const, gd(d)))
-    }
 }
 
-const entries = Object.entries(operations)
-const op2 = entries.filter(a => a[1] == 2).map(a => a[0])
-const op1 = entries.filter(a => a[1] == 1).map(a => a[0])
-entries.forEach(([key, value]) => {
-    const index = value == 2? op2.indexOf(key): op1.indexOf(key)
+Object.entries(operations).forEach(([key, value], index) => {
     if(key == "add") return macros[key] = function(line, [_, data], writeLine, p, l, g, s, gd){
         if(data !== void 0) return writeLine(commands.addi, gd(data))
         writeLine(commands.op, index)
     }
     macros[key] = function(line, [_, data], writeLine, p, l, g, s, gd){
         if(data !== void 0) writeLine(commands.const, gd(data))
-        writeLine(value == 1? commands.opa: commands.op, index)
+        writeLine(value == 0? commands.opa: commands.op, index)
     }
 })
 
@@ -308,12 +258,5 @@ Object.entries({
     macros[key] = function(line, [_, data], writeLine, p, l, g, s, gd){
         if(data !== void 0) writeLine(commands.const, gd(data))
         writeLine(commands.jmp, value)
-    }
-})
-
-Object.entries(draws).forEach(([key, value], index) => {
-    macros["draw."+key] = function(line, [_, ...data], writeLine, p, l, g, s, gd){
-        data.filter(a => a).forEach(d => writeLine(commands.const, gd(d)))
-        writeLine(commands.draw, index)
     }
 })
