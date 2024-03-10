@@ -1,0 +1,143 @@
+set logic_generator_by "zzz"
+read !cell1_health cell1 0
+jump 4 lessThanEq !cell1_health 0
+jump 6 always 0 0
+draw color 255 0 0 16
+jump 7 always 0 0
+draw color 0 0 0 16
+draw rect 0 0 176 144
+draw color 255 255 64 255
+draw poly 0 88 6 16 30
+read !cell1_bulletPos cell1 32
+jump 13 notEqual !cell1_bulletPos -1
+jump 18 always 0 0
+read !cell1_bulletPos cell1 32
+op add !cell1_bulletPos !cell1_bulletPos 26
+jump 17 lessThan !cell1_bulletPos 176
+jump 18 always 0 0
+draw poly !cell1_bulletPos 88 16 8 0
+set temp0 16
+read !cell1_shielded cell1 49
+jump 22 notEqual !cell1_shielded 0
+jump 27 always 0 0
+draw stroke 2
+draw line 20 73 20 103
+draw line 20 73 25 88
+draw line 20 103 25 88
+set temp0 32
+draw color 32 96 255 255
+read !cell2_bulletPos cell2 32
+jump 31 notEqual !cell2_bulletPos -1
+jump 37 always 0 0
+read !cell2_bulletPos cell2 32
+op sub temp1 300 !cell2_bulletPos
+op add temp1 temp1 26
+jump 36 lessThan temp1 176
+jump 37 always 0 0
+draw poly temp1 88 16 8 0
+draw color 255 128 64 255
+read !cell1_laser cell1 33
+jump 41 notEqual !cell1_laser -1
+jump 46 always 0 0
+read !cell1_laser cell1 33
+op mul !cell1_laser !cell1_laser 8
+op add !cell1_laser !cell1_laser 4
+draw stroke !cell1_laser
+draw line 32 88 176 88
+read !cell2_laser cell2 33
+jump 49 notEqual !cell2_laser -1
+jump 54 always 0 0
+read !cell2_laser cell2 33
+op mul !cell2_laser !cell2_laser 8
+op add !cell2_laser !cell2_laser 4
+draw stroke !cell2_laser
+draw line temp0 88 176 88
+draw color 255 192 128 255
+read !cell1_laser cell1 33
+jump 58 notEqual !cell1_laser -1
+jump 62 always 0 0
+read !cell1_laser cell1 33
+op mul !cell1_laser !cell1_laser 8
+draw stroke !cell1_laser
+draw line 32 88 176 88
+read !cell2_laser cell2 33
+jump 65 notEqual !cell2_laser -1
+jump 69 always 0 0
+read !cell2_laser cell2 33
+op mul !cell2_laser !cell2_laser 8
+draw stroke !cell2_laser
+draw line temp0 88 176 88
+draw color 128 64 255 255
+read !cell1_summon cell1 34
+jump 73 notEqual !cell1_summon -1
+jump 132 always 0 0
+draw stroke 2
+draw linePoly 88 88 16 48 0
+op div temp2 @time 20
+op mod temp2 temp2 360
+op add temp3 temp2 0
+op cos temp4 temp3 undefined
+op mul temp4 temp4 48
+op add temp4 temp4 88
+op sin temp5 temp3 undefined
+op mul temp5 temp5 48
+op add temp5 temp5 88
+op add temp6 temp2 72
+op cos temp7 temp6 undefined
+op mul temp7 temp7 48
+op add temp7 temp7 88
+op sin temp8 temp6 undefined
+op mul temp8 temp8 48
+op add temp8 temp8 88
+op add temp9 temp2 144
+op cos temp10 temp9 undefined
+op mul temp10 temp10 48
+op add temp10 temp10 88
+op sin temp11 temp9 undefined
+op mul temp11 temp11 48
+op add temp11 temp11 88
+op add temp12 temp2 216
+op cos temp13 temp12 undefined
+op mul temp13 temp13 48
+op add temp13 temp13 88
+op sin temp14 temp12 undefined
+op mul temp14 temp14 48
+op add temp14 temp14 88
+op add temp15 temp2 288
+op cos temp16 temp15 undefined
+op mul temp16 temp16 48
+op add temp16 temp16 88
+op sin temp17 temp15 undefined
+op mul temp17 temp17 48
+op add temp17 temp17 88
+draw line temp4 temp5 temp10 temp11
+draw line temp7 temp8 temp13 temp14
+draw line temp10 temp11 temp16 temp17
+draw line temp13 temp14 temp4 temp5
+draw line temp16 temp17 temp7 temp8
+draw color 255 255 255 255
+read !cell1_summon cell1 34
+op div !cell1_summon !cell1_summon 12
+op mul !cell1_summon !cell1_summon 96
+op min !cell1_summon !cell1_summon 96
+draw image 88 88 @corvus !cell1_summon 270
+read !cell1_summon cell1 34
+jump 126 greaterThan !cell1_summon 12
+jump 132 always 0 0
+draw color 64 192 64 255
+draw stroke 32
+draw line 88 88 176 88
+draw color 128 255 128 255
+draw stroke 24
+draw line 88 88 176 88
+read !cell2_summon cell2 34
+jump 135 greaterThan !cell2_summon 12
+jump 141 always 0 0
+draw color 64 192 64 255
+draw stroke 32
+draw line 16 88 176 88
+draw color 128 255 128 255
+draw stroke 24
+draw line 16 88 176 88
+drawflush display1
+end

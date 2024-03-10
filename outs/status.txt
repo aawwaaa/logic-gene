@@ -95,12 +95,35 @@ op add temp5 temp5 temp3
 op add temp6 temp6 temp3
 jump 18 greaterThan temp1 0
 op add @counter :numRet 1
-draw clear 0 0 0
-draw color 255 255 255 255
-set :numNumber 1234567
-set :numX 100
-set :numY 10
-set :numH 10
+draw color 0 0 0 255
+draw rect 0 144 176 32
+draw color 0 255 0 255
+read !cell1_health cell1 0
+op div !cell1_health !cell1_health 200
+op mul !cell1_health !cell1_health 120
+draw rect 10 168 !cell1_health 6
+draw color 64 128 255 255
+read !cell1_mana cell1 1
+op div !cell1_mana !cell1_mana 200
+op mul !cell1_mana !cell1_mana 120
+draw rect 10 160 !cell1_mana 6
+read !cell1_overloaded cell1 3
+jump 112 notEqual !cell1_overloaded 0
+jump 114 always 0 0
+draw color 255 64 32 255
+jump 115 always 0 0
+draw color 255 255 128 255
+read !cell1_charge cell1 2
+op div !cell1_charge !cell1_charge 100
+op mul !cell1_charge !cell1_charge 120
+draw rect 10 152 !cell1_charge 6
+draw color 255 255 0 255
+draw stroke 2
+read !cell1_special cell1 4
+set :numNumber !cell1_special
+set :numX 170
+set :numY 152
+set :numH 16
 set :numSpac 2
 set :numRet @counter
 set @counter temp0

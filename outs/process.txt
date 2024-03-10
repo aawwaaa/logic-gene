@@ -1,0 +1,230 @@
+set logic_generator_by "zzz"
+read !cell1_reset cell1 63
+jump 4 notEqual !cell1_reset 0
+jump 15 always 0 0
+write 200 cell1 0
+write 200 cell1 1
+write 0 cell1 2
+write 1 cell1 3
+write 0 cell1 4
+write 0 cell1 48
+write -1 cell1 32
+write -1 cell1 33
+write -1 cell1 34
+write 0 cell1 50
+write 0 cell1 63
+read !cell1_mana cell1 1
+jump 18 lessThan !cell1_mana 200
+jump 21 always 0 0
+read !cell1_mana cell1 1
+op add !cell1_mana !cell1_mana 0.5
+write !cell1_mana cell1 1
+read !cell1_charge cell1 2
+jump 24 lessThan !cell1_charge 100
+jump 31 always 0 0
+read !cell1_charge cell1 2
+op add !cell1_charge !cell1_charge 0.5
+write !cell1_charge cell1 2
+read !cell1_charge cell1 2
+jump 30 greaterThanEq !cell1_charge 100
+jump 31 always 0 0
+write 0 cell1 3
+sensor temp0 switch1 @enabled
+jump 34 notEqual temp0 0
+jump 50 always 0 0
+read !cell1_mana cell1 1
+jump 37 lessThan !cell1_mana 2
+jump 39 always 0 0
+control enabled switch1 0
+jump 50 always 0 0
+read !cell1_health cell1 0
+jump 42 greaterThanEq !cell1_health 200
+jump 44 always 0 0
+control enabled switch1 0
+jump 50 always 0 0
+read !cell1_health cell1 0
+op add !cell1_health !cell1_health 2
+write !cell1_health cell1 0
+read !cell1_mana cell1 1
+op add !cell1_mana !cell1_mana -2
+write !cell1_mana cell1 1
+sensor temp1 switch2 @enabled
+jump 53 notEqual temp1 0
+jump 70 always 0 0
+read !cell1_mana cell1 1
+jump 56 lessThan !cell1_mana 0.6
+jump 58 always 0 0
+control enabled switch2 0
+jump 72 always 0 0
+read !cell1_breakShield cell1 50
+jump 61 notEqual !cell1_breakShield 0
+jump 63 always 0 0
+control enabled switch2 0
+jump 72 always 0 0
+read !cell1_mana cell1 1
+op add !cell1_mana !cell1_mana -0.6
+write !cell1_mana cell1 1
+write 1 cell1 49
+control enabled switch3 0
+control enabled switch4 0
+jump 72 always 0 0
+write 0 cell1 49
+write 0 cell1 50
+sensor temp2 switch3 @enabled
+jump 75 notEqual temp2 0
+jump 90 always 0 0
+read !cell1_mana cell1 1
+jump 78 lessThan !cell1_mana 40
+jump 80 always 0 0
+control enabled switch3 0
+jump 90 always 0 0
+read !cell1_bulletPos cell1 32
+jump 83 notEqual !cell1_bulletPos -1
+jump 85 always 0 0
+control enabled switch3 0
+jump 90 always 0 0
+read !cell1_mana cell1 1
+op add !cell1_mana !cell1_mana -40
+write !cell1_mana cell1 1
+write 0 cell1 32
+control enabled switch3 0
+read !cell1_bulletPos cell1 32
+jump 93 notEqual !cell1_bulletPos -1
+jump 100 always 0 0
+read !cell1_bulletPos cell1 32
+op add !cell1_bulletPos !cell1_bulletPos 4
+write !cell1_bulletPos cell1 32
+jump 98 greaterThan !cell1_bulletPos 300
+jump 100 always 0 0
+write -1 cell1 32
+write 1 cell2 48
+read !cell1_damage cell1 48
+jump 103 equal !cell1_damage 1
+jump 111 always 0 0
+write 0 cell1 48
+read !cell1_shielded cell1 49
+jump 107 equal !cell1_shielded 0
+jump 110 always 0 0
+read !cell1_health cell1 0
+op add !cell1_health !cell1_health -25
+write !cell1_health cell1 0
+write 1 cell1 50
+sensor temp3 switch4 @enabled
+jump 114 notEqual temp3 0
+jump 151 always 0 0
+read !cell1_mana cell1 1
+jump 117 lessThan !cell1_mana 10
+jump 119 always 0 0
+control enabled switch4 0
+jump 152 always 0 0
+read !cell1_charge cell1 2
+jump 122 lessThan !cell1_charge 10
+jump 124 always 0 0
+control enabled switch4 0
+jump 152 always 0 0
+read !cell1_overloaded cell1 3
+jump 127 notEqual !cell1_overloaded 0
+jump 129 always 0 0
+control enabled switch4 0
+jump 152 always 0 0
+read !cell1_mana cell1 1
+op add !cell1_mana !cell1_mana -10
+write !cell1_mana cell1 1
+read !cell1_charge cell1 2
+op add !cell1_charge !cell1_charge -10
+write !cell1_charge cell1 2
+read !cell1_laser cell1 33
+jump 138 notEqual !cell1_laser -1
+jump 142 always 0 0
+read !cell1_laser cell1 33
+op add !cell1_laser !cell1_laser 0.1
+write !cell1_laser cell1 33
+jump 143 always 0 0
+write 1 cell1 33
+read !cell1_charge cell1 2
+jump 146 lessThan !cell1_charge 5
+jump 150 always 0 0
+write 1 cell1 3
+read !cell1_special cell1 4
+op add !cell1_special !cell1_special 1
+write !cell1_special cell1 4
+jump 152 always 0 0
+write -1 cell1 33
+read !cell2_laser cell2 33
+jump 155 notEqual !cell2_laser -1
+jump 163 always 0 0
+read !cell2_laser cell2 33
+op mul !cell2_laser !cell2_laser -2
+read !cell1_shielded cell1 49
+jump 160 equal !cell1_shielded 0
+jump 163 always 0 0
+read !cell1_health cell1 0
+op add !cell1_health !cell1_health !cell2_laser
+write !cell1_health cell1 0
+sensor temp4 switch5 @enabled
+jump 166 notEqual temp4 0
+jump 208 always 0 0
+read !cell1_mana cell1 1
+jump 169 lessThan !cell1_mana 10
+jump 171 always 0 0
+control enabled switch5 0
+jump 209 always 0 0
+read !cell1_charge cell1 2
+jump 174 lessThan !cell1_charge 5
+jump 176 always 0 0
+control enabled switch5 0
+jump 209 always 0 0
+read !cell1_overloaded cell1 3
+jump 179 notEqual !cell1_overloaded 0
+jump 181 always 0 0
+control enabled switch5 0
+jump 209 always 0 0
+read !cell1_special cell1 4
+op lessThan temp5 !cell1_special 1
+read !cell1_summon cell1 34
+op equal temp6 !cell1_summon -1
+op and temp5 temp5 temp6
+jump 188 notEqual temp5 0
+jump 190 always 0 0
+control enabled switch5 0
+jump 209 always 0 0
+read !cell1_mana cell1 1
+op add !cell1_mana !cell1_mana -10
+write !cell1_mana cell1 1
+read !cell1_charge cell1 2
+op add !cell1_charge !cell1_charge -5
+write !cell1_charge cell1 2
+read !cell1_summon cell1 34
+jump 199 notEqual !cell1_summon -1
+jump 203 always 0 0
+read !cell1_summon cell1 34
+op add !cell1_summon !cell1_summon 1
+write !cell1_summon cell1 34
+jump 207 always 0 0
+write 1 cell1 34
+read !cell1_special cell1 4
+op add !cell1_special !cell1_special -1
+write !cell1_special cell1 4
+jump 209 always 0 0
+write -1 cell1 34
+read !cell1_summon cell1 34
+jump 212 greaterThan !cell1_summon 15
+jump 215 always 0 0
+write -1 cell1 34
+write 2 cell2 48
+control enabled switch5 0
+read !cell1_damage cell1 48
+jump 218 equal !cell1_damage 2
+jump 223 always 0 0
+write 1 cell1 50
+write 0 cell1 48
+read !cell1_health cell1 0
+op add !cell1_health !cell1_health -150
+write !cell1_health cell1 0
+read !cell1_health cell1 0
+jump 226 lessThan !cell1_health 0
+jump 229 always 0 0
+read !cell1_reset cell1 63
+read !cell1_reset cell1 63
+jump 227 equal !cell1_reset 0
+end
