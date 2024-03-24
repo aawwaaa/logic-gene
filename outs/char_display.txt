@@ -1,0 +1,700 @@
+set logic_generator_by "zzz"
+set x 0
+set y 0
+set char 0
+set foreground %ffffffff
+set background %000000ff
+op add temp0 x 10
+op add temp1 x 20
+op add temp2 x 30
+op add temp3 x 40
+op add temp4 x 50
+op add temp5 x 60
+op add temp6 y 10
+op add temp7 y 20
+op add temp8 y 30
+op add temp9 y 40
+op add temp10 y 50
+op add temp11 y 60
+op add temp12 y 70
+draw col background
+draw rect x y 80 80
+draw col foreground
+op sub temp13 char 32
+jump 698 lessThan temp13 0
+op mul temp14 temp13 7
+op add @counter @counter temp14
+set _ _
+set _ _
+set _ _
+set _ _
+set _ _
+set _ _
+jump 698 always 0 0
+draw rect temp5 temp8 10 50
+draw rect temp5 temp6 10 10
+set _ _
+set _ _
+set _ _
+set _ _
+jump 698 always 0 0
+draw rect x temp11 10 20
+draw rect temp1 temp11 10 20
+set _ _
+set _ _
+set _ _
+set _ _
+jump 698 always 0 0
+draw rect temp0 temp6 10 70
+draw rect temp3 temp6 10 70
+draw rect x temp7 60 10
+draw rect x temp11 60 10
+set _ _
+set _ _
+jump 698 always 0 0
+draw rect x temp7 70 10
+draw rect x temp9 70 10
+draw rect x temp11 70 10
+draw rect x temp7 10 30
+draw rect temp5 temp9 10 30
+draw rect temp2 temp6 10 70
+jump 698 always 0 0
+draw rect x temp10 20 30
+draw rect temp4 temp6 20 30
+draw rect temp1 temp6 10 30
+draw rect temp2 temp9 10 10
+draw rect temp3 temp10 10 30
+set _ _
+jump 698 always 0 0
+draw rect x temp6 10 70
+draw rect x temp6 70 10
+draw rect x temp12 40 10
+draw rect x temp9 30 10
+draw rect temp5 temp6 10 40
+set _ _
+jump 698 always 0 0
+draw rect x temp11 10 20
+set _ _
+set _ _
+set _ _
+set _ _
+set _ _
+jump 698 always 0 0
+draw rect x temp9 10 10
+draw rect temp0 temp8 10 30
+draw rect temp1 temp7 10 50
+draw col background
+draw rect temp0 temp9 10 10
+draw rect temp1 temp8 10 30
+jump 698 always 0 0
+draw rect temp5 temp9 10 10
+draw rect temp4 temp8 10 30
+draw rect temp3 temp7 10 50
+draw col background
+draw rect temp4 temp9 10 10
+draw rect temp3 temp8 10 30
+jump 698 always 0 0
+draw rect temp0 temp10 10 20
+draw rect temp0 temp7 10 20
+draw rect temp2 temp6 10 70
+draw rect temp1 temp9 30 10
+draw rect temp4 temp10 10 20
+draw rect temp4 temp7 10 20
+jump 698 always 0 0
+draw rect temp2 temp7 10 50
+draw rect temp0 temp9 50 10
+set _ _
+set _ _
+set _ _
+set _ _
+jump 698 always 0 0
+draw rect temp3 temp6 10 10
+draw rect temp4 temp7 10 10
+set _ _
+set _ _
+set _ _
+set _ _
+jump 698 always 0 0
+draw rect temp0 temp9 50 10
+set _ _
+set _ _
+set _ _
+set _ _
+set _ _
+jump 698 always 0 0
+draw rect temp4 temp7 10 10
+set _ _
+set _ _
+set _ _
+set _ _
+set _ _
+jump 698 always 0 0
+draw rect temp1 temp6 10 30
+draw rect temp2 temp9 10 10
+draw rect temp3 temp10 10 30
+set _ _
+set _ _
+set _ _
+jump 698 always 0 0
+draw rect x temp7 10 50
+draw rect temp3 temp7 10 50
+draw rect temp0 temp6 30 10
+draw rect temp0 temp12 30 10
+draw rect temp1 temp9 10 10
+set _ _
+jump 698 always 0 0
+draw rect x temp10 10 10
+draw rect temp0 temp11 10 10
+draw rect temp1 temp6 10 70
+draw rect x temp6 50 10
+set _ _
+set _ _
+jump 698 always 0 0
+draw rect x temp11 10 10
+draw rect temp0 temp12 30 10
+draw rect temp3 temp9 10 30
+draw rect temp1 temp8 20 10
+draw rect temp0 temp7 10 10
+draw rect x temp6 50 10
+jump 698 always 0 0
+draw rect x temp12 40 10
+draw rect x temp9 40 10
+draw rect x temp6 40 10
+draw rect temp3 temp7 10 50
+set _ _
+set _ _
+jump 698 always 0 0
+draw rect x temp10 10 30
+draw rect temp0 temp9 30 10
+draw rect temp3 temp6 10 70
+set _ _
+set _ _
+set _ _
+jump 698 always 0 0
+draw rect x temp12 50 10
+draw rect x temp10 10 30
+draw rect temp0 temp9 30 10
+draw rect temp3 temp7 10 20
+draw rect x temp6 40 10
+set _ _
+jump 698 always 0 0
+draw rect temp0 temp12 30 10
+draw rect x temp7 10 50
+draw rect temp0 temp9 30 10
+draw rect temp3 temp7 10 20
+draw rect temp0 temp6 30 10
+set _ _
+jump 698 always 0 0
+draw rect x temp12 50 10
+draw rect temp2 temp10 10 20
+draw rect temp1 temp9 10 10
+draw rect temp0 temp6 10 30
+set _ _
+set _ _
+jump 698 always 0 0
+draw rect x temp10 50 20
+draw rect x temp7 50 20
+draw rect temp0 temp6 30 70
+draw col background
+draw rect temp0 temp10 30 20
+draw rect temp0 temp7 30 20
+jump 698 always 0 0
+draw rect temp0 temp12 30 10
+draw rect x temp10 10 20
+draw rect temp0 temp9 30 10
+draw rect temp3 temp7 10 50
+draw rect x temp7 40 0
+set _ _
+jump 698 always 0 0
+draw rect temp4 temp10 10 10
+draw rect temp4 temp7 10 10
+set _ _
+set _ _
+set _ _
+set _ _
+jump 698 always 0 0
+draw rect temp4 temp10 10 10
+draw rect temp4 temp7 10 10
+draw rect temp3 temp6 10 10
+set _ _
+set _ _
+set _ _
+jump 698 always 0 0
+draw rect temp0 temp8 10 30
+draw rect temp1 temp7 10 50
+draw rect temp2 temp6 10 70
+draw col background
+draw rect temp1 temp8 10 30
+draw rect temp2 temp7 10 50
+jump 698 always 0 0
+draw rect temp0 temp10 50 10
+draw rect temp0 temp8 50 10
+set _ _
+set _ _
+set _ _
+set _ _
+jump 698 always 0 0
+draw rect temp4 temp8 10 30
+draw rect temp3 temp7 10 50
+draw rect temp2 temp6 10 70
+draw col background
+draw rect temp3 temp8 10 30
+draw rect temp2 temp7 10 50
+jump 698 always 0 0
+draw rect temp0 temp12 50 10
+draw rect temp4 temp9 10 40
+draw rect temp2 temp9 30 10
+draw rect temp2 temp8 10 10
+draw rect temp2 temp6 10 10
+set _ _
+jump 698 always 0 0
+draw rect x temp7 10 50
+draw rect temp0 temp12 40 10
+draw rect temp0 temp6 50 10
+draw rect temp4 temp8 10 40
+draw rect temp3 temp8 10 10
+draw rect temp1 temp8 20 30
+jump 698 always 0 0
+draw rect x temp6 10 50
+draw rect temp0 temp11 10 10
+draw rect temp1 temp12 50 10
+draw rect temp5 temp6 10 70
+draw rect x temp9 70 10
+set _ _
+jump 698 always 0 0
+draw rect x temp6 10 70
+draw rect x temp12 60 10
+draw rect x temp6 60 10
+draw rect temp5 temp7 10 20
+draw rect temp5 temp10 10 20
+draw rect temp1 temp9 40 10
+jump 698 always 0 0
+draw rect x temp8 10 30
+draw rect temp0 temp7 10 10
+draw rect temp0 temp11 10 10
+draw rect temp1 temp12 50 10
+draw rect temp1 temp6 50 10
+set _ _
+jump 698 always 0 0
+draw rect x temp6 10 70
+draw rect x temp12 50 10
+draw rect temp4 temp11 10 10
+draw rect temp4 temp7 10 10
+draw rect temp5 temp8 10 30
+draw rect x temp6 50 10
+jump 698 always 0 0
+draw rect x temp7 10 60
+draw rect x temp12 70 10
+draw rect x temp9 70 10
+draw rect temp0 temp6 60 10
+set _ _
+set _ _
+jump 698 always 0 0
+draw rect x temp6 10 70
+draw rect x temp12 70 10
+draw rect temp1 temp9 30 10
+set _ _
+set _ _
+set _ _
+jump 698 always 0 0
+draw rect temp1 temp12 50 10
+draw rect temp0 temp11 10 10
+draw rect x temp7 10 40
+draw rect temp0 temp6 60 10
+draw rect temp5 temp6 10 40
+draw rect temp2 temp9 40 10
+jump 698 always 0 0
+draw rect x temp6 10 70
+draw rect temp5 temp6 10 70
+draw rect x temp9 70 10
+set _ _
+set _ _
+set _ _
+jump 698 always 0 0
+draw rect x temp12 70 10
+draw rect temp2 temp6 10 70
+draw rect x temp6 70 10
+set _ _
+set _ _
+set _ _
+jump 698 always 0 0
+draw rect x temp12 70 10
+draw rect temp3 temp8 10 50
+draw rect x temp7 10 10
+draw rect temp2 temp7 10 10
+draw rect temp0 temp6 20 10
+set _ _
+jump 698 always 0 0
+draw rect x temp6 10 70
+draw rect x temp9 50 10
+draw rect temp4 temp8 10 10
+draw rect temp4 temp10 10 10
+draw rect temp5 temp6 10 20
+draw rect temp5 temp11 10 20
+jump 698 always 0 0
+draw rect x temp6 10 70
+draw rect x temp6 70 10
+set _ _
+set _ _
+set _ _
+set _ _
+jump 698 always 0 0
+draw rect x temp6 10 70
+draw rect temp5 temp6 10 70
+draw rect temp0 temp11 10 10
+draw rect temp4 temp11 10 10
+draw rect temp1 temp10 30 10
+set _ _
+jump 698 always 0 0
+draw rect x temp6 10 70
+draw rect temp5 temp6 10 70
+draw rect temp0 temp11 20 10
+draw rect temp2 temp8 10 30
+draw rect temp3 temp7 20 10
+set _ _
+jump 698 always 0 0
+draw rect x temp7 10 50
+draw rect temp0 temp6 50 10
+draw rect temp5 temp7 10 50
+draw rect temp0 temp12 50 10
+set _ _
+set _ _
+jump 698 always 0 0
+draw rect temp0 temp12 50 10
+draw rect x temp6 10 60
+draw rect x temp9 60 10
+draw rect temp5 temp10 10 20
+set _ _
+set _ _
+jump 698 always 0 0
+draw rect temp0 temp12 50 10
+draw rect x temp9 10 30
+draw rect temp5 temp9 10 30
+draw rect temp0 temp8 50 10
+draw rect temp3 temp7 10 10
+draw rect temp4 temp6 10 10
+jump 698 always 0 0
+draw rect x temp6 10 70
+draw rect x temp12 60 10
+draw rect temp5 temp10 10 20
+draw rect temp1 temp9 40 10
+draw rect temp2 temp7 10 20
+draw rect temp3 temp6 30 10
+jump 698 always 0 0
+draw rect temp0 temp12 60 10
+draw rect x temp10 10 20
+draw rect temp0 temp9 50 10
+draw rect temp5 temp7 10 20
+draw rect x temp6 60 10
+set _ _
+jump 698 always 0 0
+draw rect x temp12 70 10
+draw rect temp2 temp6 10 70
+set _ _
+set _ _
+set _ _
+set _ _
+jump 698 always 0 0
+draw rect x temp8 10 50
+draw rect temp0 temp7 10 10
+draw rect temp1 temp6 40 10
+draw rect temp5 temp6 10 70
+set _ _
+set _ _
+jump 698 always 0 0
+draw rect x temp8 10 50
+draw rect temp5 temp8 10 50
+draw rect temp0 temp7 10 10
+draw rect temp4 temp7 10 10
+draw rect temp1 temp6 30 10
+set _ _
+jump 698 always 0 0
+draw rect x temp6 10 70
+draw rect temp5 temp6 10 70
+draw rect temp0 temp7 10 10
+draw rect temp4 temp7 10 10
+draw rect temp1 temp8 30 10
+set _ _
+jump 698 always 0 0
+draw rect x temp10 10 30
+draw rect x temp6 10 30
+draw rect temp0 temp9 50 10
+draw rect temp5 temp6 10 30
+draw rect temp5 temp10 10 30
+set _ _
+jump 698 always 0 0
+draw rect temp0 temp11 10 20
+draw rect temp4 temp11 10 20
+draw rect temp1 temp10 10 10
+draw rect temp3 temp10 10 10
+draw rect temp2 temp6 10 40
+set _ _
+jump 698 always 0 0
+draw rect x temp12 70 10
+draw rect x temp6 70 10
+draw rect temp0 temp7 10 20
+draw rect temp4 temp10 10 20
+draw rect temp1 temp9 30 10
+set _ _
+jump 698 always 0 0
+draw rect temp0 temp12 30 10
+draw rect temp0 temp6 10 70
+draw rect temp0 temp6 30 10
+set _ _
+set _ _
+set _ _
+jump 698 always 0 0
+draw rect temp1 temp10 10 30
+draw rect temp2 temp9 10 10
+draw rect temp3 temp6 10 30
+set _ _
+set _ _
+set _ _
+jump 698 always 0 0
+draw rect temp2 temp12 30 10
+draw rect temp4 temp6 10 70
+draw rect temp2 temp6 30 10
+set _ _
+set _ _
+set _ _
+jump 698 always 0 0
+draw rect temp0 temp10 10 10
+draw rect temp1 temp11 10 10
+draw rect temp2 temp12 10 10
+draw rect temp3 temp11 10 10
+draw rect temp4 temp10 10 10
+set _ _
+jump 698 always 0 0
+draw rect temp0 temp6 50 10
+set _ _
+set _ _
+set _ _
+set _ _
+set _ _
+jump 698 always 0 0
+draw rect x temp12 10 10
+draw rect temp0 temp11 20 10
+set _ _
+set _ _
+set _ _
+set _ _
+jump 698 always 0 0
+draw rect temp0 temp10 30 10
+draw rect temp3 temp7 10 30
+draw rect temp0 temp6 30 10
+draw rect x temp7 10 10
+draw rect temp0 temp8 30 10
+set _ _
+jump 698 always 0 0
+draw rect x temp7 10 40
+draw rect temp0 temp6 30 10
+draw rect temp3 temp7 10 10
+draw rect temp1 temp8 20 10
+set _ _
+set _ _
+jump 698 always 0 0
+draw rect x temp7 10 30
+draw rect temp0 temp10 40 10
+draw rect temp0 temp6 40 10
+set _ _
+set _ _
+set _ _
+jump 698 always 0 0
+draw rect temp3 temp7 10 40
+draw rect temp0 temp6 30 10
+draw rect x temp7 10 10
+draw rect temp0 temp8 20 10
+set _ _
+set _ _
+jump 698 always 0 0
+draw rect temp0 temp10 30 10
+draw rect x temp7 10 30
+draw rect temp0 temp6 30 10
+draw rect temp3 temp9 10 10
+draw rect temp1 temp8 20 10
+set _ _
+jump 698 always 0 0
+draw rect x temp6 10 40
+draw rect temp0 temp10 40 10
+draw rect temp1 temp8 20 10
+set _ _
+set _ _
+set _ _
+jump 698 always 0 0
+draw rect x temp9 10 10
+draw rect temp0 temp10 30 10
+draw rect temp3 temp7 10 30
+draw rect temp0 temp8 20 10
+draw rect temp1 temp6 20 10
+set _ _
+jump 698 always 0 0
+draw rect x temp6 10 50
+draw rect temp1 temp8 20 10
+draw rect temp3 temp6 10 20
+set _ _
+set _ _
+set _ _
+jump 698 always 0 0
+draw rect temp1 temp10 10 10
+draw rect temp1 temp6 10 30
+set _ _
+set _ _
+set _ _
+set _ _
+jump 698 always 0 0
+draw rect temp1 temp10 10 10
+draw rect temp1 temp7 10 20
+draw rect x temp6 20 10
+set _ _
+set _ _
+set _ _
+jump 698 always 0 0
+draw rect x temp6 10 50
+draw rect temp0 temp8 20 10
+draw rect temp2 temp7 10 10
+draw rect temp2 temp9 10 10
+draw rect temp3 temp6 10 10
+draw rect temp3 temp10 10 10
+jump 698 always 0 0
+draw rect x temp7 10 40
+draw rect temp0 temp6 20 10
+set _ _
+set _ _
+set _ _
+set _ _
+jump 698 always 0 0
+draw rect temp0 temp10 10 10
+draw rect temp2 temp10 10 10
+draw rect x temp6 10 40
+draw rect temp1 temp6 10 40
+draw rect temp3 temp6 10 40
+set _ _
+jump 698 always 0 0
+draw rect x temp6 10 50
+draw rect temp0 temp10 10 10
+draw rect temp1 temp6 10 40
+set _ _
+set _ _
+set _ _
+jump 698 always 0 0
+draw rect x temp7 10 30
+draw rect temp0 temp10 30 10
+draw rect temp0 temp6 30 10
+draw rect temp3 temp7 10 30
+set _ _
+set _ _
+jump 698 always 0 0
+draw rect x temp6 10 40
+draw rect temp0 temp10 30 10
+draw rect temp3 temp9 10 10
+draw rect temp1 temp8 20 10
+set _ _
+set _ _
+jump 698 always 0 0
+draw rect temp0 temp10 30 10
+draw rect temp3 temp6 10 40
+draw rect x temp9 10 10
+draw rect temp0 temp8 20 10
+set _ _
+set _ _
+jump 698 always 0 0
+draw rect temp0 temp10 20 10
+draw rect x temp6 10 40
+set _ _
+set _ _
+set _ _
+set _ _
+jump 698 always 0 0
+draw rect temp0 temp10 30 10
+draw rect x temp9 10 10
+draw rect temp0 temp8 30 10
+draw rect temp3 temp7 10 10
+draw rect x temp6 40 10
+set _ _
+jump 698 always 0 0
+draw rect x temp9 30 10
+draw rect temp0 temp6 10 50
+set _ _
+set _ _
+set _ _
+set _ _
+jump 698 always 0 0
+draw rect x temp8 10 30
+draw rect temp0 temp7 10 10
+draw rect temp1 temp6 30 10
+draw rect temp3 temp6 10 50
+set _ _
+set _ _
+jump 698 always 0 0
+draw rect x temp8 10 30
+draw rect temp3 temp8 10 30
+draw rect temp0 temp7 10 10
+draw rect temp2 temp7 10 10
+draw rect temp1 temp6 10 10
+set _ _
+jump 698 always 0 0
+draw rect x temp7 10 40
+draw rect temp1 temp7 10 40
+draw rect temp3 temp7 10 40
+draw rect temp0 temp6 10 10
+draw rect temp2 temp6 10 10
+set _ _
+jump 698 always 0 0
+draw rect x temp6 10 20
+draw rect x temp9 10 20
+draw rect temp0 temp8 10 10
+draw rect temp1 temp6 10 20
+draw rect temp1 temp9 10 20
+set _ _
+jump 698 always 0 0
+draw rect x temp9 10 20
+draw rect temp0 temp8 10 10
+draw rect temp0 temp6 20 10
+draw rect temp2 temp7 10 40
+set _ _
+set _ _
+jump 698 always 0 0
+draw rect x temp10 50 10
+draw rect x temp6 50 10
+draw rect temp0 temp7 10 10
+draw rect temp1 temp8 10 10
+draw rect temp2 temp9 10 10
+set _ _
+jump 698 always 0 0
+draw rect temp0 temp9 10 10
+draw rect temp1 temp6 10 70
+draw rect temp2 temp12 10 10
+draw rect temp2 temp6 10 10
+set _ _
+set _ _
+jump 698 always 0 0
+draw rect temp2 temp6 10 70
+set _ _
+set _ _
+set _ _
+set _ _
+set _ _
+jump 698 always 0 0
+draw rect temp4 temp9 10 10
+draw rect temp3 temp6 10 70
+draw rect temp2 temp12 10 10
+draw rect temp2 temp6 10 10
+set _ _
+set _ _
+jump 698 always 0 0
+draw rect x temp9 10 20
+draw rect temp0 temp11 20 10
+draw rect temp2 temp8 10 30
+draw rect temp3 temp7 20 10
+draw rect temp5 temp8 10 20
+set _ _
+jump 698 always 0 0
+draw rect x temp11 30 10
+draw rect temp3 temp12 30 10
+draw rect temp5 temp11 10 10
+draw rect temp4 temp10 20 10
+draw rect temp4 temp8 10 10
+set _ _
+jump 698 always 0 0
+drawflush display1
+end

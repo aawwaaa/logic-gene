@@ -44,6 +44,10 @@ export class Line {
     prev(){
         return buffer[this.lineNumber - 1]
     }
+
+    static getLength(){
+        return buffer.length
+    }
 }
 
 new Line("set logic_generator_by \"zzz\"")
