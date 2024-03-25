@@ -1,0 +1,878 @@
+set logic_generator_by "zzz"
+jump 695 always 0 0
+op add temp0 ::charDisplay::x 2
+op add temp1 ::charDisplay::x 4
+op add temp2 ::charDisplay::x 6
+op add temp3 ::charDisplay::x 8
+op add temp4 ::charDisplay::x 10
+op add temp5 ::charDisplay::x 12
+op add temp6 ::charDisplay::y 2
+op add temp7 ::charDisplay::y 4
+op add temp8 ::charDisplay::y 6
+op add temp9 ::charDisplay::y 8
+op add temp10 ::charDisplay::y 10
+op add temp11 ::charDisplay::y 12
+op add temp12 ::charDisplay::y 14
+draw col ::charDisplay::background
+draw rect ::charDisplay::x ::charDisplay::y 16 16
+draw col ::charDisplay::foreground
+op sub temp13 ::charDisplay::char 32
+jump 694 lessThan temp13 0
+op mul temp14 temp13 7
+op add @counter @counter temp14
+set _ _
+set _ _
+set _ _
+set _ _
+set _ _
+set _ _
+jump 694 always 0 0
+draw rect temp5 temp8 2 10
+draw rect temp5 temp6 2 2
+set _ _
+set _ _
+set _ _
+set _ _
+jump 694 always 0 0
+draw rect ::charDisplay::x temp11 2 4
+draw rect temp1 temp11 2 4
+set _ _
+set _ _
+set _ _
+set _ _
+jump 694 always 0 0
+draw rect temp0 temp6 2 14
+draw rect temp3 temp6 2 14
+draw rect ::charDisplay::x temp7 12 2
+draw rect ::charDisplay::x temp11 12 2
+set _ _
+set _ _
+jump 694 always 0 0
+draw rect ::charDisplay::x temp7 14 2
+draw rect ::charDisplay::x temp9 14 2
+draw rect ::charDisplay::x temp11 14 2
+draw rect ::charDisplay::x temp7 2 6
+draw rect temp5 temp9 2 6
+draw rect temp2 temp6 2 14
+jump 694 always 0 0
+draw rect ::charDisplay::x temp10 4 6
+draw rect temp4 temp6 4 6
+draw rect temp1 temp6 2 6
+draw rect temp2 temp9 2 2
+draw rect temp3 temp10 2 6
+set _ _
+jump 694 always 0 0
+draw rect ::charDisplay::x temp6 2 14
+draw rect ::charDisplay::x temp6 14 2
+draw rect ::charDisplay::x temp12 8 2
+draw rect ::charDisplay::x temp9 6 2
+draw rect temp5 temp6 2 8
+set _ _
+jump 694 always 0 0
+draw rect ::charDisplay::x temp11 2 4
+set _ _
+set _ _
+set _ _
+set _ _
+set _ _
+jump 694 always 0 0
+draw rect ::charDisplay::x temp9 2 2
+draw rect temp0 temp8 2 6
+draw rect temp1 temp7 2 10
+draw col ::charDisplay::background
+draw rect temp0 temp9 2 2
+draw rect temp1 temp8 2 6
+jump 694 always 0 0
+draw rect temp5 temp9 2 2
+draw rect temp4 temp8 2 6
+draw rect temp3 temp7 2 10
+draw col ::charDisplay::background
+draw rect temp4 temp9 2 2
+draw rect temp3 temp8 2 6
+jump 694 always 0 0
+draw rect temp0 temp10 2 4
+draw rect temp0 temp7 2 4
+draw rect temp2 temp6 2 14
+draw rect temp1 temp9 6 2
+draw rect temp4 temp10 2 4
+draw rect temp4 temp7 2 4
+jump 694 always 0 0
+draw rect temp2 temp7 2 10
+draw rect temp0 temp9 10 2
+set _ _
+set _ _
+set _ _
+set _ _
+jump 694 always 0 0
+draw rect temp3 temp6 2 2
+draw rect temp4 temp7 2 2
+set _ _
+set _ _
+set _ _
+set _ _
+jump 694 always 0 0
+draw rect temp0 temp9 10 2
+set _ _
+set _ _
+set _ _
+set _ _
+set _ _
+jump 694 always 0 0
+draw rect temp4 temp7 2 2
+set _ _
+set _ _
+set _ _
+set _ _
+set _ _
+jump 694 always 0 0
+draw rect temp1 temp6 2 6
+draw rect temp2 temp9 2 2
+draw rect temp3 temp10 2 6
+set _ _
+set _ _
+set _ _
+jump 694 always 0 0
+draw rect ::charDisplay::x temp7 2 10
+draw rect temp3 temp7 2 10
+draw rect temp0 temp6 6 2
+draw rect temp0 temp12 6 2
+draw rect temp1 temp9 2 2
+set _ _
+jump 694 always 0 0
+draw rect ::charDisplay::x temp10 2 2
+draw rect temp0 temp11 2 2
+draw rect temp1 temp6 2 14
+draw rect ::charDisplay::x temp6 10 2
+set _ _
+set _ _
+jump 694 always 0 0
+draw rect ::charDisplay::x temp11 2 2
+draw rect temp0 temp12 6 2
+draw rect temp3 temp9 2 6
+draw rect temp1 temp8 4 2
+draw rect temp0 temp7 2 2
+draw rect ::charDisplay::x temp6 10 2
+jump 694 always 0 0
+draw rect ::charDisplay::x temp12 8 2
+draw rect ::charDisplay::x temp9 8 2
+draw rect ::charDisplay::x temp6 8 2
+draw rect temp3 temp7 2 10
+set _ _
+set _ _
+jump 694 always 0 0
+draw rect ::charDisplay::x temp10 2 6
+draw rect temp0 temp9 6 2
+draw rect temp3 temp6 2 14
+set _ _
+set _ _
+set _ _
+jump 694 always 0 0
+draw rect ::charDisplay::x temp12 10 2
+draw rect ::charDisplay::x temp10 2 6
+draw rect temp0 temp9 6 2
+draw rect temp3 temp7 2 4
+draw rect ::charDisplay::x temp6 8 2
+set _ _
+jump 694 always 0 0
+draw rect temp0 temp12 6 2
+draw rect ::charDisplay::x temp7 2 10
+draw rect temp0 temp9 6 2
+draw rect temp3 temp7 2 4
+draw rect temp0 temp6 6 2
+set _ _
+jump 694 always 0 0
+draw rect ::charDisplay::x temp12 10 2
+draw rect temp2 temp10 2 4
+draw rect temp1 temp9 2 2
+draw rect temp0 temp6 2 6
+set _ _
+set _ _
+jump 694 always 0 0
+draw rect ::charDisplay::x temp10 10 4
+draw rect ::charDisplay::x temp7 10 4
+draw rect temp0 temp6 6 14
+draw col ::charDisplay::background
+draw rect temp0 temp10 6 4
+draw rect temp0 temp7 6 4
+jump 694 always 0 0
+draw rect temp0 temp12 6 2
+draw rect ::charDisplay::x temp10 2 4
+draw rect temp0 temp9 6 2
+draw rect temp3 temp7 2 10
+draw rect ::charDisplay::x temp7 8 0
+set _ _
+jump 694 always 0 0
+draw rect temp4 temp10 2 2
+draw rect temp4 temp7 2 2
+set _ _
+set _ _
+set _ _
+set _ _
+jump 694 always 0 0
+draw rect temp4 temp10 2 2
+draw rect temp4 temp7 2 2
+draw rect temp3 temp6 2 2
+set _ _
+set _ _
+set _ _
+jump 694 always 0 0
+draw rect temp0 temp8 2 6
+draw rect temp1 temp7 2 10
+draw rect temp2 temp6 2 14
+draw col ::charDisplay::background
+draw rect temp1 temp8 2 6
+draw rect temp2 temp7 2 10
+jump 694 always 0 0
+draw rect temp0 temp10 10 2
+draw rect temp0 temp8 10 2
+set _ _
+set _ _
+set _ _
+set _ _
+jump 694 always 0 0
+draw rect temp4 temp8 2 6
+draw rect temp3 temp7 2 10
+draw rect temp2 temp6 2 14
+draw col ::charDisplay::background
+draw rect temp3 temp8 2 6
+draw rect temp2 temp7 2 10
+jump 694 always 0 0
+draw rect temp0 temp12 10 2
+draw rect temp4 temp9 2 8
+draw rect temp2 temp9 6 2
+draw rect temp2 temp8 2 2
+draw rect temp2 temp6 2 2
+set _ _
+jump 694 always 0 0
+draw rect ::charDisplay::x temp7 2 10
+draw rect temp0 temp12 8 2
+draw rect temp0 temp6 10 2
+draw rect temp4 temp8 2 8
+draw rect temp3 temp8 2 2
+draw rect temp1 temp8 4 6
+jump 694 always 0 0
+draw rect ::charDisplay::x temp6 2 10
+draw rect temp0 temp11 2 2
+draw rect temp1 temp12 10 2
+draw rect temp5 temp6 2 14
+draw rect ::charDisplay::x temp9 14 2
+set _ _
+jump 694 always 0 0
+draw rect ::charDisplay::x temp6 2 14
+draw rect ::charDisplay::x temp12 12 2
+draw rect ::charDisplay::x temp6 12 2
+draw rect temp5 temp7 2 4
+draw rect temp5 temp10 2 4
+draw rect temp1 temp9 8 2
+jump 694 always 0 0
+draw rect ::charDisplay::x temp8 2 6
+draw rect temp0 temp7 2 2
+draw rect temp0 temp11 2 2
+draw rect temp1 temp12 10 2
+draw rect temp1 temp6 10 2
+set _ _
+jump 694 always 0 0
+draw rect ::charDisplay::x temp6 2 14
+draw rect ::charDisplay::x temp12 10 2
+draw rect temp4 temp11 2 2
+draw rect temp4 temp7 2 2
+draw rect temp5 temp8 2 6
+draw rect ::charDisplay::x temp6 10 2
+jump 694 always 0 0
+draw rect ::charDisplay::x temp7 2 12
+draw rect ::charDisplay::x temp12 14 2
+draw rect ::charDisplay::x temp9 14 2
+draw rect temp0 temp6 12 2
+set _ _
+set _ _
+jump 694 always 0 0
+draw rect ::charDisplay::x temp6 2 14
+draw rect ::charDisplay::x temp12 14 2
+draw rect temp1 temp9 6 2
+set _ _
+set _ _
+set _ _
+jump 694 always 0 0
+draw rect temp1 temp12 10 2
+draw rect temp0 temp11 2 2
+draw rect ::charDisplay::x temp7 2 8
+draw rect temp0 temp6 12 2
+draw rect temp5 temp6 2 8
+draw rect temp2 temp9 8 2
+jump 694 always 0 0
+draw rect ::charDisplay::x temp6 2 14
+draw rect temp5 temp6 2 14
+draw rect ::charDisplay::x temp9 14 2
+set _ _
+set _ _
+set _ _
+jump 694 always 0 0
+draw rect ::charDisplay::x temp12 14 2
+draw rect temp2 temp6 2 14
+draw rect ::charDisplay::x temp6 14 2
+set _ _
+set _ _
+set _ _
+jump 694 always 0 0
+draw rect ::charDisplay::x temp12 14 2
+draw rect temp3 temp8 2 10
+draw rect ::charDisplay::x temp7 2 2
+draw rect temp2 temp7 2 2
+draw rect temp0 temp6 4 2
+set _ _
+jump 694 always 0 0
+draw rect ::charDisplay::x temp6 2 14
+draw rect ::charDisplay::x temp9 10 2
+draw rect temp4 temp8 2 2
+draw rect temp4 temp10 2 2
+draw rect temp5 temp6 2 4
+draw rect temp5 temp11 2 4
+jump 694 always 0 0
+draw rect ::charDisplay::x temp6 2 14
+draw rect ::charDisplay::x temp6 14 2
+set _ _
+set _ _
+set _ _
+set _ _
+jump 694 always 0 0
+draw rect ::charDisplay::x temp6 2 14
+draw rect temp5 temp6 2 14
+draw rect temp0 temp11 2 2
+draw rect temp4 temp11 2 2
+draw rect temp1 temp10 6 2
+set _ _
+jump 694 always 0 0
+draw rect ::charDisplay::x temp6 2 14
+draw rect temp5 temp6 2 14
+draw rect temp0 temp11 4 2
+draw rect temp2 temp8 2 6
+draw rect temp3 temp7 4 2
+set _ _
+jump 694 always 0 0
+draw rect ::charDisplay::x temp7 2 10
+draw rect temp0 temp6 10 2
+draw rect temp5 temp7 2 10
+draw rect temp0 temp12 10 2
+set _ _
+set _ _
+jump 694 always 0 0
+draw rect temp0 temp12 10 2
+draw rect ::charDisplay::x temp6 2 12
+draw rect ::charDisplay::x temp9 12 2
+draw rect temp5 temp10 2 4
+set _ _
+set _ _
+jump 694 always 0 0
+draw rect temp0 temp12 10 2
+draw rect ::charDisplay::x temp9 2 6
+draw rect temp5 temp9 2 6
+draw rect temp0 temp8 10 2
+draw rect temp3 temp7 2 2
+draw rect temp4 temp6 2 2
+jump 694 always 0 0
+draw rect ::charDisplay::x temp6 2 14
+draw rect ::charDisplay::x temp12 12 2
+draw rect temp5 temp10 2 4
+draw rect temp1 temp9 8 2
+draw rect temp2 temp7 2 4
+draw rect temp3 temp6 6 2
+jump 694 always 0 0
+draw rect temp0 temp12 12 2
+draw rect ::charDisplay::x temp10 2 4
+draw rect temp0 temp9 10 2
+draw rect temp5 temp7 2 4
+draw rect ::charDisplay::x temp6 12 2
+set _ _
+jump 694 always 0 0
+draw rect ::charDisplay::x temp12 14 2
+draw rect temp2 temp6 2 14
+set _ _
+set _ _
+set _ _
+set _ _
+jump 694 always 0 0
+draw rect ::charDisplay::x temp8 2 10
+draw rect temp0 temp7 2 2
+draw rect temp1 temp6 8 2
+draw rect temp5 temp6 2 14
+set _ _
+set _ _
+jump 694 always 0 0
+draw rect ::charDisplay::x temp8 2 10
+draw rect temp5 temp8 2 10
+draw rect temp0 temp7 2 2
+draw rect temp4 temp7 2 2
+draw rect temp1 temp6 6 2
+set _ _
+jump 694 always 0 0
+draw rect ::charDisplay::x temp6 2 14
+draw rect temp5 temp6 2 14
+draw rect temp0 temp7 2 2
+draw rect temp4 temp7 2 2
+draw rect temp1 temp8 6 2
+set _ _
+jump 694 always 0 0
+draw rect ::charDisplay::x temp10 2 6
+draw rect ::charDisplay::x temp6 2 6
+draw rect temp0 temp9 10 2
+draw rect temp5 temp6 2 6
+draw rect temp5 temp10 2 6
+set _ _
+jump 694 always 0 0
+draw rect temp0 temp11 2 4
+draw rect temp4 temp11 2 4
+draw rect temp1 temp10 2 2
+draw rect temp3 temp10 2 2
+draw rect temp2 temp6 2 8
+set _ _
+jump 694 always 0 0
+draw rect ::charDisplay::x temp12 14 2
+draw rect ::charDisplay::x temp6 14 2
+draw rect temp0 temp7 2 4
+draw rect temp4 temp10 2 4
+draw rect temp1 temp9 6 2
+set _ _
+jump 694 always 0 0
+draw rect temp0 temp12 6 2
+draw rect temp0 temp6 2 14
+draw rect temp0 temp6 6 2
+set _ _
+set _ _
+set _ _
+jump 694 always 0 0
+draw rect temp1 temp10 2 6
+draw rect temp2 temp9 2 2
+draw rect temp3 temp6 2 6
+set _ _
+set _ _
+set _ _
+jump 694 always 0 0
+draw rect temp2 temp12 6 2
+draw rect temp4 temp6 2 14
+draw rect temp2 temp6 6 2
+set _ _
+set _ _
+set _ _
+jump 694 always 0 0
+draw rect temp0 temp10 2 2
+draw rect temp1 temp11 2 2
+draw rect temp2 temp12 2 2
+draw rect temp3 temp11 2 2
+draw rect temp4 temp10 2 2
+set _ _
+jump 694 always 0 0
+draw rect temp0 temp6 10 2
+set _ _
+set _ _
+set _ _
+set _ _
+set _ _
+jump 694 always 0 0
+draw rect ::charDisplay::x temp12 2 2
+draw rect temp0 temp11 4 2
+set _ _
+set _ _
+set _ _
+set _ _
+jump 694 always 0 0
+draw rect temp0 temp10 6 2
+draw rect temp3 temp7 2 6
+draw rect temp0 temp6 6 2
+draw rect ::charDisplay::x temp7 2 2
+draw rect temp0 temp8 6 2
+set _ _
+jump 694 always 0 0
+draw rect ::charDisplay::x temp7 2 8
+draw rect temp0 temp6 6 2
+draw rect temp3 temp7 2 2
+draw rect temp1 temp8 4 2
+set _ _
+set _ _
+jump 694 always 0 0
+draw rect ::charDisplay::x temp7 2 6
+draw rect temp0 temp10 8 2
+draw rect temp0 temp6 8 2
+set _ _
+set _ _
+set _ _
+jump 694 always 0 0
+draw rect temp3 temp7 2 8
+draw rect temp0 temp6 6 2
+draw rect ::charDisplay::x temp7 2 2
+draw rect temp0 temp8 4 2
+set _ _
+set _ _
+jump 694 always 0 0
+draw rect temp0 temp10 6 2
+draw rect ::charDisplay::x temp7 2 6
+draw rect temp0 temp6 6 2
+draw rect temp3 temp9 2 2
+draw rect temp1 temp8 4 2
+set _ _
+jump 694 always 0 0
+draw rect ::charDisplay::x temp6 2 8
+draw rect temp0 temp10 8 2
+draw rect temp1 temp8 4 2
+set _ _
+set _ _
+set _ _
+jump 694 always 0 0
+draw rect ::charDisplay::x temp9 2 2
+draw rect temp0 temp10 6 2
+draw rect temp3 temp7 2 6
+draw rect temp0 temp8 4 2
+draw rect temp1 temp6 4 2
+set _ _
+jump 694 always 0 0
+draw rect ::charDisplay::x temp6 2 10
+draw rect temp1 temp8 4 2
+draw rect temp3 temp6 2 4
+set _ _
+set _ _
+set _ _
+jump 694 always 0 0
+draw rect temp1 temp10 2 2
+draw rect temp1 temp6 2 6
+set _ _
+set _ _
+set _ _
+set _ _
+jump 694 always 0 0
+draw rect temp1 temp10 2 2
+draw rect temp1 temp7 2 4
+draw rect ::charDisplay::x temp6 4 2
+set _ _
+set _ _
+set _ _
+jump 694 always 0 0
+draw rect ::charDisplay::x temp6 2 10
+draw rect temp0 temp8 4 2
+draw rect temp2 temp7 2 2
+draw rect temp2 temp9 2 2
+draw rect temp3 temp6 2 2
+draw rect temp3 temp10 2 2
+jump 694 always 0 0
+draw rect ::charDisplay::x temp7 2 8
+draw rect temp0 temp6 4 2
+set _ _
+set _ _
+set _ _
+set _ _
+jump 694 always 0 0
+draw rect temp0 temp10 2 2
+draw rect temp2 temp10 2 2
+draw rect ::charDisplay::x temp6 2 8
+draw rect temp1 temp6 2 8
+draw rect temp3 temp6 2 8
+set _ _
+jump 694 always 0 0
+draw rect ::charDisplay::x temp6 2 10
+draw rect temp0 temp10 2 2
+draw rect temp1 temp6 2 8
+set _ _
+set _ _
+set _ _
+jump 694 always 0 0
+draw rect ::charDisplay::x temp7 2 6
+draw rect temp0 temp10 6 2
+draw rect temp0 temp6 6 2
+draw rect temp3 temp7 2 6
+set _ _
+set _ _
+jump 694 always 0 0
+draw rect ::charDisplay::x temp6 2 8
+draw rect temp0 temp10 6 2
+draw rect temp3 temp9 2 2
+draw rect temp1 temp8 4 2
+set _ _
+set _ _
+jump 694 always 0 0
+draw rect temp0 temp10 6 2
+draw rect temp3 temp6 2 8
+draw rect ::charDisplay::x temp9 2 2
+draw rect temp0 temp8 4 2
+set _ _
+set _ _
+jump 694 always 0 0
+draw rect temp0 temp10 4 2
+draw rect ::charDisplay::x temp6 2 8
+set _ _
+set _ _
+set _ _
+set _ _
+jump 694 always 0 0
+draw rect temp0 temp10 6 2
+draw rect ::charDisplay::x temp9 2 2
+draw rect temp0 temp8 6 2
+draw rect temp3 temp7 2 2
+draw rect ::charDisplay::x temp6 8 2
+set _ _
+jump 694 always 0 0
+draw rect ::charDisplay::x temp9 6 2
+draw rect temp0 temp6 2 10
+set _ _
+set _ _
+set _ _
+set _ _
+jump 694 always 0 0
+draw rect ::charDisplay::x temp8 2 6
+draw rect temp0 temp7 2 2
+draw rect temp1 temp6 6 2
+draw rect temp3 temp6 2 10
+set _ _
+set _ _
+jump 694 always 0 0
+draw rect ::charDisplay::x temp8 2 6
+draw rect temp3 temp8 2 6
+draw rect temp0 temp7 2 2
+draw rect temp2 temp7 2 2
+draw rect temp1 temp6 2 2
+set _ _
+jump 694 always 0 0
+draw rect ::charDisplay::x temp7 2 8
+draw rect temp1 temp7 2 8
+draw rect temp3 temp7 2 8
+draw rect temp0 temp6 2 2
+draw rect temp2 temp6 2 2
+set _ _
+jump 694 always 0 0
+draw rect ::charDisplay::x temp6 2 4
+draw rect ::charDisplay::x temp9 2 4
+draw rect temp0 temp8 2 2
+draw rect temp1 temp6 2 4
+draw rect temp1 temp9 2 4
+set _ _
+jump 694 always 0 0
+draw rect ::charDisplay::x temp9 2 4
+draw rect temp0 temp8 2 2
+draw rect temp0 temp6 4 2
+draw rect temp2 temp7 2 8
+set _ _
+set _ _
+jump 694 always 0 0
+draw rect ::charDisplay::x temp10 10 2
+draw rect ::charDisplay::x temp6 10 2
+draw rect temp0 temp7 2 2
+draw rect temp1 temp8 2 2
+draw rect temp2 temp9 2 2
+set _ _
+jump 694 always 0 0
+draw rect temp0 temp9 2 2
+draw rect temp1 temp6 2 14
+draw rect temp2 temp12 2 2
+draw rect temp2 temp6 2 2
+set _ _
+set _ _
+jump 694 always 0 0
+draw rect temp2 temp6 2 14
+set _ _
+set _ _
+set _ _
+set _ _
+set _ _
+jump 694 always 0 0
+draw rect temp4 temp9 2 2
+draw rect temp3 temp6 2 14
+draw rect temp2 temp12 2 2
+draw rect temp2 temp6 2 2
+set _ _
+set _ _
+jump 694 always 0 0
+draw rect ::charDisplay::x temp9 2 4
+draw rect temp0 temp11 4 2
+draw rect temp2 temp8 2 6
+draw rect temp3 temp7 4 2
+draw rect temp5 temp8 2 4
+set _ _
+jump 694 always 0 0
+draw rect ::charDisplay::x temp11 6 2
+draw rect temp3 temp12 6 2
+draw rect temp5 temp11 2 2
+draw rect temp4 temp10 4 2
+draw rect temp4 temp8 2 2
+set _ _
+jump 694 always 0 0
+op add @counter ::charDisplay::ret 1
+ubind @mega
+set temp15 @unit
+uradar player any any distance 0 1 temp16
+sensor temp17 temp16 @x
+sensor temp18 temp16 @y
+ucontrol move temp17 temp18
+ucontrol getBlock temp17 temp18 temp19 temp20 temp21
+jump 704 equal temp19 @large-logic-display
+jump 877 always 0 0
+set ::charDisplay::x -16
+set ::charDisplay::y -16
+set ::charDisplay::char 0
+set ::charDisplay::foreground %ffffffff
+set ::charDisplay::background %000000ff
+set ::charDisplay::ret @counter
+set @counter 2
+set ::charDisplay::x 0
+set ::charDisplay::y 160
+set ::charDisplay::char 72
+set ::charDisplay::ret @counter
+set @counter 2
+set ::charDisplay::x 16
+set ::charDisplay::y 160
+set ::charDisplay::char 101
+set ::charDisplay::ret @counter
+set @counter 2
+set ::charDisplay::x 32
+set ::charDisplay::y 160
+set ::charDisplay::char 108
+set ::charDisplay::ret @counter
+set @counter 2
+set ::charDisplay::x 48
+set ::charDisplay::y 160
+set ::charDisplay::char 108
+set ::charDisplay::ret @counter
+set @counter 2
+set ::charDisplay::x 64
+set ::charDisplay::y 160
+set ::charDisplay::char 111
+set ::charDisplay::ret @counter
+set @counter 2
+set ::charDisplay::x 80
+set ::charDisplay::y 160
+set ::charDisplay::char 44
+set ::charDisplay::ret @counter
+set @counter 2
+set ::charDisplay::x 96
+set ::charDisplay::y 160
+set ::charDisplay::char 32
+set ::charDisplay::ret @counter
+set @counter 2
+set ::charDisplay::x 112
+set ::charDisplay::y 160
+set ::charDisplay::char 32
+set ::charDisplay::ret @counter
+set @counter 2
+set ::charDisplay::x 128
+set ::charDisplay::y 160
+set ::charDisplay::char 32
+set ::charDisplay::ret @counter
+set @counter 2
+set ::charDisplay::x 144
+set ::charDisplay::y 160
+set ::charDisplay::char 32
+set ::charDisplay::ret @counter
+set @counter 2
+set ::charDisplay::x 160
+set ::charDisplay::y 160
+set ::charDisplay::char 32
+set ::charDisplay::ret @counter
+set @counter 2
+set ::charDisplay::x 0
+set ::charDisplay::y 144
+set ::charDisplay::char 87
+set ::charDisplay::ret @counter
+set @counter 2
+set ::charDisplay::x 16
+set ::charDisplay::y 144
+set ::charDisplay::char 111
+set ::charDisplay::ret @counter
+set @counter 2
+set ::charDisplay::x 32
+set ::charDisplay::y 144
+set ::charDisplay::char 114
+set ::charDisplay::ret @counter
+set @counter 2
+set ::charDisplay::x 48
+set ::charDisplay::y 144
+set ::charDisplay::char 108
+set ::charDisplay::ret @counter
+set @counter 2
+set ::charDisplay::x 64
+set ::charDisplay::y 144
+set ::charDisplay::char 100
+set ::charDisplay::ret @counter
+set @counter 2
+set ::charDisplay::x 80
+set ::charDisplay::y 144
+set ::charDisplay::char 33
+set ::charDisplay::ret @counter
+set @counter 2
+set ::charDisplay::x 96
+set ::charDisplay::y 144
+set ::charDisplay::char 32
+set ::charDisplay::ret @counter
+set @counter 2
+set ::charDisplay::x 112
+set ::charDisplay::y 144
+set ::charDisplay::char 32
+set ::charDisplay::ret @counter
+set @counter 2
+set ::charDisplay::x 128
+set ::charDisplay::y 144
+set ::charDisplay::char 32
+set ::charDisplay::ret @counter
+set @counter 2
+set ::charDisplay::x 144
+set ::charDisplay::y 144
+set ::charDisplay::char 32
+set ::charDisplay::ret @counter
+set @counter 2
+set ::charDisplay::x 160
+set ::charDisplay::y 144
+set ::charDisplay::char 32
+set ::charDisplay::ret @counter
+set @counter 2
+set ::charDisplay::x 0
+set ::charDisplay::y 128
+set ::charDisplay::char 66
+set ::charDisplay::ret @counter
+set @counter 2
+set ::charDisplay::x 16
+set ::charDisplay::y 128
+set ::charDisplay::char 121
+set ::charDisplay::ret @counter
+set @counter 2
+set ::charDisplay::x 32
+set ::charDisplay::y 128
+set ::charDisplay::char 32
+set ::charDisplay::ret @counter
+set @counter 2
+set ::charDisplay::x 48
+set ::charDisplay::y 128
+set ::charDisplay::char 90
+set ::charDisplay::ret @counter
+set @counter 2
+set ::charDisplay::x 64
+set ::charDisplay::y 128
+set ::charDisplay::char 90
+set ::charDisplay::ret @counter
+set @counter 2
+set ::charDisplay::x 80
+set ::charDisplay::y 128
+set ::charDisplay::char 90
+set ::charDisplay::ret @counter
+set @counter 2
+set ::charDisplay::x 96
+set ::charDisplay::y 128
+set ::charDisplay::char 32
+set ::charDisplay::ret @counter
+set @counter 2
+set ::charDisplay::x 112
+set ::charDisplay::y 128
+set ::charDisplay::char 32
+set ::charDisplay::ret @counter
+set @counter 2
+set ::charDisplay::x 128
+set ::charDisplay::y 128
+set ::charDisplay::char 32
+set ::charDisplay::ret @counter
+set @counter 2
+set ::charDisplay::x 144
+set ::charDisplay::y 128
+set ::charDisplay::char 32
+set ::charDisplay::ret @counter
+set @counter 2
+set ::charDisplay::x 160
+set ::charDisplay::y 128
+set ::charDisplay::char 32
+set ::charDisplay::ret @counter
+set @counter 2
+drawflush temp20
+end

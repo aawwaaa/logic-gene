@@ -3,6 +3,7 @@ import { build, color, draw, drawflush, variable, jumpToAfter, Value, Color, cou
 
 export function charDisplay(size: number): {
     display(x: Value<number>, y: Value<number>, char: Value<number>, foreground?: Value<Color>, background?: Value<Color>): void
+    displayWithoutSetColor(x: Value<number>, y: Value<number>, char: Value<number>): void
 }{
 
 const endMark = jumpToAfter(always)
@@ -642,6 +643,13 @@ return {
         char.set(achar)
         foreground.set(aforeground)
         background.set(abackground)
+        ret.set(counter)
+        counter.set(endMark.line.lineNumber + 1)
+    },
+    displayWithoutSetColor(ax: Value<number>, ay: Value<number>, achar: Value<number>): void{
+        x.set(ax)
+        y.set(ay)
+        char.set(achar)
         ret.set(counter)
         counter.set(endMark.line.lineNumber + 1)
     }

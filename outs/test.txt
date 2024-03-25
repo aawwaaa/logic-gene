@@ -700,12 +700,12 @@ jump 720 always 0 0
 read temp18 bank1 temp17
 op mod temp19 temp17 16
 op mul temp19 temp19 8
-op add temp19 temp19 8
+op add temp19 temp19 32
 op div temp20 temp17 16
 op floor temp20 temp20 undefined
 op sub temp21 16 temp20
 op mul temp21 temp21 8
-op add temp21 temp21 8
+op add temp21 temp21 32
 set ::charDisplay::x temp19
 set ::charDisplay::y temp21
 set ::charDisplay::char temp18

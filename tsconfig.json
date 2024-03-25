@@ -5,6 +5,8 @@
         "lib": ["es2022"]
     },
     "exclude":[
-        "./codes_1"
+        "./codes_1",
+        "./old",
+        "./olds"
     ]
 }

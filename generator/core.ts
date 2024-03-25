@@ -691,7 +691,7 @@ export class UnitVar extends Var<Unit>{
     controls: BindedUnitControls
     locates: BindedUnitLocates
 
-    rader(options: radarOptions = {}){
+    radar(options: radarOptions = {}){
         return unitRadar(this, options)
     }
 }
