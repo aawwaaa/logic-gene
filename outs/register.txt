@@ -1,50 +1,234 @@
 set logic_generator_by "zzz"
-sensor temp1 door1 @enabled
-sensor temp2 door2 @enabled
-set temp3 18
-set temp4 10
-jump 12 always 0 0
-getlink temp5 temp3
+sensor temp0 door33 @enabled
+sensor temp1 door34 @enabled
+jump 5 notEqual temp0 0
+jump 118 always 0 0
+set temp2 0
+getlink temp3 16
+sensor temp4 temp3 @enabled
+op shl temp2 temp2 1
+op or temp2 temp2 temp4
+getlink temp5 17
 sensor temp6 temp5 @enabled
-getlink temp7 temp4
-control enabled temp7 temp6
-op add temp3 temp3 1
-op add temp4 temp4 1
-jump 6 lessThan temp4 18
-jump 26 notEqual temp1 0
-jump 16 notEqual temp0 0
-jump 25 always 0 0
-jump 18 equal temp2 0
-jump 24 always 0 0
-set temp8 2
-jump 23 always 0 0
-getlink temp9 temp8
-control enabled temp9 0
-op add temp8 temp8 1
-jump 20 lessThan temp8 10
-set temp0 0
-end
-set temp0 1
-set temp10 18
-jump 30 notEqual temp2 0
-jump 40 always 0 0
-set temp11 2
-jump 38 always 0 0
-getlink temp12 temp11
-sensor temp13 temp12 @enabled
-getlink temp14 temp10
-control enabled temp14 temp13
-op add temp10 temp10 1
-op add temp11 temp11 1
-jump 32 lessThan temp11 10
-jump 49 always 0 0
-set temp15 2
-jump 48 always 0 0
-getlink temp16 temp10
-sensor temp17 temp16 @enabled
-getlink temp18 temp15
-control enabled temp18 temp17
-op add temp10 temp10 1
-op add temp15 temp15 1
-jump 42 lessThan temp15 10
+op shl temp2 temp2 1
+op or temp2 temp2 temp6
+getlink temp7 18
+sensor temp8 temp7 @enabled
+op shl temp2 temp2 1
+op or temp2 temp2 temp8
+getlink temp9 19
+sensor temp10 temp9 @enabled
+op shl temp2 temp2 1
+op or temp2 temp2 temp10
+getlink temp11 20
+sensor temp12 temp11 @enabled
+op shl temp2 temp2 1
+op or temp2 temp2 temp12
+getlink temp13 21
+sensor temp14 temp13 @enabled
+op shl temp2 temp2 1
+op or temp2 temp2 temp14
+getlink temp15 22
+sensor temp16 temp15 @enabled
+op shl temp2 temp2 1
+op or temp2 temp2 temp16
+getlink temp17 23
+sensor temp18 temp17 @enabled
+op shl temp2 temp2 1
+op or temp2 temp2 temp18
+getlink temp19 24
+sensor temp20 temp19 @enabled
+op shl temp2 temp2 1
+op or temp2 temp2 temp20
+getlink temp21 25
+sensor temp22 temp21 @enabled
+op shl temp2 temp2 1
+op or temp2 temp2 temp22
+getlink temp23 26
+sensor temp24 temp23 @enabled
+op shl temp2 temp2 1
+op or temp2 temp2 temp24
+getlink temp25 27
+sensor temp26 temp25 @enabled
+op shl temp2 temp2 1
+op or temp2 temp2 temp26
+getlink temp27 28
+sensor temp28 temp27 @enabled
+op shl temp2 temp2 1
+op or temp2 temp2 temp28
+getlink temp29 29
+sensor temp30 temp29 @enabled
+op shl temp2 temp2 1
+op or temp2 temp2 temp30
+getlink temp31 30
+sensor temp32 temp31 @enabled
+op shl temp2 temp2 1
+op or temp2 temp2 temp32
+getlink temp33 31
+sensor temp34 temp33 @enabled
+op shl temp2 temp2 1
+op or temp2 temp2 temp34
+op and temp35 temp2 32768
+getlink temp36 0
+control enabled temp36 temp35
+op and temp37 temp2 16384
+getlink temp38 1
+control enabled temp38 temp37
+op and temp39 temp2 8192
+getlink temp40 2
+control enabled temp40 temp39
+op and temp41 temp2 4096
+getlink temp42 3
+control enabled temp42 temp41
+op and temp43 temp2 2048
+getlink temp44 4
+control enabled temp44 temp43
+op and temp45 temp2 1024
+getlink temp46 5
+control enabled temp46 temp45
+op and temp47 temp2 512
+getlink temp48 6
+control enabled temp48 temp47
+op and temp49 temp2 256
+getlink temp50 7
+control enabled temp50 temp49
+op and temp51 temp2 128
+getlink temp52 8
+control enabled temp52 temp51
+op and temp53 temp2 64
+getlink temp54 9
+control enabled temp54 temp53
+op and temp55 temp2 32
+getlink temp56 10
+control enabled temp56 temp55
+op and temp57 temp2 16
+getlink temp58 11
+control enabled temp58 temp57
+op and temp59 temp2 8
+getlink temp60 12
+control enabled temp60 temp59
+op and temp61 temp2 4
+getlink temp62 13
+control enabled temp62 temp61
+op and temp63 temp2 2
+getlink temp64 14
+control enabled temp64 temp63
+op and temp65 temp2 1
+getlink temp66 15
+control enabled temp66 temp65
+jump 120 notEqual temp1 0
+jump 233 always 0 0
+set temp67 0
+getlink temp68 0
+sensor temp69 temp68 @enabled
+op shl temp67 temp67 1
+op or temp67 temp67 temp69
+getlink temp70 1
+sensor temp71 temp70 @enabled
+op shl temp67 temp67 1
+op or temp67 temp67 temp71
+getlink temp72 2
+sensor temp73 temp72 @enabled
+op shl temp67 temp67 1
+op or temp67 temp67 temp73
+getlink temp74 3
+sensor temp75 temp74 @enabled
+op shl temp67 temp67 1
+op or temp67 temp67 temp75
+getlink temp76 4
+sensor temp77 temp76 @enabled
+op shl temp67 temp67 1
+op or temp67 temp67 temp77
+getlink temp78 5
+sensor temp79 temp78 @enabled
+op shl temp67 temp67 1
+op or temp67 temp67 temp79
+getlink temp80 6
+sensor temp81 temp80 @enabled
+op shl temp67 temp67 1
+op or temp67 temp67 temp81
+getlink temp82 7
+sensor temp83 temp82 @enabled
+op shl temp67 temp67 1
+op or temp67 temp67 temp83
+getlink temp84 8
+sensor temp85 temp84 @enabled
+op shl temp67 temp67 1
+op or temp67 temp67 temp85
+getlink temp86 9
+sensor temp87 temp86 @enabled
+op shl temp67 temp67 1
+op or temp67 temp67 temp87
+getlink temp88 10
+sensor temp89 temp88 @enabled
+op shl temp67 temp67 1
+op or temp67 temp67 temp89
+getlink temp90 11
+sensor temp91 temp90 @enabled
+op shl temp67 temp67 1
+op or temp67 temp67 temp91
+getlink temp92 12
+sensor temp93 temp92 @enabled
+op shl temp67 temp67 1
+op or temp67 temp67 temp93
+getlink temp94 13
+sensor temp95 temp94 @enabled
+op shl temp67 temp67 1
+op or temp67 temp67 temp95
+getlink temp96 14
+sensor temp97 temp96 @enabled
+op shl temp67 temp67 1
+op or temp67 temp67 temp97
+getlink temp98 15
+sensor temp99 temp98 @enabled
+op shl temp67 temp67 1
+op or temp67 temp67 temp99
+op and temp100 temp67 32768
+getlink temp101 16
+control enabled temp101 temp100
+op and temp102 temp67 16384
+getlink temp103 17
+control enabled temp103 temp102
+op and temp104 temp67 8192
+getlink temp105 18
+control enabled temp105 temp104
+op and temp106 temp67 4096
+getlink temp107 19
+control enabled temp107 temp106
+op and temp108 temp67 2048
+getlink temp109 20
+control enabled temp109 temp108
+op and temp110 temp67 1024
+getlink temp111 21
+control enabled temp111 temp110
+op and temp112 temp67 512
+getlink temp113 22
+control enabled temp113 temp112
+op and temp114 temp67 256
+getlink temp115 23
+control enabled temp115 temp114
+op and temp116 temp67 128
+getlink temp117 24
+control enabled temp117 temp116
+op and temp118 temp67 64
+getlink temp119 25
+control enabled temp119 temp118
+op and temp120 temp67 32
+getlink temp121 26
+control enabled temp121 temp120
+op and temp122 temp67 16
+getlink temp123 27
+control enabled temp123 temp122
+op and temp124 temp67 8
+getlink temp125 28
+control enabled temp125 temp124
+op and temp126 temp67 4
+getlink temp127 29
+control enabled temp127 temp126
+op and temp128 temp67 2
+getlink temp129 30
+control enabled temp129 temp128
+op and temp130 temp67 1
+getlink temp131 31
+control enabled temp131 temp130
 end
