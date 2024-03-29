@@ -149,6 +149,35 @@ export class DataIO{
         return [c1, c2, contentStart, contentLen]
     }
 
+    readNoWait(noinit = false){
+        const i = variable()
+        read(this.target, 256).to(i)
+        const mark = jumpToAfter(i.notEqual(true))
+
+        const len = read(this.target, 257).get()
+        const c1 = read(this.target, 258).get()
+        const c2 = read(this.target, 259).get()
+        
+        const contentStart = variable().set(259)
+        const contentLen = len.toSub(1)
+        
+        ifThen(c1.equal(0x05), ()=>{
+            contentStart.add(1)
+            contentLen.sub(1)
+        }, ()=>ifThen(c1.equal(0x1b), ()=>{
+            contentStart.add(1)
+            contentLen.sub(1)
+        }))
+
+        write(this.target, 256, false)
+
+        if(!noinit)
+            this._init?.jumpTo(c1.equal(0x10))
+        mark.here()
+
+        return [c1, c2, contentStart, contentLen, i]
+    }
+
     read(idle: ()=>void = ()=>{}){
         const i = variable()
         doWhileLoop(i.notEqual(true), ()=>{

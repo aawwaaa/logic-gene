@@ -9,8 +9,8 @@ import { writeFileSync, readdirSync } from "fs"
     console.log("complete!")
 })()
 
-import { process } from "./cpu/process"
-process()
+// import { process } from "./cpu/process"
+// process()
 // import "./cpu/processor"
 
 export default {}

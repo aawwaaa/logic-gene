@@ -44,6 +44,10 @@ export class Line {
     prev(){
         return buffer[this.lineNumber - 1]
     }
+
+    static getLength(){
+        return buffer.length
+    }
 }
 
 new Line("set logic_generator_by \"zzz\"")
@@ -687,7 +691,7 @@ export class UnitVar extends Var<Unit>{
     controls: BindedUnitControls
     locates: BindedUnitLocates
 
-    rader(options: radarOptions = {}){
+    radar(options: radarOptions = {}){
         return unitRadar(this, options)
     }
 }

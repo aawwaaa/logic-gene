@@ -97,6 +97,34 @@ export function switchCounter(value: Var<number>, length: number, lines: (()=>vo
     return line
 }
 
+export function switchCounterPad(value: Var<number>, length: number, lines: (()=>void)[], noJump = false){
+    const jumps = []
+    let line;
+    if(noJump){
+        line = operation("add", counter, value).to(counter)
+    }else{
+        const temp = variable()
+        line = operation("mul", value, length + 1).to(temp)
+        counter.add(temp)
+    }
+    lines.forEach((a, index) => {
+        const begin = Line.getLength()
+        a()
+        let delta = Line.getLength() - begin
+        if(delta > length){
+            console.log("delta > length: " + index)
+        }
+        delta = length - delta
+        while(delta > 0){
+            new Line("set _ _");
+            delta--
+        }
+        if(!noJump) jumps.push(jumpToAfter(always))
+    })
+    jumps.forEach(a => a.here())
+    return line
+}
+
 export function switchValue<T>(value: Var<number>, values: T[]): SingleResult<T>{
     const results = []
     switchCounter(value, 1, values.map(a => ()=>{
